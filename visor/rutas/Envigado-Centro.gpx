@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <bounds minlat="6.175549" minlon="-75.616075" maxlat="6.336994" maxlon="-75.55607"/>
+  </metadata>
+    <trk>
+    <name>Envigado-Centro</name>
+    <desc>name=Ruta Segura Envigado&#xA;styleUrl=#line-FF0000-6000&#xA;styleHash=-72ed100a&#xA;description=Este 23 de Abril muévete en bici al trabajo, a la U, al colegio, donde desees…&#xA;stroke=#ff0000&#xA;stroke-opacity=1&#xA;stroke-width=6</desc>
+    <trkseg>
+      <trkpt lat="6.175549" lon="-75.589905">
+      </trkpt>
+      <trkpt lat="6.1760280000000005" lon="-75.590599">
+      </trkpt>
+      <trkpt lat="6.176996999999999" lon="-75.589944">
+      </trkpt>
+      <trkpt lat="6.179425" lon="-75.58821">
+      </trkpt>
+      <trkpt lat="6.181012" lon="-75.587049">
+      </trkpt>
+      <trkpt lat="6.181896" lon="-75.586427">
+      </trkpt>
+      <trkpt lat="6.182714" lon="-75.585707">
+      </trkpt>
+      <trkpt lat="6.183439" lon="-75.584983">
+      </trkpt>
+      <trkpt lat="6.18518" lon="-75.583242">
+      </trkpt>
+      <trkpt lat="6.185645" lon="-75.582723">
+      </trkpt>
+      <trkpt lat="6.185711" lon="-75.582674">
+      </trkpt>
+      <trkpt lat="6.185761" lon="-75.582624">
+      </trkpt>
+      <trkpt lat="6.186399" lon="-75.582144">
+      </trkpt>
+      <trkpt lat="6.187442" lon="-75.581608">
+      </trkpt>
+      <trkpt lat="6.190217999999999" lon="-75.580383">
+      </trkpt>
+      <trkpt lat="6.192538000000002" lon="-75.579912">
+      </trkpt>
+      <trkpt lat="6.194232" lon="-75.579421">
+      </trkpt>
+      <trkpt lat="6.194454000000001" lon="-75.579121">
+      </trkpt>
+      <trkpt lat="6.194500000000001" lon="-75.57912">
+      </trkpt>
+      <trkpt lat="6.194758" lon="-75.579057">
+      </trkpt>
+      <trkpt lat="6.195051000000001" lon="-75.579149">
+      </trkpt>
+      <trkpt lat="6.195714" lon="-75.578977">
+      </trkpt>
+      <trkpt lat="6.196564" lon="-75.57865">
+      </trkpt>
+      <trkpt lat="6.196591999999999" lon="-75.578636">
+      </trkpt>
+      <trkpt lat="6.198449999999999" lon="-75.577873">
+      </trkpt>
+      <trkpt lat="6.198993" lon="-75.577753">
+      </trkpt>
+      <trkpt lat="6.199867" lon="-75.577578">
+      </trkpt>
+      <trkpt lat="6.203239000000002" lon="-75.577298">
+      </trkpt>
+      <trkpt lat="6.207395" lon="-75.576844">
+      </trkpt>
+      <trkpt lat="6.213194999999999" lon="-75.576239">
+      </trkpt>
+      <trkpt lat="6.230988" lon="-75.574364">
+      </trkpt>
+      <trkpt lat="6.232109" lon="-75.574412">
+      </trkpt>
+      <trkpt lat="6.232214" lon="-75.574413">
+      </trkpt>
+      <trkpt lat="6.233782" lon="-75.574231">
+      </trkpt>
+      <trkpt lat="6.238333" lon="-75.572403">
+      </trkpt>
+      <trkpt lat="6.241695000000001" lon="-75.570978">
+      </trkpt>
+      <trkpt lat="6.2443670000000004" lon="-75.56989">
+      </trkpt>
+      <trkpt lat="6.245224000000001" lon="-75.57185400000002">
+      </trkpt>
+    </trkseg>
+  </trk>
+  </gpx>

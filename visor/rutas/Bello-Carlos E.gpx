@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <bounds minlat="6.175549" minlon="-75.616075" maxlat="6.336994" maxlon="-75.55607"/>
+  </metadata>
+    <trk>
+    <name>Bello-Carlos E. Restrepo</name>
+    <desc>name=Ruta Segura Bello&#xA;styleUrl=#line-55AA00-6000&#xA;styleHash=7b3deff6&#xA;description=Este 23 de Abril muévete en bici al trabajo, a la U, al colegio, donde desees…&#xA;stroke=#55aa00&#xA;stroke-opacity=1&#xA;stroke-width=6</desc>
+    <trkseg>
+      <trkpt lat="6.336994" lon="-75.559633">
+      </trkpt>
+      <trkpt lat="6.335403" lon="-75.558455">
+      </trkpt>
+      <trkpt lat="6.331565000000002" lon="-75.558228">
+      </trkpt>
+      <trkpt lat="6.327933" lon="-75.557848">
+      </trkpt>
+      <trkpt lat="6.320574999999999" lon="-75.557123">
+      </trkpt>
+      <trkpt lat="6.315710999999999" lon="-75.557137">
+      </trkpt>
+      <trkpt lat="6.314144" lon="-75.557142">
+      </trkpt>
+      <trkpt lat="6.311991" lon="-75.558344">
+      </trkpt>
+      <trkpt lat="6.311367" lon="-75.558817">
+      </trkpt>
+      <trkpt lat="6.309323999999999" lon="-75.559915">
+      </trkpt>
+      <trkpt lat="6.307386" lon="-75.560466">
+      </trkpt>
+      <trkpt lat="6.3043059999999995" lon="-75.560472">
+      </trkpt>
+      <trkpt lat="6.302728000000001" lon="-75.563246">
+      </trkpt>
+      <trkpt lat="6.300551" lon="-75.564771">
+      </trkpt>
+      <trkpt lat="6.297712000000001" lon="-75.566616">
+      </trkpt>
+      <trkpt lat="6.293456000000002" lon="-75.568031">
+      </trkpt>
+      <trkpt lat="6.292563000000001" lon="-75.568337">
+      </trkpt>
+      <trkpt lat="6.292605" lon="-75.568728">
+      </trkpt>
+      <trkpt lat="6.29204" lon="-75.56929700000002">
+      </trkpt>
+      <trkpt lat="6.291937999999999" lon="-75.569517">
+      </trkpt>
+      <trkpt lat="6.289358" lon="-75.570418">
+      </trkpt>
+      <trkpt lat="6.287721" lon="-75.570241">
+      </trkpt>
+      <trkpt lat="6.285695" lon="-75.570788">
+      </trkpt>
+      <trkpt lat="6.283898" lon="-75.571732">
+      </trkpt>
+      <trkpt lat="6.281429000000001" lon="-75.572339">
+      </trkpt>
+      <trkpt lat="6.279882999999999" lon="-75.572521">
+      </trkpt>
+      <trkpt lat="6.278246" lon="-75.572977">
+      </trkpt>
+      <trkpt lat="6.275164" lon="-75.573889">
+      </trkpt>
+      <trkpt lat="6.2724280000000014" lon="-75.575107">
+      </trkpt>
+      <trkpt lat="6.269293" lon="-75.576303">
+      </trkpt>
+      <trkpt lat="6.26748" lon="-75.576947">
+      </trkpt>
+      <trkpt lat="6.265390000000001" lon="-75.577612">
+      </trkpt>
+      <trkpt lat="6.263598000000001" lon="-75.578856">
+      </trkpt>
+      <trkpt lat="6.262734" lon="-75.579543">
+      </trkpt>
+      <trkpt lat="6.261609" lon="-75.579935">
+      </trkpt>
+      <trkpt lat="6.260255" lon="-75.579726">
+      </trkpt>
+      <trkpt lat="6.259039" lon="-75.58004700000001">
+      </trkpt>
+      <trkpt lat="6.256618" lon="-75.5809">
+      </trkpt>
+      <trkpt lat="6.255686" lon="-75.579055">
+      </trkpt>
+    </trkseg>
+  </trk>
+ </gpx>

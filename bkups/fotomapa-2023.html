@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Fotomapa</title>
+
+    <!-- Favicon -->
+	<link  rel="icon" href="./img/favicon.png" type="image/png" />
+    
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <script src='https://unpkg.com/mapillary-js@4.1.0/dist/mapillary.js'></script>
+    <link href='https://unpkg.com/mapillary-js@4.1.0/dist/mapillary.css' rel='stylesheet' />
+    <link href='https://unpkg.com/leaflet@1.0.1/dist/leaflet.css' rel='stylesheet' />
+    <script src='https://unpkg.com/leaflet@1.0.1/dist/leaflet.js'></script>
+
+
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+        #map { position: absolute; height: 100%; width: 50%; bottom: 0;}
+        #mly { position: absolute; width: 50%; height: 100%; top: 0; right: 0; bottom: 0; }
+</style>
+</head>
+
+<body>
+    <div id='map'></div>
+    <div id='mly'></div>
+    
+    <script>
+    var {Viewer} = mapillary;
+    
+  var viewer = new Viewer({    
+  accessToken: 'MLY|5554608214599642|0f4eab6039ca4f8060d9ed37b01c354c',    
+  container: 'mly', // the ID of our container defined in the HTML body 
+  imageId: '1083410459214290',
+  component: {cover: false},
+  sequence: {visible: true, playing: true},
+  });
+    </script>
+</body>
+</html>

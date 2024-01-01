@@ -1,0 +1,319 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-01-05",
+        "Incidente": "2021-01-05",
+        "Hora": "22:35",
+        "Dirección": "CR 57 CL 48",
+        "Sexo": "hombre",
+        "Edad": "51",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "bus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.575091,
+          6.250128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-02-13",
+        "Incidente": "2021-02-13",
+        "Hora": "00:15",
+        "Dirección": "CL44 CR 44",
+        "Sexo": "hombre",
+        "Edad": "52",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "motocicleta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.566679,
+          6.243239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-02-14",
+        "Incidente": "2020-12-26*",
+        "Hora": "12:20",
+        "Dirección": "CL 6Sur Cr 50EE",
+        "Sexo": "hombre",
+        "Edad": "55",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.583199,
+          6.202359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-03-20",
+        "Incidente": "2021-03-16",
+        "Hora": "18:20",
+        "Dirección": "CL 73 CR 52",
+        "Sexo": "hombre",
+        "Edad": "57",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "motocicleta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.565504,
+          6.269187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-05-29",
+        "Incidente": "2021-05-28",
+        "Hora": "17:35",
+        "Dirección": "CL 64B CR 98",
+        "Sexo": "mujer",
+        "Edad": "36",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "objeto fijo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.606731,
+          6.282568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-06-10",
+        "Incidente": "2021-06-10",
+        "Hora": "10:00",
+        "Dirección": "CL 50 CR 63",
+        "Sexo": "hombre",
+        "Edad": "84",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.578406,
+          6.254837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-06-19",
+        "Incidente": "2021-06-18",
+        "Hora": "01:06",
+        "Dirección": "CL 67 CR 50C",
+        "Sexo": "hombre",
+        "Edad": "15",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "bus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.562484,
+          6.263719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-08-20",
+        "Incidente": "2021-08-20",
+        "Hora": "16:20",
+        "Dirección": "CL 30 CR 65",
+        "Sexo": "hombre",
+        "Edad": "53",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "bus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.58274,
+          6.231805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-08-27",
+        "Incidente": "2021-07-29",
+        "Hora": "22:00",
+        "Dirección": "CR 65 CL 24",
+        "Sexo": "hombre",
+        "Edad": "73",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.583802,
+          6.225572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-09-17",
+        "Incidente": "2021-09-12",
+        "Hora": "09:20",
+        "Dirección": "CR 55 CL 40A",
+        "Sexo": "hombre",
+        "Edad": "64",
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.575155,
+          6.241852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-05-22",
+        "Incidente": "2021-05-22",
+        "Hora": "13:14",
+        "Dirección": "Medellín San Pedro km 1+600",
+        "Sexo": "hombre",
+        "Edad": 13,
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.604455,
+          6.278379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-11-02",
+        "Incidente": "2021-11-02",
+        "Hora": "23:20",
+        "Dirección": "CL 18 CR 28",
+        "Sexo": "hombre",
+        "Edad": 54,
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.55388,
+          6.217396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-11-05",
+        "Incidente": "2021-10-29",
+        "Hora": "23:10",
+        "Dirección": "CR 19 CL 16",
+        "Sexo": "hombre",
+        "Edad": 23,
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.549223,
+          6.213791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-11-02",
+        "Incidente": "2021-11-02",
+        "Hora": "23:24",
+        "Dirección": "CL 18 CR 28",
+        "Sexo": "hombre",
+        "Edad": 53,
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.558828,
+          6.220575
+        ]
+      },
+      {
+      "type": "Feature",
+      "properties": {
+        "Muerte": "2021-11-13",
+        "Incidente": "2021-11-11",
+        "Hora": "07:20",
+        "Dirección": "CR 51 CL 13 - 199",
+        "Sexo": "hombre",
+        "Edad": 70,
+        "Condición": "Conductor",
+        "Vehículo": "Bicicleta",
+        "Colision": "carro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.579525,
+          6.214963
+        ]
+      }
+     }
+  ]
+}

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Guía SIGenBici 2023: ejemplos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; font-weight: 500}
+h1 {font-size:40px; padding-top:45px}
+h2 {font-size:30px; padding-top:32px;}
+p {font-size:120%;}
+.etiquetas, .enlace {font-size:80%;}
+.ejemplo  {font-size:100%;}
+.id   {text-align: center;background-color:#009688;font-size:120%;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.padding-top {
+    padding-top: 35px;
+}
+table {font-size:100%;}
+hr {height:25px;border-width:0;color:gray;background-color:gray;}
+.filterDiv {
+  float: left;
+  text-align: left;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html#portada" class="w3-bar-item w3-button w3-theme-l1">Guía SIGenBici 2023</a>
+    <a href="https://www.siclas.org/sigenbici/mapa.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" target="_blank">Mapa ciclista</a>
+    <a href="mailto:contacto@siclas.org" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
+  </div>
+</div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Cerrar menú">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Contenido</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#intro">SIGenBici</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#enlaces">Índice de enlaces</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#colombia">Cicloinfraestructura en Colombia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#osm">Cicloinfraestructura en OSM</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#propuesta">Propuesta de etiquetas de separación y demarcación</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#vias-ciclistas">Etiquetas para vías ciclistas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="ejemplos.html">Ejemplos de etiquetas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="jerarquia.html">Jerarquía de vías en Medellín</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+<h1>Ejemplos de etiquetas</h1>
+<p><strong>Utiliza los botones para filtrar los ejemplos por subtipo.</strong></p>
+   <div class="w3-row">
+  <!-- Botones para filtrar -->          
+      <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Mostrar todo</button>
+  <button class="btn" onclick="filterSelection('ciclorruta')"> Ciclorrutas</button>
+  <button class="btn" onclick="filterSelection('ciclobanda')"> Ciclobandas</button>
+  <button class="btn" onclick="filterSelection('cicloadaptada')"> Vias cicloadaptadas</button>
+  <button class="btn" onclick="filterSelection('anden')"> Andén</button>
+  <button class="btn" onclick="filterSelection('calzada')"> Calzada</button>
+  <button class="btn" onclick="filterSelection('unsentido')"> Unidireccional</button>
+  <button class="btn" onclick="filterSelection('dossentidos')"> Bidireccional</button>
+  <button class="btn" onclick="filterSelection('derecha')"> Al lado derecho</button>
+  <button class="btn" onclick="filterSelection('izquierda')"> Al lado izquierdo</button>
+  <button class="btn" onclick="filterSelection('ambos')"> A ambos lados</button>
+  <button class="btn" onclick="filterSelection('separador')"> En separador central</button>
+  <button class="btn" onclick="filterSelection('arbusto')"> Arbustos</button>
+   <button class="btn" onclick="filterSelection('arboles')"> Árboles</button>
+   <button class="btn" onclick="filterSelection('jardinera')"> Jardinera</button>
+   <button class="btn" onclick="filterSelection('matera')"> Materas</button>
+   <button class="btn" onclick="filterSelection('bordillo')"> Bordillo</button>
+   <button class="btn" onclick="filterSelection('tacha')"> Tachas</button>
+   <button class="btn" onclick="filterSelection('baranda')"> Baranda</button>
+   <button class="btn" onclick="filterSelection('bolardo')"> Bolardos</button>
+</div>
+ 
+ <!-- Ejemplos ciclorrutas -->
+       
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta calzada unsentido derecha bordillo">1
+  <p class="id">CR-C-1-S</p>
+          <p class="subtipo">Ciclorruta unidireccional en calzada, a la derecha, en v&iacute;a de un sentido</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image10.png"
+                style="height: 150px;"
+                title="Foto"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D213663274468945"
+                >https://www.mapillary.com/app/?pKey=213663274468945</a></p>
+         
+          <table class="w3-table-all">
+              <tr style="height:225px">
+                  <td><p class="ejemplo">A:</p>
+          <p class="etiquetas">highway=*<br/>
+          cycleway=separate<br>
+          oneway=yes<br>
+          lanes=1</p>
+          </td>
+          <td><p class="ejemplo">B:</p>
+              <p class="etiquetas">
+          highway=cycleway<br>
+          oneway=yes<br>
+          separation:both=kerb<br>
+          marking:both=solid_line<br>
+          traffic_mode:left=motor_vehicle</p>
+          </td>
+          </tr>
+          </table>
+    </div>
+    
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos calzada derecha jardinera bordillo tacha">2
+  <p class="id">CR-C-2-S</p>
+          <p class="subtipo">Ciclorruta bidireccional en calzada a la derecha en vía de un sentido</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image38.png"
+                style="height: 150px;"
+                title="Foto"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D206292728564998"
+                >https://www.mapillary.com/app/?pKey=206292728564998</a></p>
+         <div style="overflow-x:auto; overflow-y:auto;"> 
+          <table class="w3-table-all">
+              <tr style="height:225px">
+                  <td><p class="ejemplo">A:</p>
+          <p class="etiquetas">highway=*<br>
+cycleway=separate<br>
+oneway=yes<br>
+lanes=2
+          </p>
+          </td>
+          <td><p class="ejemplo">B:</p>
+              <p class="etiquetas">
+          highway=cycleway<br>
+oneway=no<br>
+separation:left=bump<br>
+separation:right=kerb;greenery<br>
+marking:both=solid_line<br>
+traffic_mode:left=motor_vehicle<br>
+traffic_mode:right=foot  <br>
+          </p>
+          </td>
+          </tr>
+          </table>
+    </div></div>
+    
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos calzada derecha arbusto arboles">3
+  <p class="id">CR-C-2-S</p>
+          <p class="subtipo">Ciclorruta bidireccional en calzada a la derecha en vía de un sentido</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image44.png"
+                style="height: 150px;"
+                title="Foto"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D483917120612816"
+                >https://www.mapillary.com/app/?pKey=483917120612816</a></p>
+         
+          <table class="w3-table-all">
+              <tr style="height:225px">
+                  <td><p class="ejemplo">A:</p>
+          <p class="etiquetas">highway=*<br>
+cycleway=separate<br>
+oneway=yes<br>
+lanes=2
+          </p>
+          </td>
+          <td><p class="ejemplo">B:</p>
+              <p class="etiquetas">
+          highway=cycleway<br>
+oneway=no<br>
+separation:left=hedges<br>
+separation:right=tree_row<br>
+marking:both=solid_line<br>
+traffic_mode:right=foot<br>
+traffic_mode:left=motor_vehicle 
+          </p>
+          </td>
+          </tr>
+          </table>
+    </div>
+    
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta anden dossentidos separador bordillo arboles">4
+  <p class="id">CR-A-2-S</p>
+          <p class="subtipo">Ciclorruta bidireccional a nivel and&eacute;n en separador central de v&iacute;a de dos sentidos</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image41.png"
+                style="height: 150px;"
+                title="Foto"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D735238754859349"
+                >https://www.mapillary.com/app/?pKey=735238754859349</a></p>
+         <div style="overflow-x:auto; overflow-y:auto;"> 
+          <table class="w3-table-all">
+              <tr style="height:225px">
+                  <td><p class="ejemplo">A:</p>
+          <p class="etiquetas">highway=* <br>
+          cycleway=separate <br>
+          oneway=yes <br>
+          lanes=2
+          </p>
+          </td>
+          <td><p  class="ejemplo">B:</p>
+              <p class="etiquetas">
+          highway=cycleway <br>oneway=no <br>separation:left=kerb
+              <br />separation:right=tree_row <br>marking:both=solid_line<br>
+              traffic_mode:both=motor_vehicle
+          </p>
+          </td>
+          <td><p  class="ejemplo">C:</p>
+          <p class="etiquetas">highway=* <br>
+          cycleway=separate <br>
+          oneway=yes <br>
+          lanes=2
+          </p>
+          </td>
+          </tr>
+          </table>
+    </div></div>
+ 
+ <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden izquierda bolardo">5<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta bidireccional a nivel and&eacute;n a la izquierda en v&iacute;a de un sentido</p> <p class="foto"><img alt="" src="images/	image21.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D133017656069322">https://www.mapillary.com/app/?pKey=133017656069322</a></p> 
+ <div style="overflow-x:auto; overflow-y:auto;"> 
+ <table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>cycleway=separate<br>oneway=yes<br>lanes=3</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:left=no<br>separation:right=bollard<br>marking:both=solid_line<br>traffic_mode:right=motor_vehicle<br>traffic_mode:left=foot</p> </td> </tr> </table> </div>  </div>
+ 
+ <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden derecha arboles estructura">6<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta a nivel and&eacute;n a la derecha, con árboles</p> <p class="foto"><img alt="" src="images/image29.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D605419671300787">https://www.mapillary.com/app/?pKey=605419671300787</a></p>
+ <div style="overflow-x:auto; overflow-y:auto;"> 
+ <table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=* <br>cycleway=separate <br>oneway=yes<br>lanes=2</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway <br>oneway=no <br>separation:left=tree_row<br>separation:right=structure <br>marking:both=solid_line<br>traffic_mode:left=foot <br>traffic_mode:right=no</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden arboles">7<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta nivel and&eacute;n bidireccional sin parqueo</p> <p class="foto"><img alt="" src="images/image31.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D569146215121683">https://www.mapillary.com/app/?pKey=569146215121683</a></p> 
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> 
+<tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=* <br>cycleway=separate <br>oneway=yes<br>lanes=2</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=* <br>cycleway=separate <br>oneway=yes<br>lanes=2</p> </td> <td><p class="ejemplo">C:</p><p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:left=no<br>separation:right=tree_row<br>marking:left=solid_line;surface<br>marking:right=solid_line<br>traffic_mode:left=motor_vehicle<br>traffic_mode:right=foot</p></td></tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden jardinera bordillo">8<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta nivel and&eacute;n bidireccional sin parqueo</p> <p class="foto"><img alt="" src="images/image46.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D1305930423663366">https://www.mapillary.com/app/?pKey=1305930423663366</a></p> 
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>lanes=2 <br>oneway=yes <br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:left=greenery<br>separation:right=kerb<br>marking:both=solid_line<br>traffic_mode:left=foot<br>traffic_mode:right=motor_vehicle</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden bolardo">9<p class="id">CR-A-2-P</p><p class="subtipo">Ciclorruta a nivel and&eacute;n, con bolardos, parqueo y and&eacute;n.</p> <p class="foto"><img alt="" src="images/image8.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D231402845900264">https://www.mapillary.com/app/?pKey=231402845900264</a></p>
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>lanes=2 <br>oneway=yes<br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:left=bollard<br>separation:right=no<br>marking:both=solid_line;surface<br>traffic_mode:left=parking<br>traffic_mode:right=foot</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos calzada derecha bordillo tacha">10<p class="id">CR-C-2-S</p><p class="subtipo">Ciclorruta bidireccional en calzada, a la derecha, en v&iacute;a de dos sentidos</p> <p class="foto"><img alt="" src="images/image28.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D581039303804729">https://www.mapillary.com/app/?pKey=581039303804729</a></p> 
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>lanes=2<br>oneway=no<br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:left=bump<br>separation:right=kerb<br>marking:both=solid_line<br>traffic_mode:right=no<br>traffic_mode:left=motor_vehicle</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos calzada derecha tacha">11<p class="id">CR-C-2-S</p><p class="subtipo">Ciclorruta bidireccional en calzada, a la derecha*, en v&iacute;a de un sentido</p> <p class="foto"><img alt="" src="images/image36.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D1405285916912715">https://www.mapillary.com/app/?pKey=1405285916912715</a></p> 
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>lanes=1<br>oneway=yes<br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:left=studs<br>separation:right=no<br>marking:right=solid_line;surface<br>marking:left=doble_solid_line<br>traffic_mode:right=foot<br>traffic_mode:left=motor_vehicle</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden separador arboles bordillo">12<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta bidireccional a nivel and&eacute;n en separador central</p> <p class="foto"><img alt="" src="images/image3.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D617441266436839">https://www.mapillary.com/app/?pKey=617441266436839</a></p> <table class="w3-table-all">
+     <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>lanes=2<br>oneway=yes<br>cycleway=separate </p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:right=tree_row<br>separation:left=kerb<br>marking:both=solid_line<br>traffic_mode:right=no<br>traffic_mode:left=motor_vehicle</p> </td> <td><p class="ejemplo">C:</p><p class="etiquetas">highway=*<br>lanes=2<br>oneway=yes<br>cycleway=separate</p></td></tr> </table> </div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden derecha jardinera bordillo">13<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta bidireccional a la derecha a nivel del and&eacute;n en v&iacute;a de dos sentidos</p> <p class="foto"><img alt="" src="images/image43.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D909785556536796">https://www.mapillary.com/app/?pKey=909785556536796</a></p>
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>lanes=2<br>oneway=no<br>cycleway=separate </p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:right=greenery<br>separation:left=kerb<br>marking:both=solid_line<br>traffic_mode:right=foot<br>traffic_mode:left=motor_vehicle</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden bordillo">14<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta a nivel and&eacute;n, en v&iacute;a de dos sentidos, bidireccional y sin parqueo</p> <p class="foto"><img alt="" src="images/image45.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D722750106071247">https://www.mapillary.com/app/?pKey=722750106071247</a></p> 
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>oneway=no<br>lanes=2<br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>separation:both=kerb<br>marking:both=solid_line traffic_mode:right=motor_vehicle<br>trafic_mode:left=foot</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos calzada derecha jersey bordillo">15<p class="id">CR-C-2-S</p><p class="subtipo">Ciclorruta bidireccional en calzada a la derecha</p> <p class="foto"><img alt="" src="images/image18.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D1544040725963206">https://www.mapillary.com/app/?pKey=1544040725963206</a></p>
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>oneway=yes<br>lanes=2<br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>foot=designated<br>segregated=yes <br>separation:right=kerb<br>separation:left=jersey_barrier<br>traffic_mode:left=motor_vehicle</p> </td> </tr> </table> </div></div>
+
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclorruta dossentidos anden separador baranda">16<p class="id">CR-A-2-S</p><p class="subtipo">Ciclorruta a nivel and&eacute;n, bidireccional, en separador central separada por baranda</p> <p class="foto"><img alt="" src="images/image39.png" style="height: 150px;" title="Foto"/></p> <p class="enlace"><a href="https://www.mapillary.com/app/?pKey%3D531358998242235">https://www.mapillary.com/app/?pKey=531358998242235</a></p> 
+<div style="overflow-x:auto; overflow-y:auto;"> 
+<table class="w3-table-all"> <tr style="height:225px"> <td><p class="ejemplo">A:</p> <p class="etiquetas">highway=*<br>oneway=yes<br>lanes=3<br>cycleway=separate</p></td>  <td><p class="ejemplo">B:</p> <p class="etiquetas">highway=cycleway<br>oneway=no<br>foot=designated<br>segregated=no <br>marking:both=solid_line<br>separation:both=fence<br>traffic_mode:both=motor_vehicle</p> </td> <td><p class="ejemplo">C:</p><p class="etiquetas">highway=*<br>oneway=yes<br>lanes=3<br>cycleway=separate</p></td></tr> </table> </div></div>
+ 
+ <!-- Ejemplos cicloabandas -->
+ 
+
+ <!-- Ejemplos vías cicloadaptadas -->
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv cicloadaptada">34
+          <p class="id">Vía cicloadaptada</p>
+          <p class="subtipo">Banda ciclopreferente</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image15.png"
+                style="width: 100%; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D964458071062289"
+                >https://www.mapillary.com/app/?pKey=964458071062289</a
+              ></p>
+          <p class="etiquetas">highway=* <br />oneway=no <br />lanes=2<br />oneway:bicycle=no
+              <br />cycleway:both=lane <br />cycleway:both:oneway=yes<br />
+              cycleway:right:separation:right=greenery<br />
+              cycleway:right:separation:left=no cycleway:right:marking:right=no<br />
+              cycleway:right:marking:left=dashed_line<br />
+              cycleway:right:traffic_mode:right=foot<br />
+              cycleway:right:traffic_mode:left=motor_vehicle<br />
+              cycleway:left:separation:left=no<br />
+              cycleway:left:separation:right=kerb<br />
+              cycleway:left:marking:left=dashed_line<br />
+              cycleway:left:marking:right=no<br />
+              cycleway:left:traffic_mode:left=motor_vehicle<br />
+              cycleway:left:traffic_mode:right=foot</p>
+    </div>    
+    
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv cicloadaptada">35
+          <p class="id">Vía cicloadaptada</p>
+          <p class="subtipo">Carril ciclopreferente</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image33.png"
+                style="width: 100%; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D955110898736371"
+                >https://www.mapillary.com/app/?pKey=955110898736371</a
+              ></p>
+          <p class="etiquetas">highway=* <br />lanes=2 <br />oneway=no
+              <br />cycleway:both=shared_lane</p>
+    </div>
+   
+    <div class="w3-third w3-container w3-padding-16  w3-border container filterDiv cicloadaptada">36
+          <p class="id">Vía cicloadaptada</p>
+          <p class="subtipo">Carril ciclopreferente: con pictograma y se&ntilde;al de l&iacute;mite de velocidad 30 km/h pintados en el pavimento.</p>
+          <p class="foto"><img
+                alt=""
+                src="images/image12.png"
+                style="width: 100%; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></p>
+          <p class="enlace"><a
+                href="https://www.mapillary.com/app/?pKey%3D1785998121752968"
+                >https://www.mapillary.com/app/?pKey=1785998121752968</a
+              ></p>
+          <p class="etiquetas">
+              highway=* <br />oneway=no <br />lanes=2
+              <br />cycleway:both=shared_lane<br />maxspeed=30
+              <br />source:maxspeed=marking
+          </p>
+    </div>   
+       
+  </div>
+
+ <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-hover-black" href="index.html">1</a>
+      <a class="w3-button w3-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="jerarquia.html">3</a>
+   
+    </div>
+  </div>
+  
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p style="text-align:center">Esta guía es posible gracias al apoyo del ITDP.<br/><img src="images/logo-ITDP.jpeg" width="150px" /></p>
+      
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p style="text-align:right">Plantilla original: <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> Última actualización: 23 de abril de 2023</p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+// Script para filtrar
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

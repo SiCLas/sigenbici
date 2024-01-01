@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Guía SIGenBici 2023: tareas del proyecto</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; font-weight: 500}
+h1 {font-size:40px; padding-top:45px}
+h2 {font-size:30px; padding-top:32px;}
+p {font-size:120%;}
+.etiquetas, .enlace, .fuente {font-size:100%;}
+.ejemplo  {font-size:100%;}
+.tuto {margin-right:25px;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.padding-top {
+    padding-top: 35px;
+}
+table {font-size:100%;}
+hr {height:25px;border-width:0;color:gray;background-color:gray;}
+.captura {
+    max-width:100%;
+    max-height:450px;
+}
+</style>
+  </head>
+  <body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html#portada" class="w3-bar-item w3-button w3-theme-l1">Guía SIGenBici 2023</a>
+    <a href="https://www.siclas.org/sigenbici/mapa.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" target="_blank">Mapa ciclista</a>
+    <a href="mailto:contacto@siclas.org" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
+  </div>
+</div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Cerrar menú">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Contenido</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#intro">SIGenBici</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#enlaces">Enlaces de referencia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#colombia">Cicloinfraestructura en Colombia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#osm">Cicloinfraestructura en OSM</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#propuesta">Propuesta de etiquetas de separación y demarcación</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#vias-ciclistas">Etiquetas para vías ciclistas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="ejemplos.html">Ejemplos de etiquetas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="tareas.html">Tareas del proyecto</a>
+   <a class="w3-bar-item w3-button w3-hover-black" href="jerarquia.html">Jerarquía de vías en Medellín</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+<div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal"><strong>Tareas del proyecto</strong></h1>
+<p class="tuto">Las tareas del proyecto están disponibles en: <a href="https://tasks.hotosm.org/projects/14761" target="_blank">https://tasks.hotosm.org/projects/14761</a>. Este gestor de tareas permite organizar el trabajo colaborativo, de manera que solo una persona puede estar haciendo cambios en cierta zona en un momento dado.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-third w3-container w3-center">
+
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Utiliza tu usuario y contraseña de OSM para iniciar sesión.</p>
+
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Después de iniciar sesión y estando en la presentación del proyecto, en la esquina inferior derecha hacemos clic en el botón rojo <span style="background:red;color:white;padding:2px">Contribuir</span> para comenzar.</p>
+</div>
+ <div class="w3-twothird w3-container">
+<div class="w3-center">
+  <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/tasking-manager.png" title="Gestor de tareas" alt="Captura de pantalla del proyecto en el gestor de tareas"></p>
+</div>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+    <div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/mapear-tarea-seleccionada.png" title="Gestor de tareas: mapear tarea seleccionada"></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">A continuación, en el mapa seleccionamos uno de los recuadros en la zona urbana de Medellín y luego hacemos clic en el botón rojo <span style="background:red;color:white;padding:2px">Mapear tarea seleccionada</span>.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+    <div class="w3-twothird w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/zona-piloto.png" title="Zona piloto para mapear."></p>
+</div>
+</div>
+<div class="w3-third w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Inicialmente trabajaremos mapeando la zona de Laureles y Belén Rosales, que ya tiene fotos actualizadas en Mapillary para usar como referencia. Luego seguiremos con el resto de la zona urbana de Medellín.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+    <div class="w3-half w3-container">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Si es la primera vez que vas a editar el mapa de OSM, puedes hacer clic en <span style="background:red;color:white;padding:2px">Iniciar el tutorial</span> para aprender las funciones básicas del editor iD.</p>  
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Si ya sabes cómo editar, solo hay que hacer clic en <span style="background:red;color:white;padding:2px">Editar ahora</span> para empezar a mapear.</p>  
+</div>
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/bienvenida-id.png" title="Bienvenida editor ID"></p>
+</div>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/datos-del-mapa-fotos.png" title="Configurar la capa de fotos de Mapillary"></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Para facilitar la edición, podemos configurar los elementos visibles en el mapa. En la barra de íconos a la derecha en el mapa, hacemos clic en el ícono Datos del mapa y desplegamos primero la sección Capas de fotos. Aquí marcamos la casilla para activar las imágenes de Mapillary.</p>
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">IMPORTANTE: ¡NO UTILICES GOOGLE STREETVIEW!<br>
+El uso de Google StreetView para ayudar a mapear los datos de OpenStreetMap pondrá nuestro proyecto y el proyecto OpenStreetMap en riesgo legal,
+ya que Google tiene los derechos de autor y no tenemos licencia de uso. Si no puedes determinar la información cartográfica de alguna de las fuentes autorizadas (vistas de fondo, Mapillary, etc.), en el gestor de tareas marca la tarea como inacabada y deja un comentario. Si has añadido datos a OpenStreetMap basados en GoogleStreetView, debes borrar estos datos y cartografiar desde cero utilizando otras fuentes.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/datos-del-mapa-elementos.png" title="Configuración de los elementos del mapa"></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Luego, desplegamos la sección Elementos del mapa, deseleccionamos todos los elementos y marcamos para ver solamente Vías de tránsito, Vías de servicio y Senderos. Esto nos permitirá tener un mapa de fondo con menos elementos visibles para evitar confusiones y concentrarnos en la edición de vías.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/id-mapillary-edicion.png" title="Edición en ID con capa de fotos Mapillary"></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Recuerda realizar modificaciones solo dentro del recuadro magenta que aparece marcado en el editor, aunque algunas líneas (calles o ciclorrutas) pueden pasarse un poco del límite y en ese caso no hay problema.</p>
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Las líneas verdes son las trazas con imagenes de Mapillary disponibles y puedes ver las fotos como referencia al hacer clic en los puntos verdes. El punto amarillo indica la dirección en la que está la foto.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/editar-elemento.png" title=""></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Selecciona el elemento que hayas creado o que vas a revisar o modificar y en la parte inferior del panel izquierdo, en la sección correspondiente a las etiquetas, selecciona el modo texto para realizar las modificaciones necesarias según el tipo de cicloinfraestructura.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/id-dividir-linea.png" title="Dividir una línea en el editor ID"></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">En algunos casos, es posible que sea necesario dividir la línea de la ciclorruta cuando las separaciones son distintas en varios tramos. Para esto, hacemos clic derecho sobre el punto donde queremos hacer la división y seleccionamos Dividir (el ícono de las tijeras). Ahora podremos etiquetar cada tramo independiente según la separación y demarcación que tenga.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/subir-cambios.png" title="Subir los cambios realizados a OSM"></p>
+</div>
+</div>
+<div class="w3-half w3-container w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Es recomendable guardar las contribuciones al mapa regularmente y es un requisito guardar todos los cambios antes de poder enviar la tarea completada para su validación. Para ello, utilizamos el ícono GUARDAR que aparece en la esquina superior derecha del mapa. Una vez hacemos clic en el ícono, se cargará un panel de verificación en la parte izquierda de la pantalla con una lista de los cambios que hemos realizado en el área. Introducimos un comentario sobre las modificaciones y hacemos clic en el botón SUBIR. Es importante conservar los hashtags del proyecto que se han rellenado previamente en el campo Comentario, ya que esta es la manera en que podemos hacer un seguimiento a las contribuciones a nuestra iniciativa en OSM.</p>  
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center"><strong>Nota especial sobre el borrado:</strong><br>
+En general, debes evitar borrar el trabajo de otras personas si solo necesita mejoras. Puedes borrar tus propios errores, pero deberías intentar ajustar los objetos mapeados de otras personas si necesitan cambios. Esto preserva la historia de los elementos en la base de datos OSM y es respetuoso con las demás personas que mapean. Si realmente crees que algo debe ser eliminado, considera preguntar primero al mapeador original o en una de las listas de correo electrónico de OSM.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img class="captura" src="images/terminacion.png" title="Cerrar la tarea"></p>
+</div>
+</div>
+<div class="w3-half w3-container  w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Después de subir los cambios realizados a OSM, en el panel lateral derecho seleccionamos las opciones de terminación de la tarea.</p> 
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Si todavía no has terminado todo el recuadro puedes indicar aquí que la tarea aún no está totalmente mapeada; si ya terminaste de mapear toda la cicloinfraestructura en el recuadro, indicamos que la tarea sí está totalmente mapeada.</p>
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">De ser necesario, aquí también puedes agregar un comentario a la tarea.</p>
+</div>
+</div>
+
+<div class="w3-row w3-border w3-padding-16">
+<div class="w3-half w3-container">
+<div class="w3-center">
+    <p class="tuto w3-border w3-padding-32 w3-center">  
+<img src="images/logo-sigenbici.png" title="SIGenBici" style="width:150px"></p>
+</div>
+</div>
+<div class="w3-half w3-container  w3-center">
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">Para terminar enviamos la tarea.</p>
+<p class="tuto w3-border w3-padding-large w3-padding-32 w3-center">¡Muchas gracias por contribuir a este proyecto de mapeo colaborativo, de ciclistas para ciclistas!</p>
+</div>
+</div>
+
+
+ <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-hover-black" href="index.html#portada">1</a>
+      <a class="w3-button w3-hover-black" href="ejemplos.html">2</a>
+      <a class="w3-button w3-black" href="tareas.html">3</a> 
+      <a class="w3-button w3-hover-black" href="jerarquia.html">4</a>
+    </div>
+  </div>
+ <!-- END pagination -->
+ 
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p style="text-align:center">Esta guía es posible gracias al apoyo del ITDP.<br/><img src="images/logo-ITDP.jpeg" width="150px" /></p>
+      
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p style="text-align:right">Plantilla original: <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> Última actualización: 11 de julio de 2023</p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

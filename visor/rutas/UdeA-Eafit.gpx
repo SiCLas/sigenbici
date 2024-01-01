@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <bounds minlat="6.175549" minlon="-75.616075" maxlat="6.336994" maxlon="-75.55607"/>
+  </metadata>
+   <trk>
+    <name>UdeA-Eafit</name>
+    <desc>name=Ruta Segura Norte&#xA;styleUrl=#line-00557F-6000&#xA;styleHash=145bd678&#xA;description=Este 23 de Abril muévete en bici al trabajo, a la U, al colegio, donde desees…&#xA;stroke=#00557f&#xA;stroke-opacity=1&#xA;stroke-width=6</desc>
+    <trkseg>
+      <trkpt lat="6.198839" lon="-75.577867">
+      </trkpt>
+      <trkpt lat="6.200175" lon="-75.577602">
+      </trkpt>
+      <trkpt lat="6.201189" lon="-75.577555">
+      </trkpt>
+      <trkpt lat="6.202356" lon="-75.57748800000002">
+      </trkpt>
+      <trkpt lat="6.203379" lon="-75.577392">
+      </trkpt>
+      <trkpt lat="6.205717" lon="-75.577104">
+      </trkpt>
+      <trkpt lat="6.208838000000001" lon="-75.576842">
+      </trkpt>
+      <trkpt lat="6.211288" lon="-75.576599">
+      </trkpt>
+      <trkpt lat="6.214122" lon="-75.576316">
+      </trkpt>
+      <trkpt lat="6.217171" lon="-75.576041">
+      </trkpt>
+      <trkpt lat="6.225594999999999" lon="-75.575152">
+      </trkpt>
+      <trkpt lat="6.230941" lon="-75.574534">
+      </trkpt>
+      <trkpt lat="6.233429000000001" lon="-75.57445600000001">
+      </trkpt>
+      <trkpt lat="6.2364880000000005" lon="-75.573338">
+      </trkpt>
+      <trkpt lat="6.244303999999999" lon="-75.570144">
+      </trkpt>
+      <trkpt lat="6.244616" lon="-75.570766">
+      </trkpt>
+      <trkpt lat="6.247279000000001" lon="-75.569755">
+      </trkpt>
+      <trkpt lat="6.249785000000001" lon="-75.568673">
+      </trkpt>
+      <trkpt lat="6.251233" lon="-75.568059">
+      </trkpt>
+      <trkpt lat="6.252447" lon="-75.567794">
+      </trkpt>
+      <trkpt lat="6.252668" lon="-75.568582">
+      </trkpt>
+      <trkpt lat="6.257304" lon="-75.567655">
+      </trkpt>
+      <trkpt lat="6.264331" lon="-75.56634">
+      </trkpt>
+      <trkpt lat="6.269283" lon="-75.565537">
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

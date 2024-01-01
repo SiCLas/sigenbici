@@ -1,0 +1,1283 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.564804,6.276585 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":1,
+    "name":"Moravia",
+    "Num_Puestos":15,
+    "NombreCorto":"MRV",
+    "UltimaActualizacion":"14/03/2019 10:47",
+    "es_manual":"1",
+    "descripcion_web":"Frente a la entrada principal del Centro de Desarrollo Cultural de Moravia",
+    "zona":"1",
+    "Direccion":"CALLE 82A # 52-29"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.5653,6.269267 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":2,
+    "name":"Universidad",
+    "Num_Puestos":33,
+    "NombreCorto":"UNI",
+    "UltimaActualizacion":"21/12/2018 16:18",
+    "es_manual":"1",
+    "descripcion_web":"Bajo el viaducto de la estación Universidad del Metro",
+    "zona":"1",
+    "Direccion":"CALLE 73 # 52-2"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.566348,6.265182 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":3,
+    "name":"Ruta N",
+    "Num_Puestos":40,
+    "NombreCorto":"RTN",
+    "UltimaActualizacion":"27/09/2019 15:28",
+    "es_manual":"0",
+    "descripcion_web":"Frente a la fachada principal de Ruta N sobre la ciclorruta de la Avenida Carabobo.",
+    "zona":"1",
+    "Direccion":"CARRERA 52 # 67A-13"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.575066,6.265161 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":4,
+    "name":"Punto Cero",
+    "Num_Puestos":10,
+    "NombreCorto":"PT0",
+    "UltimaActualizacion":"21/12/2018 16:13",
+    "es_manual":"1",
+    "descripcion_web":"Intercambio vial de Punto Cero al lado de la estación de policía",
+    "zona":"2",
+    "Direccion":"CARRERA 64 # 65-59"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.578812,6.259663 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":5,
+    "name":"Universidad Nacional",
+    "Num_Puestos":33,
+    "NombreCorto":"NA",
+    "UltimaActualizacion":"21/12/2018 16:16",
+    "es_manual":"1",
+    "descripcion_web":"Portería de la Iguaná con Carrera 65 de la Universidad Nacional",
+    "zona":"2",
+    "Direccion":"CALLE 59A # 64E-44"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.581024,6.25649 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":6,
+    "name":"Colombia",
+    "Num_Puestos":12,
+    "NombreCorto":"COL",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Esquina occidental de la Carrera 65 con Calle 51",
+    "zona":"4",
+    "Direccion":"CARRERA 65 # 50-29"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.582687,6.253003 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":7,
+    "name":"Suramericana",
+    "Num_Puestos":20,
+    "NombreCorto":"SUR",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Bajo el viaducto de la estación Suramericana del Metro",
+    "zona":"4",
+    "Direccion":"CALLE 47D # 65-92"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.587692,6.253349 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":8,
+    "name":"Estadio",
+    "Num_Puestos":20,
+    "NombreCorto":"EST",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Bajo el viaducto de la estación Estadio del Metro en el parqueadero de bicicletas",
+    "zona":"4",
+    "Direccion":"CALLE 47D # 70-82"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.588585,6.249014 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":9,
+    "name":"San Juan",
+    "Num_Puestos":14,
+    "NombreCorto":"SJU",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Costado norte de la Calle 44 San Juan con Carrera 70",
+    "zona":"4",
+    "Direccion":"CALLE 44 # 69-133"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.589188,6.244998 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":10,
+    "name":"UPB",
+    "Num_Puestos":12,
+    "NombreCorto":"UPB",
+    "UltimaActualizacion":"21/02/2019 11:34",
+    "es_manual":"1",
+    "descripcion_web":"Sobre la ciclorruta de la Carrera 70 frente a la entrada de la UPB",
+    "zona":"4",
+    "Direccion":"CARRERA 70 # CIRCULAR 1-50"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.585136,6.260004 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":11,
+    "name":"Los Colores",
+    "Num_Puestos":22,
+    "NombreCorto":"COL",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Al frente de la entrada principal de la Institución Universitaria Salazar y Herrera",
+    "zona":"4",
+    "Direccion":"CARRERA 70 # TRANSVERSAL 51A"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.597366,6.258628 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":12,
+    "name":"Floresta",
+    "Num_Puestos":20,
+    "NombreCorto":"FLO",
+    "UltimaActualizacion":"21/02/2019 11:37",
+    "es_manual":"1",
+    "descripcion_web":"Bajo el viaducto de la estación Floresta del Metro en el parqueadero de bicicletas",
+    "zona":"4",
+    "Direccion":"CALLE 48 # 79-46"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.591324,6.271922 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":13,
+    "name":"Robledo",
+    "Num_Puestos":21,
+    "NombreCorto":"ROB",
+    "UltimaActualizacion":"21/02/2019 11:36",
+    "es_manual":"1",
+    "descripcion_web":"Diagonal al Colegio Mayor de Antioquia",
+    "zona":"2",
+    "Direccion":"CARRERA 77B # 60-22"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.5746534,6.2434627 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":19,
+    "name":"Plaza de La Libertad",
+    "Num_Puestos":38,
+    "NombreCorto":"ALP",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Costado sur de la Plaza de la Libertad al lado de La Alpujarra",
+    "zona":"3",
+    "Direccion":"CALLE 42C # 53A-24"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.584008,6.245383 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":20,
+    "name":"Parque de Los Mangos",
+    "Num_Puestos":18,
+    "NombreCorto":"MNG",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Esquina de la Av. Bolivariana con Carrera 65,  costado norte parque de Los Mangos",
+    "zona":"4",
+    "Direccion":"CARRERA 66B # 40-51"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583073,6.239151 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":21,
+    "name":"La 33",
+    "Num_Puestos":21,
+    "NombreCorto":"33",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Costado sur bajo el puente de la Carrera 65 con sobre la Calle 33",
+    "zona":"6",
+    "Direccion":"CARRERA 65 # 32F-12"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.593812,6.24597 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":22,
+    "name":"Primer Parque de Laureles",
+    "Num_Puestos":32,
+    "NombreCorto":"LAU",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Costado norte del 1er Parque de Laureles,  al borde de la ciclorruta",
+    "zona":"4",
+    "Direccion":"CARRERA 39D # 73-95"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.591538,6.231326 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":23,
+    "name":"Rosales",
+    "Num_Puestos":9,
+    "NombreCorto":"ROS",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Esquina de la Cll. 30 con Cra. 70, diagonal a la estación Rosales de Metroplús",
+    "zona":"6",
+    "Direccion":"CARRERA 70 # 29-73"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.593096,6.21553 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":24,
+    "name":"Maria Luisa Calle",
+    "Num_Puestos":27,
+    "NombreCorto":"MLC",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Entrada principal de la Unidad Deportiva Maria Luisa Calle ",
+    "zona":"6",
+    "Direccion":"CARRERA 70 # 3-138"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.615623,6.151631 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":27,
+    "name":"Sabaneta Parque",
+    "Num_Puestos":1,
+    "NombreCorto":"SPQ",
+    "UltimaActualizacion":"29/08/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Costado sur Parque de sabaneta",
+    "zona":"8",
+    "Direccion":"CARRERA 65 # 50-29"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.616668,6.1568288 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":28,
+    "name":"Sabaneta Metro",
+    "Num_Puestos":1,
+    "NombreCorto":"SMT",
+    "UltimaActualizacion":"29/08/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Ingreso oriental estación Sabaneta del Metro",
+    "zona":"8",
+    "Direccion":"CALLE 67sur - 49"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.594235,6.258327 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":32,
+    "name":"San Pedro y San Pablo",
+    "Num_Puestos":40,
+    "NombreCorto":"PME",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Esquina de la calle 48 con carrera 77A, barrio Estadio.",
+    "zona":"4",
+    "Direccion":"CALLE 48 CON CARRERA 77A"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.577011,6.245512 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":33,
+    "name":"Pies Descalzos I",
+    "Num_Puestos":24,
+    "NombreCorto":"DES",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"En el túnel verde EPM al costado norte de Pies Descalzos",
+    "zona":"3",
+    "Direccion":"CARRERA 57A CON CALLE 42A"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.573872,6.242481 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":34,
+    "name":"Área Metropolitana",
+    "Num_Puestos":21,
+    "NombreCorto":"AMV",
+    "UltimaActualizacion":"21/12/2018 16:24",
+    "es_manual":"1",
+    "descripcion_web":"Al frente del edificio del Área Metropolitana sobre el costado norte de la Calle Los Huesos",
+    "zona":"3",
+    "Direccion":"CALLE 41 CON CARRERA 53"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.5756351,6.2426281 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":35,
+    "name":"Plaza Mayor",
+    "Num_Puestos":20,
+    "NombreCorto":"PLZ",
+    "UltimaActualizacion":"27/09/2019 15:29",
+    "es_manual":"0",
+    "descripcion_web":"Costado sur de Plaza Mayor sobre la Avenida Ferrocarril,  salida puente peatonal de Metroplús",
+    "zona":"3",
+    "Direccion":"CALLE 41 # 55-80"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.571561,6.246078 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":36,
+    "name":"Parque de Las Luces I",
+    "Num_Puestos":28,
+    "NombreCorto":"CIS",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Plaza de Cisneros frente a los edificios Carré y Vásquez",
+    "zona":"3",
+    "Direccion":"CALLE 44 # 52A-14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.576857,6.245322 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":37,
+    "name":"Pies Descalzos II",
+    "Num_Puestos":30,
+    "NombreCorto":"EPM",
+    "UltimaActualizacion":"27/09/2019 15:28",
+    "es_manual":"0",
+    "descripcion_web":"En el túnel verde EPM al costado norte de Pies Descalzos",
+    "zona":"3",
+    "Direccion":"CARRERA 57A CON CALLE 42A"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.597297,6.245062 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":38,
+    "name":"Segundo Parque de Laureles",
+    "Num_Puestos":30,
+    "NombreCorto":"PLA",
+    "UltimaActualizacion":"20/04/2015 15:50",
+    "es_manual":"1",
+    "descripcion_web":"Costado oriental del 2do Parque de Laureles con Av. Jardín",
+    "zona":"4",
+    "Direccion":"Carrera 75 # 38-10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.58609,6.243337 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":39,
+    "name":"San Joaquín",
+    "Num_Puestos":30,
+    "NombreCorto":"SJ",
+    "UltimaActualizacion":"27/09/2019 15:32",
+    "es_manual":"0",
+    "descripcion_web":"Esquina de la Av. Bolivariana con Circular 2da en el costado sur del parque de Los Mangos",
+    "zona":"4",
+    "Direccion":"CARRERA 66B CON CIRCULAR 2-1"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.58895,6.262605 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":40,
+    "name":"Orquídeas",
+    "Num_Puestos":40,
+    "NombreCorto":"PCB",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Esquina del supermercado Consumo y la unidad Camino de Los Colores",
+    "zona":"4",
+    "Direccion":"CALLE 53 # 73-81"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.571763,6.245594 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":41,
+    "name":"Parque de Las Luces II",
+    "Num_Puestos":28,
+    "NombreCorto":"LUC",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Plaza de Cisneros frente a los edificios Carré y Vásquez",
+    "zona":"3",
+    "Direccion":"CALLE 44 # 52A-14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.596746,6.242021 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":42,
+    "name":"Santa Teresita",
+    "Num_Puestos":32,
+    "NombreCorto":"STL",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Portada de la parroquia de Santa Teresita del Niño Jesús sobre la Carrera 76",
+    "zona":"4",
+    "Direccion":"CARRERA 76 # 34A-32"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.574814,6.250576 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":43,
+    "name":"Cisneros - Unaula",
+    "Num_Puestos":33,
+    "NombreCorto":"LOM",
+    "UltimaActualizacion":"20/04/2015 16:53",
+    "es_manual":"1",
+    "descripcion_web":"Frente a la estación Cisneros del Metroplús",
+    "zona":"3",
+    "Direccion":"Carrera 57 con Calle 48"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583459,6.248949 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":44,
+    "name":"La 65",
+    "Num_Puestos":32,
+    "NombreCorto":"J65",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Esquina de la Calle 44 San Juan con Carrera 65 en Homecenter",
+    "zona":"4",
+    "Direccion":"CARRERA 65 # 44-41"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.587564,6.232526 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":45,
+    "name":"Unidad Deportiva de Belén",
+    "Num_Puestos":20,
+    "NombreCorto":"DEP",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Portería de la Circular 1era con Av. Nutibara de la UPB al frente del periódico El Tiempo",
+    "zona":"6",
+    "Direccion":"CALLE 30A # 66B-18"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.594719,6.250549 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":46,
+    "name":"María Mulata",
+    "Num_Puestos":24,
+    "NombreCorto":"FNU",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Parque monumento a La Virgen en la Cll 44A con Cra 75,  vía paralela a la Cll San Juan",
+    "zona":"4",
+    "Direccion":"CALLE 44A # 75-34"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.591929,6.241859 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":47,
+    "name":"Circular Primera",
+    "Num_Puestos":24,
+    "NombreCorto":"CRP",
+    "UltimaActualizacion":"27/09/2019 15:28",
+    "es_manual":"0",
+    "descripcion_web":"Portería de la Circular 1era con Av. Nuribara de la UPB al frente del periódico El Tiempo",
+    "zona":"4",
+    "Direccion":"TRANSVERSAL 39B # CIRCULAR 1-2 "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.595039,6.262189 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":48,
+    "name":"Batallón",
+    "Num_Puestos":18,
+    "NombreCorto":"P4B",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Vía paralela a la Calle 50 Av. Colombia,  al costado sur de la zona verde",
+    "zona":"4",
+    "Direccion":"CALLE 49B #78A-2"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.596625,6.246906 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":49,
+    "name":"Pedro Nel Gómez",
+    "Num_Puestos":26,
+    "NombreCorto":"NTB",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Av. Nutibara en las esquina de las instalaciones de UNE",
+    "zona":"4",
+    "Direccion":"CARRERA 76 # 39B-13"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.580527,6.149014 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":50,
+    "name":"Estacion movil",
+    "Num_Puestos":30,
+    "NombreCorto":"C76",
+    "UltimaActualizacion":"23/11/2018 6:48",
+    "es_manual":"1",
+    "descripcion_web":"Costado sur de la Calle 30 con Carrera 55 al borde de la ciclorruta",
+    "zona":"NULL",
+    "Direccion":"CALLE 30 CON CARRERA 55"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.595409,6.243788 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":51,
+    "name":"Cacique Candela",
+    "Num_Puestos":20,
+    "NombreCorto":"C73",
+    "UltimaActualizacion":"27/09/2019 15:29",
+    "es_manual":"0",
+    "descripcion_web":"Esquina edificio Torre Molinos sobre la Cirq. 73b entre la Av. Nutibara y la Transv. 39",
+    "zona":"4",
+    "Direccion":"CIRCULAR 73B # 39-4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.590333,6.252601 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":53,
+    "name":"Florida Nueva",
+    "Num_Puestos":26,
+    "NombreCorto":"ATA",
+    "UltimaActualizacion":"27/09/2019 15:29",
+    "es_manual":"0",
+    "descripcion_web":"Vía paralela a la Calle 47D Av. Antonio Roldán y el Parque Florida Nueva",
+    "zona":"4",
+    "Direccion":"CALLE 47 # 72-21"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.572449,6.2253 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":54,
+    "name":"Primavera",
+    "Num_Puestos":40,
+    "NombreCorto":"RTN",
+    "UltimaActualizacion":"5/04/2016 8:42",
+    "es_manual":"1",
+    "descripcion_web":"Barrio Colombia sobre la Cll. 24 con Cra. 43F",
+    "zona":"5",
+    "Direccion":"Calle 24 con Carrera 43F"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.567179,6.260481 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":55,
+    "name":"SIU-UdeA",
+    "Num_Puestos":20,
+    "NombreCorto":"SIU",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Costado oriental de la SIU sobre la ciclorruta de Carabobo",
+    "zona":"3",
+    "Direccion":"CARRERA 52 # 61-21"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.574373,6.23055 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":56,
+    "name":"Industriales Metro",
+    "Num_Puestos":38,
+    "NombreCorto":"PCL",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Plazoleta del Centro Comercial Punto Clave sobre la ciclorruta de la Av. Las Vegas",
+    "zona":"5",
+    "Direccion":"CARRERA 48 # 27-86"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.582953,6.231811 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":57,
+    "name":"Nutibara",
+    "Num_Puestos":36,
+    "NombreCorto":"NTB",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Costado Occidental de la estación Nutibara de Metroplús sobre la Carrera 65 con Calle 30",
+    "zona":"6",
+    "Direccion":"CARRERA 65 # 30-1"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.586801,6.245576 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":58,
+    "name":"Parque San Joaquín",
+    "Num_Puestos":30,
+    "NombreCorto":"PSJ",
+    "UltimaActualizacion":"27/09/2019 15:32",
+    "es_manual":"0",
+    "descripcion_web":"Parque de San Joaquín con la Circular 3",
+    "zona":"4",
+    "Direccion":"CARRERA 67A CON CIRCULAR 3"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.574658,6.22851 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":59,
+    "name":"Río Aburrá",
+    "Num_Puestos":26,
+    "NombreCorto":"BCO",
+    "UltimaActualizacion":"27/09/2019 15:28",
+    "es_manual":"0",
+    "descripcion_web":"Al frente del edificio de Bancolombia sobre la ciclorruta de la Av. Las Vegas ",
+    "zona":"5",
+    "Direccion":"CARRERA 48 # 27-4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.575431,6.220012 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":60,
+    "name":"Villa Carlota",
+    "Num_Puestos":26,
+    "NombreCorto":"VCA",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Esquina sur del complejo residencial Ciudad del Rio y Holasa sobre la ciclorruta de la Av. Las Vegas",
+    "zona":"5",
+    "Direccion":"CARRERA 48 # 18-100"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.572961,6.222324 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":61,
+    "name":"Ciudad del Río",
+    "Num_Puestos":18,
+    "NombreCorto":"NAR",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Parque lineal de Ciudad del Rio sobre la Carrera 43G",
+    "zona":"5",
+    "Direccion":"CALLE 19A - CARRERA 43G"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.579259,6.255589 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":62,
+    "name":"Otra Banda",
+    "Num_Puestos":40,
+    "NombreCorto":"CER",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Parque Carlos E. Restrepo en el costado Norte de la Calle 50 Av. Colombia",
+    "zona":"4",
+    "Direccion":"CARRERA 64A CON CALLE 50"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.573291,6.236338 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":63,
+    "name":"Palacé",
+    "Num_Puestos":34,
+    "NombreCorto":"CDR",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Plazuela al frente de la Iglesia del Perpetuo Socorro",
+    "zona":"3",
+    "Direccion":"CARRERA 50 CON CALLE 35"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.574966,6.22378 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":64,
+    "name":"MAMM",
+    "Num_Puestos":38,
+    "NombreCorto":"MUM",
+    "UltimaActualizacion":"27/09/2019 15:32",
+    "es_manual":"0",
+    "descripcion_web":"Ciudad del Rio en la Plaza Talleres Robledo sobre la ciclorruta de la Av. Las Vegas",
+    "zona":"5",
+    "Direccion":"CARRERA 48 # 19A-108"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.592235,6.222392 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":65,
+    "name":"Juan Pablo II",
+    "Num_Puestos":26,
+    "NombreCorto":"JP2",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Costado norte de la plazoleta del Aeroparque Juan Pablo II sobre la Av. 70",
+    "zona":"6",
+    "Direccion":"CARRERA 70 # 16-18"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.577222,6.231406 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":66,
+    "name":"Industriales Metroplús",
+    "Num_Puestos":20,
+    "NombreCorto":"IMP",
+    "UltimaActualizacion":"12/12/2014 8:41",
+    "es_manual":"1",
+    "descripcion_web":"Costado occidental de la Estación Industriales de Metroplús",
+    "zona":"6",
+    "Direccion":"CARRERA 52 # 29B-138"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.568796,6.251826 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":67,
+    "name":"Museo de Antioquia",
+    "Num_Puestos":20,
+    "NombreCorto":"MAQ",
+    "UltimaActualizacion":"12/12/2014 8:41",
+    "es_manual":"1",
+    "descripcion_web":"Plazoleta de Botero frente a la entrada principal del Museo de Antioquia",
+    "zona":"3",
+    "Direccion":"CARRERA 52 # 52-36"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.57858,6.260703 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":70,
+    "name":"Campus Nacional",
+    "Num_Puestos":33,
+    "NombreCorto":"NAC",
+    "UltimaActualizacion":"6/06/2014 0:00",
+    "es_manual":"1",
+    "descripcion_web":"Portería de la Iguaná con Carrera 65 de la Universidad Nacional",
+    "zona":"2",
+    "Direccion":"CALLE 59A # 64E-44"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.569954,6.24655 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":89,
+    "name":"Málaga",
+    "Num_Puestos":20,
+    "NombreCorto":"MLG",
+    "UltimaActualizacion":"27/09/2019 15:32",
+    "es_manual":"0",
+    "descripcion_web":"Bajo la estación San Antonio",
+    "zona":"3",
+    "Direccion":"CARRERA 48 # 27-4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.59509188,6.26337958 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":90,
+    "name":"Calle 51 Los Colores",
+    "Num_Puestos":40,
+    "NombreCorto":"C51",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Media cuadra debajo de INVIAS ",
+    "zona":"4",
+    "Direccion":"CALLE 51 con Cr 78B"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.5714,6.22006 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":91,
+    "name":"Telemedellín",
+    "Num_Puestos":40,
+    "NombreCorto":"TM",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Ingreso Canal parque Telemedellín",
+    "zona":"5",
+    "Direccion":"CARRERA 43f - Cll 18"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.580543,6.245546 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":92,
+    "name":"Parques del río",
+    "Num_Puestos":48,
+    "NombreCorto":"PR",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Costado noroccidental de Parques del río ",
+    "zona":"6",
+    "Direccion":"CALLE 42C - Cr 63B"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.58616817,6.26043075 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":93,
+    "name":"Salazar y Herrera",
+    "Num_Puestos":40,
+    "NombreCorto":"SL",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Posterior a la I.U. Salazar y Herrera",
+    "zona":"4",
+    "Direccion":"CARRERA 71 - calle 52 -16"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.571117,6.222081 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":94,
+    "name":"Calle 19A Villa Carlota",
+    "Num_Puestos":40,
+    "NombreCorto":"19A",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Diagonal al ingreso Grupo Orbis - Pintuco",
+    "zona":"5",
+    "Direccion":"CALLE 19A con Cr 43f"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.56905568,6.24841132 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":95,
+    "name":"San Antonio",
+    "Num_Puestos":20,
+    "NombreCorto":"SA",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Bajo la estación San Antonio del Metro",
+    "zona":"3",
+    "Direccion":"CARRERA 51 entre Cll 46 y Cll 47"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.56840926,6.25004308 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":96,
+    "name":"Parque Berrio",
+    "Num_Puestos":20,
+    "NombreCorto":"PB",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Bajo la estación Parque Berrío del Metro",
+    "zona":"3",
+    "Direccion":"CARRERA 51 con Cll 50"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.56807131,6.25066699 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":97,
+    "name":"Palacio de la Cultura",
+    "Num_Puestos":20,
+    "NombreCorto":"PC",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Paseo Bolívar, diagonal al palacio de la Cultura",
+    "zona":"3",
+    "Direccion":"CARRERA  51 con Cll 51"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.59647322,6.23525042 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":98,
+    "name":"Picacha con 76",
+    "Num_Puestos":36,
+    "NombreCorto":"PI",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Costado occidental del puente. La Picacha.",
+    "zona":"6",
+    "Direccion":"CARRERA  76 con La Picacha"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.58665901,6.23988984 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":99,
+    "name":"Unicentro",
+    "Num_Puestos":40,
+    "NombreCorto":"UC",
+    "UltimaActualizacion":"27/09/2019 15:31",
+    "es_manual":"0",
+    "descripcion_web":"Frente al Banco de Occidente",
+    "zona":"6",
+    "Direccion":"CALLE 34 entre Cr 65D y Cr 66A"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.59041411,6.23857801 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":100,
+    "name":"Bulerias",
+    "Num_Puestos":40,
+    "NombreCorto":"BU",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Bajo el puente de la Av. Bolivariana",
+    "zona":"6",
+    "Direccion":"DIAGONAL 74B con Cll 32F"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.58617622,6.23858334 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":101,
+    "name":"Cafetero",
+    "Num_Puestos":40,
+    "NombreCorto":"CF",
+    "UltimaActualizacion":"27/09/2019 15:30",
+    "es_manual":"0",
+    "descripcion_web":"Diagonal al ingreso del éxito súper",
+    "zona":"6",
+    "Direccion":"CALLE  32F entre Cr 66B y Cr 65F"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.57196051,6.23461583 ]
+    },
+    "properties": {
+    "Id_Aparcamiento":102,
+    "name":"Distrito Creativo",
+    "Num_Puestos":48,
+    "NombreCorto":"HG",
+    "UltimaActualizacion":"20/09/2019 11:19",
+    "es_manual":"0",
+    "descripcion_web":"Posterior al Hospital General de Medellín",
+    "zona":"3",
+    "Direccion":"CARRERA  46 # 34 - 46"
+    }
+  }
+]
+}

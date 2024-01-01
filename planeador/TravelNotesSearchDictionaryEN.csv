@@ -1,0 +1,9 @@
+Bicicleta;;
+;Reparación de bicicletas;
+;;amenity=bicycle_repair_station
+;Biciparqueadero;
+;;amenity=bicycle_parking
+;Alquiler/préstamo de bicicletas;
+;;amenity=bicycle_rental
+;Tienda de bicicletas;
+;;shop=bicycle

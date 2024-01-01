@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <bounds minlat="6.175549" minlon="-75.616075" maxlat="6.336994" maxlon="-75.55607"/>
+  </metadata>
+  <trk>
+    <name>Aranjuez-UdeM</name>
+    <trkseg>
+      <trkpt lat="6.231112" lon="-75.609815">
+      </trkpt>
+      <trkpt lat="6.232529999999999" lon="-75.609696">
+      </trkpt>
+      <trkpt lat="6.232483000000001" lon="-75.608892">
+      </trkpt>
+      <trkpt lat="6.232552" lon="-75.607095">
+      </trkpt>
+      <trkpt lat="6.232605" lon="-75.606124">
+      </trkpt>
+      <trkpt lat="6.2338" lon="-75.606344">
+      </trkpt>
+      <trkpt lat="6.234509" lon="-75.605233">
+      </trkpt>
+      <trkpt lat="6.233919" lon="-75.60243800000002">
+      </trkpt>
+      <trkpt lat="6.233166999999999" lon="-75.600322">
+      </trkpt>
+      <trkpt lat="6.233332" lon="-75.598249">
+      </trkpt>
+      <trkpt lat="6.236227000000001" lon="-75.595891">
+      </trkpt>
+      <trkpt lat="6.236502000000001" lon="-75.595831">
+      </trkpt>
+      <trkpt lat="6.238381" lon="-75.59397">
+      </trkpt>
+      <trkpt lat="6.238446000000001" lon="-75.590478">
+      </trkpt>
+      <trkpt lat="6.238563" lon="-75.587813">
+      </trkpt>
+      <trkpt lat="6.238564" lon="-75.587645">
+      </trkpt>
+      <trkpt lat="6.2387310000000005" lon="-75.587473">
+      </trkpt>
+      <trkpt lat="6.239736" lon="-75.586045">
+      </trkpt>
+      <trkpt lat="6.24024" lon="-75.584582">
+      </trkpt>
+      <trkpt lat="6.2404090000000005" lon="-75.584351">
+      </trkpt>
+      <trkpt lat="6.242609" lon="-75.583297">
+      </trkpt>
+      <trkpt lat="6.245399" lon="-75.583784">
+      </trkpt>
+      <trkpt lat="6.248657000000001" lon="-75.583379">
+      </trkpt>
+      <trkpt lat="6.250981" lon="-75.583277">
+      </trkpt>
+      <trkpt lat="6.251664" lon="-75.583062">
+      </trkpt>
+      <trkpt lat="6.25416" lon="-75.581914">
+      </trkpt>
+      <trkpt lat="6.256575" lon="-75.580814">
+      </trkpt>
+      <trkpt lat="6.255909" lon="-75.579458">
+      </trkpt>
+      <trkpt lat="6.2554609999999995" lon="-75.578417">
+      </trkpt>
+      <trkpt lat="6.256389" lon="-75.577955">
+      </trkpt>
+      <trkpt lat="6.25593" lon="-75.57699">
+      </trkpt>
+      <trkpt lat="6.25945" lon="-75.575144">
+      </trkpt>
+      <trkpt lat="6.264535999999999" lon="-75.575167">
+      </trkpt>
+      <trkpt lat="6.265442999999999" lon="-75.575139">
+      </trkpt>
+      <trkpt lat="6.265736" lon="-75.574715">
+      </trkpt>
+      <trkpt lat="6.265486" lon="-75.573487">
+      </trkpt>
+      <trkpt lat="6.264953" lon="-75.570654">
+      </trkpt>
+      <trkpt lat="6.264370000000001" lon="-75.566413">
+      </trkpt>
+      <trkpt lat="6.272048000000001" lon="-75.565168">
+      </trkpt>
+      <trkpt lat="6.2742249999999995" lon="-75.564739">
+      </trkpt>
+      <trkpt lat="6.275888" lon="-75.56431">
+      </trkpt>
+      <trkpt lat="6.278403999999999" lon="-75.56383700000002">
+      </trkpt>
+      <trkpt lat="6.280067" lon="-75.563494">
+      </trkpt>
+      <trkpt lat="6.282326" lon="-75.563493">
+      </trkpt>
+      <trkpt lat="6.284288000000001" lon="-75.562978">
+      </trkpt>
+      <trkpt lat="6.285823" lon="-75.562978">
+      </trkpt>
+      <trkpt lat="6.286203000000001" lon="-75.56266800000002">
+      </trkpt>
+      <trkpt lat="6.285905" lon="-75.559698">
+      </trkpt>
+      <trkpt lat="6.285772" lon="-75.556598">
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

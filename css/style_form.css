@@ -1,0 +1,199 @@
+@import url(./style.css);
+
+/* ----- Introduccion ----*/
+html {
+    height: 100vh;
+}
+
+#form, #form_ruta, #form_lugares, #form-result, #form-result-ruta, #acumulado {
+ display: relative;
+}
+
+#title-form, #title-form-ruta, #title-form-lugares, #title-form-result, #title-form-result-ruta, #title-acumulado {
+    position: absolute;
+    top:0;
+    z-index: 2;
+    color: var(--second-color);
+    border: 2px solid var(--second-color);
+    border-top: 0 ;
+    border-radius: 0px 0px 5px 5px;
+    font-size: 1.8em;
+}
+
+#logo3 {
+    width: 150px;
+    height: auto;
+}
+
+.icon-nav {
+    width: 30px;
+    height: auto;
+}
+
+.form-text {
+    color: #d5d4d4;
+}
+
+
+/* Preguntas tipo Mapas */
+
+
+.pregunta_mapa {
+    width: 90%;
+    justify-content: center;
+}
+
+.pregunta {
+    padding-top: 200px;
+    padding-right: 0px;
+}
+
+.pregunta_mapa {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.tipomapa {
+    width: 100%;
+
+}
+
+.mapa {
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+.barra {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    background: var(--first-color);
+    opacity: 0.9;
+    bottom: 0;
+    z-index: 1000;
+    color: var(--third-color);
+    text-align: center;
+    font: 20px/1.5 "Helvetica", Arial, Helvetica, sans-serif;
+    overflow: auto; /* esto es para que se pueda hacer un scroll */
+}
+
+ /*Boton de Ayuda */
+
+.ayuda {
+    top: 180px;
+    left: 10px;
+    margin-right: 100%;
+    padding: 0px;
+    float: left;
+    background-color: var(--third-color);
+    color: var(--first-color);
+    border-radius: 3px;
+    border-color: var(--third-color);
+    font-size: 0.7em;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+}
+
+.ayuda2 {
+    padding: 0;
+    margin: 0;
+    border: none;
+    float: left;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-position: -2px -2px;
+    display: block;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: var(--third-color);
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    color: #505050;
+    -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+    cursor: pointer;
+    box-shadow: 0 0 5px #505050;
+}
+
+button.ayuda2:hover {
+    background: var(--third-color);
+    color: #505050;
+}
+
+.remodal-wrapper {
+    background-color: rgba(102, 102, 102, .8)
+} 
+
+.bg-primary {
+    background-color: var(--second-color) !important;
+}
+.text-primary {
+    color: var(--second-color) !important;
+}
+
+.text-dark{
+    color: var(--first-color) !important;
+}
+ /* Botones de radio y de caja en los formularios */
+
+.form-check-input[type=checkbox]:checked {
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}
+
+.form-check-input[type=radio]:checked {
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}
+
+/*Tamaño de la fuente de las preguntas de la encuesta */
+.form-label {
+    min-width: 100%;
+    font-size: 1.3em;
+}
+
+legend {
+    font-size: 1.3em;
+}
+
+/* Boton de finalizar*/
+#form_button {
+    color: var(--third-color);
+    max-height: 46px;
+    min-height: 46px;
+}
+
+/* Modales de mapas */
+.img_gif{
+    width: 100%;
+}
+
+.form-label_emer {
+    min-width: 100%;
+    font-size: 1.1em;
+    color: var(--first-color) !important;
+    font-weight: bolder;
+}
+
+.emergente{
+    text-align: left;
+}
+
+.modal_encabezado{
+    background: var(--first-color); 
+    color: var(--third-color); 
+    padding: 10px; 
+    margin: -35px; 
+    margin-top: -60px;
+}
+
+.list_text-dark{
+    color: var(--first-color) !important;
+    text-align:left;
+    list-style-type: disc;
+}

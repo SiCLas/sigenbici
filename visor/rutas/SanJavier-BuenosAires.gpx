@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <bounds minlat="6.175549" minlon="-75.616075" maxlat="6.336994" maxlon="-75.55607"/>
+  </metadata>
+    <trk>
+    <name>San Javier-Buenos Aires</name>
+    <trkseg>
+      <trkpt lat="6.2554609999999995" lon="-75.613118">
+      </trkpt>
+      <trkpt lat="6.255018000000001" lon="-75.612099">
+      </trkpt>
+      <trkpt lat="6.253824" lon="-75.609933">
+      </trkpt>
+      <trkpt lat="6.253232" lon="-75.608854">
+      </trkpt>
+      <trkpt lat="6.252596999999999" lon="-75.607792">
+      </trkpt>
+      <trkpt lat="6.251866999999999" lon="-75.606912">
+      </trkpt>
+      <trkpt lat="6.251398" lon="-75.606355">
+      </trkpt>
+      <trkpt lat="6.25122" lon="-75.606022">
+      </trkpt>
+      <trkpt lat="6.250793" lon="-75.60473500000002">
+      </trkpt>
+      <trkpt lat="6.250665" lon="-75.602547">
+      </trkpt>
+      <trkpt lat="6.250782" lon="-75.602257">
+      </trkpt>
+      <trkpt lat="6.25058" lon="-75.601753">
+      </trkpt>
+      <trkpt lat="6.25058" lon="-75.60097">
+      </trkpt>
+      <trkpt lat="6.250111000000001" lon="-75.599747">
+      </trkpt>
+      <trkpt lat="6.250111000000001" lon="-75.598975">
+      </trkpt>
+      <trkpt lat="6.250196" lon="-75.597033">
+      </trkpt>
+      <trkpt lat="6.2501" lon="-75.595757">
+      </trkpt>
+      <trkpt lat="6.249684000000001" lon="-75.592378">
+      </trkpt>
+      <trkpt lat="6.249396000000001" lon="-75.58953600000001">
+      </trkpt>
+      <trkpt lat="6.249194" lon="-75.58797">
+      </trkpt>
+      <trkpt lat="6.249013000000001" lon="-75.586607">
+      </trkpt>
+      <trkpt lat="6.248746" lon="-75.584666">
+      </trkpt>
+      <trkpt lat="6.248597" lon="-75.583615">
+      </trkpt>
+      <trkpt lat="6.248245" lon="-75.581341">
+      </trkpt>
+      <trkpt lat="6.247135999999999" lon="-75.577983">
+      </trkpt>
+      <trkpt lat="6.246421999999999" lon="-75.575827">
+      </trkpt>
+      <trkpt lat="6.245868" lon="-75.575538">
+      </trkpt>
+      <trkpt lat="6.245792999999999" lon="-75.575023">
+      </trkpt>
+      <trkpt lat="6.245931" lon="-75.574605">
+      </trkpt>
+      <trkpt lat="6.245628000000001" lon="-75.573685">
+      </trkpt>
+      <trkpt lat="6.245345000000001" lon="-75.572813">
+      </trkpt>
+      <trkpt lat="6.2456760000000004" lon="-75.572599">
+      </trkpt>
+      <trkpt lat="6.246474999999999" lon="-75.572084">
+      </trkpt>
+      <trkpt lat="6.247925" lon="-75.571548">
+      </trkpt>
+      <trkpt lat="6.246779999999999" lon="-75.568267">
+      </trkpt>
+      <trkpt lat="6.248256" lon="-75.567246">
+      </trkpt>
+      <trkpt lat="6.247071999999999" lon="-75.564822">
+      </trkpt>
+      <trkpt lat="6.245931" lon="-75.562623">
+      </trkpt>
+      <trkpt lat="6.244417999999999" lon="-75.559631">
+      </trkpt>
+      <trkpt lat="6.242616000000001" lon="-75.55607">
+      </trkpt>
+    </trkseg>
+  </trk>
+ </gpx>

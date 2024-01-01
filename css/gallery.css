@@ -1,0 +1,29 @@
+@import url(./style.css);
+@import url(./visor.css);
+
+body {
+    padding: 0;
+    /* background-image: none; */
+    /*  background-color: var(--sixth-color); */
+    background-size:cover;
+}
+html, body, #container {
+
+    overflow: auto;
+}
+
+.gallery {
+    padding: 50px;
+}
+
+.nGY2Navigationbar .nGY2NavigationbarItem {
+    padding: 0;
+}
+
+.nGY2 .nGY2GThumbnailAlbumTitle, .nGY2 .nGY2GThumbnailImageTitle {
+    white-space: normal;
+}
+
+.nanogallery_gallerytheme_custom_my_nanogallery2 .nGY2NavPagination {
+    background: transparent !important;
+}

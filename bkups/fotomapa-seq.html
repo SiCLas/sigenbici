@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Fotomapa</title>
+
+    <!-- Favicon -->
+	<link  rel="icon" href="./img/favicon.png" type="image/png" />
+    
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <script src='https://unpkg.com/mapillary-js@4.1.0/dist/mapillary.js'></script>
+    <link href='https://unpkg.com/mapillary-js@4.1.0/dist/mapillary.css' rel='stylesheet' />
+    <link href='https://unpkg.com/leaflet@1.0.1/dist/leaflet.css' rel='stylesheet' />
+    <script src='https://unpkg.com/leaflet@1.0.1/dist/leaflet.js'></script>
+
+
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+        #mly { position: absolute; height: 100%; width: 50%; bottom: 0;}
+        #map { position: absolute; width: 50%; height: 100%; top: 0; right: 0; bottom: 0; }
+</style>
+</head>
+
+<body>
+    <div id='mly'></div>
+    <div id='map'></div>
+    <script>
+    // Definir mapa
+        // Definición de diferentes fuentes de teselas de mapas posibles. Ver por ejemplo en: https://wiki.openstreetmap.org/wiki/Tiles 
+
+		var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+}),
+		Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	ext: 'png'
+}),		
+		openTopoMap=L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)', minZoom: 12, maxZoom: 18}),
+		CyclOSM = L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}),
+		Esri_WorldImagery= L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',minZoom: 12, maxZoom: 18,id: 'Esri.WorldImagery'}),
+		StamenWatercolor= L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',minZoom: 12, maxZoom: 18,ext: 'jpg',id: 'Stamen Watercolor'}),
+    cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm-lite/{z}/{x}/{y}.png', {
+                    attribution: 'CyclOSM Lite',
+                    minZoom: 11,
+                    maxZoom: 20,
+                });	
+
+
+// Inicialización del mapa con Esri_WorldStreetMap como mapa base predeterminado
+        var map = L.map('map', {
+			    layers: [CyclOSM] 
+		    })
+		    .setView([6.25,-75.57], 17);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central del valle. 
+
+
+// Crear control de mapas base
+//var baseLayers = { // Leyenda de los mapas mostrados en el cuadro de selección	
+//			"Esri WorldStreetMap": Esri_WorldStreetMap,			
+//			"OpenTopoMap": openTopoMap,
+//			"CyclOSM": CyclOSM,
+//			"Esri Images": Esri_WorldImagery,
+//			"Stamen Watercolor": StamenWatercolor,
+//			"Stamen Toner Lite": Stamen_TonerLite
+//		};
+//var overlayMaps = {
+  //                  "CyclOSM Lite": cyclosm_lite
+    //            };
+
+// Control para cambiar mapa base, cerrado
+// cambiar a collapsed:false para mostrar el cuadro abierto
+	//	L.control.layers(baseLayers,overlayMaps,{collapsed:true}).addTo(map);
+		
+        
+        // Setup viewer
+        var popupKey = 'tuDokRdnmi1qXrMprM_cjQ';
+
+        var mly = new Mapillary.Viewer({
+            accessToken: 'TjRwZVJpRHhybmJNRWlQSHRoR2ZKZzo5N2RlNjY4YjVjMTRkZDQ5',
+            component: {
+                cover: false,
+                popup: true,
+                direction: false,
+                sequence: true, 
+                marker: {
+                    visibleBBoxSize: 100,
+                },
+                mouse: {
+                    doubleClickZoom: false,
+                },
+            },
+            container: 'mly',
+        });
+
+ mly.moveToKey('392290763114354').then(
+            function() { /* noop */ },
+            function(e) { console.error(e); });
+
+// Get popup component
+        var popupComponent = mly.getComponent('popup');
+
+        // Create popup content
+        var div = document.createElement('div');
+        div.style.backgroundColor = "#fff";
+        div.style.border = "2px solid red";
+        div.style.color = "#f00";
+        div.style.padding = "5px 10px";
+        div.innerHTML = 'Ciclobanda bidireccional';
+
+        // Create popup and set content as well as point
+        var popup = new Mapillary.PopupComponent.Popup({
+            clean: true,
+            float: Mapillary.Alignment.Left,
+            offset: 10,
+            opacity: 0.7,
+        });
+
+        popup.setDOMContent(div);
+        popup.setBasicPoint([0.546, 0.523]);
+        
+        // Show popup for the corresponding node
+        var onNodeChanged = function(node) {
+            if (node.key === popupKey) {
+                popupComponent.add([popup]);
+            } else {
+                popupComponent.removeAll();
+            }
+        }
+
+        mly.on(Mapillary.Viewer.nodechanged, onNodeChanged);
+
+        var marker;
+            mly.on(Mapillary.Viewer.nodechanged, function (node) {
+                var latLon = [node.latLon.lat, node.latLon.lon];
+
+                if (!marker) {
+                    marker = L.marker(latLon);
+                    marker.addTo(map);
+                } else {
+                    marker.setLatLng(latLon);
+                }
+
+                map.setView(latLon);
+            });
+
+        // Trigger render on browser window resize
+        window.addEventListener("resize", function() { mly.resize(); });
+        
+    </script>
+</body>
+</html>

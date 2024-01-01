@@ -1,0 +1,64 @@
+{ "editionButtons" : 
+	[		
+		{		}
+	],
+	"preDefinedIconsList" :
+	[
+		{
+			"name" : "Icono de maniobra desde OSM",
+			"icon" : "SvgIcon",
+			"tooltip" : "Icono de maniobra desde OSM",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Advertencia",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0004'></div>",
+			"tooltip" : "Advertencia",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Bicis permitidas",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0005'></div>",
+			"tooltip" : "Bicis permitidas",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Bicis no permitidas",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0013'></div>",
+			"tooltip" : "Bicis no permitidas",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Reparación de bicis",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0015'></div>",
+			"tooltip" : "Reparación de bicis",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Biciparqueadero",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0057'></div>",
+			"tooltip" : "Biciparqueadero",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Alquiler de bicis",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0058'></div>",
+			"tooltip" : "Alquiler de bicis",
+			"width" : 40,
+			"height" : 40
+		},
+		{
+			"name" : "Tienda de bicis",
+			"icon" : "<div class='TravelNotes-MapNote TravelNotes-MapNoteCategory-0059'></div>",
+			"tooltip" : "Tienda de bicis",
+			"width" : 40,
+			"height" : 40
+		}
+	]
+}

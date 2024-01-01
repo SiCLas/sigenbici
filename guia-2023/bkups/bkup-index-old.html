@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Guía SIGenBici 2023</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 35px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Cerrar menú">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Contenido</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading1">SIGenBici</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading2">Índice de enlaces</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading3">Cicloinfraestructura en Colombia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading4">Cicloinfraestructura en OSM</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading5">Propuesta de etiquetas de separación y demarcación</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading6">Etiquetas para vías ciclistas</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#ciclorrutas">=> Ciclorrutas</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#ciclobandas">=> Ciclobandas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#heading7">Etiquetas para vías cicloadaptadas</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal"><strong>Gu&iacute;a de mapeo del equipo SIGenBici</strong></h1>
+      <h2>Piloto de implementaci&oacute;n en OSM de la propuesta de etiquetado de separaci&oacute;n y demarcaci&oacute;n de cicloinfraestructura en Medell&iacute;n (Colombia)</h2>
+      <hr style="height:20px">
+       <p><strong>Entidades:</strong></p>
+    <p>Semillero GeoLab (Grupo de investigación GeoLimna, Facultad de Ingeniería, Universidad de Antioquia)<br>
+    Corporación Colectivo SiCLas</p>
+    <p><strong>Responsables:</strong></p>
+    <p>Jorge Mauricio Mesa Vargas, SiCLas<br>
+    Silvia Andrea Fl&oacute;rez Giraldo, SiCLas<br>
+    Ana Maria Navia Hermida, UdeA <br>
+    Hern&aacute;n Dar&iacute;o Gonz&aacute;lez Zapata, UdeA<br>
+    Natalia Arruda da Silveira, ASU</p>
+    <hr style="height:10px">
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><img src="images/logo-sigenbici.png" width="200px">
+      <img src="images/image17.png" width="100px">
+      <img src="images/image14.png" width="150px"></p>
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">Disponible bajo una licencia Creative Commons Atribución, No Comercial, Compartir Igual 3.0 No portada<br><img
+          alt=""
+          src="images/image9.png"
+          title=""
+          width="75px"
+      /></p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="heading1">SIGenBici</h1>
+     
+<p>En esta nueva fase del proyecto de mapeo de cicloinfraestructura SIGenBici, entre la Corporación Colectivo SiCLas y el Semillero de Investigación GeoLab (de la Facultad de Ingeniería de la UdeA), con el apoyo del ITDP (Instituto para la Política de Transporte y Desarrollo) se realiza una prueba piloto en una zona de la ciudad de Medellín con el objetivo de probar las etiquetas de separación, propuestas por un equipo de mapeadores alemanes, para ver qué tan aplicables son en el contexto colombiano y cómo se puede mejorar el estándar de etiquetado de cicloinfraestructura en OSM.</p>
+
+<p>Se recopilaron imágenes en la plataforma Mapillary, como referencia para mapear en OSM con el uso de las etiquetas propuestas para nombrar el tipo de separación, la demarcación y el modo de tráfico adyacente a la cicloinfraestructura. A partir de la información recopilada, se realizó una revisión, teniendo en cuenta la Guía de ciclo-infraestructura para ciudades colombianas del Ministerio de Transporte de Colombia, la Wiki de OSM y la propuesta de etiquetas de separación para unificarlas.</p>
+
+<p>Estas etiquetas propuestas son fuente significativa de información para realizar evaluación de cicloinfraestructura por parte de tomadores de decisión, así como para herramientas que recopilan datos que faciliten recorridos de acuerdo a las necesidades específicas de las personas que se desplazan en bicicleta.</p>
+
+<p>Esperamos contribuir con esta guía para estandarizar y detallar en OSM información actualizada, apoyada con imágenes, sobre la cicloinfraestructura en Medellín (Colombia) como piloto para replicar en otras ciudades del país.</p>
+
+<p>Equipo SIGenBici<br>
+Medellín, abril de 2023 </p>
+      
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><img src="images/image1.png" width="150px"><br><img src="images/image2.png" width="300px"></p>
+    </div>
+  </div>
+
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="heading2">Índice de enlaces</h1>
+      <p class="c0 c80"><span class="c19 c27"></span></p>
+    <a id="t.e56501d3a77a5d1ee8fc03cf095427ed7c0997c8"></a><a id="t.0"></a>
+    <table class="w3-table">
+      <tr class="c63">
+        <td class="c102 c147" colspan="1" rowspan="1">
+          <p class="c131"><span class="c5">T&iacute;tulo del recurso</span></p>
+        </td>
+        <td class="c102 c113" colspan="1" rowspan="1">
+          <p class="c131"><span class="c5">Enlace</span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c102 c119" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c19 c44">Mapa ciclista SIGenBici</span>
+          </p>
+        </td>
+        <td class="c183" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c52 c44"
+              ><a class="c11" href="https://siclas.org/sigenbici/mapa.html"
+                >https://siclas.org/sigenbici/mapa.html</a
+              ></span
+            ><span class="c19 c44">&nbsp;</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c9" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c19 c44">Gu&iacute;a OSM para principiantes</span>
+          </p>
+        </td>
+        <td class="c97" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c52 c44"
+              ><a class="c11" href="https://learnosm.org/es/beginner/start-osm/"
+                >https://learnosm.org/es/beginner/start-osm/</a
+              ></span
+            ><span class="c19 c44">&nbsp;</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c9" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c19 c44">Etiquetas OSM para calles</span>
+          </p>
+        </td>
+        <td class="c140" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c52 c44"
+              ><a
+                class="c11"
+                href="https://wiki.openstreetmap.org/wiki/Map_Features%23Highway"
+                >https://wiki.openstreetmap.org/wiki/Map_Features#Highway</a
+              ></span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c9" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c19 c44">Etiquetas OSM para cicloinfraestructura</span>
+          </p>
+        </td>
+        <td class="c97" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c52 c44"
+              ><a class="c11" href="https://wiki.openstreetmap.org/wiki/Bicycle"
+                >https://wiki.openstreetmap.org/wiki/Bicycle</a
+              ></span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c9" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c19 c44"
+              >Gu&iacute;a de Cicloinfraestructura para Ciudades
+              Colombianas</span
+            >
+          </p>
+        </td>
+        <td class="c140" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c52 c44"
+              ><a
+                class="c11"
+                href="https://www.siclas.org/wp-content/uploads/2018/08/Guia-cicloinfraestructura-Colombia.pdf"
+                >https://www.siclas.org/wp-content/uploads/2018/08/Guia-cicloinfraestructura-Colombia.pdf</a
+              ></span
+            ><span class="c19 c44">&nbsp;</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c89">
+        <td class="c9" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c44 c104"
+              >Im&aacute;genes del &aacute;rea piloto (Mapillary)</span
+            ><span class="c44 c54">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c97" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c52 c44"
+              ><a class="c11" href="https://www.mapillary.com/app/org/sigenbici"
+                >https://www.mapillary.com/app/org/sigenbici</a
+              ></span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c9" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c19 c44"
+              >Propuesta etiquetas de separaci&oacute;n
+            </span>
+          </p>
+        </td>
+        <td class="c140" colspan="1" rowspan="1">
+          <p class="c68">
+            <span class="c44 c52"
+              ><a
+                class="c11"
+                href="https://wiki.openstreetmap.org/wiki/Proposed_features/separation"
+                >https://wiki.openstreetmap.org/wiki/Proposed_features/separation</a
+              ></span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+<div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="heading3">Cicloinfraestructura en Colombia</h1>
+      <p>Para la tipología de cicloinfraestructura se utilizan las definiciones existentes en la <a href="https://www.siclas.org/wp-content/uploads/2018/08/Guia-cicloinfraestructura-Colombia.pdf">Guía de Cicloinfraestructura para Ciudades Colombianas</a>, que distingue dos grandes categorías: vías ciclistas y vías cicloadaptadas (ver pág. 51 y 76 de la guía). Las primeras son segregadas y exclusivas para bicicletas, mientras que las segundas son de uso compartido con otros modos de transporte. En las siguientes tablas se presentan los subtipos de cada categoría. </p>
+<h2>V&iacute;as ciclistas</h2>
+    <a id="t.278e4bec682f257bbfa6b96384819bde91bb8f0e"></a><a id="t.1"></a>
+    <table class="c79">
+      <tr class="c109">
+        <td class="c88 c121" colspan="1" rowspan="1">
+          <p class="c35"><span class="c8">SUBTIPO</span></p>
+        </td>
+        <td class="c88 c159" colspan="1" rowspan="1">
+          <p class="c35"><span class="c8">DEFINICI&Oacute;N</span></p>
+        </td>
+        <td class="c88 c95" colspan="1" rowspan="1">
+          <p class="c2 c150">
+            <span class="c114">FORMA DE SEGREGACI&Oacute;N</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c123" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Ciclorruta</span></p>
+        </td>
+        <td class="c143" colspan="1" rowspan="1">
+          <p class="c36 c3">
+            <span
+              >Las ciclorrutas son v&iacute;as reservadas exclusivamente para la
+              circulaci&oacute;n en bicicleta, segregadas f&iacute;sicamente del
+              resto del tr&aacute;nsito (motorizado) y tambi&eacute;n de los
+              peatones. Las ciclorrutas pueden transcurrir al nivel de la
+              calzada, al nivel del and&eacute;n o a un nivel intermedio, pero
+              siempre llevan alg&uacute;n tipo de segregaci&oacute;n
+              f&iacute;sica. Pueden ser unidireccionales o servir para los dos
+              sentidos circulatorios (bidireccionales).</span
+            >
+          </p>
+        </td>
+        <td class="c178" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >F&iacute;sica (cambios de altura o instalaci&oacute;n de
+              elementos f&iacute;sicos permanentes)</span
+            >
+          </p>
+          <p class="c80 c160"><span class="c8"></span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c102 c146" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Ciclobanda</span></p>
+        </td>
+        <td class="c102 c124" colspan="1" rowspan="1">
+          <p class="c3 c36">
+            <span
+              >Las ciclobandas son v&iacute;as reservadas exclusivamente para la
+              circulaci&oacute;n en bicicleta segregadas visualmente, es decir,
+              a trav&eacute;s de marcas viales, color y otros dispositivos
+              indicativos de su especializaci&oacute;n. Pueden transcurrir a
+              nivel de la calzada o formar parte del and&eacute;n (poco
+              recomendable).</span
+            >
+          </p>
+        </td>
+        <td class="c99" colspan="1" rowspan="1">
+          <p>Cambio de pavimento</p>
+          <p>Dispositivos de canalizaci&oacute;n de tr&aacute;nsito (hitos,
+              balizas, tachones, bordillos, o elementos similares)</p>
+          <p>Demarcaci&oacute;n</p>
+        </td>
+      </tr>
+    </table>
+    <p>Fuente: Gu&iacute;a de cicloinfraestructura para ciudades colombianas, p. 51.</p> 
+
+      <p> Para denominarlas en la guía, se manejan los códigos a continuación que nos dan información importante en cuanto a su diseño y el contexto en el que se encuentran. Por ejemplo, el código CR-A-2-S corresponde a una ciclorruta bidireccional a nivel andén y sin estacionamiento aledaño.</p>
+      <table class="c79">
+      <tr class="c63">
+        <td class="c148 c88" colspan="1" rowspan="1">
+          <p class="c35">
+            <span class="c58 c88 c42">&nbsp; &nbsp; &nbsp;Subtipo: &nbsp;</span>
+          </p>
+        </td>
+        <td class="c40 c88" colspan="1" rowspan="1">
+          <p class="c35"><span class="c58 c88 c42">&nbsp;Nivel:</span></p>
+        </td>
+        <td class="c88 c120" colspan="1" rowspan="1">
+          <p class="c35"><span class="c58 c88 c42">Sentidos:</span></p>
+        </td>
+        <td class="c88 c122" colspan="1" rowspan="1">
+          <p class="c35"><span class="c58 c42 c88">Contexto:</span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c148" colspan="1" rowspan="1">
+          <p class="c28">
+            <span class="c8">CR: ciclorruta <br />CB: ciclobanda</span>
+          </p>
+        </td>
+        <td class="c40" colspan="1" rowspan="1">
+          <p class="c28">
+            <span class="c8"
+              >C: nivel de calzada<br />A: nivel de and&eacute;n</span
+            >
+          </p>
+        </td>
+        <td class="c120" colspan="1" rowspan="1">
+          <p class="c28"><span class="c8">1: Un sentido</span></p>
+          <p class="c28"><span class="c8">2: Dos sentidos</span></p>
+        </td>
+        <td class="c122" colspan="1" rowspan="1">
+          <p class="c28">
+            <span class="c8">P: Estacionamiento en paralelo </span>
+          </p>
+          <p class="c28">
+            <span class="c8">T: Estacionamiento transversal</span>
+          </p>
+          <p class="c28"><span class="c8">S: Sin estacionamiento</span></p>
+        </td>
+      </tr>
+    </table>
+    <p>Fuente: Guía de cicloinfraestructura para ciudades colombianas, pág. 103-104.</p>
+    <h2>Vías cicloadaptadas</h2>
+    <table class="c79">
+      <tr class="c176">
+        <td class="c66" colspan="1" rowspan="1">
+          <p class="c35"><span class="c8 c117">SUBTIPO</span></p>
+        </td>
+        <td class="c66" colspan="1" rowspan="1">
+          <p class="c35"><span class="c8 c117">ADAPTACI&Oacute;N</span></p>
+        </td>
+        <td class="c117 c145" colspan="1" rowspan="1">
+          <p class="c2 c150"><span class="c8 c117">DEFINICI&Oacute;N</span></p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c94" colspan="1" rowspan="2">
+          <p class="c37 c3">
+            <span class="c8">Prelaci&oacute;n de bicicleta</span>
+          </p>
+        </td>
+        <td class="c94" colspan="1" rowspan="1">
+          <p class="c37 c3"><span>Banda ciclopreferente</span></p>
+        </td>
+        <td class="c31" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Banda en calzada reservada preferentemente a la
+              circulaci&oacute;n de bicicletas y delimitada mediante una
+              l&iacute;nea discontinua. Veh&iacute;culos motorizados y
+              bicicletas pueden cruzar la l&iacute;nea si la situaci&oacute;n
+              del tr&aacute;fico as&iacute; lo requiere, siempre y cuando no se
+              incomode ni se ponga en peligro al ciclista.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c110" colspan="1" rowspan="1">
+          <p class="c3 c37"><span>Carril ciclopreferente</span></p>
+        </td>
+        <td class="c134" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Carril de la calzada de uso compartido con indicaci&oacute;n de
+              la circulaci&oacute;n del ciclista por el centro y
+              limitaci&oacute;n de velocidad.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c47" colspan="1" rowspan="3">
+          <p class="c37 c3">
+            <span class="c8"
+              >Autorizadas para el tr&aacute;nsito de bicicletas</span
+            >
+          </p>
+        </td>
+        <td class="c47" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Carril bus-bici</span></p>
+        </td>
+        <td class="c69" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Carril para uso preferencial del transporte p&uacute;blico (bus),
+              en el que se autoriza la circulaci&oacute;n ciclista.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c47" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Contraflujo ciclista</span></p>
+        </td>
+        <td class="c69" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >V&iacute;a de sentido &uacute;nico para el tr&aacute;fico general
+              en donde se autoriza la circulaci&oacute;n ciclista a
+              contraflujo.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c47" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Calle peatonal</span></p>
+        </td>
+        <td class="c69" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Espacio o v&iacute;a peatonal donde se autoriza la
+              circulaci&oacute;n de bicicletas, manteniendo el peat&oacute;n la
+              prioridad. Sin ning&uacute;n tipo de diferenciaci&oacute;n de los
+              espacios.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c110" colspan="1" rowspan="1">
+          <p class="c37 c3">
+            <span class="c8">Calle con tr&aacute;nsito calmado</span>
+          </p>
+        </td>
+        <td class="c110" colspan="1" rowspan="1">
+          <p class="c37 c3 c80"><span class="c8"></span></p>
+        </td>
+        <td class="c134" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Uso compartido de la calzada por parte de los ciclistas donde la
+              circulaci&oacute;n es segura, c&oacute;moda y atractiva gracias a
+              que la intensidad y la velocidad del tr&aacute;nsito motorizado
+              son bajas.</span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p>Fuente: Gu&iacute;a de cicloinfraestructura para ciudades colombianas, p&aacute;g. 51-52.</p>
+    </div>
+  </div>  
+  
+  <div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="heading4">Cicloinfraestructura en OSM</h1>
+      <p>En OSM, las vías ciclistas se distinguen principalmente en función de su relación con la calzada. En este caso, hay dos posibilidades: las vías ciclistas que van por la calzada o las que tienen un trazado separado de ella.</p>
+
+      <p>En el primer caso, para una ciclobanda en calzada, a la línea de la calle correspondiente (highway=*[1]) se le añade la etiqueta cycleway y se complementa con el prefijo derecha (right), izquierda (left) o ambos (both) para especificar el lado de la calle en que se encuentra; por ejemplo, cycleway:right=lane para una ciclobanda a nivel calzada al lado derecho de la calle, cycleway:left=lane si está a la izquierda o cycleway:both=lane si hay ciclobanda a ambos lados.</p>
+
+      <p>Para indicar si una ciclorruta es unidireccional o bidireccional, utilizamos la etiqueta oneway=yes/no. Para las ciclobandas, debemos indicar primero el lado: cycleway:right:oneway=yes/no.</p>
+      <table class="c18">
+      <tr class="c180">
+        <td class="c177" colspan="1" rowspan="1">
+          <p class="c0">
+            <span class="c19 c14"
+              >Ejemplo de etiquetas b&aacute;sicas para una ciclobanda
+              bidireccional a la derecha, a nivel de la calzada, en v&iacute;a
+              de un sentido:</span
+            >
+          </p>
+          <p class="c90">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 154.00px; height: 143.73px;"
+              ><img
+                alt=""
+                src="images/image24.png"
+                style="width: 154.00px; height: 143.73px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c177" colspan="1" rowspan="1">
+          <p class="c38">
+            <span class="c19 c14">L&iacute;nea A (calle):</span>
+          </p>
+          <p class="c38">
+            <span class="c19 c14"
+              >highway=secondary<br />oneway=yes<br />cycleway:right=lane<br />cycleway:right:oneway=no</span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+  
+   <p>En cambio, las ciclorrutas (en calzada o en andén) y las ciclobandas en andén se consideran segregadas, por lo que se traza una nueva línea en OSM al lado de la calle que corresponda y se etiqueta como highway=cycleway. En ambos casos se agregan los demás atributos propios, como se explica más abajo.</p>
+
+<p>También podemos agregar el ancho de las vías ciclistas con la etiqueta width. Por ejemplo, para una ciclobanda a la derecha de 1 metro de ancho agregamos cycleway:right:width=1m.</p>
+
+<p>En el caso de las vías cicloadaptadas, cuando tenemos bandas ciclopreferentes, carriles ciclopreferentes o vías compartidas, también se etiquetan en la misma línea de la vía para vehículos motorizados y se debe definir el lado al que se encuentra mediante los prefijos derecha (right), izquierda (left) o ambos (both).</p> 
+<table class="c18">
+      <tr class="c182">
+        <td class="c154" colspan="2" rowspan="1">
+          <p class="c0">
+            <span class="c19 c14"
+              >Ejemplo de etiquetas b&aacute;sicas para una ciclorruta
+              bidireccional:</span
+            >
+          </p>
+          <p class="c0 c80"><span class="c19 c14"></span></p>
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 309.87px; height: 167.44px;"
+              ><img
+                alt=""
+                src="images/image34.png"
+                style="width: 309.87px; height: 167.44px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c26"><span class="c19 c14"></span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c157" colspan="1" rowspan="1">
+          <p class="c38">
+            <span class="c19 c14">L&iacute;nea A (calle):</span>
+          </p>
+          <p class="c38"><span class="c19 c14">highway=secondary</span></p>
+          <p class="c38"><span class="c19 c14">lanes=2</span></p>
+          <p class="c38"><span class="c19 c14">oneway=no</span></p>
+          <p class="c38"><span class="c19 c14">cycleway=separate</span></p>
+        </td>
+        <td class="c162" colspan="1" rowspan="1">
+          <p class="c38">
+            <span class="c19 c14">L&iacute;nea B (ciclorruta):</span>
+          </p>
+          <p class="c38"><span class="c19 c14">highway=cycleway</span></p>
+          <p class="c38"><span class="c19 c14">oneway=no</span></p>
+          <p class="c26"><span class="c19 c14"></span></p>
+        </td>
+      </tr>
+    </table>
+    <hr class="c127" />
+    <div>
+      <p class="c0">
+        <a href="#ftnt_ref1" id="ftnt1">[1]</a
+        ><span class="c86"
+          >&nbsp;Las etiquetas de las calles en OSM deben corresponder con la
+          jerarqu&iacute;a de las calles en Medell&iacute;n establecida por el
+          POT.</span
+        >
+      </p>
+    </div>
+    </div>
+    </div>
+ 
+<div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="heading5">Propuesta de etiquetas de separación y demarcación de la cicloinfraestructura</h1>
+      <p>Hasta el momento, no existían en OSM etiquetas documentadas o comunes para los elementos o características de separación, demarcación y protección de la infraestructura ciclista. De ahí surgió la propuesta de un equipo de mapeadores de Berlín, Alemania, para implementar un esquema de etiquetas para incluir esta información en el mapa. Dado que no solo las ciclorrutas sino también otros carriles pueden equiparse con este tipo de elementos, estas etiquetas se pueden utilizar para todo tipo de vías de circulación.</p>
+
+<p>Especialmente en la infraestructura para bicicletas, la separación y demarcación de otros usuarios de la vía es un indicador importante para evaluar su calidad, además de factores como el ancho o el tipo de superficie. El hecho de que un ciclista tenga que esperar que los automotores puedan entrar en la ciclorruta o que los peatones la puedan invadir bruscamente no solo tiene una gran influencia en la sensación de seguridad, sino que también puede ayudar a determinar qué velocidad es apropiada en ciertos tramos.</p>
+
+<p>Así pues, en esta fase del proyecto probaremos la implementación de las etiquetas separation (separación), marking (demarcación) y traffic_mode (modo de tráfico) para incluir en el mapa la información detallada sobre las demarcaciones y separaciones duras o blandas de la cicloinfraestructura existente.</p>
+
+<p>Para etiquetar los separadores físicos utilizaremos la clave separation= con el valor correspondiente. Los valores más comunes incluyen bolardos (bollard), tachones (studs), macetas (planter), jardineras (greenery) o bordillos (kerb).</p>
+
+<p>Para etiquetar las demarcaciones, utilizaremos la clave marking= con el valor según el tipo de demarcación: línea continua (solid_line), línea discontinua (dashed_line), línea continua doble (double_solid_line), zona rayada (barred_area), pictograma (pictogram) o cambio de superficie (surface).</p>
+
+<p>Los elementos de separación y las demarcaciones delinean el flujo de los distintos modos de tráfico. La clave traffic_mode= nos permite agregar al mapa la información sobre el tipo de tráfico al que se refiere la separación o demarcación especificada. Como valores comunes tenemos vehículos motorizados (motor_vehicle), parqueo (parking), carril bus (psv), bicicleta (bicycle) o zona peatonal (foot).</p>
+ <h2>Cómo indicar la separación de cada lado</h2>
+
+<p>Para el caso de las ciclorrutas y las ciclobandas en andén, la dirección de la línea es definida por el sentido en el que se dibujó en OSM y el lado (izquierda o derecha) de las separaciones, demarcaciones y tráfico adyacente se indica según esa dirección.</p>
+
+<p>Si es una vía ciclista de un sentido, izquierda (left) o derecha (right) como prefijo de separación, demarcación y tráfico adyacente se refiere a la dirección de la vía ciclista. Si es bidireccional pero la vía está mapeada por separado, izquierda  (left)  o derecha (right) se refiere a la dirección de la línea en OSM.</p>
+
+<p>Para las ciclobandas bidireccionales  izquierda (left) o derecha (right), se refieren a la dirección del tráfico en el carril adyacente, es decir, en la imagen 3, al observar la ciclorruta en la dirección de tráfico, las direcciones cambian. Para mayor ilustración, tenemos la siguiente imagen:</p>
+<img alt="" src="images/image47.png" style="width: 761.07px; height: 173.51px; margin-left: -47.07px; margin-top: -14.95px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" />
+</div>
+ </div>
+ 
+ <div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="heading6">Etiquetas para vías ciclistas</h1>
+      <p><strong>Es importante destacar que lo que sigue es la incorporación de la propuesta de nuevas etiquetas. Recuerden que la propuesta aún está en proceso de revisión y discusión en la comunidad OSM. Este ejercicio es una prueba piloto.</strong></p>
+      <h2 id="ciclorrutas">Ciclorrutas</h2>
+
+<p>Para mapear las ciclorrutas en OSM se traza una línea paralela a la de la vía correspondiente. En este caso la línea A corresponde a la calzada y la línea B a la ciclorruta. Agregamos cycleway=separate a las etiquetas de la calzada (línea A) para indicar que la ciclorruta está mapeada en una línea separada; a la línea de la ciclorruta (línea B) le agregamos las etiquetas highway=cycleway, oneway=yes/no (según sea unidireccional o bidireccional) y las etiquetas de separación (separation=*), demarcación (marking=*) y modos de tráfico (traffic_mode=*) adyacentes explicadas en el apartado anterior. </p>
+<p>Ejemplo de ciclorruta bidireccional en calzada: </p>
+<p class="c107">
+      <span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 309.87px; height: 167.44px;"
+        ><img
+          alt="https://lh4.googleusercontent.com/jU1_NPv3jatBEqXdNzE6Vk8LEs5OIQYbW8XEwldlRdsWZng45lysjKEBise3zh_DmBbnEq1XHkTJj5OtDcbLF-yCU74w-LjN9940adPp1bGZtdNkgoLyf8zL8zByUU33SQVV8y1B"
+          src="images/image34.png"
+          style="width: 309.87px; height: 167.44px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+          title="" /></span
+      ><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 267.78px; height: 166.67px;"
+        ><img
+          alt=""
+          src="images/image25.png"
+          style="width: 267.78px; height: 166.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+          title="Imagen"
+      /></span>
+    </p>
+    <a id="t.950e46846a946cb8225e02d626de6fb5cc4029c2"></a><a id="t.6"></a>
+    <table class="c18">
+      <tr class="c63">
+        <td class="c166" colspan="1" rowspan="1">
+          <p class="c38"><span class="c19 c14">L&iacute;nea A:</span></p>
+          <p class="c38"><span class="c19 c14">highway=*</span></p>
+          <p class="c38"><span class="c19 c14">lanes=2</span></p>
+          <p class="c38"><span class="c19 c14">oneway=no</span></p>
+          <p class="c38"><span class="c19 c14">cycleway=separate</span></p>
+        </td>
+        <td class="c162" colspan="1" rowspan="1">
+          <p class="c38"><span class="c19 c14">L&iacute;nea B:</span></p>
+          <p class="c38"><span class="c19 c14">highway=cycleway</span></p>
+          <p class="c38"><span class="c19 c14">oneway=no</span></p>
+          <p class="c38">
+            <span class="c19 c14">separation:left=bump;studs</span>
+          </p>
+          <p class="c38"><span class="c19 c14">separation:right=kerb</span></p>
+          <p class="c38">
+            <span class="c19 c14">marking:both=solid_line</span>
+          </p>
+          <p class="c38"><span class="c19 c14">traffic_mode:right=no</span></p>
+          <p class="c38">
+            <span class="c19 c14">traffic_mode:left=motor_vehicle</span>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p class="c0 c80"><span class="c19 c14"></span></p>
+    <p class="c0 c80"><span class="c19 c14"></span></p>
+    <a id="t.843ca13effd9ae922aab604891e2203399097d7d"></a><a id="t.7"></a>
+    <table class="c79">
+      <tr class="c80">
+        <td class="c137" colspan="4" rowspan="1">
+          <p class="c7"><span class="c5">CICLORRUTAS</span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c171" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">#</span></p>
+        </td>
+        <td class="c112" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">Subtipo</span></p>
+        </td>
+        <td class="c128" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">Foto</span></p>
+        </td>
+        <td class="c70" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">Etiquetas en OSM</span></p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">1</span></p>
+          <p class="c7 c80"><span class="c5"></span></p>
+          <p class="c7 c80"><span class="c5"></span></p>
+          <p class="c7 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59"
+              >Ciclorruta unidireccional en calzada, a la derecha, en v&iacute;a
+              de un sentido (p. ej. La Picacha)</span
+            >
+          </p>
+          <p class="c2">
+            <span class="c44"><br /></span><span class="c5">CR-C-1-S</span>
+          </p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 297.00px; height: 173.33px;"
+              ><img
+                alt=""
+                src="images/image10.png"
+                style="width: 297.00px; height: 173.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D213663274468945"
+                >https://www.mapillary.com/app/?pKey=213663274468945</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:&nbsp;</span></p>
+          <p class="c2 c3">
+            <span class="c59 c83"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=1</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c59 c85">B: </span></p>
+          <p class="c2 c73">
+            <span class="c59 c83"
+              >highway=cycleway <br />oneway=yes <br />separation:both=kerb
+              <br />marking:both=solid_line
+              <br />traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+          <p class="c2 c3 c80"><span class="c74 c59 c42"></span></p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">2</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59">Ciclorruta</span
+            ><span class="c5"
+              >&nbsp;bidireccional en calzada a la derecha en v&iacute;a de un
+              sentido</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-C-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 297.00px; height: 181.33px;"
+              ><img
+                alt=""
+                src="images/image38.png"
+                style="width: 297.00px; height: 181.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D206292728564998"
+                >https://www.mapillary.com/app/?pKey=206292728564998</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=2</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c5">B:</span></p>
+          <p class="c2 c73">
+            <span class="c45"
+              >highway=cycleway <br />oneway=no <br />separation:left=bump
+              <br />separation:right=kerb;greenery <br />marking:both=solid_line
+              <br />traffic_mode:left=motor_vehicle
+              <br />traffic_mode:right=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">3</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59">Ciclorruta</span
+            ><span class="c5"
+              >&nbsp;bidireccional en calzada a la derecha en v&iacute;a de un
+              sentido</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-C-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 297.00px; height: 140.00px;"
+              ><img
+                alt=""
+                src="images/image44.png"
+                style="width: 297.00px; height: 140.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D483917120612816"
+                >https://www.mapillary.com/app/?pKey=483917120612816</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=2</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c73">
+            <span class="c45"
+              >highway=cycleway <br />oneway=no <br />separation:left=hedges
+              <br />separation:right=tree_row <br />marking:both=solid_line
+              <br />traffic_mode:right=foot
+              <br />traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">4</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59">Ciclorruta</span
+            ><span class="c5"
+              >&nbsp;bidireccional a nivel and&eacute;n en separador central de
+              v&iacute;a de dos sentidos</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image41.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D735238754859349"
+                >https://www.mapillary.com/app/?pKey=735238754859349</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=2</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=cycleway <br />oneway=no <br />separation:left=kerb
+              <br />separation:right=tree_row <br />marking:both=solid_line
+              traffic_mode:both=motor_vehicle</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c5">C:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=2</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">5</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59">Ciclorruta</span
+            ><span class="c5"
+              >&nbsp;bidireccional a nivel and&eacute;n a la izquierda en
+              v&iacute;a de un sentido</span
+            >
+          </p>
+          <p class="c2"><span class="c59">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image21.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D133017656069322"
+                >https://www.mapillary.com/app/?pKey=133017656069322</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate
+              <br />oneway=yes<br />lanes=3</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c59 c83"
+              >highway=cycleway <br />oneway=no <br />separation:left=no
+              <br />separation:right=bollard <br />marking:both=</span
+            ><span class="c59 c83">solid_line </span
+            ><span class="c45"
+              >traffic_mode:right=motor_vehicle
+              <br />traffic_mode:left=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">6</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta a nivel and&eacute;n a la derecha, con jardinera de
+              separador entre ciclorruta y and&eacute;n
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 165.33px;"
+              ><img
+                alt=""
+                src="images/image29.png"
+                style="width: 362.00px; height: 165.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D605419671300787"
+                >https://www.mapillary.com/app/?pKey=605419671300787</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=2</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=cycleway <br />oneway=no <br />separation:left=tree_row
+              <br />separation:right=structure <br />marking:both=solid_line
+              <br />traffic_mode:left=foot <br />traffic_mode:right=no</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">7</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta nivel and&eacute;n bidireccional sin parqueo
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image31.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D569146215121683"
+                >https://www.mapillary.com/app/?pKey=569146215121683</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A y B:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />cycleway=separate <br />oneway=yes
+              <br />lanes=2</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">C:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=cycleway <br />oneway=no <br />separation:left=no
+              <br />separation:right=tree_row marking:left=solid_line;surface
+              <br />marking:right=solid_line traffic_mode:left=motor_vehicle
+              <br />traffic_mode:right=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">8</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta nivel and&eacute;n bidireccional sin parqueo
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 272.00px;"
+              ><img
+                alt=""
+                src="images/image46.png"
+                style="width: 362.00px; height: 272.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D1305930423663366"
+                >https://www.mapillary.com/app/?pKey=1305930423663366</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=*<br />lanes=2 <br />oneway=yes <br />cycleway=separate
+            </span>
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=cycleway <br />oneway=no <br />separation:left=greenery
+              <br />separation:right=kerb <br />marking:both=solid_line
+              <br />traffic_mode:left=foot
+              <br />traffic_mode:right=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">9</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta a nivel and&eacute;n, con segregaci&oacute;n de
+              parqueo de autos, con bolardos y and&eacute;n.
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-P</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 170.67px;"
+              ><img
+                alt=""
+                src="images/image8.png"
+                style="width: 362.00px; height: 170.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D231402845900264"
+                >https://www.mapillary.com/app/?pKey=231402845900264</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />lanes=2 <br />oneway=yes
+              <br />cycleway=separate</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c59 c83"
+              >highway=cycleway <br />oneway=no <br />separation:left=bollard
+              <br />separation:right=no <br />marking:both=solid_line;surface
+              traffic_mode:left=parking <br />traffic_mode:right=foot
+            </span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">10</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta bidireccional en calzada, a la derecha, en v&iacute;a
+              de dos sentidos
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-C-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 225.33px;"
+              ><img
+                alt=""
+                src="images/image28.png"
+                style="width: 362.00px; height: 225.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D581039303804729"
+                >https://www.mapillary.com/app/?pKey=581039303804729</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c23">A:</span></p>
+          <p class="c0 c3"><span class="c23">highway=*</span></p>
+          <p class="c0 c3"><span class="c23">lanes=2</span></p>
+          <p class="c0 c3"><span class="c23">oneway=no</span></p>
+          <p class="c0 c3"><span class="c23">cycleway=separate</span></p>
+          <p class="c0 c3 c80"><span class="c23"></span></p>
+          <p class="c0 c3"><span class="c23">B:</span></p>
+          <p class="c0 c3"><span class="c23">highway=cycleway</span></p>
+          <p class="c0 c3"><span class="c23">oneway=no</span></p>
+          <p class="c0 c3"><span class="c23">separation:left=bump</span></p>
+          <p class="c0 c3"><span class="c23">separation:right=kerb</span></p>
+          <p class="c0 c3"><span class="c23">marking:both=solid_line</span></p>
+          <p class="c0 c3"><span class="c23">traffic_mode:right=no</span></p>
+          <p class="c0 c3">
+            <span class="c59 c102 c83">traffic_mode:left=motor_vehicle</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c116">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">11</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Bidireccional en calzada, a la derecha*, en v&iacute;a de un
+              sentido (p. ej. Bol&iacute;var entre San Juan y Colombia)</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-C-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 157.33px;"
+              ><img
+                alt=""
+                src="images/image36.png"
+                style="width: 362.00px; height: 157.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c0 c3"><span class="c23">A:</span></p>
+          <p class="c0 c3"><span class="c23">highway=* </span></p>
+          <p class="c0 c3"><span class="c23">lanes=1</span></p>
+          <p class="c0 c3"><span class="c23">oneway=yes</span></p>
+          <p class="c0 c3"><span class="c23">cycleway=separate</span></p>
+          <p class="c0 c3 c80"><span class="c23"></span></p>
+          <p class="c0 c3"><span class="c23">B:</span></p>
+          <p class="c0 c3"><span class="c23">highway=cycleway</span></p>
+          <p class="c0 c3"><span class="c23">oneway=no</span></p>
+          <p class="c0 c3">
+            <span class="c59 c83 c102">separation:left=</span
+            ><span class="c45">studs</span>
+          </p>
+          <p class="c0 c3"><span class="c23">separation:right=no</span></p>
+          <p class="c0 c3">
+            <span class="c23">marking:right=solid_line;surface</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c23">marking:left=doble_solid_line</span>
+          </p>
+          <p class="c0 c3"><span class="c23">traffic_mode:right=foot</span></p>
+          <p class="c0 c3">
+            <span class="c59 c102 c83">traffic_mode:left=motor_vehicle</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">12</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta bidireccional a nivel and&eacute;n en separador
+              central (p. ej. la 65 entre Colombia y la Iguan&aacute;)
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 305.70px; height: 142.37px;"
+              ><img
+                alt=""
+                src="images/image3.png"
+                style="width: 305.70px; height: 142.37px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D617441266436839"
+                >https://www.mapillary.com/app/?pKey=617441266436839</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c23">A:</span></p>
+          <p class="c0 c3"><span class="c23">highway=*</span></p>
+          <p class="c0 c3"><span class="c23">lanes=2</span></p>
+          <p class="c0 c3"><span class="c23">oneway=yes</span></p>
+          <p class="c0 c3"><span class="c23">cycleway=separate</span></p>
+          <p class="c0 c3 c80"><span class="c23"></span></p>
+          <p class="c0 c3"><span class="c23">B:</span></p>
+          <p class="c0 c3"><span class="c23">highway=cycleway</span></p>
+          <p class="c0 c3"><span class="c23">oneway=no</span></p>
+          <p class="c0 c3">
+            <span class="c23">separation:right=tree_row</span>
+          </p>
+          <p class="c0 c3"><span class="c23">separation:left=kerb</span></p>
+          <p class="c0 c3"><span class="c23">marking:both=solid_line</span></p>
+          <p class="c0 c3"><span class="c23">traffic_mode:right=no</span></p>
+          <p class="c0 c3">
+            <span class="c23">traffic_mode:left=motor_vehicle</span>
+          </p>
+          <p class="c0 c3 c80"><span class="c23"></span></p>
+          <p class="c0 c3"><span class="c23">C:</span></p>
+          <p class="c0 c3"><span class="c23">highway=*</span></p>
+          <p class="c0 c3"><span class="c23">lanes=2</span></p>
+          <p class="c0 c3"><span class="c23">oneway=yes</span></p>
+          <p class="c0 c3">
+            <span class="c59 c102 c83">cycleway=separate</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">13</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59">Ciclorruta</span
+            ><span class="c5"
+              >&nbsp;bidireccional a la derecha* a nivel del and&eacute;n en
+              v&iacute;a de dos sentidos (p. ej. 30A entre 65 y 65F) *Si la
+              ciclorruta est&aacute; a la izquierda, la l&iacute;nea B debe ser
+              dibujada a la izquierda de la v&iacute;a (p. ej. la 30A entre 65F
+              y 70)
+            </span>
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 168.00px;"
+              ><img
+                alt=""
+                src="images/image43.png"
+                style="width: 362.00px; height: 168.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D909785556536796"
+                >https://www.mapillary.com/app/?pKey=909785556536796</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c0 c3"><span class="c23">A:</span></p>
+          <p class="c0 c3"><span class="c23">highway=*</span></p>
+          <p class="c0 c3"><span class="c23">lanes=2</span></p>
+          <p class="c0 c3"><span class="c23">oneway=no</span></p>
+          <p class="c0 c3"><span class="c23">cycleway=separate </span></p>
+          <p class="c0 c3 c80"><span class="c23"></span></p>
+          <p class="c0 c3"><span class="c23">B:</span></p>
+          <p class="c0 c3"><span class="c23">highway=cycleway</span></p>
+          <p class="c0 c3"><span class="c23">oneway=no</span></p>
+          <p class="c0 c3">
+            <span class="c23">separation:right=greenery</span>
+          </p>
+          <p class="c0 c3"><span class="c23">separation:left=kerb</span></p>
+          <p class="c0 c3"><span class="c23">marking:both=solid_line</span></p>
+          <p class="c0 c3"><span class="c23">traffic_mode:right=foot</span></p>
+          <p class="c0 c3">
+            <span class="c59 c102 c83">traffic_mode:left=motor_vehicle</span>
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">14</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta a nivel and&eacute;n, en v&iacute;a de dos sentidos,
+              bidireccional y sin parqueo. *El lado depende de la
+              direcci&oacute;n de la l&iacute;nea en OSM.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 166.67px;"
+              ><img
+                alt=""
+                src="images/image45.png"
+                style="width: 362.00px; height: 166.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D722750106071247"
+                >https://www.mapillary.com/app/?pKey=722750106071247</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=no <br />lanes=2
+              <br />cycleway=separate</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c59 c86"
+              >highway=cycleway <br />oneway=no<br />separation:both=kerb
+              <br />marking:both=solid_line traffic_mode:right=motor_vehicle<br />trafic_mode:left=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">15</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c59">Ciclorruta</span
+            ><span class="c5"
+              >&nbsp;bidireccional en calzada a la derecha (ej. calle
+              Barranquilla sobre el r&iacute;o)</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-C-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image18.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D1544040725963206"
+                >https://www.mapillary.com/app/?pKey=1544040725963206</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c2 c3"><span class="c5">A:</span></p>
+          <p class="c2 c3">
+            <span class="c76 c59"
+              >highway=* <br />oneway=yes <br />lanes=2
+              <br />cycleway=separate</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c76 c59">B:</span></p>
+          <p class="c2 c3">
+            <span class="c76 c59"
+              >highway=cycleway <br />oneway=no <br />foot=designated
+              <br />segregated=yes <br />separation:right=kerb
+              separation:left=jersey_barrier
+              traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c51">
+        <td class="c62" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">16</span></p>
+        </td>
+        <td class="c60" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclorruta a nivel and&eacute;n, bidireccional, en separador
+              central separada por baranda (ej. San Juan sobre el
+              r&iacute;o)</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CR-A-2-S</span></p>
+        </td>
+        <td class="c33" colspan="1" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image39.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D531358998242235"
+                >https://www.mapillary.com/app/?pKey=531358998242235</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c49" colspan="1" rowspan="1">
+          <p class="c0 c3"><span class="c5">A:</span></p>
+          <p class="c0 c3">
+            <span class="c76 c59">highway=* <br />oneway=yes </span>
+          </p>
+          <p class="c0 c3">
+            <span class="c76 c59">lanes=3<br />cycleway=separate</span>
+          </p>
+          <p class="c0 c3 c80"><span class="c76 c59"></span></p>
+          <p class="c0 c3"><span class="c76 c59">B:</span></p>
+          <p class="c0 c3">
+            <span class="c59 c76"
+              >highway=cycleway <br />oneway=no <br />foot=designated
+              <br />segregated=no <br />marking:both=solid_line
+              <br />separation:both=fence traffic_mode:both=motor_vehicle</span
+            >
+          </p>
+          <p class="c0 c3 c80"><span class="c76 c59"></span></p>
+          <p class="c0 c3"><span class="c5">C:</span></p>
+          <p class="c0 c3">
+            <span class="c76 c59">highway=* <br />oneway=yes </span>
+          </p>
+          <p class="c0 c3">
+            <span class="c76 c59">lanes=3<br />cycleway=separate</span>
+          </p>
+          <p class="c2 c3 c80"><span class="c76 c59"></span></p>
+        </td>
+      </tr>
+    </table>
+ <h2 id="ciclobandas">Ciclobandas</h2>
+
+<p>Para mapear las ciclobandas en OSM se agregan las etiquetas a la línea de la calzada. En este caso, las etiquetas comienzan con cycleway: y se complementan con la información correspondiente, indicando primero el lado de la calle en el que está la ciclobanda. Solo se trazan como línea separada si son a nivel andén.</p>
+
+<p>Ejemplo de ciclobanda bidireccional en calzada: </p>
+<p class="c90">
+      <span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 297.50px; height: 182.62px;"
+        ><img
+          alt=""
+          src="images/image23.png"
+          style="width: 297.50px; height: 182.62px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+          title="Imagen" /></span
+      ><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 195.00px; height: 182.00px;"
+        ><img
+          alt=""
+          src="images/image24.png"
+          style="width: 195.00px; height: 182.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+          title=""
+      /></span>
+    </p>
+    <a id="t.b543c46b8d37fdbbc29f5f04227f4a5afb2c3891"></a><a id="t.8"></a>
+    <table class="c18">
+      <tr class="c63">
+        <td class="c82" colspan="1" rowspan="1">
+          <p class="c38"><span class="c19 c14">L&iacute;nea A:</span></p>
+          <p class="c38">
+            <span class="c19 c14"
+              >highway=*<br />oneway=yes<br />cycleway:right=lane<br />cycleway:right:oneway=no<br />cycleway:right:separation:right=kerb</span
+            >
+          </p>
+          <p class="c38">
+            <span class="c14">cycleway:right:separation:left=</span
+            ><span class="c14">bump</span>
+          </p>
+          <p class="c38">
+            <span class="c14">cycleway:right:marking:right=</span
+            ><span class="c14">solid_line</span>
+          </p>
+          <p class="c38">
+            <span class="c19 c14"
+              >cycleway:right:marking:left=double_solid_line</span
+            >
+          </p>
+          <p class="c38">
+            <span class="c19 c14">cycleway:right:traffic_mode:right=no</span>
+          </p>
+          <p class="c38">
+            <span class="c19 c14"
+              >cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table class="c105">
+      <tr class="c80">
+        <td class="c88 c161" colspan="8" rowspan="1">
+          <p class="c7"><span class="c5">CICLOBANDAS</span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c88 c144" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">#</span></p>
+        </td>
+        <td class="c88 c132" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">Subtipo</span></p>
+        </td>
+        <td class="c88 c139" colspan="3" rowspan="1">
+          <p class="c7"><span class="c5">Foto</span></p>
+        </td>
+        <td class="c88 c152" colspan="3" rowspan="1">
+          <p class="c7"><span class="c5">Etiquetas en OSM</span></p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">1</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada, a la derecha, en v&iacute;a
+              de dos sentidos (p. ej. 33A entre Transv. 39A y 76.)</span
+            >
+          </p>
+          <p class="c2"><span class="c59">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 282.00px; height: 125.33px;"
+              ><img
+                alt=""
+                src="images/image20.png"
+                style="width: 282.00px; height: 125.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c14"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D657468109400649"
+                >https://www.mapillary.com/app/?pKey=657468109400649</a
+              ></span
+            ><span class="c19 c14">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c0 c165">
+            <span class="c45"
+              >highway=* <br />oneway=no <br />lanes=2
+              <br />cycleway:right=lane<br />cycleway:right:oneway=yes &nbsp;<br />cycleway:right:separation:left=studs
+              <br />cycleway:right:separation:right=kerb;greenery
+            </span>
+          </p>
+          <p class="c0 c129">
+            <span class="c45">cycleway:right:marking:right=no</span>
+          </p>
+          <p class="c0 c57">
+            <span class="c59 c83"
+              >cycleway:right:marking:left=dashed_line;solid_line
+              cycleway:right:traffic_mode:left=motor_vehicle
+              <br />cycleway:right:traffic_mode:right=foot
+              <br />cycleway:left=shared_lane
+              <br />cycleway:left:marking=pictogram</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">2</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda bidireccional en calzada, en v&iacute;a de un
+              sentido.</span
+            >
+          </p>
+          <p class="c2"><span class="c59">CB-C-2-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 269.00px; height: 153.33px;"
+              ><img
+                alt=""
+                src="images/image26.png"
+                style="width: 269.00px; height: 153.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D868858244399663"
+                >https://www.mapillary.com/app/?pKey=868858244399663</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c59 c83"
+              >highway=* <br />oneway=yes <br />lanes=2<br />cycleway:left=lane
+              <br />cycleway:left:oneway=no
+              <br />cycleway:left:separation:left=kerb;tree_row
+              <br />cycleway:left:separation:right=bump;studs
+              <br />cycleway:left:marking:left=solid_line
+              <br />cycleway:left:marking:right=double_solid_line
+              <br />cycleway:left:traffic_mode:left=foot
+              <br />cycleway:left:traffic_mode:right=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">3</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada en v&iacute;a de un
+              sentido.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 216.00px;"
+              ><img
+                alt=""
+                src="images/image19.png"
+                style="width: 362.00px; height: 216.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D733739317938665"
+                >https://www.mapillary.com/app/?pKey=733739317938665</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />lanes=2 <br />oneway=yes
+              <br />cycleway:right=lane <br />cycleway:right:oneway=yes
+              <br />cycleway:right:separation:left=studs
+              cycleway:right:separation:right=kerb
+              cycleway:right:marking:left=dashed_line;solid_line
+              cycleway:right:marking:right=no
+              cycleway:right:traffic_mode:left=motor_vehicle
+              cycleway:right:traffic_mode:right=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">4</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda bidireccional en calzada con segregaci&oacute;n de
+              tachas piramidales oblicuas.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-2-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 221.33px;"
+              ><img
+                alt=""
+                src="images/image23.png"
+                style="width: 362.00px; height: 221.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?%26pKey%3D2254766824672868"
+                >https://www.mapillary.com/app/?pKey=2254766824672868</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />lanes=2 <br />oneway=yes
+              <br />cycleway:right:oneway=no <br />cycleway:right=lane
+              <br />cycleway:right:separation:right=kerb
+              cycleway:right:separation:left=bump
+              cycleway:right:marking:right=solid_line
+              cycleway:right:marking:left=double_solid_line
+              cycleway:right:traffic_mode:right=no
+              cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">5</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda bidireccional en calzada, a la derecha, con
+              segregaci&oacute;n de pintura, studs, tachas piramidales en
+              algunas secciones.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-2-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 158.67px;"
+              ><img
+                alt=""
+                src="images/image11.png"
+                style="width: 362.00px; height: 158.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D3028639470778101"
+                >https://www.mapillary.com/app/?pKey=3028639470778101</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=yes <br />lanes=1
+              <br />cycleway:right:oneway=no <br />cycleway:right=lane
+              <br />cycleway:right:separation:right=kerb
+              cycleway:right:separation:left=studs
+              cycleway:right:marking:both=dashed_line
+              cycleway:right:traffic_mode:left=motor_vehicle
+              cycleway:right:traffic_mode:right=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">6</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada, a la derecha, en v&iacute;a
+              de un sentido. (p. ej. Circ. 2da y 4ta entre Av. Jard&iacute;n y
+              la Nutibara)</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 168.00px;"
+              ><img
+                alt=""
+                src="images/image13.png"
+                style="width: 362.00px; height: 168.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D1611723216011315"
+                >https://www.mapillary.com/app/?pKey=1611723216011315</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=yes <br />cycleway:right=lane
+              <br />cycleway:right:oneway=yes
+              <br />cycleway:right:separation:right=kerb
+              cycleway:right:separation:left=studs
+              cycleway:right:marking:right=no
+              cycleway:right:marking:left=dashed_line
+              cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">7</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada, a la izquierda, en
+              v&iacute;a de un sentido. (p. ej. Cra. 81A entre calle 52 y
+              48)</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3 c80"><span class="c45"></span></p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">8</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada, a la izquierda, en sentido
+              contrario al de la v&iacute;a. (p. ej. Cra. 53 entre 41 y 42.
+              Alpujarra hacia Edificio AMVA).</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3 c80"><span class="c45"></span></p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">9</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada, a la derecha, en sentido
+              contrario al de la v&iacute;a.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 160.00px;"
+              ><img
+                alt=""
+                src="images/image4.png"
+                style="width: 362.00px; height: 160.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D654080298926770"
+                >https://www.mapillary.com/app/?pKey=654080298926770</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=*<br />oneway=yes <br />lanes=1 <br />cycleway:right=lane
+              <br />cycleway:right:oneway=yes
+              <br />cycleway:right:separation:right=kerb
+              cycleway:right:separation:left=no
+              cycleway:right:marking:right=solid_line
+              cycleway:right:marking:left=double_solid_line
+              cycleway:right:traffic_mode:right=foot
+              cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">10</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda bidireccional en calzada, a la izquierda, en
+              v&iacute;a de un sentido &nbsp;(p. ej. la 79 entre Av.
+              Jard&iacute;n y Nutibara, La 51 entre 64C y 74).</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-2-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image7.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D561116875911010"
+                >https://www.mapillary.com/app/?pKey=561116875911010</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=no <br />lanes=2 <br />cycleway:left=lane
+              <br />cycleway:left:oneway=no
+              <br />cycleway:left:separation:right=studs
+              cycleway:left:separation:left=no
+              <br />cycleway:left:marking:right=no
+              <br />cycleway:left:marking:left=surface
+              cycleway:left:traffic_mode:right=motor_vehicle
+              cycleway:left:traffic_mode:left=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">11</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada en ambos lados, en
+              v&iacute;a de dos sentidos.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 154.67px;"
+              ><img
+                alt=""
+                src="images/image6.png"
+                style="width: 362.00px; height: 154.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D1746672905504010"
+                >https://www.mapillary.com/app/?pKey=1746672905504010</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=no <br />lanes=2 <br />oneway:bicycle=no
+              <br />cycleway:both=lane <br />cycleway:right:oneway=yes
+              <br />cycleway:right:separation:right=kerb
+              cycleway:right:separation:left=studs
+              cycleway:right:marking:right=no
+              cycleway:right:marking:left=dashed_line
+              cycleway:right:traffic_mode:right=foot
+              cycleway:right:traffic_mode:left=motor_vehicle
+              cycleway:left:oneway=yes <br />cycleway:left:separation:left=studs
+              cycleway:left:separation:right=kerb
+              cycleway:left:marking:left=dashed_line
+              cycleway:left:marking:right=no
+              cycleway:left:traffic_mode:left=motor_vehicle
+              cycleway:left:traffic_mode:right=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">12</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional a nivel and&eacute;n*, en v&iacute;a de
+              un sentido.<br />* Se traza como l&iacute;nea separada por ser a
+              nivel and&eacute;n.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-A-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image35.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D478918703370680"
+                >https://www.mapillary.com/app/?pKey=478918703370680</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3"><span class="c45">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=yes <br />lanes=1
+              <br />cycleway=separate</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=cycleway <br />oneway=yes <br />foot=designated
+              <br />segregated=yes <br />separation:right=kerb
+              <br />separation:left=no
+              <br />marking:both=solid_line<br />traffic_mode:right=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c163">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">13</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada en ambos lados, en
+              v&iacute;a de un sentido.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=yes <br />cycleway:both=lane
+              <br />oneway:bicycle=no
+              <br />cycleway:both:marking:both=dashed_line</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c174">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">14</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada en ambos lados, en
+              v&iacute;a de dos sentidos separadas por un separador. (p. ej.
+              Guayabal entre 30 y 4 sur)</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=yes<br />cycleway:right=lane
+              <br />cycleway:right:oneway=yes
+              <br />cycleway:right:marking:both=solid_line
+              cycleway:right:separation:left=no
+              cycleway:right:separation:right=kerb
+              cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c169">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">15</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en calzada en el lado derecho, mismo
+              sentido, en v&iacute;a de dos sentidos separada por
+              separador.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=yes <br />cycleway:right=lane
+              <br />cycleway:right:oneway=yes
+              <br />cycleway:right:marking:both=solid_line
+              cycleway:right:separation:left=no
+              cycleway:right:separation:right=kerb
+              cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c179">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">16</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda unidireccional en and&eacute;n a la derecha en
+              v&iacute;a de dos sentidos.</span
+            >
+          </p>
+          <p class="c2">
+            <span class="c5"
+              >* Se traza como l&iacute;nea separada por ser a nivel
+              and&eacute;n.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-A-1-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0 c80"><span class="c5"></span></p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3"><span class="c45">A:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />oneway=no <br />lanes=2
+              <br />cycleway=separate</span
+            >
+          </p>
+          <p class="c2 c3"><span class="c45">B:</span></p>
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=cycleway <br />oneway=yes <br />foot=designated
+              <br />segregated=no <br />marking:both=solid_line
+              <br />separation:right=no <br />separation:left=kerb
+              <br />traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c71" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">17</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >Ciclobanda bidireccional a nivel de calzada a la derecha en
+              v&iacute;a de un sentido.</span
+            >
+          </p>
+          <p class="c2"><span class="c5">CB-C-2-S</span></p>
+        </td>
+        <td class="c20" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 157.33px;"
+              ><img
+                alt=""
+                src="images/image32.png"
+                style="width: 362.00px; height: 157.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c59"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D225170283382873"
+                >https://www.mapillary.com/app/?pKey=225170283382873</a
+              ></span
+            ><span class="c5">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c55" colspan="3" rowspan="1">
+          <p class="c2 c3">
+            <span class="c45"
+              >highway=* <br />lanes=1 <br />oneway=yes
+              <br />cycleway:right:oneway=no <br />cycleway:right=lane
+              <br />cycleway:right:separation:right=kerb
+              cycleway:right:separation:left=planter
+              cycleway:right:marking:right=no
+              cycleway:right:marking:left=double_solid_line
+              cycleway:right:traffic_mode:right=no
+              cycleway:right:traffic_mode:left=motor_vehicle</span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+    </div>
+ </div>
+ 
+ <div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="heading7">Etiquetas para vías cicloadaptadas</h1>
+      <table class="c105">
+      <tr class="c63">
+        <td class="c88 c151" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">#</span></p>
+        </td>
+        <td class="c29" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">Subtipo</span></p>
+        </td>
+        <td class="c88 c135" colspan="3" rowspan="1">
+          <p class="c7"><span class="c5">Foto</span></p>
+        </td>
+        <td class="c88 c167" colspan="3" rowspan="1">
+          <p class="c7"><span class="c5">Etiquetas en OSM</span></p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c13" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">1</span></p>
+        </td>
+        <td class="c142 c102" colspan="1" rowspan="1">
+          <p class="c2"><span class="c59">BANDA CICLOPREFERENTE</span></p>
+        </td>
+        <td class="c141 c102" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 168.00px;"
+              ><img
+                alt=""
+                src="images/image15.png"
+                style="width: 362.00px; height: 168.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c14"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D964458071062289"
+                >https://www.mapillary.com/app/?pKey=964458071062289</a
+              ></span
+            ><span class="c19 c14">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c102 c118" colspan="3" rowspan="1">
+          <p class="c2 c77">
+            <span class="c59 c83"
+              >highway=* <br />oneway=no <br />lanes=2<br />oneway:bicycle=no
+              <br />cycleway:both=lane <br />cycleway:both:oneway=yes
+              cycleway:right:separation:right=greenery
+              cycleway:right:separation:left=no cycleway:right:marking:right=no
+              cycleway:right:marking:left=dashed_line
+              cycleway:right:traffic_mode:right=foot
+              cycleway:right:traffic_mode:left=motor_vehicle
+              cycleway:left:separation:left=no
+              cycleway:left:separation:right=kerb
+              cycleway:left:marking:left=dashed_line
+              cycleway:left:marking:right=no
+              cycleway:left:traffic_mode:left=motor_vehicle
+              cycleway:left:traffic_mode:right=foot</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c184">
+        <td class="c13" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">2</span></p>
+        </td>
+        <td class="c102 c142" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5">CARRIL CICLOPREFERENTE<br /></span>
+          </p>
+        </td>
+        <td class="c141 c102" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.19px; height: 178.52px;"
+              ><img
+                alt=""
+                src="images/image33.png"
+                style="width: 362.19px; height: 239.84px; margin-left: 0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c14"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D955110898736371"
+                >https://www.mapillary.com/app/?pKey=955110898736371</a
+              ></span
+            ><span class="c19 c14">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c118 c102" colspan="3" rowspan="1">
+          <p class="c2 c77">
+            <span class="c59 c83"
+              >highway=* <br />lanes=2 <br />oneway=no
+              <br />cycleway:both=shared_lane</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c16">
+        <td class="c13" colspan="1" rowspan="1">
+          <p class="c7"><span class="c5">3</span></p>
+        </td>
+        <td class="c142 c102" colspan="1" rowspan="1">
+          <p class="c2">
+            <span class="c5"
+              >CARRIL CICLOPREFERENTE: con pictograma y se&ntilde;al de
+              l&iacute;mite de velocidad 30 km/h pintados en el pavimento.</span
+            >
+          </p>
+        </td>
+        <td class="c102 c141" colspan="3" rowspan="1">
+          <p class="c0">
+            <span
+              style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 169.33px;"
+              ><img
+                alt=""
+                src="images/image12.png"
+                style="width: 362.00px; height: 169.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title="Imagen"
+            /></span>
+          </p>
+          <p class="c0">
+            <span class="c52 c14"
+              ><a
+                class="c11"
+                href="https://www.mapillary.com/app/?pKey%3D1785998121752968"
+                >https://www.mapillary.com/app/?pKey=1785998121752968</a
+              ></span
+            ><span class="c19 c14">&nbsp;</span>
+          </p>
+        </td>
+        <td class="c118 c102" colspan="3" rowspan="1">
+          <p class="c2 c77">
+            <span class="c45"
+              >highway=* <br />oneway=no <br />lanes=2
+              <br />cycleway:both=shared_lane<br />maxspeed=30
+              <br />source:maxspeed=marking</span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+    </div>
+ </div>
+
+
+  
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p style="text-align:center">Esta guía es posible gracias al apoyo del ITDP.<br/><img src="images/logo-ITDP.jpeg" width="150px" /></p>
+      
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Plantilla: <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

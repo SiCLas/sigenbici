@@ -1,0 +1,1489 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-12-20T21:29:08Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3828692137",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 66B CON CIRCULAR 2-1",
+        "addr:housenumber": "2-1",
+        "addr:street": "CARRERA 66B",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla San Joaquín",
+        "note": "Esquina de la Av. Bolivariana con Circular 2da en el costado sur del parque de Los Mangos",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5858525,
+          6.2435388
+        ]
+      },
+      "id": "node/3828692137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4224384664",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 39D # 73-95",
+        "addr:housenumber": "73-95",
+        "addr:street": "CARRERA 39D",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Primer Parque de Laureles",
+        "note": "Costado norte del 1er Parque de Laureles, al borde de la ciclorruta",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5934651,
+          6.2461287
+        ]
+      },
+      "id": "node/4224384664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4318405089",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 76 # 39B-13",
+        "addr:housenumber": "39B-13",
+        "addr:street": "CARRERA 76",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "name": "Estación EnCicla Pedro Nel Gómez",
+        "note": "Av. Nutibara en las esquina de las instalaciones de UNE",
+        "opening_hours": "Mo-Fr 05:30-21:00; Sa 06:30-21:00, Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5965191,
+          6.246968
+        ]
+      },
+      "id": "node/4318405089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4413927095",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla MAMM",
+        "name:es": "Estación EnCicla MAMM",
+        "network": "EnCicla",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5750161,
+          6.2239257
+        ]
+      },
+      "id": "node/4413927095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4413944492",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Río Aburrá",
+        "name:es": "Estación EnCicla Río Aburrá",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5746628,
+          6.2279493
+        ]
+      },
+      "id": "node/4413944492"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4477643070",
+        "addr:city": "Medellín",
+        "addr:full": "Carrera 75 # 38-10",
+        "addr:housenumber": "38-10",
+        "addr:street": "Carrera 75",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Segundo Parque de Laureles",
+        "note": "Costado oriental del 2do Parque de Laureles con Av. Jardín",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5970311,
+          6.2451411
+        ]
+      },
+      "id": "node/4477643070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5010370888",
+        "access": "customers",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "26",
+        "covered": "no",
+        "name": "Estación EnCicla Ruta N",
+        "network": "EnCicla",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sat 06:30-21:00; Sun 08:00-16:00",
+        "operator": "EnCicla",
+        "payment:civica": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5663289,
+          6.2651599
+        ]
+      },
+      "id": "node/5010370888"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5636373497",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "operator": "EnCicla",
+        "payment:none": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5772824,
+          6.2603082
+        ]
+      },
+      "id": "node/5636373497"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5807236707",
+        "amenity": "bicycle_rental",
+        "name": "EnCicla Ciudad del Río",
+        "network": "EnCicla",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5729881,
+          6.2225341
+        ]
+      },
+      "id": "node/5807236707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5807236708",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Villa Carlota",
+        "network": "EnCicla",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5753057,
+          6.2206373
+        ]
+      },
+      "id": "node/5807236708"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5951707185",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 44 # 69-133",
+        "addr:housenumber": "69-133",
+        "addr:street": "CALLE 44",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "9",
+        "name": "Estación EnCicla San Juan",
+        "note": "Costado norte de la Calle 44 San Juan con Carrera 70",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5886048,
+          6.2490475
+        ]
+      },
+      "id": "node/5951707185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6124219848",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "website": "https://encicla.metropol.gov.co/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5834223,
+          6.2488596
+        ]
+      },
+      "id": "node/6124219848"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6434389087",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 70 # 29-73",
+        "addr:housenumber": "29-73",
+        "addr:street": "CARRERA 70",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Rosales",
+        "note": "Esquina de la Cll. 30 con Cra. 70, diagonal a la estación Rosales de Metroplús",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5914891,
+          6.2314179
+        ]
+      },
+      "id": "node/6434389087"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6812944489",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "16",
+        "name": "Estación EnCicla Calle 51 Los Colores",
+        "opening_hours": "Mo-Fr 05:00-21:00; Sa 06:00-15:00; Sun 08:00-16:00",
+        "operator": "EnCicla",
+        "website": "http://www.encicla.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5950923,
+          6.2634051
+        ]
+      },
+      "id": "node/6812944489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6983533006",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "description": "Sistema automático",
+        "fee": "no",
+        "name": "Estación EnCicla Orquídeas",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sat 06:30-21:00; Sun 08:00-16:00",
+        "operator": "EnCicla",
+        "operator:type": "public"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5887258,
+          6.2627502
+        ]
+      },
+      "id": "node/6983533006"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7098774687",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "fee": "no",
+        "name": "Estación EnCicla Unicentro",
+        "opening_hours": "Mo-Fr 05:30-21:00; Sa 06:30-20:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "operator:type": "government",
+        "website": "http://www.encicla.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5867317,
+          6.2399984
+        ]
+      },
+      "id": "node/7098774687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7115041886",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Industriales Metro",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "website": "http://www.encicla.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5743413,
+          6.2303917
+        ]
+      },
+      "id": "node/7115041886"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7195307263",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "37",
+        "name": "Estación EnCicla San Pedro y San Pablo",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5942533,
+          6.2583172
+        ]
+      },
+      "id": "node/7195307263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7235859231",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 42C - Cr 63B",
+        "addr:housenumber": "Cr 63B",
+        "addr:street": "CALLE 42C",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Parques del Río",
+        "note": "Costado noroccidental de Parques del Río",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5800336,
+          6.2449818
+        ]
+      },
+      "id": "node/7235859231"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7253815368",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 82A # 52-29",
+        "addr:housenumber": "52-29",
+        "addr:street": "CALLE 82A",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Moravia",
+        "notes": "Frente a la entrada principal del Centro de Desarrollo Cultural de Moravia",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5647968,
+          6.2765944
+        ]
+      },
+      "id": "node/7253815368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7282651231",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 52 # 52-36",
+        "addr:housenumber": "52-36",
+        "addr:street": "CARRERA 52",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Museo de Antioquia",
+        "note": "Plazoleta de Botero frente a la entrada principal del Museo de Antioquia",
+        "opening_hours": "Mo-Sa 06:30-17:30",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5688039,
+          6.2517881
+        ]
+      },
+      "id": "node/7282651231"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7282684154",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 51 #50-82",
+        "addr:housenumber": "50-82",
+        "addr:street": "CARRERA 51",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Parque Berrio",
+        "note": "Bajo la estación Parque Berrío del Metro entrada sur",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5683293,
+          6.2500479
+        ]
+      },
+      "id": "node/7282684154"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7282804006",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 51 entre Cll 46 y Cll 47",
+        "addr:housenumber": "46",
+        "addr:street": "CARRERA 51",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla San Antonio",
+        "note": "Bajo la estación San Antonio del Metro",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5690811,
+          6.2483407
+        ]
+      },
+      "id": "node/7282804006"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7282822566",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 44 # 52A-14",
+        "addr:housenumber": "52A-14",
+        "addr:street": "CALLE 44",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Parque de Las Luces I",
+        "note": "Plaza de Cisneros frente a los edificios Carré y Vásquez",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5717017,
+          6.2461423
+        ]
+      },
+      "id": "node/7282822566"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7282822567",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 44 # 52A-14",
+        "addr:housenumber": "52A-14",
+        "addr:street": "CALLE 44",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Parque de Las Luces II",
+        "note": "Plaza de Cisneros frente a los edificios Carré y Vásquez",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.571809,
+          6.2456917
+        ]
+      },
+      "id": "node/7282822567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7282861253",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 48 # 27-4",
+        "addr:housenumber": "27-4",
+        "addr:street": "CARRERA 48",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Málaga",
+        "note": "Bajo la estación San Antonio",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5699381,
+          6.2469104
+        ]
+      },
+      "id": "node/7282861253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523641746",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 64A CON CALLE 50",
+        "addr:housenumber": "50",
+        "addr:street": "CARRERA 64A",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Carlos E. Restrepo",
+        "note": "Parque Carlos E. Restrepo en el costado Norte de la Calle 50 Av. Colombia",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00, Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5791783,
+          6.2556094
+        ]
+      },
+      "id": "node/7523641746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523647420",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 70 # TRANSVERSAL 51A",
+        "addr:housenumber": "TRANSVERSAL 51A",
+        "addr:street": "CARRERA 70",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "14",
+        "name": "Estación EnCicla Los Colores",
+        "note": "Al frente de la entrada principal de la Institución Universitaria Salazar y Herrera",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5851465,
+          6.260079
+        ]
+      },
+      "id": "node/7523647420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523666590",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 65 # 50-29",
+        "addr:housenumber": "50-29",
+        "addr:street": "CARRERA 65",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Colombia",
+        "note": "Esquina occidental de la Carrera 65 con Calle 51",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5809767,
+          6.2565197
+        ]
+      },
+      "id": "node/7523666590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523691049",
+        "addr:city": "Medellín",
+        "addr:housenumber": "70-82",
+        "addr:street": "Calle 47D",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Estadio",
+        "note": "Bajo el viaducto de la estación Estadio del Metro en el parqueadero de bicicletas",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "no",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5885357,
+          6.2534479
+        ]
+      },
+      "id": "node/7523691049"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523723745",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 47 # 72-21",
+        "addr:housenumber": "72-21",
+        "addr:street": "CALLE 47",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "13",
+        "name": "Estación EnCicla Florida Nueva",
+        "note": "Vía paralela a la Calle 47D Av. Antonio Roldán y el Parque Florida Nueva",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5902759,
+          6.2526076
+        ]
+      },
+      "id": "node/7523723745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523739221",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 70 # CIRCULAR 1-50",
+        "addr:housenumber": "1-50",
+        "addr:street": "CARRERA 70",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla UPB",
+        "note": "Sobre la ciclorruta de la Carrera 70 frente a la entrada de la UPB",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5892955,
+          6.2450358
+        ]
+      },
+      "id": "node/7523739221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7523779696",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 67A CON CIRCULAR 3",
+        "addr:housenumber": "CIRCULAR 3",
+        "addr:street": "CARRERA 67A",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Parque San Joaquín",
+        "note": "Parque de San Joaquín con la Circular 3",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5867528,
+          6.2455131
+        ]
+      },
+      "id": "node/7523779696"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7554823750",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 76 # 34A-32",
+        "addr:housenumber": "34A-32",
+        "addr:street": "CARRERA 76",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "name": "Estación EnCicla Santa Teresita",
+        "notes": "Portada de la parroquia de Santa Teresita del Niño Jesús sobre la Carrera 76",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5967806,
+          6.2418442
+        ]
+      },
+      "id": "node/7554823750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7554985920",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 44A # 75-34",
+        "addr:housenumber": "75-34",
+        "addr:street": "CALLE 44A",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla María Mulata",
+        "note": "Parque monumento a La Virgen en la Cll 44A con Cra 75, vía paralela a la Cll San Juan",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5947137,
+          6.2506083
+        ]
+      },
+      "id": "node/7554985920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7555011085",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 48 # 79-46",
+        "addr:housenumber": "79-46",
+        "addr:street": "CALLE 48",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Floresta",
+        "note": "Bajo el viaducto de la estación Floresta del Metro en el parqueadero de bicicletas",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5973986,
+          6.2586649
+        ]
+      },
+      "id": "node/7555011085"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7560491836",
+        "addr:city": "Medellín",
+        "addr:full": "DIAGONAL 74B con Cll 32F",
+        "addr:housenumber": "32F",
+        "addr:street": "DIAGONAL 74B",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Bulerias",
+        "note": "Bajo el puente de la Av. Bolivariana",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5902424,
+          6.2387618
+        ]
+      },
+      "id": "node/7560491836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7560525870",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 65 # 32F-12",
+        "addr:housenumber": "32F-12",
+        "addr:street": "CARRERA 65",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla La 33",
+        "note": "Costado sur bajo el puente de la Carrera 65 con sobre la Calle 33",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.58303,
+          6.2392446
+        ]
+      },
+      "id": "node/7560525870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7560637001",
+        "addr:city": "Medellín",
+        "addr:full": "CARRERA 70 # 16-18",
+        "addr:housenumber": "16-18",
+        "addr:street": "CARRERA 70",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Juan Pablo II",
+        "note": "Costado norte de la plazoleta del Aeroparque Juan Pablo II sobre la Av. 70",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5919624,
+          6.2221372
+        ]
+      },
+      "id": "node/7560637001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7560678892",
+        "addr:city": "Medellín",
+        "addr:full": "CALLE 30A # 66B-18",
+        "addr:housenumber": "66B-18",
+        "addr:street": "CALLE 30A",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "name": "Estación EnCicla Unidad Deportiva de Belén",
+        "notes": "Portería de la Circular 1era con Av. Nutibara de la UPB al frente del periódico El Tiempo",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla",
+        "parking:conditions": "customers",
+        "parking:fee": "free",
+        "supervised": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5875763,
+          6.2324681
+        ]
+      },
+      "id": "node/7560678892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8192387481",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "9",
+        "name": "Estación Encicla Batallón",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "parking:conditions": "costumers",
+        "parking:fee": "free"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5950552,
+          6.2621878
+        ]
+      },
+      "id": "node/8192387481"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8438719108",
+        "amenity": "bicycle_rental",
+        "capacity": "25",
+        "fee": "no",
+        "name": "Estación EnCicla Parque de Itagüí",
+        "name:en": "Parque de Itagüí EnCicla Station",
+        "operator": "EnCicla",
+        "operator:type": "public"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6093006,
+          6.172916
+        ]
+      },
+      "id": "node/8438719108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8573378737",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "capacity": "18",
+        "fee": "no",
+        "name": "Estación EnCicla Telemedellín",
+        "network": "EnCicla",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla",
+        "operator:type": "public"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5715983,
+          6.2199468
+        ]
+      },
+      "id": "node/8573378737"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9108975267",
+        "amenity": "bicycle_rental",
+        "name": "Estación Encicla Suramericana",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sat 06:30-21:00; Sun 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5833057,
+          6.2530191
+        ]
+      },
+      "id": "node/9108975267"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11168197771",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "fee": "no",
+        "name": "Estación EnCicla Campus Nacional",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5787669,
+          6.2597505
+        ]
+      },
+      "id": "node/11168197771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11418264560",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Universidad",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sat 06:30-21:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.565301,
+          6.2692694
+        ]
+      },
+      "id": "node/11418264560"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11418264561",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "capacity": "12",
+        "name": "Estación EnCicla SIU UdeA",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sat 06:30-21:00; Sun 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5671847,
+          6.2604806
+        ]
+      },
+      "id": "node/11418264561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11420246394",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Plaza de la Libertad",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sat 06:30-21:00; Sun 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5746668,
+          6.2435193
+        ]
+      },
+      "id": "node/11420246394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11421651617",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Calle 19A Villa Carlota",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5710116,
+          6.2221222
+        ]
+      },
+      "id": "node/11421651617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11423152585",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Robledo",
+        "note": "Al frente de la entrada principal del Colegio Mayor.",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5921486,
+          6.2730849
+        ]
+      },
+      "id": "node/11423152585"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11423152586",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Ciudadela Universitaria Robledo",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5886685,
+          6.2732964
+        ]
+      },
+      "id": "node/11423152586"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11423152587",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Bahía Vehicular",
+        "note": "Ubicada en la carrera 72A, frente a la entrada de urgencias del Hospital Pablo Tobón Uribe.",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5805666,
+          6.278459
+        ]
+      },
+      "id": "node/11423152587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11423152588",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Hospital Infantil Concejo de Medellín",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5588613,
+          6.268301
+        ]
+      },
+      "id": "node/11423152588"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11423152589",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "description": "Ubicada en el costado occidental. Ciudadela para la cuarta revolución industrial.",
+        "name": "Estación EnCicla C4TA",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.613835,
+          6.2540556
+        ]
+      },
+      "id": "node/11423152589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11423152590",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Politécnico",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5764287,
+          6.2098484
+        ]
+      },
+      "id": "node/11423152590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11435747800",
+        "addr:city": "Medellín",
+        "addr:full": "Calle 51 x carrera 40",
+        "addr:housenumber": "Carrera 40",
+        "addr:street": "Calle 51",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Teatro Pablo Tobón Uribe",
+        "note": "Av. La Playa Ubicado al occidente del Teatro Pablo Tobón Uribe",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5603898,
+          6.247471
+        ]
+      },
+      "id": "node/11435747800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11435772163",
+        "addr:full": "Calle 46 entre carreras 55 y 57",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Cisneros",
+        "note": "Ubicada debajo del viaducto de la estación del Metro de Medellín Cisneros en el costado oriental.",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5746908,
+          6.2487318
+        ]
+      },
+      "id": "node/11435772163"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11435772661",
+        "addr:city": "Medellín",
+        "addr:full": "Calle 52 #28A-46",
+        "addr:housenumber": "28A-46",
+        "addr:street": "Calle 52",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "docking_station",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Coltejer",
+        "note": "La Playa x Sucre",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5655274,
+          6.2493809
+        ]
+      },
+      "id": "node/11435772661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11435779380",
+        "addr:full": "CARRERA 51 #51-47",
+        "amenity": "bicycle_rental",
+        "brand": "EnCicla",
+        "brand:wikidata": "Q18644128",
+        "name": "Estación EnCicla Palacio de la Cultura",
+        "note": "Diagonal al Palacio de la Cultura. Bajos estación P. Berrio. entrada Norte",
+        "opening_hours": "Mo-Fr 05:30-22:00; Sa 06:30-21:00; Su 08:00-16:00",
+        "operator": "EnCicla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.5682766,
+          6.2507509
+        ]
+      },
+      "id": "node/11435779380"
+    }
+  ]
+}

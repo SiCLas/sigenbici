@@ -1,0 +1,188 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2021-01-13T16:26:03Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/86579858",
+        "access": "yes",
+        "bicycle": "dismount",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "footway",
+        "horse": "no",
+        "layer": "1",
+        "motor_vehicle": "no",
+        "sidewalk": "both"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5806488,
+            6.2396994
+          ],
+          [
+            -75.5805937,
+            6.2397004
+          ],
+          [
+            -75.5805883,
+            6.2394205
+          ],
+          [
+            -75.5805143,
+            6.2394219
+          ]
+        ]
+      },
+      "id": "way/86579858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/182956553",
+        "bicycle": "dismount",
+        "bridge": "yes",
+        "description": "Inseguro por la noche.",
+        "foot": "yes",
+        "highway": "cycleway",
+        "layer": "1",
+        "lit": "no",
+        "name": "Aula Ambiental",
+        "note": "Hours 5:30-19:30 M-F Horas 5:30-19:30 L-V",
+        "surface": "concrete",
+        "width": "2.5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5730846,
+            6.264334
+          ],
+          [
+            -75.5729725,
+            6.2643072
+          ],
+          [
+            -75.5725481,
+            6.264206
+          ],
+          [
+            -75.5722081,
+            6.2640929
+          ],
+          [
+            -75.5721798,
+            6.264086
+          ]
+        ]
+      },
+      "id": "way/182956553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/448742244",
+        "description": "Rampa de Acceso Parque Biblioteca la quintana",
+        "handrail:right": "yes",
+        "highway": "footway",
+        "incline": "10°",
+        "ramp": "yes",
+        "ramp:bicycle": "yes",
+        "ramp:wheelchair": "yes",
+        "surface": "asphalt",
+        "width": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5832434,
+            6.2848799
+          ],
+          [
+            -75.5830956,
+            6.2850965
+          ],
+          [
+            -75.5830925,
+            6.2851003
+          ],
+          [
+            -75.5830643,
+            6.28508
+          ],
+          [
+            -75.5830303,
+            6.2851426
+          ],
+          [
+            -75.58301,
+            6.28518
+          ],
+          [
+            -75.5830888,
+            6.2852423
+          ],
+          [
+            -75.5832102,
+            6.2853119
+          ]
+        ]
+      },
+      "id": "way/448742244"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/793346511",
+        "bicycle": "dismount",
+        "highway": "footway",
+        "ramp:bicycle": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5764486,
+            6.2309531
+          ],
+          [
+            -75.5763171,
+            6.2309619
+          ],
+          [
+            -75.576126,
+            6.2309443
+          ],
+          [
+            -75.5758432,
+            6.2308942
+          ],
+          [
+            -75.5756057,
+            6.2308634
+          ],
+          [
+            -75.5753827,
+            6.2308317
+          ],
+          [
+            -75.5751798,
+            6.2308112
+          ],
+          [
+            -75.5750236,
+            6.2307876
+          ]
+        ]
+      },
+      "id": "way/793346511"
+    }
+  ]
+}

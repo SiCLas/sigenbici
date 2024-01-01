@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Guía SIGenBici 2023</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; font-weight: 500}
+h1 {font-size:40px; padding-top:45px}
+h2 {font-size:30px; padding-top:32px;}
+p {font-size:120%;}
+.etiquetas, .enlace, .tabla {font-size:90%;}
+.ejemplo  {font-size:100%;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.padding-top {
+    padding-top: 35px;
+}
+table {font-size:100%;}
+hr {height:25px;border-width:0;color:gray;background-color:gray;}
+.flip-card {
+  background-color: transparent;
+  width: 349px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #009688;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#portada" class="w3-bar-item w3-button w3-theme-l1">Guía SIGenBici 2023</a>
+    <a href="https://www.siclas.org/sigenbici/mapa.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" target="_blank">Mapa ciclista</a>
+    <a href="mailto:contacto@siclas.org" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
+  </div>
+</div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Cerrar menú">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Contenido</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#intro">SIGenBici</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#enlaces">Índice de enlaces</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#colombia">Cicloinfraestructura en Colombia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#osm">Cicloinfraestructura en OSM</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#propuesta">Propuesta de etiquetas de separación y demarcación</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#vias-ciclistas">Etiquetas para vías ciclistas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="ejemplos.html">Ejemplos de etiquetas</a>
+   <a class="w3-bar-item w3-button w3-hover-black" href="tareas.html">Tareas del proyecto</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="jerarquia.html">Jerarquía de vías en Medellín</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="portada"><strong>Gu&iacute;a de mapeo del equipo SIGenBici</strong></h1>
+      <hr style="height:25px;border-width:0;color:gray;background-color:gray">
+      <h2>Piloto de implementaci&oacute;n en OSM de la propuesta de etiquetado de separaci&oacute;n y demarcaci&oacute;n de cicloinfraestructura en Medell&iacute;n (Colombia)</h2>
+      <hr>
+       <p style="font-size:80%"><strong>Entidades:</strong><br>Semillero GeoLab (Grupo GeoLimna, Fac. de Ingeniería, U. de Antioquia)<br>
+    Corporación Colectivo SiCLas</p>
+    <p style="font-size:80%"><strong>Responsables:</strong><br>Jorge Mauricio Mesa Vargas, SiCLas<br>
+    Silvia Andrea Fl&oacute;rez Giraldo, SiCLas<br>
+    Ana Maria Navia Hermida, UdeA <br>
+    Hern&aacute;n Dar&iacute;o Gonz&aacute;lez Zapata, UdeA<br>
+    Natalia Arruda da Silveira, ASU</p>
+    </div>
+    <div class="w3-third w3-container w3-padding-64">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><img src="images/logo-sigenbici.png" width="200px"><br>
+<img src="images/image17.png" alt="logo SiCLas" width="85px">
+      <img src="images/image14.png" alt="logo GeoLab" width="150px"></p>
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center" style="font-size:80%">Disponible bajo una licencia Creative Commons Atribución, No Comercial, Compartir Igual 3.0<br><img
+          alt="CC-BY-NC-SA"
+          src="images/image9.png"
+          title=""
+          width="75px"
+      /></p>
+    </div>
+  </div>
+<hr>
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal padding-top" id="intro">SIGenBici</h1>
+     
+<p>En esta nueva fase del proyecto de mapeo de cicloinfraestructura SIGenBici, entre la Corporación Colectivo SiCLas y el Semillero de Investigación GeoLab (de la Facultad de Ingeniería de la UdeA), con el apoyo del ITDP (Instituto para la Política de Transporte y Desarrollo) se realiza una prueba piloto en una zona de la ciudad de Medellín con el objetivo de probar las etiquetas de separación, propuestas por un equipo de mapeadores alemanes, para ver qué tan aplicables son en el contexto colombiano y cómo se puede mejorar el estándar de etiquetado de cicloinfraestructura en OSM.</p>
+
+<p>Se recopilaron imágenes en la plataforma Mapillary, como referencia para mapear en OSM con el uso de las etiquetas propuestas para nombrar el tipo de separación, la demarcación y el modo de tráfico adyacente a la cicloinfraestructura. A partir de la información recopilada, se realizó una revisión, teniendo en cuenta la Guía de ciclo-infraestructura para ciudades colombianas del Ministerio de Transporte de Colombia, la Wiki de OSM y la propuesta de etiquetas de separación para unificarlas.</p>
+
+<p>Estas etiquetas propuestas son fuente significativa de información para realizar evaluación de cicloinfraestructura por parte de tomadores de decisión, así como para herramientas que recopilan datos que faciliten recorridos de acuerdo a las necesidades específicas de las personas que se desplazan en bicicleta.</p>
+
+<p>Esperamos contribuir con esta guía para estandarizar y detallar en OSM información actualizada, apoyada con imágenes, sobre la cicloinfraestructura en Medellín (Colombia) como piloto para replicar en otras ciudades del país.</p>
+
+<p style="text-align:right">Equipo SIGenBici<br>
+Medellín, abril de 2023 </p>
+    </div>
+    <div class="w3-third w3-container w3-padding-32">
+      <p class="w3-border w3-center"><img src="images/portada-guia.jpg" width="100%"></p>
+    </div>
+  </div>
+<hr>
+ 
+  <div class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="enlaces">Índice de enlaces</h1>
+     <ul class="w3-ul"> 
+    <li><a class="c11" href="https://siclas.org/sigenbici/mapa.html" target="_blank">Mapa ciclista SIGenBici</a></li>
+    
+    <li><a class="c11" href="https://learnosm.org/es/beginner/start-osm/"
+                target="_blank">Gu&iacute;a OSM para principiantes</a></li>
+    
+    <li>
+    <a class="c11"
+                href="https://wiki.openstreetmap.org/wiki/Map_Features%23Highway"
+                target="_blank">Etiquetas OSM para calles</a></li>
+    
+    <li>
+              <a class="c11" href="https://wiki.openstreetmap.org/wiki/Bicycle"
+                target="_blank">Etiquetas OSM para cicloinfraestructura</a></li>
+    
+    <li>
+              <a
+                class="c11"
+                href="https://www.siclas.org/wp-content/uploads/2018/08/Guia-cicloinfraestructura-Colombia.pdf"
+                target="_blank">Gu&iacute;a de Cicloinfraestructura para Ciudades Colombianas</a></li>
+    
+    <li>
+         <a class="c11" href="https://www.mapillary.com/app/org/sigenbici"
+                target="_blank">Im&aacute;genes del &aacute;rea piloto (Mapillary)</a></li>
+                
+    <li>
+         <a class="c11" href="https://tasks.hotosm.org/projects/14761"
+                target="_blank">Tareas del proyecto para mapear en OSM</a></li>
+    
+    <li>
+              <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/separation" target="_blank">Propuesta etiquetas de separaci&oacute;n</a></li>
+        </ul>      
+    </div>
+    
+    <div class="w3-third w3-container w3-padding-32">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><img src="images/image1.png" width="100px"><br>
+      
+      <span style="font-size:130%; color:#009688">«Todo mapa es una representación ideológica y, a través de un mapeo, se construyen miradas críticas sobre lo que nos rodea.»</span>
+      </p>
+      <p style="font-size:80%" class="w3-center">Fuente: Cómo hacer un mapeo colectivo.<br>La aventura de aprender.</p>
+      </div>
+  </div>
+<hr>
+<div class="w3-row">
+    <div class="w3-auto w3-container">
+<div class="flip-card w3-third">
+   <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/fase1.jpg" alt="Fase 1" style="width:100%;height:350px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Fase 1</h1> 
+      <p>Captura de fotos en Mapillary para identificar tipos de demarcaciones y protecciones físicas y no físicas en la cicloinfraestructura de la ciudad de Medellín.</p>
+    </div>
+   </div>
+  </div>
+
+<div class="flip-card w3-third">
+   <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/fase2.jpg" alt="Fase 2" style="width:100%;height:350px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Fase 2</h1> 
+      <p>Revisión de fuentes Min.Transporte, Wiki OSM, etiquetas propuestas de separación y guía SIGenBici (2020). Revisión de imágenes capturadas en Mapillary.</p>
+    </div>
+   </div>
+  </div>
+
+<div class="flip-card w3-third">
+   <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/fase3.jpg" alt="Fase 3" style="width:100%;height:350px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Fase 3</h1> 
+      <p>Presentación de la guía de mapeo, mapatón y taller de actualización de las etiquetas en OSM.</p>
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+<hr>
+<div class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="colombia">Cicloinfraestructura en Colombia</h1>
+      <p>Para la tipología de cicloinfraestructura se utilizan las definiciones existentes en la <a href="https://www.siclas.org/wp-content/uploads/2018/08/Guia-cicloinfraestructura-Colombia.pdf" target="_blank">Guía de Cicloinfraestructura para Ciudades Colombianas</a>, que distingue dos grandes categorías: vías ciclistas y vías cicloadaptadas (ver pág. 51 y 76 de la guía). Las primeras son segregadas y exclusivas para bicicletas, mientras que las segundas son de uso compartido con otros modos de transporte. En las siguientes tablas se presentan los subtipos de cada categoría. </p>
+<h2>V&iacute;as ciclistas</h2>
+    
+    <div style="overflow-x:auto; overflow-y:auto;"> 
+    <table class="w3-table-all tabla">
+      <tr>
+        <th colspan="1" rowspan="1">
+          <p>SUBTIPO</p>
+        </th>
+        <th colspan="1" rowspan="1">
+          <p>DEFINICI&Oacute;N</p>
+        </th>
+        <th colspan="1" rowspan="1">
+          <p>
+            FORMA DE SEGREGACI&Oacute;N
+          </p>
+        </th>
+      </tr>
+      <tr>
+        <td colspan="1" rowspan="1">
+          <p>Ciclorruta</p>
+        </td>
+        <td class="c143" colspan="1" rowspan="1">
+          <p class="c36 c3">
+            <span
+              >Las ciclorrutas son v&iacute;as reservadas exclusivamente para la
+              circulaci&oacute;n en bicicleta, segregadas f&iacute;sicamente del
+              resto del tr&aacute;nsito (motorizado) y tambi&eacute;n de los
+              peatones. Las ciclorrutas pueden transcurrir al nivel de la
+              calzada, al nivel del and&eacute;n o a un nivel intermedio, pero
+              siempre llevan alg&uacute;n tipo de segregaci&oacute;n
+              f&iacute;sica. Pueden ser unidireccionales o servir para los dos
+              sentidos circulatorios (bidireccionales).</span
+            >
+          </p>
+        </td>
+        <td class="c178" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >F&iacute;sica (cambios de altura o instalaci&oacute;n de
+              elementos f&iacute;sicos permanentes)</span
+            >
+          </p>
+          <p class="c80 c160"><span class="c8"></span></p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c102 c146" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Ciclobanda</span></p>
+        </td>
+        <td class="c102 c124" colspan="1" rowspan="1">
+          <p class="c3 c36">
+            <span
+              >Las ciclobandas son v&iacute;as reservadas exclusivamente para la
+              circulaci&oacute;n en bicicleta segregadas visualmente, es decir,
+              a trav&eacute;s de marcas viales, color y otros dispositivos
+              indicativos de su especializaci&oacute;n. Pueden transcurrir a
+              nivel de la calzada o formar parte del and&eacute;n (poco
+              recomendable).</span
+            >
+          </p>
+        </td>
+        <td class="c99" colspan="1" rowspan="1">
+          <p>Cambio de pavimento</p>
+          <p>Dispositivos de canalizaci&oacute;n de tr&aacute;nsito (hitos,
+              balizas, tachones, bordillos, o elementos similares)</p>
+          <p>Demarcaci&oacute;n</p>
+        </td>
+      </tr>
+    </table>
+    </div> 
+    <p style="font-size:80%">Fuente: Gu&iacute;a de cicloinfraestructura para ciudades colombianas, p. 51.</p> 
+
+    <h2>Vías cicloadaptadas</h2>
+     <div style="overflow-x:auto; overflow-y:auto;"> 
+    <table class="w3-table-all tabla">
+      <tr>
+        <th colspan="1" rowspan="1">
+          <p>SUBTIPO</p>
+        </th>
+        <th colspan="1" rowspan="1">
+          <p>DEFINICI&Oacute;N</p>
+        </th>
+        <th colspan="1" rowspan="1">
+          <p>
+            FORMA DE SEGREGACI&Oacute;N
+          </p>
+        </th>
+      </tr>
+      <tr class="c80">
+        <td class="c94" colspan="1" rowspan="2">
+          <p class="c37 c3">
+            <span class="c8">Prelaci&oacute;n de bicicleta</span>
+          </p>
+        </td>
+        <td class="c94" colspan="1" rowspan="1">
+          <p class="c37 c3"><span>Banda ciclopreferente</span></p>
+        </td>
+        <td class="c31" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Banda en calzada reservada preferentemente a la
+              circulaci&oacute;n de bicicletas y delimitada mediante una
+              l&iacute;nea discontinua. Veh&iacute;culos motorizados y
+              bicicletas pueden cruzar la l&iacute;nea si la situaci&oacute;n
+              del tr&aacute;fico as&iacute; lo requiere, siempre y cuando no se
+              incomode ni se ponga en peligro al ciclista.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c110" colspan="1" rowspan="1">
+          <p class="c3 c37"><span>Carril ciclopreferente</span></p>
+        </td>
+        <td class="c134" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Carril de la calzada de uso compartido con indicaci&oacute;n de
+              la circulaci&oacute;n del ciclista por el centro y
+              limitaci&oacute;n de velocidad.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c47" colspan="1" rowspan="3">
+          <p class="c37 c3">
+            <span class="c8"
+              >Autorizadas para el tr&aacute;nsito de bicicletas</span
+            >
+          </p>
+        </td>
+        <td class="c47" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Carril bus-bici</span></p>
+        </td>
+        <td class="c69" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Carril para uso preferencial del transporte p&uacute;blico (bus),
+              en el que se autoriza la circulaci&oacute;n ciclista.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c47" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Contraflujo ciclista</span></p>
+        </td>
+        <td class="c69" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >V&iacute;a de sentido &uacute;nico para el tr&aacute;fico general
+              en donde se autoriza la circulaci&oacute;n ciclista a
+              contraflujo.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c80">
+        <td class="c47" colspan="1" rowspan="1">
+          <p class="c37 c3"><span class="c8">Calle peatonal</span></p>
+        </td>
+        <td class="c69" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Espacio o v&iacute;a peatonal donde se autoriza la
+              circulaci&oacute;n de bicicletas, manteniendo el peat&oacute;n la
+              prioridad. Sin ning&uacute;n tipo de diferenciaci&oacute;n de los
+              espacios.</span
+            >
+          </p>
+        </td>
+      </tr>
+      <tr class="c63">
+        <td class="c110" colspan="1" rowspan="1">
+          <p class="c37 c3">
+            <span class="c8">Calle con tr&aacute;nsito calmado</span>
+          </p>
+        </td>
+        <td class="c110" colspan="1" rowspan="1">
+          <p class="c37 c3 c80"><span class="c8"></span></p>
+        </td>
+        <td class="c134" colspan="1" rowspan="1">
+          <p class="c21">
+            <span class="c8"
+              >Uso compartido de la calzada por parte de los ciclistas donde la
+              circulaci&oacute;n es segura, c&oacute;moda y atractiva gracias a
+              que la intensidad y la velocidad del tr&aacute;nsito motorizado
+              son bajas.</span
+            >
+          </p>
+        </td>
+      </tr>
+    </table>
+    </div>
+    <p style="font-size:80%">Fuente: Gu&iacute;a de cicloinfraestructura para ciudades colombianas, p&aacute;g. 51-52.</p>
+    </div>
+     <div class="w3-third w3-container w3-padding-32">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><a href="https://www.siclas.org/wp-content/uploads/2018/08/Guia-cicloinfraestructura-Colombia.pdf" target="_blank"><img src="images/guia-mintransporte.jpg" style="width:150px"></a></p>
+      
+       <div style="overflow-x:auto; overflow-y:auto;"> 
+      <table class="w3-table-all tabla">
+      <tr>
+          <td colspan="2"><p>Para denominar las vías exclusivas para bicicletas, en la guía de MinTransporte (pp. 103-104) se manejan los códigos a continuación que nos dan información importante en cuanto a su diseño y el contexto en el que se encuentran:</p></td>
+      </tr>
+      
+      <tr>
+        <td>
+          <p>
+            Subtipo:
+          </p>
+        </td>
+        
+        <td>
+          <p>
+            CR: Ciclorruta <br />CB: Ciclobanda
+          </p>
+        </td>
+        </tr>
+        <tr>
+        <td>
+          <p>Nivel:</p>
+        </td>
+        
+        <td>
+          <p>
+            C: Nivel de calzada<br />A: Nivel de and&eacute;n
+          </p>
+        </td>
+        </tr>
+        
+        <tr>
+        <td>
+          <p>Sentidos:</p>
+        </td>
+        
+            <td>
+          <p>1: Un sentido<br>2: Dos sentidos</p>
+        </td>
+        </tr>
+        
+        <tr>
+        <td>
+          <p>Contexto:</p>
+        </td>
+      
+        <td>
+          <p>
+            P: Estacionamiento en paralelo<br>
+            T: Estacionamiento transversal<br>
+            S: Sin estacionamiento</p>
+        </td>
+        </tr>
+    </table>
+    </div>
+      
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><strong>Por ejemplo, el código CR-A-2-S corresponde a una ciclorruta bidireccional a nivel andén y sin estacionamiento aledaño.</strong></p>
+      
+      </div>
+  </div>  
+  
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="osm">Cicloinfraestructura en OSM</h1>
+      <p>En OSM, las vías ciclistas se distinguen principalmente en función de su relación con la calzada. En este caso, hay dos posibilidades: las vías ciclistas que van por la calzada o las que tienen un trazado separado de ella.</p>
+
+      <p>En el primer caso, para una ciclobanda en calzada, a la línea de la calle correspondiente (highway=*) se le añade la etiqueta cycleway y se complementa con el prefijo derecha (right), izquierda (left) o ambos (both) para especificar el lado de la calle en que se encuentra; por ejemplo, cycleway:right=lane para una ciclobanda a nivel calzada al lado derecho de la calle, cycleway:left=lane si está a la izquierda o cycleway:both=lane si hay ciclobanda a ambos lados.</p>
+      
+      <p>Para ubicar una vía ciclista a la derecha o a la izquierda de la calzada, tendremos como referencia el sentido del flujo de la vía. Si la vía es bidireccional, tendremos como punto de referencia el sentido en el cual aumenta la numeración de la vía (Las calles tienen una numeración que crece del este al oeste u oriente-occidente, y las carreras del sur al norte).</p>
+
+
+      <p>Es necesario tener en cuenta que las etiquetas de las calles en OSM deben corresponder con la <a href="https://siclas.org/sigenbici/guia-2023/jerarquia.html" target="_blank">jerarquía de las calles en Medellín</a> establecida por el POT, p. ej. highway=residential para una vía de servicio o highway=tertiary para una vía colectora).</p>
+
+      <p>Para indicar si una ciclorruta es unidireccional o bidireccional, utilizamos la etiqueta oneway=yes/no. Para las ciclobandas, debemos indicar primero el lado: cycleway:right:oneway=yes/no.</p>
+      
+  
+   <p>En cambio, las ciclorrutas (en calzada o en andén) y las ciclobandas en andén se consideran segregadas, por lo que se traza una nueva línea en OSM al lado de la calle que corresponda y se etiqueta como highway=cycleway. En ambos casos se agregan los demás atributos propios, como se explica más abajo.</p>
+
+<p>También podemos agregar el ancho de las vías ciclistas con la etiqueta width. Por ejemplo, para una ciclobanda a la derecha de 1 metro de ancho agregamos cycleway:right:width=1m.</p>
+
+<p>En el caso de las vías cicloadaptadas, cuando tenemos bandas ciclopreferentes, carriles ciclopreferentes o vías compartidas, también se etiquetan en la misma línea de la vía para vehículos motorizados y se debe definir el lado al que se encuentra mediante los prefijos derecha (right), izquierda (left) o ambos (both).</p>
+    </div>
+    
+     <div class="w3-third w3-container w3-padding-32">
+      <p class="w3-border w3-padding-32 w3-center"><img src="images/logo-osm.png" width="200px"></p>
+
+<div class="w3-border">
+        <table class="w3-table-all">
+           <tr colspan="2">
+               <td colspan="2">
+      <p class="ejemplo"><strong>Ejemplo de etiquetas b&aacute;sicas para una ciclobanda bidireccional a la derecha, a nivel de la calzada, en v&iacute;a de un sentido:</strong></p>
+      </td>
+</tr>      
+   <tr>   
+<td>  
+<p>
+    <img
+                alt="CB-C-2-S"
+                src="images/image24.png"
+                style="width: 100%;"
+                title="Ciclobanda"
+            />
+            </p>
+            </td>
+             <td>
+         <p class="ejemplo">Línea A (calle):</p>
+          <p class="etiquetas">highway=secondary<br>
+          oneway=yes<br>
+          cycleway:right=lane<br>
+          cycleway:right:oneway=no</p></td>
+            </tr>
+          </table>
+</div>
+
+          <div class="w3-border">
+        <table class="w3-table-all">
+           <tr colspan="2">
+               <td colspan="2">
+                   <p class="ejemplo"><strong>Ejemplo de etiquetas b&aacute;sicas para una ciclorruta bidireccional a la derecha, a nivel de la calzada, en v&iacute;a de dos sentidos:</strong></p>
+               </td>
+           </tr>
+           <tr colspan="2">
+               <td colspan="2">
+            <p class="w3-center">
+              <img
+                alt=""
+                src="images/image34.png"
+                style="width: 80%;"
+                title="Ciclorruta"
+            /></p>
+            </td>
+           </tr>
+           
+            <tr colspan="2">
+                <td>
+          <p class="ejemplo">Línea A (calle):</p>
+    <p class="etiquetas">highway=secondary<br>
+lanes=2<br>
+oneway=no<br>
+cycleway=separate</p>
+        </td><td>
+          <p class="ejemplo"> Línea B (ciclorruta):</p>
+          <p class="etiquetas">highway=cycleway<br>
+oneway=no</p>
+</td>
+</tr>
+        </table>
+        </div>
+    </div>
+    </div>
+
+ 
+<div class="w3-row">
+    <div class="w3-twothird w3-container padding-top">
+      <h1 class="w3-text-teal" id="propuesta">Propuesta de etiquetas de separación y demarcación de la cicloinfraestructura</h1>
+      <p>Hasta el momento, no existían en OSM etiquetas documentadas o comunes para los elementos o características de separación, demarcación y protección de la infraestructura ciclista. De ahí surgió la <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/separation"
+                target="_blank">propuesta de un equipo de mapeadores</a> de Berlín, Alemania, para implementar un esquema de etiquetas para incluir esta información en el mapa. Dado que no solo las ciclorrutas sino también otros carriles pueden equiparse con este tipo de elementos, estas etiquetas se pueden utilizar para todo tipo de vías de circulación.</p>
+
+<p>Especialmente en la infraestructura para bicicletas, la separación y demarcación de otros usuarios de la vía es un indicador importante para evaluar su calidad, además de factores como el ancho o el tipo de superficie. El hecho de que un ciclista tenga que esperar que los automotores puedan entrar en la ciclorruta o que los peatones la puedan invadir bruscamente no solo tiene una gran influencia en la sensación de seguridad, sino que también puede ayudar a determinar qué velocidad es apropiada en ciertos tramos.</p>
+
+<p>Así pues, en esta fase del proyecto probaremos la implementación de las etiquetas separation (separación), marking (demarcación) y traffic_mode (modo de tráfico) para incluir en el mapa la información detallada sobre las demarcaciones y separaciones duras o blandas de la cicloinfraestructura existente.</p>
+
+<p>Para etiquetar los separadores físicos utilizaremos la clave separation= con el valor correspondiente. Los valores más comunes incluyen bolardos (bollard), tachones (studs), macetas (planter), jardineras (greenery), bordillos continuos (kerb), bordillos discontinuos (bump), fila de árboles (tree_row) o una estructura (structure).</p>
+
+<p>Para etiquetar las demarcaciones, utilizaremos la clave marking= con el valor según el tipo de demarcación: línea continua (solid_line), línea discontinua (dashed_line), línea continua doble (double_solid_line), zona rayada (barred_area), pictograma (pictogram) o cambio de superficie (surface).</p>
+
+<p>Los elementos de separación y las demarcaciones delinean el flujo de los distintos modos de tráfico. La clave traffic_mode= nos permite agregar al mapa la información sobre el tipo de tráfico al que se refiere la separación o demarcación especificada. Como valores comunes tenemos vehículos motorizados (motor_vehicle), parqueo (parking), carril bus (psv), bicicleta (bicycle) o zona peatonal (foot).</p>
+
+ <h2>Cómo indicar la separación de cada lado</h2>
+
+<p>Para el caso de las ciclorrutas y las ciclobandas en andén, la dirección de la línea es definida por el sentido en el que se dibujó en OSM y el lado (izquierda o derecha) de las separaciones, demarcaciones y tráfico adyacente se indica según esa dirección.</p>
+
+<p>Si es una vía ciclista de un sentido, izquierda (left) o derecha (right) como prefijo de separación, demarcación y tráfico adyacente se refiere a la dirección de la vía ciclista. Si es bidireccional pero la vía está mapeada por separado, izquierda  (left)  o derecha (right) se refiere a la dirección de la línea en OSM.</p>
+
+<p>Para las ciclobandas bidireccionales en calzada,  izquierda (left) o derecha (right) se refieren a la dirección del tráfico en el carril adyacente.</p>
+</div>
+
+<div class="w3-third w3-container w3-padding-64">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center etiquetas"><img
+          alt=""
+          src="images/matera.jpg"
+          title="separation=planter (matera)"
+          width="100%"
+      /><br><br>
+      separation:right=planter (matera)</p>
+      
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center etiquetas"><img
+          alt=""
+          src="images/baranda.jpg"
+          title=""
+          width="100%"
+      /><br><br>separation:both=fence (baranda)</p>
+      
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center etiquetas"><img
+          alt=""
+          src="images/fila-arboles.jpg"
+          title=""
+          width="100%"
+      /><br><br>separation:right=tree_row (fila de árboles)</p>
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center etiquetas"><img
+          alt=""
+          src="images/lado-separacion.png"
+          title=""
+          width="100%"
+      /></p>
+    </div>
+    
+    
+
+ </div>
+ 
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" id="vias-ciclistas">Etiquetas para vías ciclistas</h1>
+      <p><strong>Es importante destacar que lo que sigue es la incorporación de la propuesta de nuevas etiquetas. Recuerden que la propuesta aún está en proceso de revisión y discusión en la comunidad OSM. Este ejercicio es una prueba piloto.</strong></p>
+      <p>Las tareas del proyecto están disponibles en: <a class="c11" href="https://tasks.hotosm.org/projects/14761"
+                target="_blank">https://tasks.hotosm.org/projects/14761</a></p>
+      
+      </div>
+
+ </div>
+ 
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+ 
+      <h2 id="ciclorrutas">Ciclorrutas</h2>
+      <h3>Ejemplo de ciclorruta bidireccional en calzada:</h3>
+
+<div style="overflow-x:auto; overflow-y:auto;"> 
+ <table class="w3-table-all center" style="width:60%">
+<tr>
+    <td colspan="2" rowspan="1">
+<img
+          alt=""
+          src="images/image25.png"
+          style="width: 500px;"
+          title="Imagen"
+      />
+</td>
+</tr>
+<tr>
+    <td colspan="2" rowspan="1">
+<p>
+      <img
+          alt=""
+          src="images/image34.png"
+          title="" />
+    </p>
+    </td>
+    </tr>
+      <tr>
+        <td colspan="1" rowspan="1">
+          <p class="ejemplo">Línea A</p>
+          <p class="etiquetas">highway=*<br>
+lanes=2<br>
+oneway=no<br>
+cycleway=separate</p>
+        </td>
+        <td colspan="1" rowspan="1">
+          <p class="ejemplo">L&iacute;nea B:</p>
+          <p class="etiquetas">highway=cycleway<br>
+oneway=no<br>
+separation:left=bump;studs<br>
+separation:right=kerb<br>
+marking:left=double_solid_line<br>
+marking:right=solid_line<br>
+traffic_mode:right=no<br>
+traffic_mode:left=motor_vehicle</p>
+        </td>
+      </tr>
+    </table>
+    </div>
+    </div>
+   <div class="w3-third w3-container" style="padding-top:100px">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><img src="images/image1.png" width="100px"><br>
+       Para mapear las ciclorrutas en OSM se traza una línea paralela a la de la vía correspondiente. En este caso la línea A corresponde a la calzada y la línea B a la ciclorruta. Agregamos cycleway=separate a las etiquetas de la calzada (línea A) para indicar que la ciclorruta está mapeada en una línea separada; a la línea de la ciclorruta (línea B) le agregamos las etiquetas highway=cycleway, oneway=yes/no (según sea unidireccional o bidireccional) y las etiquetas de separación (separation=*), demarcación (marking=*) y modos de tráfico (traffic_mode=*) adyacentes explicadas en el apartado anterior. </p>
+   </div>
+
+ </div>
+ 
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+    
+    <h2 id="ciclobandas">Ciclobandas</h2>
+<h3>Ejemplo de ciclobanda bidireccional en calzada:</h3>
+<div style="overflow-x:auto; overflow-y:auto;"> 
+
+  <table class="w3-table-all center" style="width:60%">
+<tr>
+    <td colspan="2" rowspan="1">
+<img
+          alt=""
+          src="images/image23.png"
+          style="width: 100%;"
+          title="Imagen" />
+</td>
+</tr>
+<tr>
+    <td colspan="1" rowspan="1">
+<p>
+          <img
+          alt=""
+          src="images/image24.png"
+          title=""
+      />
+    </p>
+    </td>
+        <td colspan="1" rowspan="1">
+          <p class="ejemplo">L&iacute;nea A:</p>
+          <p class="etiquetas">highway=*<br>
+          oneway=yes<br>
+          cycleway:right=lane<br>
+          cycleway:right:oneway=no<br>
+          cycleway:right:separation:right=kerb<br>
+          cycleway:right:separation:left=bump<br>
+          cycleway:right:marking:right=solid_line<br>
+          cycleway:right:marking:left=double_solid_line<br>
+          cycleway:right:traffic_mode:right=no<br>
+          cycleway:right:traffic_mode:left=motor_vehicle</p>
+        </td>
+      </tr>
+    </table>
+    
+    </div>
+   </div>
+   <div class="w3-third w3-container" style="padding-top:100px">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><img src="images/image1.png" width="100px"><br>
+      Para mapear las ciclobandas en OSM se agregan las etiquetas a la línea de la calzada. En este caso, las etiquetas comienzan con cycleway: y se complementan con la información correspondiente, indicando primero el lado de la calle en el que está la ciclobanda. Solo se trazan como línea separada si son a nivel andén.</p>
+   </div>
+ </div>
+ 
+ <div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal" id="vias-cicloadaptadas">Etiquetas para vías cicloadaptadas</h1>
+      <p>Para las vías cicloadaptadas, se complementan las etiquetas de la calzada con información sobre demarcaciones (pictograma o límite de velocidad), número, sentido y ancho de los carriles de la vía, etc.</p>
+      <p>En el caso de las calles peatonales donde se autoriza la circulación de bicicletas, manteniendo el peatón la prioridad (sin ningún tipo de diferenciación de los espacios), utilizamos las etiquetas highway=pedestrian y bicycle=yes. 
+      </p>
+      <p>En los tramos donde sea necesario bajar de la bici (por ejemplo, en pasos peatonales como el Aula Ambiental o el puente de la estación Industriales), usar:  bicycle=dismount.</p>
+      <p>En los tramos donde haya escaleras con rampa para bicicleta (como el Aula Ambiental), usar: ramp:bicycle=yes</p>
+      </div>
+ </div>
+ 
+ <div class="w3-row w3-container">
+     
+    <h2 id="servicios">Actividades o servicios relacionados al uso de la bicicleta</h2>
+<p>El objetivo es mapear las actividades relacionadas al uso de la bicicleta, como tiendas que venden bicicletas y accesorios, talleres, etc. Esta información puede ser representada como punto o como polígono. Será representada como punto cuando sea una actividad desarrollada dentro de una edificación, pero no ocupa la totalidad del edificio. Será representada como un polígono cuando su uso sí ocupe todo el edificio a mapear.</p>
+
+<div style="overflow-x:auto; overflow-y:auto;"> 
+  <table class="w3-table-all" style="width:70%; margin:auto">
+<tr>
+    <td colspan="1" rowspan="1">
+        <p>TIPO</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p>ETIQUETA</p>
+    </td>
+    </tr>
+<tr>
+    <td colspan="1" rowspan="1">
+        <p>BICIPARQUEADEROS</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">amenity=bicycle_parking<br>supervised=yes  
+(si es un parqueadero vigilado)<br>covered=yes (si es cubierto)</p>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="1" rowspan="1">
+        <p>ESTACIONES ENCICLA</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">amenity=bikesharing_station<br>name=*<br>operator= Encicla<br>opening_hours=Mo-Fr 05:30-22:00; Sat 06:30-21:00</p>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="1" rowspan="1">
+        <p>ALQUILER DE BICICLETAS</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">amenity=bicycle_rental</p>
+    </td>
+    </tr>
+     <tr>
+    <td colspan="1" rowspan="1">
+        <p>TIENDAS QUE VENDEN BICICLETAS O ACCESORIOS</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">shop=bicycle</p>
+    </td>
+    </tr>
+     <tr>
+    <td colspan="1" rowspan="1">
+        <p>BOMBAS DE AIRE QUE PUEDEN SER USADAS PARA BICICLETAS</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">amenity=compressed_air<br>compressed_air=yes<br> service:bicycle:pump=yes</p>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="1" rowspan="1">
+        <p>PARA ESTACIONES DE HERRAMIENTAS</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">amenity=bicycle_repair_station</p>
+    </td>
+    </tr>
+      <tr>
+    <td colspan="1" rowspan="1">
+        <p>PARA CAJAS BICI (PARA ESPERAR ADELANTE EN LOS SEMÁFOROS)</p>
+        </td>
+    <td colspan="1" rowspan="1">
+        <p class="etiquetas">cycleway=asl<br>
+(se etiqueta un nodo antes de la intersección) </p>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </div>
+ 
+ <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="ejemplos.html">2</a>
+      <a class="w3-button w3-hover-black" href="tareas.html">3</a>
+      <a class="w3-button w3-hover-black" href="jerarquia.html">4</a>
+   
+    </div>
+  </div>
+ 
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p style="text-align:center">Esta guía es posible gracias al apoyo del ITDP.<br/><img src="images/logo-ITDP.jpeg" width="150px" /></p>
+      
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p style="text-align:right">Plantilla original: <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> Última actualización: 25 de abril de 2023</p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+Datos visualizados en uMap 
+
+Talleres bici
+https://ethercalc.org/b19vooyl6i4b.csv
+
+Encicla
+https://ethercalc.org/35zr3ikxmq.csv
+
+Parqueaderos
+https://ethercalc.org/2610q2z19dxu.csv
+
+Puntos peligrosos
+https://ethercalc.org/mhw3skvstrzw.csv
+
+puntos wifi
+https://ethercalc.org/2j3flbr17tyq.csv
+
+
+consultas overpass para uMap y Leaflet
+recordar el zoom de copa a sabaneta
+
+ciclorrutas nivel andén
+highway=cycleway
+archivo ciclorruta-anden.geojson
+
+ciclobandas en calzada
+cycleway:right=lane or cycleway:left=lane or cycleway:both=lane
+archivo ciclobanda-calzada.geojson
+
+carril compartido zona 30
+cycleway=shared_lane
+archivo carril-zona-30.geojson
+
+peatonales compartidos con bici
+highway=footway and (bicycle=yes or bicycle=designated)
+archivo peatonales.geojson
+
+rampas o riel para bici/puente peatonal
+ramp:bicycle=yes or bicycle=dismount

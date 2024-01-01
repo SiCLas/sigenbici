@@ -1,0 +1,1049 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.59632,6.235066 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Almacén Ciclas",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 76 No. 32 B 10 Barrio Belén (Comuna Belén)",
+    "email":"",
+    "phone":"2386853",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.568063,6.254941 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Almacén Colbic Carabobo",
+    "styleUrl":"#waypoint",
+    "description":"Venta y reparación de todo tipo de bicicletas.",
+    "address":"Carrera 52 No. 55-16/18. ",
+    "email":"bicicletascolbic@hotmail.com  ",
+    "phone":" 2315551 y 5130747 ",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.33083,6.439068 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Almacén de Motos y Bicicletas El Dorado",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 17 No.17-27, 4063466 Barbosa, Antioquia",
+    "email":"",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.447337,6.378448 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Almacén de Motos y Bicicletas El Dragón",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 7 No. 17-33,2890309 2890654 Girardota, Antioquia",
+    "email":"",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.569155,6.235053 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Almacén Gasolina Extra",
+    "styleUrl":"#waypoint",
+    "description":"Venta de bicicletas plegables y accesorios.",
+    "address":"Centro Comercial San Diego Local 1653",
+    "email":"",
+    "phone":"2328370",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.594805,6.231443 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Antonio Londoño",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 30 No.74-24",
+    "email":"",
+    "phone":"2382199  Repuestos para bicicletas",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.596205,6.185446 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bcicicletas RyJ",
+    "styleUrl":"#waypoint",
+    "description":"Almacén y Taller de Bicicletas RyJ",
+    "address":" Cr52 75-13 Itagüí Itagüí, Colombia ",
+    "email":"",
+    "phone":"(034)2810278",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.616525,6.152118 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bici Impacto",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 70S # 45A - 53,(4) 3011708 Sabaneta, Antioquia",
+    "email":"",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.579844,6.259236 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bici Smith",
+    "styleUrl":"#waypoint",
+    "description":"Mantenimiento y reparación. Conocido como \"Bicicletas El Rolo\"",
+    "address":"Cra. 65 No. 59-04 Barrio La Iguaná",
+    "email":"",
+    "phone":"3127770966",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.565816,6.275239 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas \"Lady\"",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 80B No.55-25",
+    "email":"",
+    "phone":" 2120399 y 2110233 Barrio El Bosque - Medellín",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.608312,6.171574 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas B y B",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 49 No. 51-29",
+    "email":"",
+    "phone":"2778079 Itagüí - Antioquia",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.593021,6.249811 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas BASE",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 44 No.74-08",
+    "email":"",
+    "phone":"4132563",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.568458,6.254845 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Cicloby",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 55 con Cra 52 (Carabobo)",
+    "email":"",
+    "phone":"5130752",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.593528,6.246865 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Diego Palacio",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 40 # 73–108 Barrio Laureles (Comuna Laureles-Estadio)",
+    "email":"",
+    "phone":"413 4121",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.571105,6.211239 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Guairo",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 43B # 10-45 El Poblado",
+    "email":"",
+    "phone":" 312 20 56 Móvil: 313 702 50 76",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.56805,6.25517 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Ideal",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 52 No.55-44",
+    "email":"",
+    "phone":"5138792",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.567484,6.259183 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Imperial",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carera 52 No.60-15 (Carabobo)",
+    "email":"",
+    "phone":"5120056",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.594692,6.187297 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Leo´s",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cr52 77-155 Itagüí",
+    "email":"",
+    "phone":"(57) (4) 2814705",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.636167,6.094809 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Maya",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cr 50 # 125s-134 Caldas, Antioquia, Medellín",
+    "email":"",
+    "phone":"(57) (4) 2781571",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.568053,6.255096 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Orby",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 52 No. 55-32 ",
+    "email":"ventas@bicicletasorby.com http://www.bicicletasorby.com",
+    "phone":" 231 0772 y 231 1931 ",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.595585,6.245566 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Scott",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Avenida Nutibara No 74a – 04  ",
+    "email":"http://www.scottcolombia.com/   info@scottcolombia.com ventas@scottcolombia.com",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.569855,6.185849 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas Sobre Ruedas",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 16A Sur No. 32B - 38. Campestre Drive In Local 101",
+    "email":"info@bicicletassobreruedas.com mercadeo@bicicletassobreruedas.com http://www.bicicletassobreruedas.com/",
+    "phone":"314 0098 - 321 0312",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.635856,6.086322 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicicletas y motos Arcila´s",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 135 sur No.50-09",
+    "email":"",
+    "phone":"3389485 Caldas - Antioquia",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.592257,6.24911 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicilaverde",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"",
+    "email":"http://facebook.com/bicilaverde.medellin",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.568187,6.255536 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicimanias",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 52 No.56-11",
+    "email":"",
+    "phone":"5130744 Carabobo",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.604069,6.258180 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Casa Bici Rolling Medellín",
+    "styleUrl":"#waypoint",
+    "description":"Personalización de bicicletas. http://www.facebook.com/BiciRolling",
+    "address":"Calle 47DD #87-28",
+    "email":"bicirolling.ind@gmail.com",
+    "phone":"312 809 36 81",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.594027,6.26202 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bicy Hoyos",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 50 No.77B-23",
+    "email":"bicyhoyos@hotmail.com",
+    "phone":"2341874 Móvil: 3113050574 ",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.570284,6.232947 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Bike House",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 43A No. 31-193 Tel.: (57)(4)262 3121 Linea 018000 522225 ",
+    "email":"contacto@bikehouse.com.co http://www.bikehouse.com.co/",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.568369,6.255328 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo 2000",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 56 No.52-24",
+    "email":"",
+    "phone":"5130743 Medellín - Colombia",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.593129,6.249814 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Benotto",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 44 No. 73-86",
+    "email":"",
+    "phone":"4124342",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.575182,6.295581 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Castilla",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 73 No.98-94",
+    "email":"",
+    "phone":"2377417 Barrio Castilla - Medellín",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.553783,6.27446 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Fabio",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 82 No.44-94",
+    "email":"",
+    "phone":"2632010",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.584688,6.168774 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Línea",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 37 sur No. 38-42",
+    "email":"",
+    "phone":"276 3316",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.571185,6.293741 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Restrepo",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cra. 68 No. 98-115 Esquina de San Judas",
+    "email":"",
+    "phone":"2679708 Barrio Castilla",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.63603,6.088789 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Ritmo",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 50 No. 133 S-09,(4) 2780490 Caldas, Antioquia",
+    "email":"",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.599263,6.181961 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Simil",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cr52 67-19 Itagüí-Antioquia (57) (4) 2813772",
+    "email":"",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.58642,6.248118 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Tour",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 43 No. 68-37",
+    "email":"",
+    "phone":"2301986",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.636712,6.096753 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclo Visión Pocho",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cra 50 con Calle 123Sur",
+    "email":"",
+    "phone":"3033171 Caldas - Antioquia",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.598469,6.231336 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"CicloAses",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 30 No. 78-18",
+    "email":"",
+    "phone":"3419234 Medellín - Colombia",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583652,6.170513 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Cycle Planet Bike Shop",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Transversal 34D sur 39-08,(4) 3346281 Barrio Obrero, Envigado, Colombia ",
+    "email":"http://www.cycleplanet.blogspot.com/ http://www.facebook.com/cycleplanet.bikeshop",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583151,6.217866 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"HA BICICLETAS S.A.",
+    "styleUrl":"#waypoint",
+    "description":"Distribuidores de bicicletas GW",
+    "address":"Calle 14 No.52 A-187",
+    "email":"http://www.habicicletas.com/ (http://www.habicicletas.com)  ",
+    "phone":"2855040",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.61692,6.15263 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"MonoCiclas",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 70 Sur No. 46-33",
+    "email":"",
+    "phone":" fijo: 2881807 móvil: 3146187588 Julian Jaramillo",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.56827,6.254546 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ramón Hoyos",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 52 No.54-31 (Carabobo)",
+    "email":"",
+    "phone":"2112499",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.591356,6.244337 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Raúl Mesa",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 73 Circular 1-34",
+    "email":"",
+    "phone":" 413 6347 Barrio Laureles",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.59275,6.247403 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Safety Ropa Deportiva",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 41 No 73-29 Barrio Laureles (Comuna Laureles-Estadio).",
+    "email":"http://www.safetycol.com/company.htm",
+    "phone":"4110246",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.598394,6.255168 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Scorpions Bike",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cra 80 No.45GG-18",
+    "email":"jhonnatanreyr@hotmail.com",
+    "phone":"4141121  Jhonnatan Rey: 3122713993 Catalina Laverde: 3113929160",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.589636,6.198662 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Taller D Bicicletas",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 11Sur con Guayabal (esquina)",
+    "email":"",
+    "phone":"2551706",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.331232,6.439044 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Taller de Bicicletas",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"",
+    "email":"",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.502011,6.0584 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Taller de Bicicletas Correcaminos",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 21 No.19-03 541 4280 El Retiro – Antioquia ",
+    "email":"http://elpunto.co/component/mtree/el-retiro-ant/taller-de-bicicletas-correcaminos",
+    "phone":"",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.591508,6.226219 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Villalbike",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 70 # 25-81 Barrio Belén San Bernardo (Comuna Belén)",
+    "email":"http://www.villalbike.com.co/",
+    "phone":"353 33 98 Celular: (+571) 313 678 88 08 ",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.602299,6.226547 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Vision Bikes",
+    "styleUrl":"#waypoint",
+    "description":"Almacén y Taller de Bicicletas",
+    "address":"Calle 21 No. 80AA-49 Una cuadra arriba del consumo de Belén",
+    "email":"",
+    "phone":"3425809",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.559824,6.206565 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Welcome El Poblado",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cra. 30 No. 8B-81 Trans. Inferior con calle 10",
+    "email":"http://www.welcome.com.co",
+    "phone":"2667834",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":"0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.593341,6.261242 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Taller Don Rubiel",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"",
+    "email":"",
+    "phone":"3148939150",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.595647,6.267324 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Cycling Life",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Carrera 80 #53-42",
+    "email":"",
+    "phone":"323 290 35 11",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+    {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.611912,6.255178 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Central Bike",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Calle 44 #94-160",
+    "email":"@centralbikemed",
+    "phone":"320 609 51 59",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.564040,6.259418 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Rastaller Bike Love",
+    "styleUrl":"#waypoint",
+    "description":"Todo lo relacionado con mantenimiento y reparación de bicicletas. Atendemos de lunes a viernes de 08:00 a.m -05:00p.m y los sabados de 08:00 a.m - 02:00 p.m",
+    "address":"Carrera 50C #61-67",
+    "email":"andresbustamanterestrepo@gmail.com",
+    "phone":"312 702 03 10",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.595459,6.262830 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Solution Bike",
+    "styleUrl":"#waypoint",
+    "description":"Jose Zapata",
+    "address":"Calle 50 #77B-141",
+    "email":"",
+    "phone":"300 755 07 31",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.604519,6.259374 ]
+    },
+    "properties": {
+    "type":"Feature",
+    "name":"Ciclope",
+    "styleUrl":"#waypoint",
+    "description":"",
+    "address":"Cra. 87 #47-09",
+    "email":"",
+    "phone":"2347008",
+    "geometry/type":"Point",
+    "geometry/coordinates/2":""
+    }
+  }
+]
+}

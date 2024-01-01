@@ -1,0 +1,23 @@
+<div class="w3-third w3-container w3-padding-16  w3-border container filterDiv ciclobanda">#
+    <p class="id"></p>
+    <p class="subtipo"></p>
+    <p class="foto"><img alt="" src="images/image1.png" style="height: 150px;" title="Foto"/></p>
+    <p class="enlace"><a href="https://www.mapillary.com/app/?pKey=" target="_blank">https://www.mapillary.com/app/?pKey=</a></p>
+     <button class="mapillary" onclick="showPic()">Ver más fotos</button>
+    <div style="overflow-x:auto; overflow-y:auto;"> 
+    <table class="w3-table-all">
+        <tr style="max-height:275px"> 
+        <td>
+            <p class="ejemplo">A:</p>
+            <p class="etiquetas">highway=*<br></p>
+        </td>  
+        <td>
+            <p class="ejemplo">B:</p>
+            <p class="etiquetas">highway=cycleway<br></p> 
+        </td>
+        </tr>
+    </table>
+    </div>
+</div>
+      
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Guía SIGenBici 2023: jerarquía de vías en Medellín</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; font-weight: 500}
+h1 {font-size:40px; padding-top:45px}
+h2 {font-size:30px; padding-top:32px;}
+p {font-size:120%;}
+.etiquetas, .enlace, .fuente {font-size:100%;}
+.ejemplo  {font-size:100%;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.padding-top {
+    padding-top: 35px;
+}
+table {font-size:100%;}
+hr {height:25px;border-width:0;color:gray;background-color:gray;}
+</style>
+  </head>
+  <body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html#portada" class="w3-bar-item w3-button w3-theme-l1">Guía SIGenBici 2023</a>
+    <a href="https://www.siclas.org/sigenbici/mapa.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" target="_blank">Mapa ciclista</a>
+    <a href="mailto:contacto@siclas.org" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
+  </div>
+</div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Cerrar menú">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Contenido</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#intro">SIGenBici</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#enlaces">Enlaces de referencia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#colombia">Cicloinfraestructura en Colombia</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#osm">Cicloinfraestructura en OSM</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#propuesta">Propuesta de etiquetas de separación y demarcación</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html#vias-ciclistas">Etiquetas para vías ciclistas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="ejemplos.html">Ejemplos de etiquetas</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="tareas.html">Tareas del proyecto</a>
+   <a class="w3-bar-item w3-button w3-hover-black" href="jerarquia.html">Jerarquía de vías en Medellín</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row">
+    <div class="w3-auto w3-container">
+      <h1 class="w3-text-teal"><strong>Jerarquía de vías</strong></h1>
+
+    <p class="c26">La jerarqu&iacute;a de las calles en Medell&iacute;n debe ser acorde a la jerarqu&iacute;a establecida por el POT, la cual podemos encontrar en el Mapa de segmentos viales en el Geoportal de Medell&iacute;n.</p>
+    <p class="c36">La equivalencia de la jerarqu&iacute;a utilizada por la
+        Secretar&iacute;a de Infraestructura se debe comparar con las etiquetas
+        existentes en OSM: (<a
+          class="c16"
+          href="https://wiki.openstreetmap.org/wiki/Map_Features%23Highway"
+          target="_blank">https://wiki.openstreetmap.org/wiki/Map_Features#Highway</a>)
+    </p>
+
+<div style="overflow-x:auto; overflow-y:auto;"> 
+    <table class="w3-table-all">
+      <tr>
+        <td colspan="1" rowspan="1">
+          <p class="c10 c32"><span class="c11 c4">TIPO</span></p>
+        </td>
+        <td class="c2" colspan="1" rowspan="1">
+          <p class="c10"><span class="c4">DEFINICI&Oacute;N</span></p>
+        </td>
+        <td class="c45" colspan="1" rowspan="1">
+          <p class="c10"><span class="c4">FOTO Y ETIQUETA EN OSM</span></p>
+        </td>
+      </tr>
+
+ <tr class="c48">
+        <td class="c6" colspan="1" rowspan="2">
+          <p class="c0 c32"><span class="c4">AUTOPISTA</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="2">
+          <p class="c20">
+            <span class="c30 c19"
+              >Son v&iacute;as r&aacute;pidas de alta capacidad y largo
+              recorrido, que se caracterizan por tener calzadas separadas,
+              accesos y salidas controladas, y todas sus intersecciones a
+              desnivel. En Medell&iacute;n, el &uacute;nico eje con
+              caracter&iacute;sticas de autopista urbana, es el sistema vial del
+              corredor multimodal de transporte del r&iacute;o Medell&iacute;n.
+            </span>
+          </p>
+          <p class="c20"><span class="c30 c19">(Ej.: Autopista Sur)</span></p>
+        </td>
+        <td class="c21" colspan="1" rowspan="1">
+          <p class="c0">
+            <img
+                alt=""
+                src="images/image3-2.png"
+                title="Autopista"
+                style="width:500px"
+            />
+          </p>
+        </td>
+      </tr>
+      <tr class="c31">
+        <td class="c24" colspan="1" rowspan="1">
+          <p class="etiquetas  w3-center">highway=trunk</p>
+        </td>
+      </tr>
+
+
+
+      <tr class="c37">
+        <td class="c18" colspan="1" rowspan="2">
+          <p class="c0 c32"><span class="c4">ARTERIA PRINCIPAL</span></p>
+        </td>
+        <td class="c2" colspan="1" rowspan="2">
+          <p class="c20 c25"><span class="c30 c19"></span></p>
+          <p class="c20">
+            <span class="c30 c19"
+              >Su funci&oacute;n principal es movilizar el flujo vehicular de
+              largo recorrido dentro del &aacute;rea urbana, uniendo entre
+              s&iacute; las diferentes zonas de la ciudad. El sistema vial
+              arterial principal para la ciudad de Medell&iacute;n,
+              estar&aacute; conformado por el anillo bidireccional del centro,
+              un sistema de v&iacute;as en direcci&oacute;n norte-sur que
+              corresponde casi totalmente al sistema vial metropolitano, y un
+              sistema de v&iacute;as en direcci&oacute;n oriente-occidente, que
+              cruza a desnivel sobre el sistema vial del r&iacute;o
+              Medell&iacute;n (Aburr&aacute;).
+            </span>
+          </p>
+          <p class="c20">
+            <span class="c19 c30"
+              >(Ej.: Avenida Guayabal,&nbsp; Avenida 80-81, Carrera 65)</span
+            >
+          </p>
+        </td>
+        <td class="c40" colspan="1" rowspan="1">
+          <p class="c0">
+            <img
+                alt=""
+                src="images/image3-6.png"
+                style="width: 500px;"
+                title=""
+            />
+          </p>
+        </td>
+      </tr>
+      <tr class="c14">
+        <td class="c21" colspan="1" rowspan="1">
+          <p class="etiquetas w3-center">highway=primary
+          </p>
+        </td>
+      </tr>
+      <tr class="c42">
+        <td class="c6" colspan="1" rowspan="2">
+          <p class="c0 c32"><span class="c4">ARTERIA MENOR</span></p>
+        </td>
+        <td class="c1" colspan="1" rowspan="2">
+          <p class="c20">
+            <span class="c9"
+              >Cumplen funciones similares a las v&iacute;as arterias
+              principales y en algunos casos presentan caracter&iacute;sticas
+              semejantes a &eacute;stas, pero con menor alcance
+              (longitud).</span
+            >
+          </p>
+          <p class="c20 c25"><span class="c9"></span></p>
+          <p class="c20">
+            <span class="c9"
+              >(Ej.: Carrera 70; calle 1 Sur, entre la avenida Bolivariana y la
+              Longitudinal Occidental; Loma Los Balsos, entre la avenida 34 y la
+              Longitudinal Oriental)</span
+            >
+          </p>
+        </td>
+        <td class="c21" colspan="1" rowspan="1">
+          <p class="c0">
+           <img
+                alt=""
+                src="images/image3-1.png"
+                style="width: 500px;"
+                title=""
+            />
+          </p>
+        </td>
+      </tr>
+      <tr class="c41">
+        <td class="c29" colspan="1" rowspan="1">
+          <p class="etiquetas w3-center">highway=secondary  </p>
+        </td>
+      </tr>
+ <tr class="c54">
+        <td class="c18" colspan="1" rowspan="2">
+          <p class="c0 c32"><span class="c4">COLECTORA</span></p>
+        </td>
+        <td class="c2" colspan="1" rowspan="2">
+          <p class="c20 c25"><span class="c9"></span></p>
+          <p class="c20">
+            <span class="c9"
+              >Es el conjunto de v&iacute;as que distribuyen y canalizan el
+              tr&aacute;nsito vehicular hacia o desde el sistema arterial hasta
+              diferentes sectores urbanos, en forma directa o con
+              intervenci&oacute;n complementaria de las v&iacute;as de servicio.
+              Generalmente unen v&iacute;as arterias entre s&iacute;, y deben
+              atender vol&uacute;menes de tr&aacute;nsito moderados, incluyendo
+              el transporte p&uacute;blico colectivo.
+            </span>
+          </p>
+          <p class="c20">
+            <span class="c9">(Ej.: Calle 57, &nbsp;La Paz)</span>
+          </p>
+        </td>
+        <td class="c40" colspan="1" rowspan="1">
+          <p class="c0">
+            <img
+                alt=""
+                src="images/image3-3.png"
+                style="width: 500px;"
+                title=""
+            />
+          </p>
+        </td>
+      </tr>
+      <tr class="c15">
+        <td class="c29" colspan="1" rowspan="1">
+          <p class="etiquetas w3-center">highway=tertiary        </p>
+        </td>
+      </tr>
+      <tr class="c50">
+        <td class="c18" colspan="1" rowspan="2">
+          <p class="c0 c32"><span class="c4 c11">SERVICIO</span></p>
+        </td>
+        <td class="c2" colspan="1" rowspan="2">
+          <p class="c47">
+            <span class="c9"
+              >Es el conjunto de v&iacute;as vehiculares cuya funci&oacute;n
+              principal es facilitar el acceso directo a las propiedades o
+              actividades adyacentes, perdiendo importancia la funci&oacute;n de
+              movilidad. Para este sistema de v&iacute;as debe restringirse (en
+              lo posible) el transporte p&uacute;blico y de carga, y la
+              velocidad permitida estar&aacute; condicionada al desarrollo de
+              las actividades y flujos peatonales existentes. &nbsp;(Ej.: Calle
+              30B)</span
+            >
+          </p>
+        </td>
+        <td class="c40" colspan="1" rowspan="1">
+          <p class="c17">
+            <img
+                alt=""
+                src="images/image3-5.png"
+                style="width: 500px;"
+                title=""
+            />
+          </p>
+        </td>
+      </tr>
+      <tr class="c53">
+        <td class="c38" colspan="1" rowspan="1">
+          <p class="etiquetas w3-center">highway=residential          </p>
+        </td>
+      </tr>
+    </table>
+   </div>
+    
+    <p class="fuente">Fuente: Plan de Ordenamiento Territorial Medellín (2006), pp. 77-78.</p>
+
+    </div>
+   
+  </div>
+
+ <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-hover-black" href="index.html#portada">1</a>
+      <a class="w3-button w3-hover-black" href="ejemplos.html">2</a>
+      <a class="w3-button w3-black-black" href="tareas.html">3</a> 
+      <a class="w3-button w3-black" href="jerarquia.html">4</a>   
+    </div>
+  </div>
+ <!-- END pagination -->
+ 
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <p style="text-align:center">Esta guía es posible gracias al apoyo del ITDP.<br/><img src="images/logo-ITDP.jpeg" width="150px" /></p>
+      
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p style="text-align:right">Plantilla original: <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> Última actualización: 11 de julio de 2023</p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

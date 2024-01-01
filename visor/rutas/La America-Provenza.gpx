@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <bounds minlat="6.175549" minlon="-75.616075" maxlat="6.336994" maxlon="-75.55607"/>
+  </metadata>
+   <trk>
+    <name>La América-Provenza</name>
+    <desc>name=Ruta Segura Laureles&#xA;styleUrl=#line-FF5500-6000&#xA;styleHash=-a5b394a&#xA;description=Este 23 de Abril muévete en bici al trabajo, a la U, al colegio, donde desees…&#xA;stroke=#ff5500&#xA;stroke-opacity=1&#xA;stroke-width=6</desc>
+    <trkseg>
+      <trkpt lat="6.208207" lon="-75.565676">
+      </trkpt>
+      <trkpt lat="6.208661" lon="-75.565539">
+      </trkpt>
+      <trkpt lat="6.210624999999999" lon="-75.570445">
+      </trkpt>
+      <trkpt lat="6.210852999999999" lon="-75.571159">
+      </trkpt>
+      <trkpt lat="6.211832" lon="-75.570778">
+      </trkpt>
+      <trkpt lat="6.213337" lon="-75.570563">
+      </trkpt>
+      <trkpt lat="6.214795" lon="-75.570785">
+      </trkpt>
+      <trkpt lat="6.215206" lon="-75.572931">
+      </trkpt>
+      <trkpt lat="6.216782" lon="-75.57182">
+      </trkpt>
+      <trkpt lat="6.224805" lon="-75.571462">
+      </trkpt>
+      <trkpt lat="6.225478000000001" lon="-75.572824">
+      </trkpt>
+      <trkpt lat="6.225636" lon="-75.573723">
+      </trkpt>
+      <trkpt lat="6.225442" lon="-75.574903">
+      </trkpt>
+      <trkpt lat="6.230908" lon="-75.574495">
+      </trkpt>
+      <trkpt lat="6.231021000000001" lon="-75.5746">
+      </trkpt>
+      <trkpt lat="6.231876" lon="-75.57736100000001">
+      </trkpt>
+      <trkpt lat="6.231031" lon="-75.605656">
+      </trkpt>
+      <trkpt lat="6.233417" lon="-75.606145">
+      </trkpt>
+      <trkpt lat="6.234078" lon="-75.606354">
+      </trkpt>
+      <trkpt lat="6.235645" lon="-75.605829">
+      </trkpt>
+      <trkpt lat="6.236413" lon="-75.605958">
+      </trkpt>
+      <trkpt lat="6.236978" lon="-75.606558">
+      </trkpt>
+      <trkpt lat="6.237554" lon="-75.607674">
+      </trkpt>
+      <trkpt lat="6.238397000000001" lon="-75.608586">
+      </trkpt>
+      <trkpt lat="6.24294" lon="-75.607567">
+      </trkpt>
+      <trkpt lat="6.243623000000001" lon="-75.60732">
+      </trkpt>
+      <trkpt lat="6.244199" lon="-75.606794">
+      </trkpt>
+      <trkpt lat="6.244231" lon="-75.607664">
+      </trkpt>
+      <trkpt lat="6.243697" lon="-75.609444">
+      </trkpt>
+      <trkpt lat="6.243809999999999" lon="-75.611308">
+      </trkpt>
+      <trkpt lat="6.243878999999999" lon="-75.611606">
+      </trkpt>
+      <trkpt lat="6.244348" lon="-75.61306">
+      </trkpt>
+      <trkpt lat="6.246039" lon="-75.614713">
+      </trkpt>
+      <trkpt lat="6.247771" lon="-75.616075">
+      </trkpt>
+      <trkpt lat="6.248124" lon="-75.615903">
+      </trkpt>
+    </trkseg>
+  </trk>
+  </gpx>

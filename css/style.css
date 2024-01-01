@@ -1,0 +1,265 @@
+@import url(https://github.com/necolas/normalize.css/);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* ----- Variables Globales ---- */
+
+:root {
+    --font-primary: 'Roboto Condensed', sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+    --first-color: #666;
+    --second-color: #00AAA5;
+    --third-color: #FFF;
+    --fourth-color: #E74C3C;/* Color de los botones de gruardar datos en modales */
+    --fifth-color: #555555;/* Color de la barra superior de navegación del visor */
+    --sixth-color: #303030;/* Color de fondo de la barra lateral visor */
+    --seventh-color: #707070;/* Color de fondo de los menu desplegables superiores visor*/
+    --eighth-color: #454545;/* Color del fondo del contenido panel lateral visor*/
+    --font-size-1: 17px;
+}
+* {
+    font-family: var(--font-primary);
+    color: var(--third-color);
+}
+
+html {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+/* Dimensionando pagina con respecto al tamaño de la pantalla */
+body {
+    background-image: url(../img/imb_bg1.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-size:cover;
+}
+
+@media (max-width: 480px){
+    body{
+        background-image: url(../img/imb_phone.jpg);
+        /* background-size: auto; */
+    }
+}
+
+p, 
+label {
+    font-size: var(--font-size-1);
+}
+
+
+/* ---- Seccion Difuminada  ---- */
+
+.background-blur {
+    backdrop-filter: blur(40px);
+}
+
+@-moz-document url-prefix() { 
+    .background-blur {
+        background-color: hsla(0, 0%, 30%, 0.7);
+    }
+
+  }
+
+
+/* Logo por fuera de la seccion difuminadas para medianas y grandes pantallas*/
+
+#logo1 {
+    width: 120px;
+    height: 120px;
+}
+
+/* Logo seccion difuminada */
+
+#logo2 {
+    width: 80px;
+    height: 80px;
+}
+
+
+.cc {
+    width: 88px;
+    max-height: 48px;
+}
+
+#copyright1 > div > div > .fw-bold {
+    margin: 0;
+    font-size: .7em;
+    font-weight: bolder;
+}
+
+#copyright1 > div > div > p {
+    margin: 0;
+    font-size: .6em;
+    min-width: 300px;
+}
+#copyright2  > div > div > .fw-bold {
+    text-align: left;
+    margin: 0;
+    font-size: .7em;
+    font-weight: bolder;
+}
+
+#copyright2 > div > div > p,
+#copyright_sidebar {
+    text-align: left;
+    margin: 0;
+    font-size: .6em;
+}
+
+#copyright2 .cc {
+    padding-top: 2px;
+}
+
+
+/* Ajustes del menu desplegable en el inicio */
+
+#desplegable{
+    margin-top: 20px;
+}
+
+.nav-item:hover{
+    background-color: var(--second-color);
+    transition: .5s;
+}
+
+.nav-link_index:hover{
+    background-color: var(--second-color);
+    margin-left: -24px;
+    margin-right: -48px;
+    transition: .5s;
+}
+
+.nav-active {
+    background-color: var(--third-color);
+    color: var(--first-color);
+}
+.nav-active:hover {
+    background-color: var(--third-color);
+    color: var(--first-color);
+}
+
+.dropdown-menu {
+    background: var(--seventh-color);
+    margin-left: -28px;
+    margin-right: -28px;
+    padding-left: 28px;
+    
+}
+
+.dropdown-item {
+    color: var(--third-color);
+}
+
+
+/* Switcheo de logos y copyright segun tamaño de pantalla*/
+
+.show-me-mobile {
+    display: none;
+}
+
+.show-me-desktop {
+    display: flex;
+}
+
+/*992*/
+@media (max-width: 992px) {
+    
+    .show-me-desktop {
+        display: none;
+        width: none;
+    }
+
+    .show-me-mobile {
+        display: flex;
+    }
+
+}
+
+/* Titulo y parrafo principal */
+
+#main-title > h1 {
+    font-family: var(--font-secondary);
+    font-weight: bolder;
+    color: var(--second-color);
+    margin-bottom: 50px;
+    font-size: 2.2em;
+}
+
+
+
+/*992*/
+@media (max-width: 992px) {
+    #main-title > h1,  
+    #p-description {
+        text-align: center;
+    }
+
+    #logo2 {
+        display: flex;
+    }
+
+}
+
+/* Botones */
+
+#buttons {
+    min-height: 150px;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: var(--second-color) 2px solid;
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--second-color);
+    border: var(--second-color) 2px solid;
+    color: var(--third-color);
+}
+
+.btn-primary_emer {
+    background-color: transparent;
+    height: 2.8em;
+    border: var(--fourth-color) 2px solid;
+    color: var(--fourth-color);
+    font-weight: bold;
+}
+
+.btn-primary_emer:hover {
+    background-color: var(--fourth-color);
+    border: var(--fourth-color) 2px solid;
+    color: var(--third-color);
+}
+/*450*/
+@media (max-width: 450px) {
+    #buttons  div  a {
+        font-size: 14px;
+        font-family: var(--font-secondary);
+
+    }
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../icons/menu.svg);
+}
+
+.icon-btn a + img{
+    margin-bottom: 1em;
+    transition: .5s;
+}
+.icon-btn a:hover + img{
+    margin-bottom: 2em;
+    transition: .5s;
+}

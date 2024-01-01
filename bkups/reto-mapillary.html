@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <script src=https://code.jquery.com/jquery-3.2.1.min.js></script>
+    <meta charset='utf-8' />
+    <title>Reto Mapillary MDE</title>
+    <style>
+    body {
+        margin: 35px;
+    }
+    
+    /* Style the header */
+.header {
+  background-color: #24943A;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+        table, th, tr {
+  border: 5px solid #24943A;
+  background-color: #D4EED1;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    </style>
+  </head>
+
+  <body>
+      <div>
+          <img src="./img/logo.png" alt="logo SIGenBici" style="float:left;width:125px;margin-right:25px;">
+          <div class="header">
+          <h1>Reto de fotomapeo Mapillary MDE 2022</h1>
+          </div>
+      </div>
+  
+  <div style="clear:left">
+      <table id="table">
+      <caption style="padding:5px;">Imágenes contribuidas al proyecto</caption>
+      <tr>
+          <th>Nombre en Mapillary</th><th>Imágenes subidas</th>
+      </tr>
+  </table>
+<h2>¿Qué es Mapillary?</h2>
+<p>Se trata de una plataforma colaborativa de imágenes a nivel de calle al estilo Google StreetView, solo que en este caso cualquiera puede contribuir fotos y los datos se comparten con una licencia libre, de manera que cualquiera puede usarlos en sus proyectos de mapeo.</p>
+
+<h2>¿Para qué necesitamos las imágenes?</h2>
+
+<p>En el proyecto SIGenBici nos enfocaremos en usar Mapillary para capturar imágenes de la cicloinfraestructura existente, así como de otras rutas empleadas con frecuencia para los desplazamientos en bici en la ciudad metropolitana.</p>
+
+<p>Mantener un mapa ciclista colaborativo con imágenes a nivel de calle facilita a las personas interesadas en empezar a usar la bici la planeación de sus rutas y nos permite tener información de base para sugerir a la administración mejoras y nuevos tramos para conectar los existentes.</p>
+
+<p>Necesitamos las imágenes para:</p>
+
+    <ul>
+        <li>Usarlas como referencia y seguir contribuyendo a mejorar los datos en <a href="https://www.siclas.org/te-gusta-mapear/" target="_blank">OpenStreetMap</a> para Medellín y el Valle de Aburrá.</li>
+        <li>Complementar el <a href="https://siclas.org/mapa-ciclista" target="_blank">mapa ciclista SIGenBici</a> y usarlas para la promoción de la bici y recomendación de rutas seguras a ciclistas principiantes.</li>
+        <li>Facilitar comparaciones entre el antes y el después de la construcción de infraestructura.</li>
+        <li>Mostrar a la administración los puntos que necesitan mantenimiento o señalización, o que tienen problemas de accesibilidad.</li>
+    </ul>
+
+<h2>¿Cómo puedo contribuir?</h2>
+
+<p>Solo se necesita una cámara que pueda disparar automáticamente cada 2-5 segundos y registrar la ubicación GPS. La app de Mapillary permite hacerlo en la mayoría de celulares, y solo es cuestión de lograr asegurar el teléfono de manera adecuada a la bicicleta. Con cámaras deportivas con GPS como la GoPro5 es incluso más fácil pues están hechas para actividades como esta.</p>
+
+<p>En la página web de SiCLas encuentras la <a href="https://www.siclas.org/taller-mapillary/">grabación del taller virtual y el formulario</a> de inscripción para participar en el reto.</p>
+
+<p><strong>¡Anímate a fotomapear con nosotros!</strong></p>
+      </div>
+  
+    <script>
+      $.ajax({
+      type: "get",
+      dataType: "json",
+      url: "https://graph.mapillary.com/images?creatorName=sflorez,mauromesa,bobfakoly,fabiosig,nanive,nataliaarruda&accessToken=MLY|5554608214599642|0f4eab6039ca4f8060d9ed37b01c354c",
+      success: function(data) {
+        for (i = 0; i < data.length; i++) {
+        $('#table').append('<tr><td>' + data[i]["username"] + '</td><td>' + data[i]["image_count"] + '</td>');
+        };
+      }
+    });
+    </script>
+  </body>
+</html>

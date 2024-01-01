@@ -1,0 +1,43 @@
+ <!-- Fixed navbar -->
+
+        <nav class="navbar navbar-expand-lg fixed-top ps-lg-5 navbar-default  pt-lg-0 pb-lg-0" style = "z-index: 20000" >
+            <div class="container-fluid ms-lg-5">
+                <a class="navbar-brand p-0" href="./index.html">
+                        <img class="img-fluid" src="./img/logo2_b.svg" alt="Logo SIGenBici" width="56" height="20">
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto pt-3 pt-lg-0 mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-active nav-link-active text-dark ps-5 px-lg-3" aria-current="page" href="#">Mapa</a>
+                  </li>
+                  <li class="nav-item px-3">
+                    <a class="nav-link" href="./gallery.html">Infografía</a>
+                  </li>
+                  <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Agregar datos
+                    </a>
+                    <ul class="dropdown-menu rounded-0 mt-0 border-0" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./rutas.html">Agregar rutas frecuentes</a></li>
+                        <li><a class="dropdown-item" href="./lugares.html">Agregar puntos de percepción</a></li>
+                        <li><a class="dropdown-item" href="./encuesta.html">Encuesta completa SIGenBici</a></li>
+                        <li><a class="dropdown-item" href="https://www.openstreetmap.org/">Mapea con OSM</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Recursos
+                    </a>
+                    <ul class="dropdown-menu rounded-0 mt-0 border-0" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="https://www.siclas.org/sigenbici/guia-2023" target="_blank">Guía mapeo 2023</a></li>
+                        <li><a class="dropdown-item" href="https://www.siclas.org/wp-content/uploads/2020/02/SIGenBici_guia_OSM.pdf">Guía de mapeo remoto (2020)</a></li>
+                        <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=ue1AHRjyrdA">Capacitación de mapeo con OSM/JOSM</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>

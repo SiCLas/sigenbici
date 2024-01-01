@@ -1,0 +1,159 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583985,6.25809 ]
+    },
+    "properties": {
+    "Comentario":"Los talleres de esta zona invaden constantemente la acera y el ciclocarril, poniendo en conflicto y riesgo a peatones y ciclistas.",
+    "type":"Vehículos estacionados en carril confinado",
+    "date":"2016-12-09",
+    "properties/gid":2141,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.576707,6.297597 ]
+    },
+    "properties": {
+    "Comentario":"La inclinación de las vías es un tanto riesgosa en cuanto a los viajes en descenso. Una mayor construcción de cables periféricos contribuiría en gran medida a la mayor apropiación de la cultura y uso de la bicicleta como medio de transporte, ya que un gran impedimento es lo dificultuoso que resulta el traslado desde el centro de la ciudad hacia las periferias urbanas superiores.",
+    "type":"Condiciones peligrosas",
+    "date":"2015-02-27",
+    "properties/gid":81,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.580648,6.256517 ]
+    },
+    "properties": {
+    "Comentario":"",
+    "type":"Vehículos estacionados en carril confinado",
+    "date":"2016-06-25",
+    "properties/gid":1857,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.574265,6.252507 ]
+    },
+    "properties": {
+    "Comentario":"",
+    "type":"Cruce peligroso",
+    "date":"2016-06-25",
+    "properties/gid":1858,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.579178,6.255829 ]
+    },
+    "properties": {
+    "Comentario":"Es necesario poner un pare antes del pompeyano para dar verdadera prioridad al paso peatonal y necesitamos control a la invasión de ciclorruta por parte de los motociclistas. ",
+    "type":"Condiciones peligrosas",
+    "date":"2016-06-26",
+    "properties/gid":1859,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.580777,6.256591 ]
+    },
+    "properties": {
+    "Comentario":"Falta semáforo peatonal y ciclista en sentido occidente oriente.",
+    "type":"Cruce peligroso",
+    "date":"2016-06-26",
+    "properties/gid":1860,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583373,6.257967 ]
+    },
+    "properties": {
+    "Comentario":"Hace falta pintar cebras para asegurar paso peatonal seguro.",
+    "type":"Cruce peligroso",
+    "date":"2016-06-26",
+    "properties/gid":1861,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.585841,6.259002 ]
+    },
+    "properties": {
+    "Comentario":"Hace falta control a los motociclistas que invaden la ciclorruta y se los encuentra uno de frente cuando viene por la 70 a coger la calle 51.",
+    "type":"Cruce peligroso",
+    "date":"2016-06-26",
+    "properties/gid":1862,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.583277,6.250203 ]
+    },
+    "properties": {
+    "Comentario":"Hace falta un andén digno, una cebra para marcar el paso peatonal y un pare para que los autos respeten la prioridad peatonal y ciclista.",
+    "type":"Cruce peligroso",
+    "date":"2016-06-26",
+    "properties/gid":1863,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.590079,6.260495 ]
+    },
+    "properties": {
+    "Comentario":"No hay semáforo saliendo del Diamante por la carrera 74 para seguir por la misma carrera, y es un cruce bastante conflictivo en general.",
+    "type":"Cruce peligroso",
+    "date":"2016-09-23",
+    "properties/gid":1956,
+    "geometry/type":"Point"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.57692,6.230158 ]
+    },
+    "properties": {
+    "Comentario":"hay presencia de cicloruta y anden de buenas características. pero muchos peatones invaden la cicloruta, hace falta señalización y un mensaje contundente",
+    "type":"Conflicto con peatones",
+    "date":"2016-10-08",
+    "properties/gid":2021,
+    "geometry/type":"Point"
+    }
+  }
+]
+}

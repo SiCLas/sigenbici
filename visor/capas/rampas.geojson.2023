@@ -1,0 +1,140 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-08-13T16:35:42Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/86579858",
+        "access": "yes",
+        "bicycle": "dismount",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "footway",
+        "horse": "no",
+        "layer": "1",
+        "motor_vehicle": "no",
+        "sidewalk": "both"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5806488,
+            6.2396994
+          ],
+          [
+            -75.5805937,
+            6.2397004
+          ],
+          [
+            -75.5805883,
+            6.2394205
+          ],
+          [
+            -75.5805143,
+            6.2394219
+          ]
+        ]
+      },
+      "id": "way/86579858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/182956553",
+        "bicycle": "dismount",
+        "bridge": "yes",
+        "description": "Inseguro por la noche.",
+        "foot": "yes",
+        "highway": "cycleway",
+        "layer": "1",
+        "lit": "no",
+        "note": "Hours 5:30-19:30 M-F Horas 5:30-19:30 L-V",
+        "surface": "concrete",
+        "width": "2.5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5730907,
+            6.2643377
+          ],
+          [
+            -75.5721817,
+            6.2640404
+          ],
+          [
+            -75.5721353,
+            6.2642012
+          ],
+          [
+            -75.5716028,
+            6.2640495
+          ],
+          [
+            -75.5715735,
+            6.2640411
+          ]
+        ]
+      },
+      "id": "way/182956553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/448742244",
+        "description": "Rampa de Acceso Parque Biblioteca la quintana",
+        "handrail:right": "yes",
+        "highway": "footway",
+        "incline": "10°",
+        "ramp": "yes",
+        "ramp:bicycle": "yes",
+        "ramp:wheelchair": "yes",
+        "surface": "asphalt",
+        "width": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5832434,
+            6.2848799
+          ],
+          [
+            -75.5830956,
+            6.2850965
+          ],
+          [
+            -75.5830925,
+            6.2851003
+          ],
+          [
+            -75.5830643,
+            6.28508
+          ],
+          [
+            -75.5830457,
+            6.2851213
+          ],
+          [
+            -75.5829818,
+            6.2852187
+          ],
+          [
+            -75.5830935,
+            6.2852876
+          ],
+          [
+            -75.583298,
+            6.2854006
+          ]
+        ]
+      },
+      "id": "way/448742244"
+    }
+  ]
+}

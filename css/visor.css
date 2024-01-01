@@ -1,0 +1,214 @@
+@import url(./style.css);
+@import url(./style_form.css);
+
+html, body, #container {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+}
+
+
+body > .container-fluid {
+        padding: 0 0 0 0;
+}
+ 
+.navbar-toggler-icon {
+        background-image: url(../icons/menu.svg);
+}
+
+#mapid {
+        display: block;
+        width: auto;
+        height: 100%;
+}
+.sidebar{
+        position: relative;
+        height: 100%;
+        left:0;
+        top:0;
+        border-bottom-width: 0 !important;
+        border-top-width: 0 !important;
+        border-left-width: 0 !important;
+}
+
+.sidebar-left{
+        float: left;
+        border-right-width: 0px;
+}
+
+.sidebar-right{
+        float: right;
+}
+.leaflet-control-layers{
+        width: 100%;
+}
+
+.leaflet-touch .leaflet-control-layers{
+        border: 0px;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+.sidebar-text {
+	line-height: 1.5;;
+}
+
+.leaflet-tooltip{
+        width: 200px;
+        white-space: normal;
+}
+
+.icon {
+        display: block;
+        fill: var(--first-color);
+        height: 50px;
+        margin-top: -15px;
+        width: 50px;
+}
+
+.sidebar-header {
+        background-color: var(--second-color); 
+}
+
+.sidebar-content {
+        background-color: var(--eighth-color);
+}
+
+.sidebar-tabs {
+        background-color: var(--sixth-color);
+}
+
+.navbar-default {
+        background-color: var(--fifth-color);
+        border-color: var(--fifth-color);
+        color: var(--third-color);
+}
+
+.leaflet-control-layers-expanded {
+        background: var(--eighth-color);
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+        background: var(--sixth-color);
+}
+
+#capas > p > a, 
+#puntos > p > a {
+        color: var(--second-color) !important;
+}
+
+a {
+        color: var(--second-color) !important;
+}
+
+#list_tematico {
+        text-align: left !important;
+}
+
+@media (min-width: 0px) {
+        .sidebar.leaflet-touch {
+                border: 2px solid rgba(0,0,0,.2);
+                border-right-width: 0px;
+        } 
+}
+
+.navbar-default .navbar-nav > li> a, 
+.navbar-default .navbar-nav > li> a:hover {
+        color: var(--third-color);
+
+}
+.navbar-nav>.active>a:hover {
+        color: var(--third-color);
+        background-color: #e7e7e7;
+}
+.nav-link {
+        padding: 16px 8px;
+}
+
+@media (max-width: 992px) {
+        body > .container-fluid {
+                padding: 72px 0 0 0;
+        }
+        .nav-link:hover{
+                padding-left: 2em;
+                background-color: var(--second-color);
+                margin-left: -28px;
+                margin-right: -48px;
+                transition: .5s;
+        }
+
+        .nav-link {
+                padding: 8px 8px;
+        }
+        .nav-active {
+                background-color: var(--sixth-color);
+                color: var(--third-color) !important;
+                margin-right: -12px;
+                margin-left: -12px;
+            }
+        .nav-active:hover {
+                background-color: var(--sixth-color);
+                margin-right: -12px;
+                margin-left: -12px;
+        }
+}
+.fa-map-pin:before {
+        color: black;
+}
+
+.sidebar-tabs>li.active, 
+.sidebar-tabs>ul>li.active {
+        background-color: var(--second-color);
+}
+
+.sidebar-tabs>li:hover, 
+.sidebar-tabs>ul>li:hover {
+        background-color: var(--fifth-color);
+}
+
+.leaflet-tooltip {
+        background-color: var(--eighth-color);
+        border: 1px solid var(--eighth-color);
+        color: var(--third-color);
+        padding: 12px;
+        border-radius: 12px;
+}
+
+.leaflet-tooltip-left {
+	margin-left: -20px;
+}
+.leaflet-tooltip-right {
+	margin-left: 20px;
+}
+
+.leaflet-tooltip-top:before {
+	border-top-color: var(--eighth-color);
+	}
+
+.leaflet-tooltip-bottom:before {
+	border-bottom-color: var(--eighth-color);
+}
+
+.leaflet-tooltip-left:before {
+        border-left-color: var(--eighth-color);
+}
+.leaflet-tooltip-right:before {
+        border-right-color: var(--eighth-color);
+}
+
+.modal-content p, h3, h5 {
+        color:black;
+        padding: 5px;
+}
+.modal-content h4 {
+        background-color: var(--eighth-color);
+        padding: 5px;
+}
+
+.btn-close {
+        background-color: var(--second-color);
+}

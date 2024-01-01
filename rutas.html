@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>SIGenBici | Agregar rutas frecuentes</title>
+
+		<!-- Favicon -->
+		<link  rel="icon" href="./img/favicon.png" type="image/png" />
+
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+		<link rel="stylesheet" href="./encuesta/leaflet.draw/leaflet.draw.css" />
+
+		<!-- Remodal -->
+		<link rel="stylesheet" href="./encuesta/remodal/remodal.css" />
+		<link rel="stylesheet" href="./encuesta/remodal/remodal-default-theme.css" />
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+		
+		<!-- Hojas de Estilo -->
+		<link rel="stylesheet" href="./css/style_form.css?v=5">
+	</head>
+
+	<body>
+<!-- ---------------------------------------------------------BLOQUE DE PREGUNTAS DE LA ENCUESTA ------------------------------------------------------------------> 
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	
+	<!-- Contenedor para todos los elementos en pantalla -->
+
+	<div class="d-flex justify-content-center">
+	  
+		<form id="form_ruta" action="./encuesta/saveform_ruta.php" method="POST" class="d-flex justify-content-center vw-100 min-vh-100">
+		
+			<h1 id="title-form-ruta" class="text-end p-3 pb-2 fw-bold">Información sobre rutas</h1>
+		<!-- Pregunta 0: Introduccion --------------------------------------------------------------------------------------------------------------------------------->
+
+			<div id="intro" class="pregunta col-12 col-sm-6 background-blur p-5">
+				
+				<div class="d-flex flex-column align-items-center h-100">
+
+					<!-- Logo de SIGenBici -->
+					<div id="logo3" class="icon_wrapper my-5">
+						<a href="./index.html"><img class="icon" src="./img/logo2_b.svg" alt="Logo SIGenBici"></a>
+					</div>
+					
+					<!-- Introduccion Texto -->
+					<div class="mb-2">
+						<p style = "text-align: justify">
+							De antemano gracias por su interés en agregar sus recorridos en bicicleta al proyecto SIGenBici. De acuerdo a la Ley 1581 de 2012, la información que se recoja será tratada de manera confidencial, y no se usará para ningún otro propósito fuera de los de esta 
+							investigación. Cabe aclarar que en ningún momento se revelarán sus rutas personales aunque sí serán analizadas y tratadas 
+							para la configuración de los mapas temáticos y sugerencia de rutas. Para obtener mayor información sobre la política de privacidad del proyecto, puede escribir al 
+							correo: semillerogeolab@udea.edu.co o contacto@siclas.org.
+						</p>
+						
+						<p style = "text-align: justify">
+    						Al hacer clic en el botón “Iniciar” encontrará cuatro preguntas de caracterización y luego podrá agregar el número de rutas que desee. También encontrará  
+							información de ayuda, con el ánimo de orientarle en el proceso. Por último, se solicita el correo electrónico.
+                        </p>
+                        
+						<div class="form-check">
+							<input type="checkbox" id="trat_datos" name="trat_datos" value="acepto" class=" form-check-input me-2">
+							<label class="form-check-label text-primary fw-bold text-decoration-underline"  for="trat_datos">He leído y acepto la política de manejo de datos.</label>
+						</div>
+					
+					</div>
+
+					<div class="botonera mt-auto">
+						<button class="btnTo btn btn-primary" toDiv="" msg="Para iniciar, por favor acepte la política de manejo de datos.">Iniciar</button>
+					</div>
+					<div><br></div>
+				</div>
+			</div>
+
+			<!-- Pregunta 3: Genero---------------------------------------------------------------------------------------------------------------------------------------->
+			
+			<div id="divPreg3" class="pregunta col-12 col-sm-6 background-blur p-5">
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<!-- <label for="preg3" class="form-label"></label> -->
+					<fieldset>
+
+						<legend>1. ¿Con qué género se identifica?</legend>
+						
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg3" id="preg3-r1" value="1">
+							<label class="form-check-label" for="preg3-r1">Femenino</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg3" id="preg3-r2" value="2">
+							<label class="form-check-label" for="preg3-r2" >Masculino</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg3" id="preg3-r3" value="3">
+							<label class="form-check-label" for="preg3-r3">Otro</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg3" id="preg3-r4" value="99">
+							<label class="form-check-label" for="preg3-r4">Prefiero no decirlo</label>
+						</div>
+
+					</fieldset>
+
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Por favor seleccione una de las opciones"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Pregunta 4: Municipio donde vive-------------------------------------------------------------------------------------------------------------------------->
+	
+			<div id="divPreg4" class="pregunta col-12 col-sm-6 background-blur p-5">
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5">
+					<label for="preg4" class="form-label">2. ¿En qué municipio vive?</label>
+					<select class="form-select text-dark" placeholder="Escoja un municipio" clasid="preg4" id="preg4" name="preg4">
+						<option class="text-dark" value="0" selected>Escoja un municipio</option>
+						<option class="text-dark" value="1" >Barbosa</option>
+						<option class="text-dark" value="2" >Bello</option>
+						<option class="text-dark" value="3" >Caldas</option>
+						<option class="text-dark" value="4" >Copacabana</option>
+						<option class="text-dark" value="5" >Envigado</option>
+						<option class="text-dark" value="6" >Girardota</option>
+						<option class="text-dark" value="7" >Itagüí</option>
+						<option class="text-dark" value="8" >La Estrella</option>
+						<option class="text-dark" value="9" >Medellín</option>
+						<option class="text-dark" value="10" >Sabaneta</option>
+					</select>
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Seleccione un municipio"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+			
+		<!-- Pregunta 5, 5a, 5b, 5c: Comuna - Barrio / corregimiento / vereda donde vive------------------------------------------------------------------------------->
+	
+			<div id="divPreg5" class="pregunta col-12 col-sm-6 background-blur p-5"><!-- Municipios sin comunas -->
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<label for="preg5" class="form-label">3. Barrio o vereda donde vive:</label>
+					<input type="text" class="form-control bg-white text-dark" placeholder="Barrio/vereda" id="preg5" name="preg5">
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Digite su lugar de residencia"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+	
+			<div id="divPreg5_2" class="pregunta col-12 col-sm-6 background-blur p-5"><!-- Si el municipio es Medellín -->
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<label for="divPreg5_2_select" class="form-label">3a. ¿En qué comuna vive?</label>
+					<select class="form-select text-dark" placeholder="Escoja una comuna" id="divPreg5_2_select" name="preg5_c2">
+						<option class="text-dark" value="0" selected>Escoja una comuna</option>
+						<option class="text-dark" value="1" >Comuna 1 - Popular</option>
+						<option class="text-dark" value="2" >Comuna 2 - Santa Cruz</option>
+						<option class="text-dark" value="3" >Comuna 3 - Manrique</option>
+						<option class="text-dark" value="4" >Comuna 4 - Aranjuez</option>
+						<option class="text-dark" value="5" >Comuna 5 - Castilla</option>
+						<option class="text-dark" value="6" >Comuna 6 - Doce de Octubre</option>
+						<option class="text-dark" value="7" >Comuna 7 - Robledo</option>
+						<option class="text-dark" value="8" >Comuna 8 - Villa Hermosa</option>
+						<option class="text-dark" value="9" >Comuna 9 - Buenos Aires</option>
+						<option class="text-dark" value="10" >Comuna 10 - La Candelaria</option>
+						<option class="text-dark" value="11" >Comuna 11 - Laureles - Estadio</option>
+						<option class="text-dark" value="12" >Comuna 12 - La América</option>
+						<option class="text-dark" value="13" >Comuna 13 - San Javier</option>
+						<option class="text-dark" value="14" >Comuna 14 - El Poblado</option>
+						<option class="text-dark" value="15" >Comuna 15 - Guayabal</option>
+						<option class="text-dark" value="16" >Comuna 16 - Belén</option>
+						<option class="text-dark" value="95" >Corregimiento de Santa Elena</option>
+						<option class="text-dark" value="96" >Corregimiento de San Antonio de Prado</option>
+						<option class="text-dark" value="97" >Corregimiento de Altavista</option>
+						<option class="text-dark" value="98" >Corregimiento de Palmitas</option>
+						<option class="text-dark" value="99" >Corregimiento de San Cristóbal</option>
+					</select>
+					<label for="preg5_2" class="form-label mt-4">3b. Barrio o vereda donde vive:</label>
+					<input type="text" class="form-control bg-white text-dark" placeholder="Barrio/vereda" name="preg5_2">
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Por favor seleccione una comuna"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+		
+			<div id="divPreg5_3" class="pregunta col-12 col-sm-6 background-blur p-5"><!-- Si el municipio es Bello -->
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<label for="divPreg5_3" class="form-label">3a. ¿En qué comuna vive?</label>
+					<select class="form-select text-dark" placeholder="Escoja una comuna" name="preg5_c3">
+						<option class="text-dark" value="0" selected>Escoja una comuna</option>
+						<option class="text-dark" value="1" >Comuna 1 - Paris</option>
+						<option class="text-dark" value="2" >Comuna 2 - La Madera</option>
+						<option class="text-dark" value="3" >Comuna 3 - Santa Ana</option>
+						<option class="text-dark" value="4" >Comuna 4 - Suarez</option>
+						<option class="text-dark" value="5" >Comuna 5 - La Cumbre</option>
+						<option class="text-dark" value="6" >Comuna 6 - Bellavista</option>
+						<option class="text-dark" value="7" >Comuna 7 - Altos de Niquia</option>
+						<option class="text-dark" value="8" >Comuna 8 - Niquia</option>
+						<option class="text-dark" value="9" >Comuna 9 - Guasimalito</option>
+						<option class="text-dark" value="10" >Comuna 10 - Fontidueño</option>
+						<option class="text-dark" value="11" >Comuna 11 - Zamora</option>
+						<option class="text-dark" value="99" >Corregimiento de San Félix</option>
+					</select>
+					<label for="preg5_3" class="form-label mt-4">3b. Barrio o vereda donde vive:</label>
+					<input type="text" class="form-control bg-white text-dark" placeholder="Barrio/vereda" name="preg5_3">
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Por favor seleccione una comuna"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+	
+			<div id="divPreg5_4" class="pregunta col-12 col-sm-6 background-blur p-5"><!-- Si el municipio es Itagui -->
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<label for="divPreg5_4" class="form-label">3a. ¿En qué comuna vive?</label>
+					<select class="form-select text-dark" placeholder="Escoja una comuna" name="preg5_c4">
+						<option class="text-dark" value="0" selected>Escoja una comuna</option>
+						<option class="text-dark" value="1" >Comuna 1</option>
+						<option class="text-dark" value="2" >Comuna 2</option>
+						<option class="text-dark" value="3" >Comuna 3</option>
+						<option class="text-dark" value="4" >Comuna 4</option>
+						<option class="text-dark" value="5" >Comuna 5</option>
+						<option class="text-dark" value="6" >Comuna 6</option>
+						<option class="text-dark" value="99" >Corregimiento El Manzanillo</option>
+					</select>
+					<label for="preg5_4" class="form-label mt-4">3b. Barrio o vereda donde vive:</label>
+					<input type="text" class="form-control bg-white text-dark" placeholder="Barrio/vereda" name="preg5_4">
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Por favor seleccione una comuna"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pregunta 12: Nivel de experiencia con la bici------------------------------------------------------------------------------------------------------------->
+		
+			<div id="divPreg12" class="pregunta col-12 col-sm-6 background-blur p-5">
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<fieldset>
+
+						<legend>12. ¿De 1 a 5 cómo cree que es su nivel de experiencia como ciclista?</legend>
+						<div class="form-text">(1 - menos experiencia, 5 - más experiencia)</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg12" id="preg12-r1" value="1">
+							<label class="form-check-label" for="preg12-r1">1</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg12" id="preg12-r2" value="2">
+							<label class="form-check-label" for="preg12-r2" >2</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg12" id="preg12-r3" value="3">
+							<label class="form-check-label" for="preg12-r3">3</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg12" id="preg12-r4" value="4">
+							<label class="form-check-label" for="preg12-r4">4</label>
+						</div>
+
+						<div class="ms-4 form-check">
+							<input type="radio" class="form-check-input" name="preg12" id="preg12-r5" value="5">
+							<label class="form-check-label" for="preg12-r5">5</label>
+						</div>
+
+					</fieldset>
+					
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="" msg="Por favor seleccione una de las opciones"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+			
+			<!-- Pregunta 13 a 21: Mapa y datos de ruta ------------------------------------------------------------------------------------------------------------------->
+	
+			<div id="divPreg13" class="pregunta_mapa">
+
+				<div class="tipomapa">
+					<div class="ayuda">
+						<button type="button" class="ayuda2" onClick="ayuda();">&nbsp;?&nbsp;</button>
+					</div>
+					<div id="mapid" class="mapa"></div>
+					<div class="barra">
+						4. Por favor trace la ruta de sus viajes marcando punto a punto su trayecto por las calles que transita habitualmente.
+						<div class="botonera m-4">
+							<button class="btnFrom_b btn btn-primary"><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+							<button class="btnTo_b btn btn-primary" toDiv="" msg="Por favor dibuje al menos una ruta frecuente"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+						</div>
+					</div>
+					<input type="hidden" name="preg13" value="">
+					<input type="hidden" name="preg14" value="">
+					<input type="hidden" name="preg15" value="">
+					<input type="hidden" name="preg16" value="">
+					<input type="hidden" name="preg17" value="">
+					<input type="hidden" name="preg18" value="">
+					<input type="hidden" name="preg19" value="">
+					<input type="hidden" name="preg20" value="">
+					<input type="hidden" name="preg21" value="">
+				</div>
+
+			</div>
+			
+		
+			<!-- Pregunta 32: ¿Desea dejar su correo electronico? --------------------------------------------------------------------------------------------------------->
+	
+			<div id="divPreg32" class="pregunta col-12 col-sm-6 background-blur p-5">
+
+				<div class="d-flex flex-column align-items-center h-100 m-auto col-12 col-sm-10 col-md-6 pt-5 mt-5 ">
+					<label for="preg32" class="form-label">5. Déjenos su correo, en caso de querer recibir informacion sobre el proyecto.</label>
+					<input type="email" class="form-control" placeholder="Ingrese su dirección de correo (opcional)" name="preg32" id="preg32">
+					<div class="botonera m-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<button class="btnTo btn btn-primary" toDiv="divPreg100" msg="Digite una dirección electrónica válida"><img class="icon-nav" src="./icons/next.svg" alt=""></button>
+					</div>
+				</div>
+
+			</div>
+		
+		
+			<!-- Pregunta XX: Div de cierre para envio de formulario ------------------------------------------------------------------------------------------------------>
+		
+			<div id="divPreg100" class="pregunta col-12 col-sm-6 background-blur p-0 pt-5 p-sm-5">
+
+				<div class="col-8 d-flex flex-column mx-auto align-items-center">
+					<h3 class="mt-5">Gracias</h3>
+					<p>Presione finalizar para enviar sus respuestas.</p>
+					<div class="botonera m-sm-4">
+						<button class="btnFrom btn btn-primary" ><img class="icon-nav" src="./icons/prev.svg" alt=""></button>
+						<input class="btn btn-primary" type="submit" value="Finalizar" id="form_button" />
+					</div>
+				</div>
+
+			</div>
+
+		</form>
+	</div>
+	
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!------------------ Esto es para poder mostrar esa ventana emergente de modal, requiere el plugin remodal y se inicializa con algo generico ---------------------->	
+
+	<div data-remodal-id="modalInfo" role="dialog" aria-labelledby="modalInfoTitle" aria-describedby="modalInfoDesc">
+		<div>
+			<h2 id="modalInfoTitle" class="text-dark">XXX</h2>
+			<p id="modalInfoDesc" class="text-dark">
+				xx xx xx xx
+			</p>
+		</div>
+		<button data-remodal-action="confirm" class="remodal-confirm btn btn-primary">Cerrar</button>
+	</div>
+
+<!----------------------------------------------------------------------- jQuery library -------------------------------------------------------------------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./encuesta/remodal/remodal.js"></script>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+	<script src="./encuesta/leaflet.draw/leaflet.draw.js?v=3"></script>
+	<script src="./js/ruta.js?v=5"></script>
+	</body>
+</html>

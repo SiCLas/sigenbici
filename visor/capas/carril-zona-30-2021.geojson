@@ -1,0 +1,4627 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2021-01-13T16:07:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30603577",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 84",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6015491,
+            6.2553127
+          ],
+          [
+            -75.6012741,
+            6.255597
+          ],
+          [
+            -75.6012144,
+            6.2556686
+          ],
+          [
+            -75.6011697,
+            6.2557353
+          ],
+          [
+            -75.6011372,
+            6.2557901
+          ],
+          [
+            -75.6011044,
+            6.2558423
+          ],
+          [
+            -75.6010955,
+            6.2561772
+          ]
+        ]
+      },
+      "id": "way/30603577"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30603748",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Calle 45G",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5994301,
+            6.2558847
+          ],
+          [
+            -75.5993888,
+            6.2558235
+          ],
+          [
+            -75.5985416,
+            6.2553584
+          ]
+        ]
+      },
+      "id": "way/30603748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/30667269",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 46",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5760715,
+            6.2129069
+          ],
+          [
+            -75.5760093,
+            6.2128226
+          ],
+          [
+            -75.5759861,
+            6.212791
+          ],
+          [
+            -75.575958,
+            6.2127214
+          ],
+          [
+            -75.5759067,
+            6.2125844
+          ],
+          [
+            -75.5758927,
+            6.2124266
+          ],
+          [
+            -75.575881,
+            6.2122316
+          ],
+          [
+            -75.5758911,
+            6.2120138
+          ],
+          [
+            -75.5758973,
+            6.2118811
+          ],
+          [
+            -75.5759243,
+            6.211647
+          ],
+          [
+            -75.575958,
+            6.2113541
+          ],
+          [
+            -75.5759957,
+            6.2110321
+          ],
+          [
+            -75.5760094,
+            6.2109154
+          ],
+          [
+            -75.5760234,
+            6.2105765
+          ],
+          [
+            -75.5759931,
+            6.2103235
+          ],
+          [
+            -75.5759113,
+            6.210089
+          ],
+          [
+            -75.5758197,
+            6.2098728
+          ],
+          [
+            -75.5756652,
+            6.2094121
+          ],
+          [
+            -75.5755857,
+            6.209144
+          ],
+          [
+            -75.5755663,
+            6.2090787
+          ],
+          [
+            -75.5755493,
+            6.2090223
+          ],
+          [
+            -75.5753757,
+            6.2084484
+          ],
+          [
+            -75.5753002,
+            6.2082893
+          ],
+          [
+            -75.5752077,
+            6.2081186
+          ]
+        ]
+      },
+      "id": "way/30667269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31009713",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Carrera 53",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5900194,
+            6.2028873
+          ],
+          [
+            -75.5898799,
+            6.2031093
+          ],
+          [
+            -75.589798,
+            6.2032399
+          ],
+          [
+            -75.5897383,
+            6.2033155
+          ],
+          [
+            -75.5896413,
+            6.2033671
+          ],
+          [
+            -75.5893118,
+            6.2034706
+          ],
+          [
+            -75.5891854,
+            6.2035492
+          ],
+          [
+            -75.5890826,
+            6.2037044
+          ],
+          [
+            -75.5886826,
+            6.2047548
+          ]
+        ]
+      },
+      "id": "way/31009713"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31475384",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 65G",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5862535,
+            6.2191898
+          ],
+          [
+            -75.5862533,
+            6.2191162
+          ],
+          [
+            -75.5862768,
+            6.2189868
+          ]
+        ]
+      },
+      "id": "way/31475384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31476232",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Carrera 65G",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;right;left"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5858744,
+            6.2231789
+          ],
+          [
+            -75.5859281,
+            6.2229598
+          ],
+          [
+            -75.5859789,
+            6.2227424
+          ],
+          [
+            -75.5860917,
+            6.2223266
+          ],
+          [
+            -75.5861532,
+            6.2221089
+          ],
+          [
+            -75.5862041,
+            6.221929
+          ],
+          [
+            -75.5863158,
+            6.2215006
+          ],
+          [
+            -75.5864288,
+            6.2210434
+          ]
+        ]
+      },
+      "id": "way/31476232"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31476318",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Carrera 65G",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5864288,
+            6.2210434
+          ],
+          [
+            -75.5864562,
+            6.2207945
+          ],
+          [
+            -75.5864708,
+            6.2206733
+          ],
+          [
+            -75.5864656,
+            6.2204388
+          ],
+          [
+            -75.5864418,
+            6.2202567
+          ]
+        ]
+      },
+      "id": "way/31476318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31476727",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 65G",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5862539,
+            6.2193595
+          ],
+          [
+            -75.5862637,
+            6.2194269
+          ],
+          [
+            -75.5863221,
+            6.2198267
+          ],
+          [
+            -75.5863272,
+            6.2198605
+          ],
+          [
+            -75.5864418,
+            6.2202567
+          ]
+        ]
+      },
+      "id": "way/31476727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/31960346",
+        "alt_name": "Junín",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 49",
+        "oneway": "yes",
+        "surface": "paving_stones"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5672309,
+            6.2482771
+          ],
+          [
+            -75.5669083,
+            6.2489993
+          ],
+          [
+            -75.566691,
+            6.2494179
+          ],
+          [
+            -75.566548,
+            6.2496891
+          ],
+          [
+            -75.5663941,
+            6.2499697
+          ],
+          [
+            -75.5663879,
+            6.249981
+          ]
+        ]
+      },
+      "id": "way/31960346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/32060853",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Carrera 64B",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5825138,
+            6.2434445
+          ],
+          [
+            -75.5831468,
+            6.2425376
+          ],
+          [
+            -75.5832079,
+            6.2424547
+          ]
+        ]
+      },
+      "id": "way/32060853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/32060929",
+        "cycleway": "shared_lane",
+        "cycleway:right:oneway": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Carrera 65D",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5832079,
+            6.2424547
+          ],
+          [
+            -75.5832841,
+            6.2423432
+          ]
+        ]
+      },
+      "id": "way/32060929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/32471431",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 42C",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5752021,
+            6.2433503
+          ],
+          [
+            -75.5750712,
+            6.2433558
+          ],
+          [
+            -75.5748056,
+            6.2433535
+          ],
+          [
+            -75.574446,
+            6.243398
+          ]
+        ]
+      },
+      "id": "way/32471431"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/33045060",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 52",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5882824,
+            6.2614783
+          ],
+          [
+            -75.5875677,
+            6.2611576
+          ],
+          [
+            -75.5868884,
+            6.2607825
+          ],
+          [
+            -75.5862483,
+            6.2603503
+          ]
+        ]
+      },
+      "id": "way/33045060"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/33713825",
+        "access": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 86",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6024121,
+            6.2588912
+          ],
+          [
+            -75.6023874,
+            6.2586763
+          ],
+          [
+            -75.6023333,
+            6.2582067
+          ],
+          [
+            -75.6022467,
+            6.2574551
+          ],
+          [
+            -75.6021789,
+            6.2568448
+          ],
+          [
+            -75.6020757,
+            6.2560063
+          ],
+          [
+            -75.6020966,
+            6.2558937
+          ]
+        ]
+      },
+      "id": "way/33713825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34616259",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 1 Sur",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5769312,
+            6.2055296
+          ],
+          [
+            -75.5768536,
+            6.2055003
+          ],
+          [
+            -75.5759921,
+            6.2051205
+          ],
+          [
+            -75.5759717,
+            6.2051115
+          ],
+          [
+            -75.5746013,
+            6.2044571
+          ],
+          [
+            -75.574562,
+            6.2044383
+          ],
+          [
+            -75.5743892,
+            6.2043599
+          ]
+        ]
+      },
+      "id": "way/34616259"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34616459",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 43D",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5735195,
+            6.2079679
+          ],
+          [
+            -75.5734557,
+            6.2078589
+          ],
+          [
+            -75.573384,
+            6.2076381
+          ],
+          [
+            -75.5733068,
+            6.207365
+          ],
+          [
+            -75.5732835,
+            6.2070618
+          ],
+          [
+            -75.5733028,
+            6.2066949
+          ],
+          [
+            -75.5733554,
+            6.2064026
+          ],
+          [
+            -75.573442,
+            6.2061299
+          ],
+          [
+            -75.5734584,
+            6.2060784
+          ],
+          [
+            -75.5736203,
+            6.2057425
+          ],
+          [
+            -75.5737843,
+            6.2053995
+          ],
+          [
+            -75.5740145,
+            6.2049677
+          ],
+          [
+            -75.5741635,
+            6.2047713
+          ],
+          [
+            -75.5742348,
+            6.2046812
+          ],
+          [
+            -75.5742686,
+            6.2046393
+          ],
+          [
+            -75.5743287,
+            6.2045771
+          ]
+        ]
+      },
+      "id": "way/34616459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687092",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Calle 8",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5756897,
+            6.2110167
+          ],
+          [
+            -75.5755828,
+            6.2110501
+          ],
+          [
+            -75.5755171,
+            6.2110541
+          ],
+          [
+            -75.5754487,
+            6.2110248
+          ],
+          [
+            -75.5753146,
+            6.2109888
+          ],
+          [
+            -75.5752529,
+            6.2109648
+          ],
+          [
+            -75.5751973,
+            6.2109218
+          ],
+          [
+            -75.5751788,
+            6.2108242
+          ]
+        ]
+      },
+      "id": "way/34687092"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687101",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 47",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5764062,
+            6.2054897
+          ],
+          [
+            -75.5760089,
+            6.2063589
+          ],
+          [
+            -75.5756741,
+            6.2070915
+          ]
+        ]
+      },
+      "id": "way/34687101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687122",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "CO:urban",
+        "name": "Carrera 43E",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5739433,
+            6.2077664
+          ],
+          [
+            -75.5738867,
+            6.2074872
+          ],
+          [
+            -75.5738266,
+            6.2071971
+          ],
+          [
+            -75.5738008,
+            6.2069069
+          ],
+          [
+            -75.5738008,
+            6.2066766
+          ],
+          [
+            -75.5738352,
+            6.2064376
+          ],
+          [
+            -75.5738791,
+            6.2063211
+          ],
+          [
+            -75.5738979,
+            6.2062712
+          ]
+        ]
+      },
+      "id": "way/34687122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687130",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 47",
+        "oneway": "no",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5763702,
+            6.2097249
+          ],
+          [
+            -75.5760917,
+            6.2089475
+          ],
+          [
+            -75.5760813,
+            6.2089162
+          ]
+        ]
+      },
+      "id": "way/34687130"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687131",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Transversal 5A",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.575742,
+            6.2078869
+          ],
+          [
+            -75.5756355,
+            6.2077455
+          ],
+          [
+            -75.5754781,
+            6.2075599
+          ],
+          [
+            -75.5753584,
+            6.2074492
+          ],
+          [
+            -75.5751522,
+            6.2073138
+          ],
+          [
+            -75.574975,
+            6.2072392
+          ],
+          [
+            -75.5747058,
+            6.2071432
+          ],
+          [
+            -75.5745256,
+            6.2071176
+          ],
+          [
+            -75.574295,
+            6.2071331
+          ]
+        ]
+      },
+      "id": "way/34687131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687141",
+        "bridge": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Calle 7",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt",
+        "turn:lanes": "left|through"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5752933,
+            6.2091697
+          ],
+          [
+            -75.5753555,
+            6.2091489
+          ],
+          [
+            -75.5755139,
+            6.2090962
+          ],
+          [
+            -75.5755663,
+            6.2090787
+          ]
+        ]
+      },
+      "id": "way/34687141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687145",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Calle 7",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.576621,
+            6.208777
+          ],
+          [
+            -75.5765715,
+            6.2087881
+          ],
+          [
+            -75.5761202,
+            6.2089037
+          ],
+          [
+            -75.5760813,
+            6.2089162
+          ],
+          [
+            -75.5760394,
+            6.2089301
+          ],
+          [
+            -75.5756183,
+            6.2090614
+          ],
+          [
+            -75.5755663,
+            6.2090787
+          ]
+        ]
+      },
+      "id": "way/34687145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687258",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Transversal 6",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5752077,
+            6.2081186
+          ],
+          [
+            -75.5751067,
+            6.2079871
+          ],
+          [
+            -75.5749763,
+            6.2078541
+          ],
+          [
+            -75.5748421,
+            6.2077635
+          ],
+          [
+            -75.5746839,
+            6.2077114
+          ],
+          [
+            -75.5745149,
+            6.2076834
+          ],
+          [
+            -75.5743802,
+            6.2076749
+          ]
+        ]
+      },
+      "id": "way/34687258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687261",
+        "bridge": "yes",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "30",
+        "name": "Carrera 45",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "subway": "zebra",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5743802,
+            6.2076749
+          ],
+          [
+            -75.5743906,
+            6.2077592
+          ],
+          [
+            -75.5744218,
+            6.2079202
+          ]
+        ]
+      },
+      "id": "way/34687261"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687262",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 45",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5743275,
+            6.2064537
+          ],
+          [
+            -75.5743115,
+            6.2065674
+          ],
+          [
+            -75.5742746,
+            6.2068768
+          ],
+          [
+            -75.574295,
+            6.2071331
+          ],
+          [
+            -75.5743336,
+            6.2074082
+          ]
+        ]
+      },
+      "id": "way/34687262"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687369",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Calle 7",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5752933,
+            6.2091697
+          ],
+          [
+            -75.5752223,
+            6.209193
+          ],
+          [
+            -75.5748843,
+            6.2093012
+          ],
+          [
+            -75.5748202,
+            6.2093217
+          ],
+          [
+            -75.5746661,
+            6.2093746
+          ],
+          [
+            -75.5745764,
+            6.2094054
+          ]
+        ]
+      },
+      "id": "way/34687369"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34687517",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 45",
+        "oneway": "no",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5751788,
+            6.2108242
+          ],
+          [
+            -75.5751818,
+            6.210773
+          ],
+          [
+            -75.575186,
+            6.2107023
+          ],
+          [
+            -75.5752096,
+            6.2105421
+          ],
+          [
+            -75.5751493,
+            6.2103085
+          ],
+          [
+            -75.5750675,
+            6.2100459
+          ],
+          [
+            -75.5748417,
+            6.2094069
+          ],
+          [
+            -75.5748202,
+            6.2093217
+          ],
+          [
+            -75.5748045,
+            6.2092708
+          ],
+          [
+            -75.5746383,
+            6.2088335
+          ],
+          [
+            -75.5745248,
+            6.2083145
+          ],
+          [
+            -75.5744218,
+            6.2079202
+          ]
+        ]
+      },
+      "id": "way/34687517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34717888",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 46",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5749637,
+            6.2082777
+          ],
+          [
+            -75.5750495,
+            6.2084569
+          ],
+          [
+            -75.5751182,
+            6.2086446
+          ],
+          [
+            -75.5752804,
+            6.209131
+          ],
+          [
+            -75.5752933,
+            6.2091697
+          ],
+          [
+            -75.5754506,
+            6.2096425
+          ],
+          [
+            -75.5755731,
+            6.2099672
+          ],
+          [
+            -75.5756309,
+            6.210163
+          ],
+          [
+            -75.5756738,
+            6.2103848
+          ],
+          [
+            -75.5757081,
+            6.2106237
+          ],
+          [
+            -75.5756897,
+            6.2110167
+          ],
+          [
+            -75.575648,
+            6.2114258
+          ],
+          [
+            -75.5756441,
+            6.2115281
+          ],
+          [
+            -75.5756397,
+            6.2116863
+          ],
+          [
+            -75.5756187,
+            6.2119796
+          ],
+          [
+            -75.5756046,
+            6.2122151
+          ],
+          [
+            -75.5756011,
+            6.2123175
+          ]
+        ]
+      },
+      "id": "way/34717888"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34717889",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Transversal 6",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5744218,
+            6.2079202
+          ],
+          [
+            -75.5744916,
+            6.2079193
+          ],
+          [
+            -75.574586,
+            6.2079535
+          ],
+          [
+            -75.5747233,
+            6.2080132
+          ],
+          [
+            -75.5748607,
+            6.2081241
+          ],
+          [
+            -75.5749637,
+            6.2082777
+          ]
+        ]
+      },
+      "id": "way/34717889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/34743770",
+        "cycleway": "shared_lane",
+        "highway": "unclassified",
+        "name": "Calle 19A",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5714304,
+            6.2223255
+          ],
+          [
+            -75.5700249,
+            6.2217657
+          ]
+        ]
+      },
+      "id": "way/34743770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/35414010",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Transversal 74",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5938726,
+            6.2454851
+          ],
+          [
+            -75.5939131,
+            6.2455624
+          ],
+          [
+            -75.5939645,
+            6.2456619
+          ],
+          [
+            -75.5940755,
+            6.2458045
+          ],
+          [
+            -75.5941783,
+            6.2458869
+          ]
+        ]
+      },
+      "id": "way/35414010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/35567141",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "tertiary",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Calle 3",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.55708,
+            6.1978847
+          ],
+          [
+            -75.5572252,
+            6.1980522
+          ],
+          [
+            -75.5574022,
+            6.1982749
+          ],
+          [
+            -75.5574595,
+            6.1983765
+          ],
+          [
+            -75.5575005,
+            6.1984709
+          ],
+          [
+            -75.5575973,
+            6.1987335
+          ],
+          [
+            -75.5576751,
+            6.1989423
+          ],
+          [
+            -75.5577167,
+            6.1990935
+          ],
+          [
+            -75.5577519,
+            6.199176
+          ],
+          [
+            -75.5578169,
+            6.1992449
+          ],
+          [
+            -75.5580578,
+            6.1994141
+          ],
+          [
+            -75.5584605,
+            6.1996322
+          ],
+          [
+            -75.5587809,
+            6.1997875
+          ],
+          [
+            -75.5589918,
+            6.1998985
+          ],
+          [
+            -75.559095,
+            6.199977
+          ],
+          [
+            -75.559225,
+            6.2001086
+          ],
+          [
+            -75.5594739,
+            6.2003732
+          ],
+          [
+            -75.5595169,
+            6.2004244
+          ],
+          [
+            -75.5595512,
+            6.2004841
+          ],
+          [
+            -75.5595684,
+            6.2005267
+          ],
+          [
+            -75.5595855,
+            6.2005694
+          ],
+          [
+            -75.5595941,
+            6.2006206
+          ],
+          [
+            -75.5595941,
+            6.2006889
+          ],
+          [
+            -75.559608,
+            6.2009049
+          ]
+        ]
+      },
+      "id": "way/35567141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/35567216",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "residential",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 2",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5563625,
+            6.1970011
+          ],
+          [
+            -75.5563861,
+            6.1970774
+          ],
+          [
+            -75.556438,
+            6.1971626
+          ],
+          [
+            -75.5564907,
+            6.197219
+          ],
+          [
+            -75.5567583,
+            6.1974812
+          ],
+          [
+            -75.5568035,
+            6.1975557
+          ],
+          [
+            -75.5569214,
+            6.1976944
+          ]
+        ]
+      },
+      "id": "way/35567216"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/43528315",
+        "alt_name": "Loma Los Parra",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "tertiary",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "40",
+        "name": "Calle 1 Sur Loma los Parra",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5626154,
+            6.2000202
+          ],
+          [
+            -75.5628286,
+            6.200073
+          ],
+          [
+            -75.5629555,
+            6.2001069
+          ],
+          [
+            -75.5631376,
+            6.2001346
+          ],
+          [
+            -75.5633801,
+            6.2001501
+          ],
+          [
+            -75.5634596,
+            6.2001614
+          ]
+        ]
+      },
+      "id": "way/43528315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/69252262",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Calle 4",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;right",
+        "turn:lanes:forward": "through;left"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.584404,
+            6.2103419
+          ],
+          [
+            -75.5826496,
+            6.209898
+          ],
+          [
+            -75.5807763,
+            6.2094637
+          ],
+          [
+            -75.5799994,
+            6.2092781
+          ],
+          [
+            -75.5797251,
+            6.2092199
+          ],
+          [
+            -75.5794061,
+            6.209148
+          ],
+          [
+            -75.5790985,
+            6.2090785
+          ]
+        ]
+      },
+      "id": "way/69252262"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/69481438",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Calle 32B",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.591638,
+            6.2360404
+          ],
+          [
+            -75.5916144,
+            6.2360412
+          ],
+          [
+            -75.5913105,
+            6.2360515
+          ],
+          [
+            -75.5911002,
+            6.2360627
+          ]
+        ]
+      },
+      "id": "way/69481438"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/69563981",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 69C",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5911237,
+            6.2377888
+          ],
+          [
+            -75.5911275,
+            6.2374957
+          ],
+          [
+            -75.5911188,
+            6.2365576
+          ],
+          [
+            -75.5911002,
+            6.2360627
+          ]
+        ]
+      },
+      "id": "way/69563981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/80784945",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 64",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5774396,
+            6.2561174
+          ],
+          [
+            -75.5777709,
+            6.2555185
+          ]
+        ]
+      },
+      "id": "way/80784945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98731189",
+        "alt_name": "Bolívar",
+        "cycleway": "shared_lane",
+        "highway": "living_street",
+        "lanes": "1",
+        "name": "Carrera 51",
+        "oneway": "yes",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5686226,
+            6.249767
+          ],
+          [
+            -75.5683245,
+            6.2505009
+          ]
+        ]
+      },
+      "id": "way/98731189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98742485",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "maxspeed": "30",
+        "mechanical": "yes",
+        "name": "Carrera 79AA",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5997122,
+            6.2506191
+          ],
+          [
+            -75.5997423,
+            6.2511444
+          ]
+        ]
+      },
+      "id": "way/98742485"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98783680",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Carrera 69B",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5905733,
+            6.2383674
+          ],
+          [
+            -75.5905735,
+            6.2383553
+          ],
+          [
+            -75.590589,
+            6.2375148
+          ]
+        ]
+      },
+      "id": "way/98783680"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/98798707",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "mechanical": "yes",
+        "name": "Carrera 78B",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5997423,
+            6.2511444
+          ],
+          [
+            -75.5997395,
+            6.2511916
+          ],
+          [
+            -75.5997328,
+            6.2512362
+          ],
+          [
+            -75.5997147,
+            6.2512902
+          ],
+          [
+            -75.5996872,
+            6.2513495
+          ],
+          [
+            -75.5996602,
+            6.2514024
+          ],
+          [
+            -75.5996339,
+            6.25145
+          ],
+          [
+            -75.5995834,
+            6.2515322
+          ],
+          [
+            -75.5993075,
+            6.2519588
+          ],
+          [
+            -75.5991433,
+            6.2522264
+          ],
+          [
+            -75.598909,
+            6.2525961
+          ],
+          [
+            -75.5987227,
+            6.2528936
+          ],
+          [
+            -75.5983578,
+            6.2534674
+          ],
+          [
+            -75.5981275,
+            6.2538442
+          ],
+          [
+            -75.5979561,
+            6.2541
+          ],
+          [
+            -75.5977041,
+            6.2543539
+          ]
+        ]
+      },
+      "id": "way/98798707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99868925",
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 71",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5858363,
+            6.2610216
+          ],
+          [
+            -75.5858648,
+            6.2609751
+          ],
+          [
+            -75.5862483,
+            6.2603503
+          ],
+          [
+            -75.5863665,
+            6.2601375
+          ],
+          [
+            -75.5865834,
+            6.2597655
+          ],
+          [
+            -75.5867653,
+            6.2594384
+          ]
+        ]
+      },
+      "id": "way/99868925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99870140",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Carrera 82",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6004336,
+            6.259055
+          ],
+          [
+            -75.6004049,
+            6.2588502
+          ],
+          [
+            -75.6002691,
+            6.2577289
+          ],
+          [
+            -75.6001828,
+            6.2571079
+          ]
+        ]
+      },
+      "id": "way/99870140"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99870141",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 83",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6005677,
+            6.2562535
+          ],
+          [
+            -75.6006933,
+            6.2570239
+          ],
+          [
+            -75.6007828,
+            6.2576579
+          ],
+          [
+            -75.6008774,
+            6.2584083
+          ],
+          [
+            -75.6009372,
+            6.2588826
+          ],
+          [
+            -75.6009737,
+            6.2591727
+          ]
+        ]
+      },
+      "id": "way/99870141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99871397",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 79A",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6005861,
+            6.2294387
+          ],
+          [
+            -75.600519,
+            6.2294413
+          ],
+          [
+            -75.6002713,
+            6.2294448
+          ],
+          [
+            -75.6000853,
+            6.2294116
+          ],
+          [
+            -75.5999977,
+            6.2293897
+          ],
+          [
+            -75.5998471,
+            6.229307
+          ],
+          [
+            -75.5997798,
+            6.2292612
+          ],
+          [
+            -75.5996899,
+            6.2291875
+          ],
+          [
+            -75.5995113,
+            6.2290023
+          ],
+          [
+            -75.5993145,
+            6.2288099
+          ],
+          [
+            -75.5992831,
+            6.2287805
+          ],
+          [
+            -75.5992273,
+            6.2287183
+          ],
+          [
+            -75.5991799,
+            6.2286622
+          ]
+        ]
+      },
+      "id": "way/99871397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/99876882",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Calle 5",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5881315,
+            6.2130835
+          ],
+          [
+            -75.58809,
+            6.2130859
+          ],
+          [
+            -75.5872274,
+            6.2129179
+          ],
+          [
+            -75.5868069,
+            6.212836
+          ]
+        ]
+      },
+      "id": "way/99876882"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/142506449",
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 72",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5881237,
+            6.2600922
+          ],
+          [
+            -75.5879598,
+            6.2604256
+          ],
+          [
+            -75.5875677,
+            6.2611576
+          ],
+          [
+            -75.5871395,
+            6.2618671
+          ],
+          [
+            -75.5871086,
+            6.2619183
+          ]
+        ]
+      },
+      "id": "way/142506449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/159739053",
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "residential",
+        "name": "Carrera 42",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5624886,
+            6.2460711
+          ],
+          [
+            -75.5621125,
+            6.2468243
+          ],
+          [
+            -75.5620904,
+            6.2468686
+          ],
+          [
+            -75.5618179,
+            6.2474144
+          ],
+          [
+            -75.5616038,
+            6.2478763
+          ]
+        ]
+      },
+      "id": "way/159739053"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/170300079",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 53A",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.574446,
+            6.243398
+          ],
+          [
+            -75.5743382,
+            6.2453349
+          ],
+          [
+            -75.5742221,
+            6.2454841
+          ]
+        ]
+      },
+      "id": "way/170300079"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/170301859",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 38",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5578816,
+            6.2470391
+          ],
+          [
+            -75.5578772,
+            6.2470037
+          ],
+          [
+            -75.5578291,
+            6.2466193
+          ],
+          [
+            -75.55781,
+            6.2465764
+          ]
+        ]
+      },
+      "id": "way/170301859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/170365028",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Calle 14",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5945609,
+            6.2208831
+          ],
+          [
+            -75.5952018,
+            6.2209941
+          ],
+          [
+            -75.5953427,
+            6.2210366
+          ],
+          [
+            -75.5956818,
+            6.2211917
+          ],
+          [
+            -75.5962532,
+            6.2214338
+          ],
+          [
+            -75.5964079,
+            6.2214824
+          ],
+          [
+            -75.5965483,
+            6.2215279
+          ],
+          [
+            -75.5967457,
+            6.2216057
+          ],
+          [
+            -75.5968098,
+            6.2216466
+          ],
+          [
+            -75.5968714,
+            6.2216947
+          ],
+          [
+            -75.5971959,
+            6.2218867
+          ],
+          [
+            -75.597315,
+            6.2219458
+          ]
+        ]
+      },
+      "id": "way/170365028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/173504682",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "maxspeed": "30",
+        "name": "Calle 53A",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5936911,
+            6.2667204
+          ],
+          [
+            -75.5941537,
+            6.2670608
+          ],
+          [
+            -75.5942565,
+            6.2671364
+          ],
+          [
+            -75.5946018,
+            6.2672663
+          ],
+          [
+            -75.5951178,
+            6.2674203
+          ]
+        ]
+      },
+      "id": "way/173504682"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/173504684",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 79A",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5951178,
+            6.2674203
+          ],
+          [
+            -75.5950034,
+            6.2679667
+          ],
+          [
+            -75.594875,
+            6.268628
+          ],
+          [
+            -75.5947627,
+            6.2691949
+          ]
+        ]
+      },
+      "id": "way/173504684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/173504687",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 79A",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5947627,
+            6.2691949
+          ],
+          [
+            -75.5946916,
+            6.2697119
+          ],
+          [
+            -75.594662,
+            6.2702315
+          ]
+        ]
+      },
+      "id": "way/173504687"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/173504694",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 79A",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5945529,
+            6.2702082
+          ],
+          [
+            -75.5944709,
+            6.2704982
+          ],
+          [
+            -75.594436,
+            6.2705822
+          ],
+          [
+            -75.5944106,
+            6.2706288
+          ],
+          [
+            -75.5943757,
+            6.2706836
+          ],
+          [
+            -75.5943475,
+            6.2707154
+          ],
+          [
+            -75.5940524,
+            6.2709663
+          ]
+        ]
+      },
+      "id": "way/173504694"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/197615435",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Carrera 45",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5733832,
+            6.2171075
+          ],
+          [
+            -75.573557,
+            6.2153709
+          ],
+          [
+            -75.5735639,
+            6.2153024
+          ]
+        ]
+      },
+      "id": "way/197615435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/315643019",
+        "alt_name": "Perú",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Calle 55",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5643247,
+            6.2527258
+          ],
+          [
+            -75.5639121,
+            6.2524735
+          ]
+        ]
+      },
+      "id": "way/315643019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/325277892",
+        "cycleway": "shared_lane",
+        "highway": "tertiary_link",
+        "lanes": "2",
+        "maxspeed": "30",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5756011,
+            6.2123175
+          ],
+          [
+            -75.5756342,
+            6.2124961
+          ],
+          [
+            -75.5756593,
+            6.2125885
+          ],
+          [
+            -75.5756972,
+            6.2126778
+          ],
+          [
+            -75.5757429,
+            6.2127341
+          ],
+          [
+            -75.5758045,
+            6.2127373
+          ],
+          [
+            -75.5758566,
+            6.2127121
+          ],
+          [
+            -75.575885,
+            6.2126618
+          ],
+          [
+            -75.5759067,
+            6.2125844
+          ]
+        ]
+      },
+      "id": "way/325277892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/327838476",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Carrera 53",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.590509,
+            6.2022054
+          ],
+          [
+            -75.5905006,
+            6.2023366
+          ],
+          [
+            -75.590475,
+            6.2024655
+          ],
+          [
+            -75.5904254,
+            6.2025559
+          ],
+          [
+            -75.5903618,
+            6.2026318
+          ],
+          [
+            -75.5902657,
+            6.2026888
+          ],
+          [
+            -75.5901016,
+            6.2027712
+          ],
+          [
+            -75.5900194,
+            6.2028873
+          ]
+        ]
+      },
+      "id": "way/327838476"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/366320803",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 6",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5739433,
+            6.2077664
+          ],
+          [
+            -75.5737145,
+            6.2078901
+          ]
+        ]
+      },
+      "id": "way/366320803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/369143373",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Calle 14",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5984957,
+            6.2223181
+          ],
+          [
+            -75.5985695,
+            6.2223366
+          ],
+          [
+            -75.5987045,
+            6.2223341
+          ]
+        ]
+      },
+      "id": "way/369143373"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/369143379",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "1",
+        "name": "Calle 14",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.597315,
+            6.2219458
+          ],
+          [
+            -75.5974257,
+            6.222023
+          ],
+          [
+            -75.5975505,
+            6.2220671
+          ],
+          [
+            -75.5978023,
+            6.2221505
+          ],
+          [
+            -75.5978719,
+            6.2221778
+          ]
+        ]
+      },
+      "id": "way/369143379"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/384022138",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "residential",
+        "horse": "yes",
+        "lanes": "1",
+        "maxspeed": "60",
+        "name": "Carrera 25A",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5569609,
+            6.1976477
+          ],
+          [
+            -75.5569955,
+            6.197711
+          ],
+          [
+            -75.5570405,
+            6.1977706
+          ],
+          [
+            -75.5570691,
+            6.1977881
+          ],
+          [
+            -75.5571248,
+            6.1977864
+          ],
+          [
+            -75.5571941,
+            6.1977649
+          ],
+          [
+            -75.557233,
+            6.1977276
+          ],
+          [
+            -75.5572591,
+            6.1976671
+          ],
+          [
+            -75.5572904,
+            6.1976033
+          ],
+          [
+            -75.5573235,
+            6.1975562
+          ]
+        ]
+      },
+      "id": "way/384022138"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/397753282",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "tertiary",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Calle 2",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5569214,
+            6.1976944
+          ],
+          [
+            -75.5569454,
+            6.197721
+          ],
+          [
+            -75.5569679,
+            6.1977483
+          ],
+          [
+            -75.5570633,
+            6.1978644
+          ]
+        ]
+      },
+      "id": "way/397753282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/405015417",
+        "cycleway": "shared_lane",
+        "cycleway:left": "opposite_lane",
+        "highway": "service",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5739766,
+            6.2433733
+          ],
+          [
+            -75.5740002,
+            6.2424909
+          ]
+        ]
+      },
+      "id": "way/405015417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/447852949",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 15A",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5989675,
+            6.2222457
+          ],
+          [
+            -75.5994006,
+            6.2220828
+          ]
+        ]
+      },
+      "id": "way/447852949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/447852954",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Calle 14",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5987045,
+            6.2223341
+          ],
+          [
+            -75.5989675,
+            6.2222457
+          ]
+        ]
+      },
+      "id": "way/447852954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/520043355",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "1",
+        "name": "Carrera 65G",
+        "oneway": "yes",
+        "placement": "left_of:1",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5862535,
+            6.2191898
+          ],
+          [
+            -75.5862539,
+            6.2193595
+          ]
+        ]
+      },
+      "id": "way/520043355"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/566810871",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 47",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5760813,
+            6.2089162
+          ],
+          [
+            -75.5760694,
+            6.2088805
+          ],
+          [
+            -75.5758388,
+            6.2082055
+          ],
+          [
+            -75.575742,
+            6.2078869
+          ]
+        ]
+      },
+      "id": "way/566810871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/569717133",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "residential",
+        "name": "Carrera 42",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;left"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5614748,
+            6.248093
+          ],
+          [
+            -75.561432,
+            6.2481541
+          ],
+          [
+            -75.5610056,
+            6.2489841
+          ],
+          [
+            -75.5609894,
+            6.2490052
+          ]
+        ]
+      },
+      "id": "way/569717133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/571516398",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Carrera 66",
+        "oneway": "no",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;right;left"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5877618,
+            6.2236493
+          ],
+          [
+            -75.587803,
+            6.2234397
+          ],
+          [
+            -75.5878336,
+            6.2232036
+          ],
+          [
+            -75.5878426,
+            6.2230312
+          ],
+          [
+            -75.587834,
+            6.2228435
+          ],
+          [
+            -75.5878165,
+            6.2227638
+          ],
+          [
+            -75.5877997,
+            6.2226814
+          ],
+          [
+            -75.5877482,
+            6.2225022
+          ],
+          [
+            -75.5876796,
+            6.2223038
+          ],
+          [
+            -75.5874804,
+            6.2217686
+          ],
+          [
+            -75.587422,
+            6.2216063
+          ],
+          [
+            -75.5873534,
+            6.2214442
+          ]
+        ]
+      },
+      "id": "way/571516398"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/571855756",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "maxspeed": "30",
+        "name": "Carrera 79",
+        "oneway": "no",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left;right"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5947318,
+            6.2665778
+          ],
+          [
+            -75.5946657,
+            6.2669278
+          ],
+          [
+            -75.5946018,
+            6.2672663
+          ]
+        ]
+      },
+      "id": "way/571855756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/576531765",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 6",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5743802,
+            6.2076749
+          ],
+          [
+            -75.5741266,
+            6.2077183
+          ]
+        ]
+      },
+      "id": "way/576531765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/576531766",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 45",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5743336,
+            6.2074082
+          ],
+          [
+            -75.5743802,
+            6.2076749
+          ]
+        ]
+      },
+      "id": "way/576531766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/576784168",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 47",
+        "oneway": "yes",
+        "source:maxspeed": "marking",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5763702,
+            6.2097249
+          ],
+          [
+            -75.5764382,
+            6.2099288
+          ],
+          [
+            -75.5764963,
+            6.2101032
+          ]
+        ]
+      },
+      "id": "way/576784168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/576928769",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "1",
+        "name": "Calle 14",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.597944,
+            6.2222294
+          ],
+          [
+            -75.5979704,
+            6.2222632
+          ],
+          [
+            -75.5979966,
+            6.2222943
+          ],
+          [
+            -75.5981183,
+            6.2223379
+          ],
+          [
+            -75.5982652,
+            6.2223652
+          ],
+          [
+            -75.5983622,
+            6.2223569
+          ],
+          [
+            -75.5984957,
+            6.2223181
+          ]
+        ]
+      },
+      "id": "way/576928769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/576928776",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "1",
+        "name": "Calle 14",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5978719,
+            6.2221778
+          ],
+          [
+            -75.597944,
+            6.2222294
+          ]
+        ]
+      },
+      "id": "way/576928776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/576935982",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 45",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5750423,
+            6.204864
+          ],
+          [
+            -75.5746891,
+            6.2055347
+          ],
+          [
+            -75.5744469,
+            6.2059419
+          ],
+          [
+            -75.5743824,
+            6.2061224
+          ],
+          [
+            -75.5743557,
+            6.2062213
+          ]
+        ]
+      },
+      "id": "way/576935982"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/578222192",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "1",
+        "name": "Calle 14",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5945609,
+            6.2208831
+          ],
+          [
+            -75.5945156,
+            6.2208407
+          ],
+          [
+            -75.5938163,
+            6.2207088
+          ],
+          [
+            -75.5935888,
+            6.2206679
+          ],
+          [
+            -75.5932996,
+            6.2206105
+          ],
+          [
+            -75.5924747,
+            6.2204547
+          ],
+          [
+            -75.5923553,
+            6.2204338
+          ]
+        ]
+      },
+      "id": "way/578222192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/578937727",
+        "alt_name": "Sucre",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "name": "Carrera 47",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5656293,
+            6.2494883
+          ],
+          [
+            -75.5660779,
+            6.2486596
+          ]
+        ]
+      },
+      "id": "way/578937727"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/607398847",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Carrera 42",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5623008,
+            6.2457107
+          ],
+          [
+            -75.562281,
+            6.2457338
+          ],
+          [
+            -75.5622932,
+            6.2457582
+          ],
+          [
+            -75.5622985,
+            6.245799
+          ],
+          [
+            -75.5623059,
+            6.2458297
+          ],
+          [
+            -75.5623394,
+            6.2458724
+          ],
+          [
+            -75.5624413,
+            6.245975
+          ],
+          [
+            -75.5624722,
+            6.2460163
+          ],
+          [
+            -75.5624886,
+            6.2460711
+          ]
+        ]
+      },
+      "id": "way/607398847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/625666511",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 80",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6005983,
+            6.230022
+          ],
+          [
+            -75.6006092,
+            6.2305455
+          ]
+        ]
+      },
+      "id": "way/625666511"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/625666512",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 80",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6005861,
+            6.2294387
+          ],
+          [
+            -75.6005983,
+            6.230022
+          ]
+        ]
+      },
+      "id": "way/625666512"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/626532110",
+        "alt_name": "Loma Los Parra",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "tertiary",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "40",
+        "name": "Calle 1 Sur Loma los Parra",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5661182,
+            6.2011141
+          ],
+          [
+            -75.5660395,
+            6.2010844
+          ],
+          [
+            -75.5658524,
+            6.2010175
+          ],
+          [
+            -75.5654705,
+            6.2008642
+          ],
+          [
+            -75.5653173,
+            6.2008028
+          ],
+          [
+            -75.5651484,
+            6.2007302
+          ],
+          [
+            -75.5649351,
+            6.2006142
+          ],
+          [
+            -75.5646884,
+            6.2004987
+          ],
+          [
+            -75.5646722,
+            6.2004911
+          ],
+          [
+            -75.5645393,
+            6.2004289
+          ],
+          [
+            -75.5645108,
+            6.200412
+          ],
+          [
+            -75.5643264,
+            6.2003268
+          ],
+          [
+            -75.5642949,
+            6.2003163
+          ],
+          [
+            -75.5642102,
+            6.2002879
+          ],
+          [
+            -75.563693,
+            6.200145
+          ],
+          [
+            -75.5634794,
+            6.200086
+          ]
+        ]
+      },
+      "id": "way/626532110"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/631983718",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "1",
+        "name": "Calle 14",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5923462,
+            6.2204913
+          ],
+          [
+            -75.5924626,
+            6.2205124
+          ],
+          [
+            -75.5935801,
+            6.2207191
+          ],
+          [
+            -75.5945191,
+            6.2208927
+          ],
+          [
+            -75.5945609,
+            6.2208831
+          ]
+        ]
+      },
+      "id": "way/631983718"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/678009161",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "foot": "yes",
+        "highway": "tertiary",
+        "horse": "yes",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Calle 2",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5570633,
+            6.1978644
+          ],
+          [
+            -75.55708,
+            6.1978847
+          ]
+        ]
+      },
+      "id": "way/678009161"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/746246421",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Calle 51",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5956388,
+            6.2636522
+          ],
+          [
+            -75.595098,
+            6.2633883
+          ],
+          [
+            -75.5946667,
+            6.2631784
+          ],
+          [
+            -75.594557,
+            6.2631272
+          ],
+          [
+            -75.5941139,
+            6.2629268
+          ]
+        ]
+      },
+      "id": "way/746246421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/770878545",
+        "access": "no",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "motor_vehicle": "yes",
+        "name": "Transversal 45D",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.6010587,
+            6.254819
+          ],
+          [
+            -75.6015491,
+            6.2553127
+          ],
+          [
+            -75.6018628,
+            6.2556412
+          ],
+          [
+            -75.6020966,
+            6.2558937
+          ],
+          [
+            -75.6021814,
+            6.2559853
+          ]
+        ]
+      },
+      "id": "way/770878545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/775618580",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "3",
+        "maxspeed": "30",
+        "name": "Calle 49B",
+        "oneway": "yes",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5845616,
+            6.2571178
+          ],
+          [
+            -75.58408,
+            6.256877
+          ]
+        ]
+      },
+      "id": "way/775618580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/775623152",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 51A",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5777709,
+            6.2555185
+          ],
+          [
+            -75.5782344,
+            6.2557821
+          ]
+        ]
+      },
+      "id": "way/775623152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/775623153",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Carrera 64",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5781182,
+            6.2548923
+          ],
+          [
+            -75.5777709,
+            6.2555185
+          ]
+        ]
+      },
+      "id": "way/775623153"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/775822459",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "maxspeed": "30",
+        "name": "Transversal 73",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;right",
+        "turn:lanes:forward": "left;through"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5836942,
+            6.2734325
+          ],
+          [
+            -75.5832928,
+            6.2735377
+          ],
+          [
+            -75.5830622,
+            6.2735644
+          ],
+          [
+            -75.5827832,
+            6.2735857
+          ],
+          [
+            -75.5826556,
+            6.2736222
+          ],
+          [
+            -75.5824318,
+            6.2736367
+          ],
+          [
+            -75.5823474,
+            6.273638
+          ],
+          [
+            -75.5822091,
+            6.2736401
+          ],
+          [
+            -75.5821114,
+            6.2736416
+          ],
+          [
+            -75.5820757,
+            6.2736422
+          ]
+        ]
+      },
+      "id": "way/775822459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/777352588",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Calle 32D",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.590589,
+            6.2375148
+          ],
+          [
+            -75.5911275,
+            6.2374957
+          ]
+        ]
+      },
+      "id": "way/777352588"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/778022223",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "cycleway:oneway": "no",
+        "electrified": "contact_line",
+        "foot": "yes",
+        "name": "Tranvía de Ayacucho",
+        "oneway:bicycle": "no",
+        "oneway:tram": "yes",
+        "railway": "tram",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5672824,
+            6.2481757
+          ],
+          [
+            -75.5672723,
+            6.2481933
+          ],
+          [
+            -75.5672609,
+            6.2481993
+          ],
+          [
+            -75.5672462,
+            6.2482067
+          ],
+          [
+            -75.567216,
+            6.24821
+          ],
+          [
+            -75.5671892,
+            6.248206
+          ]
+        ]
+      },
+      "id": "way/778022223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/778022225",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "cycleway:oneway": "no",
+        "electrified": "contact_line",
+        "foot": "yes",
+        "name": "Tranvía de Ayacucho",
+        "oneway:bicycle": "no",
+        "oneway:tram": "yes",
+        "railway": "tram",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.567181,
+            6.2482193
+          ],
+          [
+            -75.5671982,
+            6.2482264
+          ]
+        ]
+      },
+      "id": "way/778022225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/779967975",
+        "bike_ride": "yes",
+        "cycleway": "shared_lane",
+        "cycleway:oneway": "no",
+        "electrified": "contact_line",
+        "name": "Tranvía de Ayacucho",
+        "oneway:bicycle": "no",
+        "railway": "tram",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5688962,
+            6.2469494
+          ],
+          [
+            -75.5688765,
+            6.2469425
+          ],
+          [
+            -75.5688548,
+            6.246935
+          ],
+          [
+            -75.5686565,
+            6.2468643
+          ],
+          [
+            -75.568314,
+            6.2467423
+          ],
+          [
+            -75.5682871,
+            6.2467386
+          ],
+          [
+            -75.5682623,
+            6.2467422
+          ],
+          [
+            -75.5682404,
+            6.2467518
+          ],
+          [
+            -75.568237,
+            6.2467539
+          ],
+          [
+            -75.5682123,
+            6.2467781
+          ],
+          [
+            -75.568121,
+            6.2469118
+          ],
+          [
+            -75.5676984,
+            6.2475302
+          ],
+          [
+            -75.5673516,
+            6.2480683
+          ],
+          [
+            -75.5672824,
+            6.2481757
+          ]
+        ]
+      },
+      "id": "way/779967975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/779967976",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "cycleway:oneway": "no",
+        "electrified": "contact_line",
+        "foot": "yes",
+        "name": "Tranvía de Ayacucho",
+        "oneway:bicycle": "no",
+        "oneway:tram": "yes",
+        "railway": "tram",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5688962,
+            6.2469494
+          ],
+          [
+            -75.5688765,
+            6.2469425
+          ],
+          [
+            -75.5688548,
+            6.246935
+          ],
+          [
+            -75.568314,
+            6.2467423
+          ],
+          [
+            -75.5682871,
+            6.2467386
+          ],
+          [
+            -75.5682623,
+            6.2467422
+          ],
+          [
+            -75.568237,
+            6.2467539
+          ],
+          [
+            -75.5682123,
+            6.2467781
+          ],
+          [
+            -75.568121,
+            6.2469118
+          ],
+          [
+            -75.5676984,
+            6.2475302
+          ],
+          [
+            -75.5673516,
+            6.2480683
+          ],
+          [
+            -75.5672824,
+            6.2481757
+          ]
+        ]
+      },
+      "id": "way/779967976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/779970027",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "cycleway:oneway": "no",
+        "electrified": "contact_line",
+        "foot": "no",
+        "name": "Tranvía de Ayacucho",
+        "oneway:bicycle": "no",
+        "oneway:tram": "yes",
+        "railway": "tram",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5617668,
+            6.2454937
+          ],
+          [
+            -75.5620064,
+            6.2456184
+          ],
+          [
+            -75.5622538,
+            6.2457387
+          ]
+        ]
+      },
+      "id": "way/779970027"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/790809170",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Calle 42C",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5739766,
+            6.2433733
+          ],
+          [
+            -75.5737736,
+            6.243301
+          ],
+          [
+            -75.5736643,
+            6.2432674
+          ],
+          [
+            -75.5735498,
+            6.2432649
+          ],
+          [
+            -75.5732759,
+            6.2432567
+          ],
+          [
+            -75.5730958,
+            6.2432513
+          ],
+          [
+            -75.5729717,
+            6.2432505
+          ],
+          [
+            -75.5727005,
+            6.2432488
+          ],
+          [
+            -75.5723279,
+            6.2432418
+          ],
+          [
+            -75.5721865,
+            6.2432152
+          ],
+          [
+            -75.5721253,
+            6.2432019
+          ]
+        ]
+      },
+      "id": "way/790809170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/790810378",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Calle 42C",
+        "oneway": "yes",
+        "surface": "cobblestone"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.574446,
+            6.243398
+          ],
+          [
+            -75.5743283,
+            6.2433918
+          ],
+          [
+            -75.5739766,
+            6.2433733
+          ]
+        ]
+      },
+      "id": "way/790810378"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/790885560",
+        "alt_name": "Ecuador",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "30",
+        "name": "Carrera 48",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5633545,
+            6.2543029
+          ],
+          [
+            -75.5639015,
+            6.2534088
+          ],
+          [
+            -75.5639536,
+            6.2533246
+          ],
+          [
+            -75.5643306,
+            6.2527294
+          ],
+          [
+            -75.5647536,
+            6.2520615
+          ]
+        ]
+      },
+      "id": "way/790885560"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/790885561",
+        "alt_name": "Caracas",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Calle 54",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5647536,
+            6.2520615
+          ],
+          [
+            -75.5650714,
+            6.2522789
+          ],
+          [
+            -75.5653049,
+            6.2524425
+          ]
+        ]
+      },
+      "id": "way/790885561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/790885935",
+        "alt_name": "Venezuela",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Carrera 49",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.563937,
+            6.2546405
+          ],
+          [
+            -75.564058,
+            6.2544647
+          ],
+          [
+            -75.564488,
+            6.2537673
+          ],
+          [
+            -75.5645426,
+            6.2536788
+          ],
+          [
+            -75.5649088,
+            6.2530849
+          ],
+          [
+            -75.5653049,
+            6.2524425
+          ]
+        ]
+      },
+      "id": "way/790885935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/790887847",
+        "alt_name": "Bolívar",
+        "cycleway": "shared_lane",
+        "highway": "footway",
+        "lanes": "1",
+        "name": "Carrera 51",
+        "oneway": "yes",
+        "surface": "concrete"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5683245,
+            6.2505009
+          ],
+          [
+            -75.5681133,
+            6.2510037
+          ],
+          [
+            -75.5680162,
+            6.2512349
+          ]
+        ]
+      },
+      "id": "way/790887847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/791108545",
+        "bicycle": "yes",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Calle 57",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.594662,
+            6.2702315
+          ],
+          [
+            -75.5945529,
+            6.2702082
+          ]
+        ]
+      },
+      "id": "way/791108545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/796479570",
+        "cycleway": "shared_lane",
+        "highway": "tertiary",
+        "lanes": "2",
+        "name": "Calle 1 Sur",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5743287,
+            6.2045771
+          ],
+          [
+            -75.5744562,
+            6.2046297
+          ],
+          [
+            -75.5750423,
+            6.204864
+          ],
+          [
+            -75.5759244,
+            6.2052687
+          ],
+          [
+            -75.5760475,
+            6.2053252
+          ],
+          [
+            -75.5764062,
+            6.2054897
+          ],
+          [
+            -75.5767797,
+            6.2056607
+          ],
+          [
+            -75.5769156,
+            6.205718
+          ]
+        ]
+      },
+      "id": "way/796479570"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/810518172",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "name": "Calle 16 A",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.5864288,
+            6.2210434
+          ],
+          [
+            -75.5866442,
+            6.2210977
+          ],
+          [
+            -75.5867402,
+            6.221126
+          ],
+          [
+            -75.5870006,
+            6.2211989
+          ],
+          [
+            -75.5870845,
+            6.22123
+          ],
+          [
+            -75.5871398,
+            6.2212622
+          ],
+          [
+            -75.5872254,
+            6.2213319
+          ],
+          [
+            -75.5873534,
+            6.2214442
+          ]
+        ]
+      },
+      "id": "way/810518172"
+    }
+  ]
+}
