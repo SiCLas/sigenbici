@@ -58,6 +58,17 @@ L.control.locate().addTo(map);
 // Mostrar la escala del mapa en la parte inferior izquierda
 L.control.scale().addTo(map);
 
+// Add search
+map.setGeocoder('Nominatim', {
+  email: 'contacto@siclas.org', // auth for large number of requests
+    'accept-language': 'es', // render results in Spanish
+    countrycodes: 'co', // limit search results to Colombia
+    extratags: 1, // include additional details
+    viewbox: '-75.72101014269579, 6.4784022617544395, -75.2253318522355, 5.969391404998333',
+    bounded: 1
+});
+map.addControl(L.control.search({ position: 'bottomleft' }));
+
 // Barra lateral
 var sidebar = L.control.sidebar('sidebar').addTo(map);
 
