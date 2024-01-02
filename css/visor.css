@@ -96,6 +96,11 @@ body > .container-fluid {
         background: var(--sixth-color);
 }
 
+h3.popupHeader {
+        font-size:medium;
+        background-color: var(--second-color);
+        color: var(--third-color);
+}
 #capas > p > a, 
 #puntos > p > a {
         color: var(--second-color) !important;

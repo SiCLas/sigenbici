@@ -2,7 +2,7 @@
 // Mapa ciclista interactivo v. 0.4
 // Proyecto SIGenBici
 // CC-BY-SA
-// 29 de diciembre de 2023
+// 1 de enero de 2024
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -89,7 +89,7 @@ $.getJSON("./visor/puntos/encicla-test-mapillary.geojson", function (Fontainedat
   var fontaineLayer2023 = L.geoJson(Fontainedata2023, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: FontaineIcon2023 });
-      marker.bindPopup("<strong>" + feature.properties.name + "</strong> (" + (tipo_encicla(feature.properties.bicycle_rental)) + ")<br>" + (info_descrip(feature.properties.description)) + (foto_mapi(feature.properties.mapillary)));
+      marker.bindPopup("<h3 class='popupHeader'>" + feature.properties.name + "</h3><strong>" + (tipo_encicla(feature.properties.bicycle_rental)) + "</strong><br>" + (info_descrip(feature.properties.description)) + (foto_mapi(feature.properties.mapillary)));
       return marker;
     }
   })
@@ -169,31 +169,76 @@ function foto_mapi(mapi){
 function recorreRazgos2(feature, layer) {
 	// does this feature have a property named popupContent?
 	if (feature.properties) {
-		var texto = "";
+		var texto1 = "";
+    var textoPopup = "";
+    var sentidos = "";
+    var descr = "";
+    if(layer.feature.properties.description != null){
+      descr = layer.feature.properties.description;
+    }
+    if(layer.feature.properties.oneway == "yes"){
+      sentidos = "Unidireccional";
+    }
+    if(layer.feature.properties.oneway == "no"){
+      sentidos = "Bidireccional";
+    }
     if(layer.feature.properties.name == null){
-      texto = "Ciclorruta";
+      texto1 = "Ciclorruta";
     }
     else{
-      texto = layer.feature.properties.name;
+      texto1 = layer.feature.properties.name;
     }
-    layer.bindPopup(texto);
+    if(layer.feature.properties.name == null){
+      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3><br>Ciclorruta<br>" + sentidos + "<br>" + descr;
+    }
+    else{
+      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3><br>"+ layer.feature.properties.name + "<br>" + sentidos + "<br>" + descr;
+    }
+      layer.bindTooltip(texto1).bindPopup(textoPopup);
 	}
-	oyente_popup(layer);
+	oyente_tooltip(layer);
 }
 
 function recorreRazgos3(feature, layer) {
 	// does this feature have a property named popupContent?
 	if (feature.properties) {
-		var texto = "";
+		var texto1 = "";
+    var textoPopup = "";
+    var lado = "";
+    var sentido = "";
+    if(layer.feature.properties["cycleway:right"] == "lane"){
+      lado = "Al lado derecho de la calzada.";
+    }
+    if(layer.feature.properties["cycleway:left"] == "lane"){
+      lado = "Al lado izquierdo de la calzada.";
+    }
+    if(layer.feature.properties["cycleway:right:oneway"] == "yes"){
+      sentido = "Unidireccional";
+    }
+    if(layer.feature.properties["cycleway:left:oneway"] == "yes"){
+      sentido = "Unidireccional";
+    }
+    if(layer.feature.properties["cycleway:right:oneway"] == "no"){
+      sentido = "Bidireccional";
+    }
+    if(layer.feature.properties["cycleway:left:oneway"] == "no"){
+      sentido = "Bidireccional";
+    }
     if(layer.feature.properties.name == null){
-      texto = "Ciclobanda";
+      texto1 = "Ciclobanda ";
     }
     else{
-      texto = "Ciclobanda " + layer.feature.properties.name;
+      texto1 = "Ciclobanda " + layer.feature.properties.name;
     }
-    layer.bindPopup(texto);
+    if(layer.feature.properties.name == null){
+      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3>Ciclobanda" + sentido+ "<br>" + lado;
+    }
+    else{
+      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3>Ciclobanda "+ layer.feature.properties.name + "<br>" + sentido+ "<br>" + lado;
+    }
+    layer.bindTooltip(texto1).bindPopup(textoPopup);
 	}
-	oyente_popup(layer);
+	oyente_tooltip(layer);
 }
 
 function recorreRazgos4(feature, layer) {
@@ -214,16 +259,27 @@ function recorreRazgos4(feature, layer) {
 function recorreRazgos5(feature, layer) {
 	// does this feature have a property named popupContent?
 	if (feature.properties) {
-		var texto = "";
+		var texto1 = "";
+    var textoPopup = "";
+    var carriles = "";
+    if (layer.feature.properties.lanes != null){
+      carriles = "<br>Total carriles de la vía: " + layer.feature.properties.lanes;
+    }
     if(layer.feature.properties.name == null){
-      texto = "Carril compartido";
+      texto1 = "Carril ciclopreferente";
     }
     else{
-      texto = "Carril compartido - " + layer.feature.properties.name;
+      texto1 = "Carril ciclopreferente - " + layer.feature.properties.name;
     }
-    layer.bindPopup(texto);
+    if(layer.feature.properties.name == null){
+      textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada</h3>Carril ciclopreferente" + carriles;
+    }
+    else{
+      textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada</h3>Carril ciclopreferente<br>" + layer.feature.properties.name + carriles;
+    }
+    layer.bindTooltip(texto1).bindPopup(textoPopup);
 	}
-	oyente_popup(layer);
+	oyente_tooltip(layer);
 }
 
 function recorreRazgos6(feature, layer) {
@@ -268,5 +324,21 @@ function oyente_popup(layer){
 	});		
 	layer.on('mousemove', function (e) {
 		this.getPopup().setLatLng(e.latlng).openOn(layer);
+	});
+}
+
+function oyente_tooltip(layer){
+  layer.on('click', function (e) {
+		this.closeTooltip();
+    this.getPopup().setLatLng(e.latlng).openOn(layer);
+	});
+  layer.on('mouseover', function (e) {
+		this.getTooltip().setLatLng(e.latlng).openOn(layer);
+	});
+	layer.on('mouseout', function (e) {
+		this.closeTooltip().closePopup();
+	});		
+	layer.on('mousemove', function (e) {
+		this.getTooltip().setLatLng(e.latlng).openOn(layer);
 	});
 }
