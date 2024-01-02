@@ -217,3 +217,7 @@ a {
 .btn-close {
         background-color: var(--second-color);
 }
+
+input {
+        color: black;
+}
