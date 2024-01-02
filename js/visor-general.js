@@ -27,13 +27,13 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 var cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm-lite/{z}/{x}/{y}.png', {
   attribution: 'CyclOSM Lite',
   minZoom: 11,
-  maxZoom: 20,
+  maxZoom: 19,
 });
 // Inicialización del mapa con OSM como mapa base predeterminado
-var map = L.map('mapid', {layers: [osm]}).setView([6.248038936944781, -75.58030147776749], 12);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central del valle.
+var map = L.map('mapid', {layers: [osm]}).setView([6.248038936944781, -75.58030147776749], 11);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central del valle.
 
 //Establecer zoom mínimo y máximo posibles
-map.setMinZoom(11);
+map.setMinZoom(10);
 map.setMaxZoom(19);
 
 //Limitar el área del mapa a la zona visible inicialmente
