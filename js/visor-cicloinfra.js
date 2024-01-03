@@ -79,6 +79,10 @@ $.getJSON("./visor/capas/peatonales.geojson", function (Peatonalesdata) {
   controlCapas.addOverlay(Peatonaleslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00ff80 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspTramos peatonales compartidos con la bici</strong>');
 });
 
+// Create MarkerCluster Group
+var markers = L.markerClusterGroup();
+var parkingMarkerSub = L.featureGroup.subGroup(markers);
+
 // Mostrar estaciones Encicla 2023
 $.getJSON("./visor/puntos/encicla-test-mapillary.geojson", function (Fontainedata2023) {
   var FontaineIcon2023 = L.icon({
@@ -93,7 +97,8 @@ $.getJSON("./visor/puntos/encicla-test-mapillary.geojson", function (Fontainedat
       return marker;
     }
   })
-  controlCapas.addOverlay(fontaineLayer2023, "<img src='./icons/ic_13.png' width='35'> <strong>   Estaciones EnCicla</strong>");
+
+  controlCapas.addOverlay(fontaineLayer2023, "<img src='./icons/ic_13.png' width='35'> <strong>   Estaciones EnCicla</strong>")
 });
 
 // Mostrar talleres. 
@@ -116,24 +121,32 @@ $.getJSON("./visor/puntos/talleres.geojson", function (BicycleShopdata) {
 });
 
 // Mostrar cicloparqueaderos
-$.getJSON("./visor/puntos/parqueaderos.json", function (BicycleParkingdata) {
-  var bicycleParkingIcon = L.icon({
-    iconUrl: './icons/ic_15.png',
-    iconSize: [25, 25]
-  });
-  var bicycleparkingLayer = L.geoJson(BicycleParkingdata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: bicycleParkingIcon });
-      marker.bindTooltip("<strong>Cicloparqueadero</strong>"
+var bicycleParkingIcon = L.icon({
+  iconUrl: './icons/ic_15.png',
+  iconSize: [25, 25]
+});
+var parkingMarker = L.geoJson(false, {
+  pointToLayer: function(feature, latlng) {
+    var marker = L.marker(latlng, {
+      icon: bicycleParkingIcon
+    });
+    //popup
+    marker.bindPopup("<strong>Cicloparqueadero</strong>"
         + "<br><br><strong>Cubierto: </strong>" + feature.properties.covered
         + "<br><strong>Capacidad: </strong>" + feature.properties.capacity
         + "<br><strong>Tipo: </strong>" + feature.properties.bicycle_parking);
       return marker;
-    }
-  })
-  controlCapas.addOverlay(bicycleparkingLayer, "<img src='./icons/ic_15.png' width='35'> <strong>Cicloparqueaderos</strong>");
+  }
 });
 
+$.getJSON("./visor/puntos/parqueaderos.json", function(BicycleParkingdata) {
+  parkingMarker.addData(BicycleParkingdata);
+  parkingMarker.eachLayer(function(layer) {
+  layer.addTo(parkingMarkerSub);
+  });
+  controlCapas.addOverlay(parkingMarkerSub, "<img src='./icons/ic_15.png' width='35'> <strong>Cicloparqueaderos</strong>") 
+  agrupar(parkingMarker)
+});
 
 /////////////////////////////
 //Funcion para no mostrar descripción sin datos como undefined
@@ -341,4 +354,15 @@ function oyente_tooltip(layer){
 	layer.on('mousemove', function (e) {
 		this.getTooltip().setLatLng(e.latlng).openOn(layer);
 	});
+}
+
+function agrupar(layer){
+  map.on('overlayadd', function (e) {
+    markers.addLayer(layer);
+    map.addLayer(markers);
+    layer.clearLayers();
+  }),
+  map.on('overlayremove', function (e) {
+    markers.clearLayers();
+  })
 }
