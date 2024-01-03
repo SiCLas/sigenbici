@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "siclas_sigenbici";
-$password = "SIGenBici2020";
+$username = "username";
+$password = "password";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
