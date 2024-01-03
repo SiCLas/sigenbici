@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 header('Content-Type: text/html; charset=utf-8');
-$connect = new PDO("mysql:host=localhost;dbname=siclas_sigenbici;charset=utf8mb4", "siclas_sigenbici", "SIGenBici2020");/* localhost es el servidor, "encuesta" es el nombre de la base de datos, nombre de usuario, contraseña */
+$connect = new PDO("mysql:host=localhost;dbname=name;charset=utf8mb4", "db_user", "db_password");/* localhost es el servidor, "encuesta" es el nombre de la base de datos, nombre de usuario, contraseña */
 $message = 'Nada para enviar';
 if(isset($_POST["preg22"]))
 {
