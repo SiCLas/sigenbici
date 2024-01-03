@@ -30,7 +30,9 @@ var cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclos
   maxZoom: 19,
 });
 // Inicialización del mapa con OSM como mapa base predeterminado
-var map = L.map('mapid', {layers: [osm]}).setView([6.248038936944781, -75.58030147776749], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central del valle.
+var map = L.map('mapid', 
+  {layers: [osm], revealOSMControl: true},
+  ).setView([6.248038936944781, -75.58030147776749], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central del valle.
 
 //Establecer zoom mínimo y máximo posibles
 map.setMinZoom(10);
@@ -99,3 +101,4 @@ L.control.watermark = function (opts) {
 };
 
 L.control.watermark({ position: 'bottomright' }).addTo(map);
+
