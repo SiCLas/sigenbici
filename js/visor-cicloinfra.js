@@ -80,46 +80,64 @@ $.getJSON("./visor/capas/peatonales.geojson", function (Peatonalesdata) {
 });
 
 // Create MarkerCluster Group
-var markers = L.markerClusterGroup();
-var parkingMarkerSub = L.featureGroup.subGroup(markers);
+var markers = L.markerClusterGroup({maxClusterRadius: 120});
+
+// Create subgroups
+var parkingMarkerSub = L.featureGroup.subGroup(markers); // DO NOT add to map.
+var enciclaMarkerSub = L.featureGroup.subGroup(markers);
+var BikeShopsMarkerSub = L.featureGroup.subGroup(markers);
 
 // Mostrar estaciones Encicla 2023
-$.getJSON("./visor/puntos/encicla-test-mapillary.geojson", function (Fontainedata2023) {
-  var FontaineIcon2023 = L.icon({
-    iconUrl: './icons/ic_13.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
-  });
-  var fontaineLayer2023 = L.geoJson(Fontainedata2023, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: FontaineIcon2023 });
-      marker.bindPopup("<h3 class='popupHeader'>" + feature.properties.name + "</h3><strong>" + (tipo_encicla(feature.properties.bicycle_rental)) + "</strong><br>" + (info_descrip(feature.properties.description)) + (foto_mapi(feature.properties.mapillary)));
+var enciclaIcon = L.icon({
+  iconUrl: './icons/ic_13.png',
+  iconSize: [30, 30],
+  iconAnchor: [15, 30]
+});
+var enciclaMarker = L.geoJson(false, {
+  pointToLayer: function(feature, latlng) {
+    var marker = L.marker(latlng, {
+      icon: enciclaIcon
+    });
+    //popup
+    marker.bindPopup("<h3 class='popupHeader'>" + feature.properties.name + "</h3><strong>" + (tipo_encicla(feature.properties.bicycle_rental)) + "</strong><br>" + (info_descrip(feature.properties.description)) + (foto_mapi(feature.properties.mapillary)));
       return marker;
-    }
-  })
-
-  controlCapas.addOverlay(fontaineLayer2023, "<img src='./icons/ic_13.png' width='35'> <strong>   Estaciones EnCicla</strong>")
+  }
 });
 
-// Mostrar talleres. 
-$.getJSON("./visor/puntos/talleres.geojson", function (BicycleShopdata) {
-  var BikeShopsIcon = L.icon({
-    iconUrl: './icons/ic_14.png',
-    iconSize: [25, 25]
+$.getJSON("./visor/puntos/encicla-test-mapillary.geojson", function(encicladata) {
+  enciclaMarker.addData(encicladata);
+  enciclaMarker.eachLayer(function(layer) {
+  layer.addTo(enciclaMarkerSub);
   });
-  var bikeshoplayer = L.geoJson(BicycleShopdata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: BikeShopsIcon });
-      marker.bindTooltip("<strong>" + feature.properties.name
+  controlCapas.addOverlay(enciclaMarkerSub, "<img src='./icons/ic_13.png' width='35'> <strong>   Estaciones EnCicla</strong>") 
+});
+
+// Mostrar talleres
+var BikeShopsIcon = L.icon({
+  iconUrl: './icons/ic_14.png',
+  iconSize: [25, 25]
+});
+var BikeShopsMarker = L.geoJson(false, {
+  pointToLayer: function(feature, latlng) {
+    var marker = L.marker(latlng, {
+      icon: BikeShopsIcon
+    });
+    //popup
+    marker.bindPopup("<strong>" + feature.properties.name
         + "</strong><br><br><strong>Dirección: </strong>" + feature.properties.address
         + "<br><strong>Teléfono: </strong>" + feature.properties.phone);
       return marker;
-    }
-  })
-
-  controlCapas.addOverlay(bikeshoplayer, "<img src='./icons/ic_14.png' width='35'> <strong>Talleres</strong>");
+  }
 });
 
+$.getJSON("./visor/puntos/talleres.geojson", function(BicycleShopdata) {
+  BikeShopsMarker.addData(BicycleShopdata);
+  BikeShopsMarker.eachLayer(function(layer) {
+  layer.addTo(BikeShopsMarkerSub);
+  });
+  controlCapas.addOverlay(BikeShopsMarkerSub, "<img src='./icons/ic_14.png' width='35'> <strong>Talleres</strong>") 
+});
+ 
 // Mostrar cicloparqueaderos
 var bicycleParkingIcon = L.icon({
   iconUrl: './icons/ic_15.png',
@@ -145,7 +163,7 @@ $.getJSON("./visor/puntos/parqueaderos.json", function(BicycleParkingdata) {
   layer.addTo(parkingMarkerSub);
   });
   controlCapas.addOverlay(parkingMarkerSub, "<img src='./icons/ic_15.png' width='35'> <strong>Cicloparqueaderos</strong>") 
-  agrupar(parkingMarker)
+  markers.addTo(map);
 });
 
 /////////////////////////////
@@ -354,15 +372,4 @@ function oyente_tooltip(layer){
 	layer.on('mousemove', function (e) {
 		this.getTooltip().setLatLng(e.latlng).openOn(layer);
 	});
-}
-
-function agrupar(layer){
-  map.on('overlayadd', function (e) {
-    markers.addLayer(layer);
-    map.addLayer(markers);
-    layer.clearLayers();
-  }),
-  map.on('overlayremove', function (e) {
-    markers.clearLayers();
-  })
 }
