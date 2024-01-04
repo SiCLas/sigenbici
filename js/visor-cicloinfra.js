@@ -2,7 +2,7 @@
 // Mapa ciclista interactivo v. 0.4
 // Proyecto SIGenBici
 // CC-BY-SA
-// 1 de enero de 2024
+// Enero de 2024
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -225,7 +225,7 @@ function recorreRazgos2(feature, layer) {
     else{
       textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3><br>"+ layer.feature.properties.name + "<br>" + sentidos + "<br>" + descr;
     }
-      layer.bindTooltip(texto1).bindPopup(textoPopup);
+      layer.bindPopup(textoPopup);
 	}
 	oyente_tooltip(layer);
 }
@@ -267,7 +267,7 @@ function recorreRazgos3(feature, layer) {
     else{
       textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3>Ciclobanda "+ layer.feature.properties.name + "<br>" + sentido+ "<br>" + lado;
     }
-    layer.bindTooltip(texto1).bindPopup(textoPopup);
+    layer.bindPopup(textoPopup);
 	}
 	oyente_tooltip(layer);
 }
@@ -298,17 +298,13 @@ function recorreRazgos5(feature, layer) {
     }
     if(layer.feature.properties.name == null){
       texto1 = "Carril ciclopreferente";
-    }
-    else{
-      texto1 = "Carril ciclopreferente - " + layer.feature.properties.name;
-    }
-    if(layer.feature.properties.name == null){
       textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada</h3>Carril ciclopreferente" + carriles;
     }
     else{
+      texto1 = "Carril ciclopreferente - " + layer.feature.properties.name;
       textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada</h3>Carril ciclopreferente<br>" + layer.feature.properties.name + carriles;
     }
-    layer.bindTooltip(texto1).bindPopup(textoPopup);
+    layer.bindPopup(textoPopup);
 	}
 	oyente_tooltip(layer);
 }
@@ -318,14 +314,14 @@ function recorreRazgos6(feature, layer) {
 	if (feature.properties) {
 		var texto = "";
     if(layer.feature.properties.name == null){
-      texto = "Andén compartido";
+      texto = "<h3 class='popupHeader'>Pasos peatonales*</h3>Andén compartido<br><br>* En estos tramos la prioridad es peatonal y es mejor reducir la velocidad; en algunos casos, puede ser recomendable bajarse de la bici y caminar.";
     }
     else{
-      texto = layer.feature.properties.name;
+      texto = "<h3 class='popupHeader'>Pasos peatonales*</h3>Andén compartido<br><br>" + layer.feature.properties.name + "<br>* En estos tramos la prioridad es peatonal y es mejor reducir la velocidad; en algunos casos, puede ser recomendable bajarse de la bici y caminar.";
     }
     layer.bindPopup(texto);
 	}
-	oyente_popup(layer);
+	oyente_tooltip(layer);
 }
 
 function recorreRazgos7(feature, layer) {
@@ -367,7 +363,7 @@ function oyente_tooltip(layer){
 		this.getTooltip().setLatLng(e.latlng).openOn(layer);
 	});
 	layer.on('mouseout', function (e) {
-		this.closeTooltip().closePopup();
+		this.closeTooltip();
 	});		
 	layer.on('mousemove', function (e) {
 		this.getTooltip().setLatLng(e.latlng).openOn(layer);
