@@ -76,7 +76,7 @@ $.getJSON("./visor/capas/peatonales.geojson", function (Peatonalesdata) {
     "opacity": 0.6,
   };
   var Peatonaleslayer = L.geoJson(Peatonalesdata, {onEachFeature: recorreRazgos6, style: PeatonalesStyle }).addTo(map);
-  controlCapas.addOverlay(Peatonaleslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00ff80 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspTramos peatonales compartidos con la bici</strong>');
+  controlCapas.addOverlay(Peatonaleslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00ff80 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspPasos peatonales</strong>');
 });
 
 // Create MarkerCluster Group
