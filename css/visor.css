@@ -19,7 +19,7 @@ body > .container-fluid {
 #mapid {
         display: block;
         width: auto;
-        height: 100%;
+        height: 100vh;
 }
 .sidebar{
         position: relative;
