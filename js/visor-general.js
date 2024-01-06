@@ -12,7 +12,7 @@
 
 // Definición de diferentes fuentes de teselas de mapas posibles. 
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors. Datos: Proyecto SIGenBici.',
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/">OSM</a> contributors.',
                     maxZoom: 19,
 });
 var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
