@@ -80,7 +80,16 @@ $.getJSON("./visor/capas/peatonales.geojson", function (Peatonalesdata) {
 });
 
 // Create MarkerCluster Group
-var markers = L.markerClusterGroup({maxClusterRadius: 120});
+var markers = L.markerClusterGroup({
+  iconCreateFunction: function (cluster) { // Custom icon
+    var markers = cluster.getAllChildMarkers();
+    var n = 0;
+    for (var i = 0; i < markers.length; i++) {
+      n += markers[i].number;
+    }
+    return L.divIcon({ html: i, className: 'infracluster', iconSize: L.point(40, 40) });
+  }}
+);
 
 // Create subgroups
 var parkingMarkerSub = L.featureGroup.subGroup(markers); // DO NOT add to map.
@@ -220,10 +229,10 @@ function recorreRazgos2(feature, layer) {
       texto1 = layer.feature.properties.name;
     }
     if(layer.feature.properties.name == null){
-      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3><br>Ciclorruta<br>" + sentidos + "<br>" + descr;
+      textoPopup = "<h3 class='popupHeader'>Vía ciclista (exclusiva)</h3><br>Ciclorruta<br>" + sentidos + "<br>" + descr;
     }
     else{
-      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3><br>"+ layer.feature.properties.name + "<br>" + sentidos + "<br>" + descr;
+      textoPopup = "<h3 class='popupHeader'>Vía ciclista (exclusiva)</h3><br>"+ layer.feature.properties.name + "<br>" + sentidos + "<br>" + descr;
     }
       layer.bindPopup(textoPopup);
 	}
@@ -262,10 +271,10 @@ function recorreRazgos3(feature, layer) {
       texto1 = "Ciclobanda " + layer.feature.properties.name;
     }
     if(layer.feature.properties.name == null){
-      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3>Ciclobanda" + sentido+ "<br>" + lado;
+      textoPopup = "<h3 class='popupHeader'>Vía ciclista (exclusiva)</h3>Ciclobanda" + sentido+ "<br>" + lado;
     }
     else{
-      textoPopup = "<h3 class='popupHeader'>Vía exclusiva</h3>Ciclobanda "+ layer.feature.properties.name + "<br>" + sentido+ "<br>" + lado;
+      textoPopup = "<h3 class='popupHeader'>Vía ciclista (exclusiva)</h3>Ciclobanda "+ layer.feature.properties.name + "<br>" + sentido+ "<br>" + lado;
     }
     layer.bindPopup(textoPopup);
 	}
@@ -298,11 +307,11 @@ function recorreRazgos5(feature, layer) {
     }
     if(layer.feature.properties.name == null){
       texto1 = "Carril ciclopreferente";
-      textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada</h3>Carril ciclopreferente" + carriles;
+      textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada (compartida)</h3>Carril ciclopreferente" + carriles;
     }
     else{
       texto1 = "Carril ciclopreferente - " + layer.feature.properties.name;
-      textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada</h3>Carril ciclopreferente<br>" + layer.feature.properties.name + carriles;
+      textoPopup = "<h3 class='popupHeader'>Vía cicloadaptada (compartida)</h3>Carril ciclopreferente<br>" + layer.feature.properties.name + carriles;
     }
     layer.bindPopup(textoPopup);
 	}

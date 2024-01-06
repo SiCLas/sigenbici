@@ -221,17 +221,32 @@ a {
 input {
         color: black;
 }
-.parking_cluster {
-        width: 40px;
-        height: 40px;
-        background-color: rgb(40, 118, 173);
-        text-align: center;
-        font-size: 24px;
-}
-.encicla_cluster {
-        width: 40px;
-        height: 40px;
-        background-color: rgb(24, 187, 111);
-        text-align: center;
-        font-size: 24px;
-}
+
+.positivecluster {
+        background: rgba(110, 204, 57, 0.6);
+        border:5px solid rgba(255,255,255,0.5);
+        font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        text-align:center;
+        border-radius:50%;
+        line-height:30px;
+      }
+.negativecluster {
+                background: rgba(241, 77, 23, 0.6);
+                border:5px solid rgba(255,255,255,0.5);
+                font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                text-align:center;
+                border-radius:50%;
+                line-height:30px;
+              }
+
+.infracluster {
+                background: rgba(12, 145, 240, 0.6);
+                border:5px solid rgba(255,255,255,0.5);
+                font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                text-align:center;
+                border-radius:50%;
+                line-height:30px;
+              }

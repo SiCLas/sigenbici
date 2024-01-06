@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.3
+// Mapa ciclista interactivo v. 0.4
 // Proyecto SIGenBici
 // CC-BY-SA
-// 21 de julio de 2021
+// Enero de 2023
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -19,161 +19,198 @@ function setParent(el, newParent) {
 }
 setParent(htmlObject3, c);
 
+/////////////// 
+// Marker clusters
+// Create MarkerCluster Group
+//Custom radius and icon create function
+var perceptionmarkers = L.markerClusterGroup({
+  maxClusterRadius: 120,
+});
 
-// Mostrar lugares seguros
+ // Mostrar percepciones de seguridad personal
+ var SeguroIcon = L.icon({
+  iconUrl: './icons/ic_1.png',
+  iconSize: [30, 30],
+  iconAnchor: [15, 30]
+});
+var seguroLayer = L.geoJson(false, {
+  pointToLayer: function (feature, latlng) {
+    var marker = L.marker(latlng, { icon: SeguroIcon });
+    marker.bindPopup(info_descrip(feature.properties.descripcio)
+          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
+        return marker;
+  }
+});
 $.getJSON("./visor/puntos/seguro.geojson", function (Segurodata) {
-  var SeguroIcon = L.icon({
-    iconUrl: './icons/ic_1.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
-  });
-  var SeguroLayer = L.geoJson(Segurodata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: SeguroIcon });
-      marker.bindTooltip(info_descrip(feature.properties.descripcio)
-        +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
-        +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
-      return marker;
-    }
-  })
-  controlPuntos.addOverlay(SeguroLayer, "<img src='./icons/ic_1.png' width='18'> <strong>Percepción de seguridad personal</strong>");
+seguroLayer.addData(Segurodata);
+seguroLayer.eachLayer(function(layer) {
+layer.addTo(segurosMarkerSub);
 });
-
-
-// Mostrar lugares agradable
-$.getJSON("./visor/puntos/L_agradables.geojson", function (Agradabledata) {
-  var AgradableIcon = L.icon({
-    iconUrl: './icons/ic_7.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
-  });
-  var AgradableLayer = L.geoJson(Agradabledata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: AgradableIcon });
-      marker.bindTooltip(info_descrip(feature.properties.Descripcio)
-        +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
-        +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
-      return marker;
-    }
-  })
-  controlPuntos.addOverlay(AgradableLayer, "<img src='./icons/ic_7.png' width='18'> <strong>Percepción de zona agradable</strong>");
+controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18'> <strong>Percepción de seguridad personal</strong>");
 });
-
-
-// Mostrar lugares peligrosos
-$.getJSON("./visor/puntos/peligroso.geojson", function (Peligrosodata) {
+  
+  // Mostrar lugares agradable
+    var AgradableIcon = L.icon({
+      iconUrl: './icons/ic_7.png',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30]
+    });
+    var AgradableLayer = L.geoJson(false, {
+      pointToLayer: function (feature, latlng) {
+        var marker = L.marker(latlng, { icon: AgradableIcon });
+        marker.bindPopup(info_descrip(feature.properties.Descripcio)
+          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
+        return marker;
+      }
+    });
+    $.getJSON("./visor/puntos/L_agradables.geojson", function (Agradabledata) {
+    AgradableLayer.addData(Agradabledata);
+    AgradableLayer.eachLayer(function(layer) {
+    layer.addTo(agradableMarkerSub);
+    });
+    controlPuntos.addOverlay(agradableMarkerSub, "<img src='./icons/ic_7.png' width='18'> <strong>Percepción de zona agradable</strong>");
+    });
+  
+  
+  // Mostrar percepciones de lugares peligrosos
   var PeligrosoIcon = L.icon({
     iconUrl: './icons/ic_2.png',
     iconSize: [30, 30],
     iconAnchor: [15, 30]
   });
-  var PeligrosoLayer = L.geoJson(Peligrosodata, {
+  var PeligrosoLayer = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: PeligrosoIcon });
-      marker.bindTooltip(info_descrip(feature.properties.descripcio)
-        +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
-        +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
-      return marker;
+      marker.bindPopup(info_descrip(feature.properties.descripcio)
+          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
+        return marker;
     }
-  })
-  controlPuntos.addOverlay(PeligrosoLayer, "<img src='./icons/ic_2.png' width='18'> <strong>Percepción de zona peligrosa</strong>");
-});
-
-
-// Mostrar problemas de infraestructura
-$.getJSON("./visor/puntos/problema-infra.geojson", function (Infradata) {
-  var InfraIcon = L.icon({
-    iconUrl: './icons/ic_6.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
   });
-  var InfraLayer = L.geoJson(Infradata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: InfraIcon });
-      marker.bindTooltip(info_descrip(feature.properties.descripcio));
-      return marker;
-    }
-  })
-  controlPuntos.addOverlay(InfraLayer, "<img src='./icons/ic_6.png' width='18'> <strong>Percepción de problema de infraestructura</strong>");
+  $.getJSON("./visor/puntos/peligroso.geojson", function (Peligrosodata) {
+  PeligrosoLayer.addData(Peligrosodata);
+  PeligrosoLayer.eachLayer(function(layer) {
+  layer.addTo(peligrosoMarkerSub);
 });
-
-// Mostrar mejora entorno con cicloinfraestructura
-$.getJSON("./visor/puntos/mejora.geojson", function (Mejoradata) {
-  var MejoraIcon = L.icon({
-    iconUrl: './icons/ic_10.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
+  controlPuntos.addOverlay(peligrosoMarkerSub, "<img src='./icons/ic_2.png' width='18'> <strong>Percepción de zona peligrosa</strong>");
   });
-  var MejoraLayer = L.geoJson(Mejoradata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: MejoraIcon });
-      marker.bindTooltip(info_descrip(feature.properties.descripcio)
-        +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
-        +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
-      return marker;
-    }
-  })
-  controlPuntos.addOverlay(MejoraLayer, "<img src='./icons/ic_10.png' width='18'> <strong>Percepción de mejora en el entorno</strong>");
-});
-
-// Mostrar desmejora entorno con cicloinfraestructura
-$.getJSON("./visor/puntos/desmejora.geojson", function (DesMejoradata) {
-  var DesMejoraIcon = L.icon({
-    iconUrl: './icons/ic_11.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
+  
+  
+  // Mostrar problemas de infraestructura
+    var InfraIcon = L.icon({
+      iconUrl: './icons/ic_6.png',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30]
+    });
+    var InfraLayer = L.geoJson(false, {
+      pointToLayer: function (feature, latlng) {
+        var marker = L.marker(latlng, { icon: InfraIcon });
+        marker.bindTooltip(info_descrip(feature.properties.descripcio));
+        return marker;
+      }
+    });
+    $.getJSON("./visor/puntos/problema-infra.geojson", function (Infradata) {
+      InfraLayer.addData(Infradata);
+      InfraLayer.eachLayer(function(layer) {
+        layer.addTo(infraMarkerSub);
+      });
+    controlPuntos.addOverlay(infraMarkerSub, "<img src='./icons/ic_6.png' width='18'> <strong>Percepción de problema de infraestructura</strong>");
   });
-  var DesMejoraLayer = L.geoJson(DesMejoradata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: DesMejoraIcon });
-      marker.bindTooltip(info_descrip(feature.properties.descripcio)
-        +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
-        +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
-      return marker;
-    }
-  })
-  controlPuntos.addOverlay(DesMejoraLayer, "<img src='./icons/ic_11.png' width='18'> <strong>Percepción de desmejora en el entorno</strong>");
-});
+  
+  // Mostrar mejora entorno con cicloinfraestructura
+     var MejoraIcon = L.icon({
+      iconUrl: './icons/ic_10.png',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30]
+    });
+    var MejoraLayer = L.geoJson(false, {
+      pointToLayer: function (feature, latlng) {
+        var marker = L.marker(latlng, { icon: MejoraIcon });
+        marker.bindTooltip(info_descrip(feature.properties.descripcio)
+          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
+        return marker;
+      }
+    });
+    $.getJSON("./visor/puntos/mejora.geojson", function (Mejoradata) {
+      MejoraLayer.addData(Mejoradata);
+      MejoraLayer.eachLayer(function(layer) {
+        layer.addTo(mejoraMarkerSub);
+      });
+    controlPuntos.addOverlay(mejoraMarkerSub, "<img src='./icons/ic_10.png' width='18'> <strong>Percepción de mejora en el entorno</strong>");
+  });
+  
+  // Mostrar desmejora entorno con cicloinfraestructura
+    var DesMejoraIcon = L.icon({
+      iconUrl: './icons/ic_11.png',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30]
+    });
+    var DesMejoraLayer = L.geoJson(false, {
+      pointToLayer: function (feature, latlng) {
+        var marker = L.marker(latlng, { icon: DesMejoraIcon });
+        marker.bindPopup(info_descrip(feature.properties.descripcio)
+          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
+        return marker;
+      }
+    });
+    $.getJSON("./visor/puntos/desmejora.geojson", function (DesMejoradata) {
+      DesMejoraLayer.addData(DesMejoradata);
+      DesMejoraLayer.eachLayer(function(layer) {
+        layer.addTo(desmejoraMarkerSub);
+      });
+      controlPuntos.addOverlay(desmejoraMarkerSub, "<img src='./icons/ic_11.png' width='18'> <strong>Percepción de desmejora en el entorno</strong>");
+  });
+  
 
-
-// Mostrar incidentes ciclistas
-$.getJSON("./visor/puntos/incidentes-viales.geojson", function (Incidentedata) {
+  // Mostrar incidentes ciclistas
   var IncidenteIcon = L.icon({
     iconUrl: './icons/ic_8.png',
     iconSize: [30, 30],
     iconAnchor: [15, 30]
   });
-  var IncidenteLayer = L.geoJson(Incidentedata, {
+  var IncidenteLayer = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: IncidenteIcon });
-      marker.bindTooltip("<strong>Incidente vial ciclista</strong>"
+      marker.bindPopup("<strong>Incidente vial ciclista</strong>"
         +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
       return marker;
     }
-  })
-  controlPuntos.addOverlay(IncidenteLayer, "<img src='./icons/ic_8.png' width='18'> <strong>Incidentes ciclistas 2020</strong>");
-});
-
-
-// Mostrar robos
-$.getJSON("./visor/puntos/robos.geojson", function (Benchdata) {
-  var BenchIcon = L.icon({
-    iconUrl: './icons/ic_9.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30]
   });
-  var benchLayer = L.geoJson(Benchdata, {
-    pointToLayer: function (feature, latlng) {
-      var marker = L.marker(latlng, { icon: BenchIcon });
-      marker.bindTooltip("<strong> Modalidad: </strong>" + feature.properties.tipo);
-      return marker;
-    }
-  })
-  controlPuntos.addOverlay(benchLayer, "<img src='./icons/ic_9.png' width='18'> <strong>Robos de bici 2020</strong>");
+  $.getJSON("./visor/puntos/incidentes-viales.geojson", function (Incidentedata) {
+  IncidenteLayer.addData(Incidentedata);
+  IncidenteLayer.eachLayer(function(layer) {
+  layer.addTo(incidenteMarkerSub);
 });
+  controlPuntos.addOverlay(incidenteMarkerSub, "<img src='./icons/ic_8.png' width='18'> <strong>Incidentes ciclistas 2020</strong>");
+  });
+  
+  
+  // Mostrar robos
+    var roboIcon = L.icon({
+      iconUrl: './icons/ic_9.png',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30]
+    });
+    var roboLayer = L.geoJson(false, {
+      pointToLayer: function (feature, latlng) {
+        var marker = L.marker(latlng, { icon: roboIcon });
+        marker.bindPopup("<strong> Modalidad: </strong>" + feature.properties.tipo);
+        return marker;
+      }
+    });
+    $.getJSON("./visor/puntos/robos.geojson", function (robodata) {
+      roboLayer.addData(robodata);
+      roboLayer.eachLayer(function(layer) {
+      layer.addTo(roboMarkerSub);
+  });
+    controlPuntos.addOverlay(roboMarkerSub, "<img src='./icons/ic_9.png' width='18'> <strong>Robos de bici 2020</strong>");
+  });
 
-
-//Funcion para no mostrar tooltips sin datos vacios
+//Funcion para no mostrar tooltips sin datos
 function info_descrip(descripcion){
   if (descripcion == null){
     return "Sin datos";
@@ -221,3 +258,43 @@ function info_exper(expe){
     return "No informa";
   }
 }
+
+// Create subgroups
+var positiveMarkerSub = L.featureGroup.subGroup(perceptionmarkers); // DO NOT add to map.
+var negativeMarkerSub = L.featureGroup.subGroup(perceptionmarkers);
+
+var positiveMarkerSub = L.markerClusterGroup({
+  iconCreateFunction: function (cluster) { // Custom icon
+    var positiveMarkerSub = cluster.getAllChildMarkers();
+    var n = 0;
+    for (var i = 0; i < positiveMarkerSub.length; i++) {
+      n += positiveMarkerSub[i].number;
+    }
+    return L.divIcon({ html: i, className: 'positivecluster', iconSize: L.point(40, 40) });
+  }
+});
+
+var negativeMarkerSub = L.markerClusterGroup({
+  iconCreateFunction: function (cluster) {
+    var negativeMarkerSub = cluster.getAllChildMarkers();
+    var n = 0;
+    for (var i = 0; i < negativeMarkerSub.length; i++) {
+      n += negativeMarkerSub[i].number;
+    }
+    return L.divIcon({ html: i, className: 'negativecluster', iconSize: L.point(40, 40) });
+  }
+});
+// Marcadores positivos
+var segurosMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
+var agradableMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
+var mejoraMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
+// Marcadores negativos
+var roboMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
+var incidenteMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
+var peligrosoMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
+var desmejoraMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
+var infraMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
+
+positiveMarkerSub.addTo(map);
+negativeMarkerSub.addTo(map);
+perceptionmarkers.addTo(map);

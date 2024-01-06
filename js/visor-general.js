@@ -31,17 +31,19 @@ var cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclos
 });
 // Inicialización del mapa con OSM como mapa base predeterminado
 var map = L.map('mapid', 
-  {layers: [osm], revealOSMControl: true},
-  ).setView([6.248038936944781, -75.58030147776749], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central del valle.
+  {layers: [osm], 
+  revealOSMControl: true
+  },
+  ).setView([6.248038936944781, -75.54101], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central.
 
 //Establecer zoom mínimo y máximo posibles
-map.setMinZoom(10);
+map.setMinZoom(11);
 map.setMaxZoom(19);
 
-//Limitar el área del mapa a la zona visible inicialmente
+//Limitar el área del mapa
 map.setMaxBounds([
-  [6.636124006237452, -76.07722454384509],
-  [5.964082165714018, -75.10046365532638]
+  [6.814157525371442, -76.44400489567374],
+  [5.454281943820035, -74.66080858168455]
 ]);
 
 // Crear control de mapas base
@@ -55,13 +57,13 @@ var overlayMaps = {"Cicloinfraestructura (CyclOSM Lite)": cyclosm_lite};
 
 // Control para cambiar mapa base, cerrado
 // cambiar a collapsed:false para mostrar el cuadro abierto
-L.control.layers(baseLayers, overlayMaps, { collapsed: true }).addTo(map);
+L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomleft' }).addTo(map);
 
 // Control para ubicación usuario
 L.control.locate().addTo(map);
 
 // Mostrar la escala del mapa en la parte inferior izquierda
-L.control.scale().addTo(map);
+L.control.scale({position: 'bottomright'}).addTo(map);
 
 // Add search
 map.setGeocoder('Nominatim', {
@@ -72,7 +74,7 @@ map.setGeocoder('Nominatim', {
     viewbox: '-75.72101014269579, 6.4784022617544395, -75.2253318522355, 5.969391404998333',
     bounded: 1
 });
-map.addControl(L.control.search({ position: 'bottomleft' }));
+map.addControl(L.control.search({ position: 'bottomright' }));
 
 // Barra lateral
 var sidebar = L.control.sidebar('sidebar').addTo(map);
@@ -100,5 +102,5 @@ L.control.watermark = function (opts) {
   return new L.Control.Watermark(opts);
 };
 
-L.control.watermark({ position: 'bottomright' }).addTo(map);
+L.control.watermark({ position: 'topright' }).addTo(map);
 
