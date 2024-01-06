@@ -4,7 +4,7 @@
 html, body, #container {
         height: 100%;
         width: 100%;
-        overflow: hidden;
+        overflow: auto;
 }
 
 
@@ -136,7 +136,7 @@ a {
 
 @media (max-width: 992px) {
         body > .container-fluid {
-                padding: 72px 0 0 0;
+                padding: 0 0 0 0;
         }
         .nav-link:hover{
                 padding-left: 2em;
