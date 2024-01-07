@@ -22,11 +22,6 @@ L.easyButton( '<img class="boton" src="/icons/creative-commons-brands.png" style
     ModalBienvenida.toggle();
   },'Acerca de SIGenBici').addTo(map);
 
-  // Botón para mostrar/ocultar controles de capas
-//  L.easyButton( '<img src="/icons/ic_15.png" style="width:36px; height:36px;">', function(btn, map){
- // $('.leaflet-control-layers').toggle();
-// },'Test easybutton control leaflet').addTo(map);
-
 // Crear modal ayuda
   var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
 });
@@ -35,7 +30,7 @@ L.easyButton( '<img src="/icons/question-circle-regular.png" style="width:36px; 
   ModalAyuda.toggle();
   },'Ayuda').addTo(map);
 
-// Definir estilo de línea para las capas y agregar tooltip con info de los objetos
+ // Definir estilo de línea para las capas y agregar tooltip con info de los objetos
 var customLayer8 = L.geoJson(null, {onEachFeature: recorreRazgos9, style: function (feature) {
     return feature.properties, {color: '#BA4A00', dashArray: '1,5', weight: '4', opacity: '0.7' };
   }});
