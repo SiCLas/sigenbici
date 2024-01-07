@@ -342,6 +342,9 @@ function recorreRazgos7(feature, layer) {
 }
 
 function oyente_popup(layer){
+  map.on('zoomend', function (e) {
+    this.closePopup();
+  });
   layer.on('click', function (e) {
 		this.closePopup();
 	});
