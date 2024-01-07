@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.4
+// Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
 // Enero de 2024
@@ -10,14 +10,7 @@
 // Control de las capas
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlCapas = L.control.layers(null, null, { collapsed: false }, { autoZIndex: true }).addTo(map);
-
-var htmlObject = controlCapas.getContainer();
-var a = document.getElementById('control-capas')
-function setParent(el, newParent) {
-  newParent.appendChild(el);
-}
-setParent(htmlObject, a);
+var controlCapas = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
 
 // Guía de colores: https://www.w3schools.com/colors/colors_picker.asp
 

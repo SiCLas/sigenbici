@@ -30,14 +30,10 @@ var cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclos
   maxZoom: 19,
 });
 // Inicialización del mapa con OSM como mapa base predeterminado
-var map = L.map('mapid', 
-  {layers: [osm], 
-  revealOSMControl: true
-  },
-  ).setView([6.248038936944781, -75.54101], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central.
+var map = L.map('mapid', {layers: [osm]}).setView([6.248038936944781, -75.58], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central.
 
 //Establecer zoom mínimo y máximo posibles
-map.setMinZoom(11);
+map.setMinZoom(12);
 map.setMaxZoom(19);
 
 //Limitar el área del mapa
@@ -57,7 +53,7 @@ var overlayMaps = {"Cicloinfraestructura (CyclOSM Lite)": cyclosm_lite};
 
 // Control para cambiar mapa base, cerrado
 // cambiar a collapsed:false para mostrar el cuadro abierto
-L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomleft' }).addTo(map);
+L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomleft' });
 
 // Control para ubicación usuario
 L.control.locate().addTo(map);
@@ -77,10 +73,10 @@ map.setGeocoder('Nominatim', {
 map.addControl(L.control.search({ position: 'bottomright' }));
 
 // Barra lateral
-var sidebar = L.control.sidebar('sidebar').addTo(map);
+//var sidebar = L.control.sidebar('sidebar').addTo(map);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Agregar marca de agua con el logo en la esquina inferior derecha
+// Agregar marca de agua con el logo en la esquina superior derecha
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 L.Control.Watermark = L.Control.extend({
@@ -103,4 +99,3 @@ L.control.watermark = function (opts) {
 };
 
 L.control.watermark({ position: 'topright' }).addTo(map);
-

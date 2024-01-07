@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.4
+// Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
 // Enero de 2023
@@ -10,14 +10,7 @@
 // Control de los puntos
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlPuntos = L.control.layers(null, null, { collapsed: false }, { autoZIndex: true }).addTo(map);
-
-var htmlObject3 = controlPuntos.getContainer();
-var c = document.getElementById('control-puntos')
-function setParent(el, newParent) {
-  newParent.appendChild(el);
-}
-setParent(htmlObject3, c);
+var controlPuntos = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
 
 /////////////// 
 // Marker clusters
@@ -73,7 +66,6 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
     controlPuntos.addOverlay(agradableMarkerSub, "<img src='./icons/ic_7.png' width='18'> <strong>Percepción de zona agradable</strong>");
     });
   
-  
   // Mostrar percepciones de lugares peligrosos
   var PeligrosoIcon = L.icon({
     iconUrl: './icons/ic_2.png',
@@ -96,7 +88,6 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
 });
   controlPuntos.addOverlay(peligrosoMarkerSub, "<img src='./icons/ic_2.png' width='18'> <strong>Percepción de zona peligrosa</strong>");
   });
-  
   
   // Mostrar problemas de infraestructura
     var InfraIcon = L.icon({
@@ -191,8 +182,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
   controlPuntos.addOverlay(incidenteMarkerSub, "<img src='./icons/ic_8.png' width='18'> <strong>Incidentes ciclistas 2020</strong>");
   });
   
-  
-  // Mostrar robos
+    // Mostrar robos
     var roboIcon = L.icon({
       iconUrl: './icons/ic_9.png',
       iconSize: [30, 30],
@@ -239,7 +229,6 @@ function info_genero(gen){
   }
 }
 
-
 //Funcion para decodificar nivel de experiencia
 function info_exper(expe){
   if (expe == "1"){
@@ -264,8 +253,8 @@ function info_exper(expe){
 
 // Create subgroups
 var positiveMarkerSub = L.featureGroup.subGroup(perceptionmarkers); // DO NOT add to map.
-var negativeMarkerSub = L.featureGroup.subGroup(perceptionmarkers);
-
+var negativeMarkerSub = L.featureGroup.subGroup(perceptionmarkers); // DO NOT add to map.
+// Create custom icon for positive cluster
 var positiveMarkerSub = L.markerClusterGroup({
   iconCreateFunction: function (cluster) { // Custom icon
     var positiveMarkerSub = cluster.getAllChildMarkers();
@@ -276,7 +265,7 @@ var positiveMarkerSub = L.markerClusterGroup({
     return L.divIcon({ html: i, className: 'positivecluster', iconSize: L.point(40, 40) });
   }
 });
-
+// Create custom icon for negative cluster
 var negativeMarkerSub = L.markerClusterGroup({
   iconCreateFunction: function (cluster) {
     var negativeMarkerSub = cluster.getAllChildMarkers();
@@ -287,17 +276,17 @@ var negativeMarkerSub = L.markerClusterGroup({
     return L.divIcon({ html: i, className: 'negativecluster', iconSize: L.point(40, 40) });
   }
 });
-// Marcadores positivos
+// Agrupar marcadores positivos
 var segurosMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
 var agradableMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
 var mejoraMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
-// Marcadores negativos
+// Agrupar marcadores negativos
 var roboMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var incidenteMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var peligrosoMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var desmejoraMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var infraMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
-
+// Agregar clusters al mapa
 positiveMarkerSub.addTo(map);
 negativeMarkerSub.addTo(map);
 perceptionmarkers.addTo(map);

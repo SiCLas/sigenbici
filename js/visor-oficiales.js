@@ -1,25 +1,39 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.3
+// Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
-// 14 de noviembre de 2021
-// Última actualización: 14 de julio de 2023
+// Enero de 2024
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Panel datos oficiales
-// Control de las capas
+// Control de las capas 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlAdmon = L.control.layers(null, null, { collapsed: false }, { autoZIndex: true }).addTo(map);
+var controlAdmon = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
 
-var htmlObject4 = controlAdmon.getContainer();
-var d = document.getElementById('control-admon')
-function setParent(el, newParent) {
-  newParent.appendChild(el);
-}
-setParent(htmlObject4, d);
+// Crear modales y traer contenido del html
+// Crear modal Bienvenida
+var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienvenida'), {
+  focus: true
+});
+// EasyButton para abrir modal de bienvenida
+L.easyButton( '<img src="/icons/creative-commons-brands.png" style="width:36px; height:36px;">', function(btn, map){
+    ModalBienvenida.toggle();
+  },'Acerca de SIGenBici').addTo(map);
 
+  // Botón para mostrar/ocultar controles de capas
+//  L.easyButton( '<img src="/icons/ic_15.png" style="width:36px; height:36px;">', function(btn, map){
+ // $('.leaflet-control-layers').toggle();
+// },'Test easybutton control leaflet').addTo(map);
+
+// Crear modal ayuda
+  var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
+});
+// EasyButton para abrir modal de ayuda
+L.easyButton( '<img src="/icons/question-circle-regular.png" style="width:36px; height:36px;">', function(btn, map){
+  ModalAyuda.toggle();
+  },'Ayuda').addTo(map);
 
 // Definir estilo de línea para las capas y agregar tooltip con info de los objetos
 var customLayer8 = L.geoJson(null, {onEachFeature: recorreRazgos9, style: function (feature) {

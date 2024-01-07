@@ -40,7 +40,7 @@ body > .container-fluid {
         float: right;
 }
 .leaflet-control-layers{
-        width: 100%;
+        width: auto;
 }
 
 .leaflet-touch .leaflet-control-layers{
@@ -89,7 +89,7 @@ body > .container-fluid {
 }
 
 .leaflet-control-layers-expanded {
-        background: var(--eighth-color);
+        background: rgba(69, 69, 69, 0.7);
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
@@ -106,8 +106,8 @@ h3.popupHeader {
         color: var(--second-color) !important;
 }
 
-a {
-        color: var(--second-color) !important;
+#ModalBienvenida a {
+        color: var(--third-color) !important;
 }
 
 #list_tematico {
@@ -206,8 +206,12 @@ a {
 }
 
 .modal-content p, h3, h5 {
-        color:black;
+        color:var(--third-color);
         padding: 5px;
+}
+
+.modal-content {
+        background-color: var(--eighth-color);
 }
 .modal-content h4 {
         background-color: var(--eighth-color);
@@ -215,7 +219,7 @@ a {
 }
 
 .btn-close {
-        background-color: var(--second-color);
+        background-color: var(--third-color);
 }
 
 input {
@@ -250,3 +254,33 @@ input {
                 border-radius:50%;
                 line-height:30px;
               }
+
+.leaflet-control-layers-toggle {
+              border:  1px solid grey;
+              border-radius: 5px;
+        }
+
+.leaflet-top.leaflet-left .leaflet-control-layers:nth-child(2) .leaflet-control-layers-toggle {  
+                background-image: url(/icons/bicycle-solid.png);        
+                width: 36px;
+                height: 36px;
+        }
+ 
+.leaflet-top.leaflet-left .leaflet-control-layers:nth-child(3) .leaflet-control-layers-toggle {
+                background-image: url('/icons/map-marker-solid.png');
+                width: 36px;
+                height: 36px; /*percepciones*/
+        }
+
+.leaflet-top.leaflet-left .leaflet-control-layers:nth-child(4) .leaflet-control-layers-toggle {
+                background-image: url('/icons/map-solid.png');
+                width: 36px;
+                height: 36px; /*oficiales*/
+        }
+
+.leaflet-bar button { 
+        height: 36px !important; 
+        width: 36px !important; 
+        font-size: 2.6em; 
+        padding: 0;
+ }
