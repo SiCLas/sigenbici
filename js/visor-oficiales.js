@@ -18,7 +18,7 @@ var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienveni
   focus: true
 });
 // EasyButton para abrir modal de bienvenida
-L.easyButton( '<img class="boton" src="/icons/creative-commons-brands.png" style="width:36px; height:36px;">', function(btn, map){
+L.easyButton( '<img class="boton" src="./icons/creative-commons-brands.png" style="width:36px; height:36px;">', function(btn, map){
     ModalBienvenida.toggle();
   },'Acerca de SIGenBici').addTo(map);
 
@@ -26,9 +26,12 @@ L.easyButton( '<img class="boton" src="/icons/creative-commons-brands.png" style
   var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
 });
 // EasyButton para abrir modal de ayuda
-L.easyButton( '<img src="/icons/question-circle-regular.png" style="width:36px; height:36px;">', function(btn, map){
+L.easyButton( '<img src="./icons/question-circle-regular.png" style="width:36px; height:36px;">', function(btn, map){
   ModalAyuda.toggle();
   },'Ayuda').addTo(map);
+  
+ // Control para ubicación usuario
+L.control.locate().addTo(map);
 
  // Definir estilo de línea para las capas y agregar tooltip con info de los objetos
 var customLayer8 = L.geoJson(null, {onEachFeature: recorreRazgos9, style: function (feature) {

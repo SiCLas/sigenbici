@@ -1,14 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.4
+// Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
-// 31 de diciembre de 2023
-///////////////////////////////////////////////////////////////////////////////////////////////////
+// Enero de 2024
+////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Generacion de mapas y control de mapas
-// 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // Definición de diferentes fuentes de teselas de mapas posibles. 
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -53,13 +52,11 @@ var overlayMaps = {"Cicloinfraestructura (CyclOSM Lite)": cyclosm_lite};
 
 // Control para cambiar mapa base, cerrado
 // cambiar a collapsed:false para mostrar el cuadro abierto
-L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomleft' });
+L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomright' }).addTo(map);
 
-// Control para ubicación usuario
-L.control.locate().addTo(map);
-
+ 
 // Mostrar la escala del mapa en la parte inferior izquierda
-L.control.scale({position: 'bottomright'}).addTo(map);
+L.control.scale({position: 'bottomleft'}).addTo(map);
 
 // Add search
 map.setGeocoder('Nominatim', {
@@ -72,8 +69,6 @@ map.setGeocoder('Nominatim', {
 });
 map.addControl(L.control.search({ position: 'bottomright' }));
 
-// Barra lateral
-//var sidebar = L.control.sidebar('sidebar').addTo(map);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Agregar marca de agua con el logo en la esquina superior derecha
