@@ -205,7 +205,7 @@ h3.popupHeader {
         border-right-color: var(--eighth-color);
 }
 
-.modal-content p, h3, h5 {
+.modal-content p, h3, h5, a {
         color:var(--third-color);
         padding: 5px;
 }
@@ -283,4 +283,16 @@ input {
         width: 36px !important; 
         font-size: 2.6em; 
         padding: 0;
+        background-color: rgba(112, 112, 112, 0.5);
+ }
+
+ .img-boton {
+        margin: 10px 5px; 
+        height: 35px; 
+        width: 35px; 
+        padding: 2px; 
+        background-color: var(--third-color); 
+        border: 1px solid grey; 
+        border-radius: 5px; 
+        float:left;
  }

@@ -67,19 +67,38 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-                <p class="sidebar-text py-4">
-                    Marca las casillas para activar las capas correspondientes en el mapa.
-                </p>
-                <div class="infracluster" style="width: 40px; height: 40px; float:right; margin: 5px 15px" title="Las estaciones EnCicla, cicloparqueaderos y talleres se agrupan en círculos azules.">#</div>
+                <p>Utiliza los botones a la izquierda del mapa para activar los controles de capas.</p> 
+                <img class="img-boton" src='/icons/bicycle-solid.png'></img><p>&nbsp;<strong>Cicloinfraestructura</strong> (ciclorrutas, ciclobandas, carriles compartidos, cicloparqueaderos, etc.).</p>
+                <img class="img-boton" src="/icons/map-marker-solid.png"></img><p>&nbsp;<strong>Percepciones ciclistas</strong> (zonas agradables, seguras o peligrosas, problemas de infraestructura y otras).</p>
+                <img class="img-boton" src='/icons/map-solid.png'></img><p>&nbsp;<strong>Datos oficiales</strong> (cicloinfraestructura según el POT 2014-2027 MDE, muertes de ciclistas en Medellín).</p>
+                <hr style="width:100%">
+                <h4>Capas de cicloinfraestructura</h4>
+                <p>Marca las casillas según las capas que quieras ver en el mapa.</p>
+                <img class="center" src="/img/ciclorrutas.jpg" style="width: 50%; margin-bottom:10px;"></img>
+                                <div class="infracluster" style="width: 40px; height: 40px; float:right; margin: 5px 15px" title="Las estaciones EnCicla, cicloparqueaderos y talleres se agrupan en círculos azules.">#</div>
                 <p>
                     Luego de activar las casillas de EnCicla, cicloparqueaderos o talleres, acerca el mapa o haz clic sobre los círculos azules para ver la ubicación de los puntos de interés.
                 </p>
+                <hr style="width:100%">
+                <h4>Capas de puntos de percepciones ciclistas</h4>
+                <p>Marca las casillas según las capas que quieras ver en el mapa.</p>
+                <img class="center" src="/img/control-puntos.png" style="width: 50%; margin-bottom:10px;"></img>
                 <div class="negativecluster" style="width: 40px; height: 40px; float:right; margin: 5px 15px" title="Los puntos de percepción negativa (zona peligrosa, desmejora en el entorno), incidentes y robos se agrupan en círculos rojos.">#</div>
                 <div class="positivecluster" style="width: 40px; height: 40px; float:right; margin: 5px 15px" title="Los puntos de percepción positiva (zona agradable, seguridad personal y mejora en el entorno) se agrupan en círculos verdes.">#</div>
                 <p>
                     En el caso de los puntos de percepciones ciclistas, acerca el mapa o haz clic sobre los círculos verdes y rojos para ver la ubicación de los puntos de percepciones positivas y negativas, respectivamente.
                 </p>
-            </div>
+                <hr style="width:100%">
+                  <h4>Capas de datos oficiales</h4>
+                  <p>Marca las casillas según las capas que quieras ver en el mapa.</p>
+                  <img class="center" src="/img/control-admon.png" style="width: 50%; margin-bottom:10px;"></img>
+                  <hr style="width:100%">
+                  <h4>Fuentes de los datos</h4>
+                  <p>Los datos de cicloinfraestructura y EnCicla se obtienen de la base de datos de OpenStreetMap (OSM). Los datos de talleres y cicloparqueaderos están en proceso de actualización en OSM.</p>
+                  <p>Los datos de percepciones ciclistas fueron recogidos en la segunda fase del proyecto SIGenBici (2020) mediante una encuesta en línea. 
+                    Si quieres aportar información para enriquecer el mapa, puedes agregar tus <a href="./rutas.html" target="_blank">rutas frecuentes</a> o <a href="./lugares.html" target="_blank">puntos de percepción</a>.</p> 
+                  <p>Los datos oficiales fueron obtenidos del portal de datos abiertos de Medellín.</p>
+                </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Cicloinfraestructura en Colombia</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -150,7 +169,7 @@
     <script type="text/javascript">
       $(document).ready(function()
       {
-      //$('#ModalBienvenida').modal('show');
+      $('#ModalBienvenida').modal('show');
       });
     </script>
 </body>
