@@ -261,19 +261,19 @@ input {
         }
 
 .leaflet-top.leaflet-left .leaflet-control-layers:nth-child(2) .leaflet-control-layers-toggle {  
-                background-image: url(/icons/bicycle-solid.png);        
+                background-image: url(/sigenbici/icons/bicycle-solid.png);        
                 width: 36px;
                 height: 36px;
         }
  
 .leaflet-top.leaflet-left .leaflet-control-layers:nth-child(3) .leaflet-control-layers-toggle {
-                background-image: url('/icons/map-marker-solid.png');
+                background-image: url('/sigenbici/icons/map-marker-solid.png');
                 width: 36px;
                 height: 36px; /*percepciones*/
         }
 
 .leaflet-top.leaflet-left .leaflet-control-layers:nth-child(4) .leaflet-control-layers-toggle {
-                background-image: url('/icons/map-solid.png');
+                background-image: url('/sigenbici/icons/map-solid.png');
                 width: 36px;
                 height: 36px; /*oficiales*/
         }
