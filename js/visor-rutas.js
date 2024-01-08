@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.3
+// Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
-// 09 de abril de 2021
+// Enero de 2024
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -10,62 +10,55 @@
 // Control de las capas
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlRutas = L.control.layers(null,null,{collapsed:false},{autoZIndex:true}).addTo(map);
-
-var htmlObject2 = controlRutas.getContainer();
-var b = document.getElementById('control-rutas')
-/* function setParent(el, newParent){
-  newParent.appendChild(el);
-  } */
-setParent(htmlObject2, b);
+var controlRutas = L.control.layers(null,null,{collapsed:true},{autoZIndex:true}).addTo(map);
 
 // Definir estilo para las capas GPX
 // http://leafletjs.com/reference.html#geojson-style
 var customLayer = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer1 = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer2 = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer3 = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer4 = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer5 = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer6 = L.geoJson(null, {
     style: function(feature) {
-        return { color: 'Lime', weight: '9', opacity: '0.4' };
+        return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
 var customLayer7 = L.geoJson(null, {
     style: function(feature) {
-       return { color: 'Lime', weight: '7', opacity: '0.4' };
+       return { color: '#cc00cc', weight: '10', opacity: '0.7' };
     }
 });
 
@@ -85,6 +78,6 @@ var runLayer = omnivore.gpx("./visor/rutas/SanJavier-BuenosAires.gpx", null, cus
 	controlRutas.addOverlay(runLayer, '<strong>San Javier-Buenos Aires</strong>');
 var runLayer = omnivore.gpx("./visor/rutas/UdeA-Eafit.gpx", null, customLayer6);
 	controlRutas.addOverlay(runLayer, '<strong>UdeA-Eafit</strong>');
-var runLayer = omnivore.gpx("./visor/rutas/rutas filtradas repubikla.gpx", null, customLayer7);
-  controlRutas.addOverlay(runLayer, '<strong>Otras rutas</strong>');
+//var runLayer = omnivore.gpx("./visor/rutas/rutas filtradas repubikla.gpx", null, customLayer7);
+  //controlRutas.addOverlay(runLayer, '<strong>Otras rutas</strong>');
   

@@ -94,3 +94,11 @@ L.control.watermark = function (opts) {
 };
 
 L.control.watermark({ position: 'topright' }).addTo(map);
+
+L.easyPrint({
+	title: 'Descargar imagen del mapa',
+	position: 'topright',
+  sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
+  filename: 'miMapaSIGenBici',
+  exportOnly: true,
+}).addTo(map);

@@ -361,7 +361,7 @@ function oyente_popup(layer){
 
 function oyente_tooltip(layer){
   layer.on('click', function (e) {
-		this.closeTooltip();
+	//	this.closeTooltip();
     this.getPopup().setLatLng(e.latlng).openOn(layer);
 	});
   layer.on('mouseover', function (e) {
