@@ -20,7 +20,7 @@ var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienveni
 // EasyButton para abrir modal de bienvenida
 L.easyButton( '<img class="boton" src="./icons/creative-commons-brands.png" style="width:36px; height:36px;">', function(btn, map){
     ModalBienvenida.toggle();
-  },'Acerca de SIGenBici').addTo(map);
+  },'Acerca de SIGenBici').setPosition('topright').addTo(map);
 
 // Crear modal ayuda
   var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {

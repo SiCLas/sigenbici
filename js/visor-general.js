@@ -59,6 +59,15 @@ L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomri
 // Mostrar la escala del mapa en la parte inferior izquierda
 L.control.scale({position: 'bottomleft'}).addTo(map);
 
+
+L.easyPrint({
+	title: 'Descargar imagen del mapa',
+	position: 'bottomright',
+  sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
+  filename: 'miMapaSIGenBici',
+  exportOnly: true,
+}).addTo(map);
+
 // Add search
 map.setGeocoder('Nominatim', {
   email: 'contacto@siclas.org', // auth for large number of requests
@@ -95,11 +104,3 @@ L.control.watermark = function (opts) {
 };
 
 L.control.watermark({ position: 'topright' }).addTo(map);
-
-L.easyPrint({
-	title: 'Descargar imagen del mapa',
-	position: 'topright',
-  sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
-  filename: 'miMapaSIGenBici',
-  exportOnly: true,
-}).addTo(map);
