@@ -64,7 +64,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2015.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -81,7 +81,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2016.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -98,7 +98,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2017.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -115,7 +115,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2018.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -132,7 +132,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2019.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -167,7 +167,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2021.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -185,7 +185,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2022.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
@@ -202,7 +202,7 @@ $.getJSON("./visor/admon/ciclistas-muertos-2023.geojson", function (Biciblancada
   var biciLayer = L.geoJson(Biciblancadata, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".");
+      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   })
