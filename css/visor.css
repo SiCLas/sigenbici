@@ -283,7 +283,10 @@ input {
         width: 36px !important; 
         font-size: 2.6em; 
         padding: 0;
-        background-color: rgba(112, 112, 112, 0.5);
+ }
+
+ .leaflet-bar button:hover {
+        background-color: var(--seventh-color);
  }
 
  .img-boton {

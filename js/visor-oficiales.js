@@ -18,7 +18,7 @@ var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienveni
   focus: true
 });
 // EasyButton para abrir modal de bienvenida
-L.easyButton( '<img class="boton" src="./icons/creative-commons-brands.png" style="width:36px; height:36px;">', function(btn, map){
+L.easyButton( '<img class="boton" src="./icons/creative-commons.png" style="width:36px; height:36px;">', function(btn, map){
     ModalBienvenida.toggle();
   },'Acerca de SIGenBici').setPosition('topright').addTo(map);
 
@@ -26,7 +26,7 @@ L.easyButton( '<img class="boton" src="./icons/creative-commons-brands.png" styl
   var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
 });
 // EasyButton para abrir modal de ayuda
-L.easyButton( '<img src="./icons/question-circle-regular.png" style="width:36px; height:36px;">', function(btn, map){
+L.easyButton( '<img src="./icons/question.png" style="width:36px; height:36px;">', function(btn, map){
   ModalAyuda.toggle();
   },'Ayuda').addTo(map);
   
@@ -223,4 +223,22 @@ function recorreRazgos9(feature, layer) {
     layer.bindPopup(texto);
 	}
 	oyente_popup(layer);
+}
+
+function oyente_popup(layer){
+  map.on('zoomstart', function (e) {
+  this.closePopup();
+});
+layer.on('click', function (e) {
+  this.closePopup();
+});
+layer.on('mouseover', function (e) {
+  this.getPopup().setLatLng(e.latlng).openOn(layer);
+});
+layer.on('mouseout', function (e) {
+  this.closePopup();
+});		
+layer.on('mousemove', function (e) {
+  this.getPopup().setLatLng(e.latlng).openOn(layer);
+});
 }

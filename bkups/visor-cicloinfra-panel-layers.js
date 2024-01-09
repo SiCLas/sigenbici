@@ -11,7 +11,49 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Guía de colores: https://www.w3schools.com/colors/colors_picker.asp
 
-var controlCapas = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
+//var controlCapas = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
+
+// Define baselayer group for layer panel
+var baselayers = [
+  {
+    group: "Mapa base",
+    collapsed: true,
+    layers: [  
+{
+  name: "Open Street Map",
+  layer: osm
+},
+{
+  name: "Mapa de calles (Esri)",
+  layer: Esri_WorldStreetMap
+},
+{
+  name: "Imágenes satelitales (Esri)",
+  layer: Esri_WorldImagery
+}
+]
+}
+]
+// Define overlayers groups for layer panel
+var overlayers = [{
+  group: "Cicloinfraestructura",
+  collapsed: false,
+  layers: [ ]
+},{
+  group: "Percepciones",
+  collapsed: true,
+  layers: [ ]
+}
+]
+
+// Create panel
+var panel = L.control.panelLayers(baselayers, overlayers, { 
+  position: 'topright',
+  collapsibleGroups: true,
+  selectorGroup: true,
+  compact: true
+}).addTo(map);
+
 
 // Mostrar ciclorrutas
 $.getJSON("./visor/capas/ciclorruta-anden.geojson", function (DSCdata) {
@@ -21,9 +63,10 @@ $.getJSON("./visor/capas/ciclorruta-anden.geojson", function (DSCdata) {
     "opacity": 0.8
   };
   var DSClayer = L.geoJson(DSCdata, {onEachFeature: recorreRazgos2, style: DSCStyle}).addTo(map);
-controlCapas.addOverlay(DSClayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #0000ce 4px; vertical-align: middle;"></span><strong>&nbspCiclorrutas</strong>');
-})
+//  controlCapas.addOverlay(DSClayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #0000ce 4px; vertical-align: middle;"></span><strong>&nbspCiclorrutas</strong>');
+});
 
+//panel.addOverlay({layer: DSClayer, icon: "<img src='./icons/bicycle-solid.png' width='20'>"}, 'Ciclorrutas', 'Cicloinfraestructura');
 
 // mostrar ciclobandas en calzada
 $.getJSON("./visor/capas/ciclobanda-calzada.geojson", function (BandesCyclablesdata) {
@@ -35,8 +78,8 @@ $.getJSON("./visor/capas/ciclobanda-calzada.geojson", function (BandesCyclablesd
     "dashOffset": "5"
   };
   var BandesCyclableslayer = L.geoJson(BandesCyclablesdata, {onEachFeature: recorreRazgos3, style: BandesCyclablesStyle }).addTo(map);
-  controlCapas.addOverlay(BandesCyclableslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: dotted #0000ff 3px; vertical-align: middle;"></span><strong>&nbspCiclobandas</strong>');
- //panel.addOverlay({layer: BandesCyclableslayer}, 'Ciclobandas', 'Ciclo'); 
+ // controlCapas.addOverlay(BandesCyclableslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: dotted #0000ff 3px; vertical-align: middle;"></span><strong>&nbspCiclobandas</strong>');
+ //panel.addOverlay({layer: BandesCyclableslayer}, 'Ciclobandas', 'Cicloinfraestructura'); 
 });
 
 // mostrar vías ciclistas temporales
@@ -59,11 +102,12 @@ $.getJSON("./visor/capas/carril-zona-30.geojson", function (MaxSpeed30data) {
     "opacity": 0.4,
   };
   var MaxSpeed30layer = L.geoJson(MaxSpeed30data, {onEachFeature: recorreRazgos5, style: MaxSpeed30Style }).addTo(map);
-  controlCapas.addOverlay(MaxSpeed30layer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00bfff 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspCarriles ciclopreferentes</strong>');
-//panel.addOverlay({layer: MaxSpeed30layer}, 'Ciclopreferentes', 'Ciclo'); 
+//  controlCapas.addOverlay(MaxSpeed30layer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00bfff 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspCarriles ciclopreferentes</strong>');
+//panel.addOverlay({layer: MaxSpeed30layer}, 'Ciclopreferentes', 'Cicloinfraestructura'); 
 });
 
 // mostrar tramos peatonales compartidos con la bici
+
 $.getJSON("./visor/capas/peatonales.geojson", function (Peatonalesdata) {
   var PeatonalesStyle = {
     "color": "#00ff80",
@@ -71,11 +115,9 @@ $.getJSON("./visor/capas/peatonales.geojson", function (Peatonalesdata) {
     "opacity": 0.6,
   };
   var Peatonaleslayer = L.geoJson(Peatonalesdata, {onEachFeature: recorreRazgos6, style: PeatonalesStyle }).addTo(map);
-  controlCapas.addOverlay(Peatonaleslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00ff80 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspPasos peatonales</strong>');
-//panel.addOverlay({layer: Peatonaleslayer}, 'Tramos peatonales', 'Ciclo'); 
+//  controlCapas.addOverlay(Peatonaleslayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: solid #00ff80 4px; vertical-align: middle; opacity: 0.5"></span><strong>&nbspPasos peatonales</strong>');
+panel.addOverlay({layer: Peatonaleslayer}, 'Tramos peatonales', 'Cicloinfraestructura'); 
 });
-
-
 
 // Create MarkerCluster Group
 var markers = L.markerClusterGroup({
@@ -116,8 +158,8 @@ $.getJSON("./visor/puntos/encicla-test-mapillary.geojson", function(encicladata)
   enciclaMarker.eachLayer(function(layer) {
   layer.addTo(enciclaMarkerSub);
   });
-  controlCapas.addOverlay(enciclaMarkerSub, "<img src='./icons/ic_13.png' width='35'> <strong>   Estaciones EnCicla</strong>") 
- //panel.addOverlay({layer: enciclaMarker}, 'EnCicla', 'Ciclo'); 
+ // controlCapas.addOverlay(enciclaMarkerSub, "<img src='./icons/ic_13.png' width='35'> <strong>   Estaciones EnCicla</strong>") 
+ //panel.addOverlay({layer: enciclaMarker}, 'EnCicla', 'Cicloinfraestructura'); 
 });
 
 // Mostrar talleres
@@ -143,8 +185,8 @@ $.getJSON("./visor/puntos/talleres.geojson", function(BicycleShopdata) {
   BikeShopsMarker.eachLayer(function(layer) {
   layer.addTo(BikeShopsMarkerSub);
   });
-  controlCapas.addOverlay(BikeShopsMarkerSub, "<img src='./icons/ic_14.png' width='35'> <strong>Talleres</strong>") 
-//panel.addOverlay({layer: BikeShopsMarker}, 'Talleres', 'Ciclo'); 
+//  controlCapas.addOverlay(BikeShopsMarkerSub, "<img src='./icons/ic_14.png' width='35'> <strong>Talleres</strong>") 
+//panel.addOverlay({layer: BikeShopsMarker}, 'Talleres', 'Cicloinfraestructura'); 
 });
  
 // Mostrar cicloparqueaderos
@@ -171,12 +213,10 @@ $.getJSON("./visor/puntos/parqueaderos.json", function(BicycleParkingdata) {
   parkingMarker.eachLayer(function(layer) {
   layer.addTo(parkingMarkerSub);
   });
-  controlCapas.addOverlay(parkingMarkerSub, "<img src='./icons/ic_15.png' width='35'> <strong>Cicloparqueaderos</strong>") 
- //panel.addOverlay({layer: parkingMarker}, 'Cicloparqueaderos', 'Ciclo'); 
+ // controlCapas.addOverlay(parkingMarkerSub, "<img src='./icons/ic_15.png' width='35'> <strong>Cicloparqueaderos</strong>") 
+ //panel.addOverlay({layer: parkingMarker}, 'Cicloparqueaderos', 'Cicloinfraestructura'); 
 });
 
-
-markers.addTo(map);
 
 /////////////////////////////
 //Funcion para no mostrar descripción sin datos como undefined
@@ -377,4 +417,4 @@ function oyente_tooltip(layer){
   layer.on('mouseout', function (e) {
 		this.closeTooltip();
 	});		
-	}
+}

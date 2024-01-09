@@ -16,18 +16,21 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     edgeBufferTiles: 1
 });
 var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012. Datos: Proyecto SIGenBici.'
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012. Datos: Proyecto SIGenBici.',
+  edgeBufferTiles: 1
 });
 var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. Datos: Proyecto SIGenBici.', 
   minZoom: 12, 
   maxZoom: 18, 
-  id: 'Esri.WorldImagery'
+  id: 'Esri.WorldImagery',
+  edgeBufferTiles: 1
 });
 var cyclosm_lite = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm-lite/{z}/{x}/{y}.png', {
   attribution: 'CyclOSM Lite',
   minZoom: 11,
   maxZoom: 19,
+  edgeBufferTiles: 1
 });
 // Inicialización del mapa con OSM como mapa base predeterminado
 var map = L.map('mapid', {layers: [osm]}).setView([6.248038936944781, -75.58], 13);  // Posición del mapa centrado en Medellín y nivel de zoom que abarque zona central.
@@ -55,30 +58,8 @@ var overlayMaps = {"Cicloinfraestructura (CyclOSM Lite)": cyclosm_lite};
 // cambiar a collapsed:false para mostrar el cuadro abierto
 L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomright' }).addTo(map);
 
- 
-// Mostrar la escala del mapa en la parte inferior izquierda
+ // Mostrar la escala del mapa en la parte inferior izquierda
 L.control.scale({position: 'bottomleft'}).addTo(map);
-
-
-L.easyPrint({
-	title: 'Descargar imagen del mapa',
-	position: 'bottomright',
-  sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
-  filename: 'miMapaSIGenBici',
-  exportOnly: true,
-}).addTo(map);
-
-// Add search
-map.setGeocoder('Nominatim', {
-  email: 'contacto@siclas.org', // auth for large number of requests
-    'accept-language': 'es', // render results in Spanish
-    countrycodes: 'co', // limit search results to Colombia
-    extratags: 1, // include additional details
-    viewbox: '-75.72101014269579, 6.4784022617544395, -75.2253318522355, 5.969391404998333',
-    bounded: 1
-});
-map.addControl(L.control.search({ position: 'bottomright' }));
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Agregar marca de agua con el logo en la esquina superior derecha
