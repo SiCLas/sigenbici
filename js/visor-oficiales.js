@@ -253,3 +253,12 @@ map.setGeocoder('Nominatim', {
     bounded: 1
 });
 map.addControl(L.control.search({ position: 'topright' }));
+
+if (L.Browser.mobile) {
+  map.on('movestart', function (e) {
+  controlAdmon.collapse();
+  controlCapas.collapse();
+  controlPuntos.collapse();
+  controlMapas.collapse();
+});
+};

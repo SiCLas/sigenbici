@@ -56,7 +56,7 @@ var overlayMaps = {"Cicloinfraestructura (CyclOSM Lite)": cyclosm_lite};
 
 // Control para cambiar mapa base, cerrado
 // cambiar a collapsed:false para mostrar el cuadro abierto
-L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomright' }).addTo(map);
+var controlMapas = L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomright' }).addTo(map);
 
  // Mostrar la escala del mapa en la parte inferior izquierda
 L.control.scale({position: 'bottomleft'}).addTo(map);
