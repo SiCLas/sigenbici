@@ -191,7 +191,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
     var roboLayer = L.geoJson(false, {
       pointToLayer: function (feature, latlng) {
         var marker = L.marker(latlng, { icon: roboIcon });
-        marker.bindPopup("<h3 class='popupHeader'>Robo</h3><br><strong> Modalidad: </strong>" + feature.properties.tipo);
+        marker.bindPopup("<h3 class='popupHeader'>Robo</h3><br><strong> Modalidad: </strong>" + feature.properties.tipo + "<br>" + info_descrip(feature.properties.descripcion));
         return marker;
       }
     });
@@ -206,7 +206,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
 //Funcion para no mostrar tooltips sin datos
 function info_descrip(descripcion){
   if (descripcion == null){
-    return "Sin datos";
+    return " ";
   }
   else{
     return descripcion;

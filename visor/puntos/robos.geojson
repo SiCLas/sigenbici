@@ -48,6 +48,32 @@
 { "type": "Feature", "properties": { "20201203_4": "Masculino", "lugar": "En Itagüí", "latitude": null, "longitude": null, "fecha": "2020-11-01", "hora": "Medio día (12:00 p. m. - 1:59 p. m.)", "descripcion": "Verbal ", "clase": "Robo", "tipo": null, "marca": "GW", "denuncia": "yes", "comentario": null, "recupera": "no", "Submission Time": "2020-12-09 17:21:49 UTC" }, "geometry": null },
 { "type": "Feature", "properties": { "20201203_4": "Femenino", "lugar": "avenida Nutibara con la 65, en toda la cicloruta", "latitude": null, "longitude": null, "fecha": "2020-12-04", "hora": "Mañana (6:00 a. m. - 11:59 a. m.)", "descripcion": "un hombre de unos 27 años con bicicleta de carbono y uniforme de ciclista, bien vestido me paro durante mi ruta proponiéndome hacer un video para una campaña de movistar , me insistió que debía esperar un regalo que me iban a dar para seguir la pagina donde hacían los videos , según el quería que yo participara, luego de un rato de hablar , llego otro hombre con ojos claros y cabello claro diciendo que era el primo de el , supuestamente vivía cerca del lugar y al otro ordenarle que fuera por mi obsequio se  ausento del sitio con la bicicleta del hombre que me paro, por que así llegaría mas rápido con el tal bug que pensaban darme, después de unos 10 min el hombre empezó a explicarme algo sobre el peso que influía en el equilibrio , me entrego el celular de el  preguntándome si pesaba mas que  mi celular , a lo que yo respondí que pesaba mas el mío, el hombre  me dijo que le sostuviera el celular y que lo guardara en mi bolso canguro , hice lo que me pidió y el tomo mi bicicleta y empezó a mostrarme como mantenía el equilibrio sin usar las manos en el manubrio , me pidió que hiciera lo mismo a lo que yo respondí que no, aun así me monte por ultima vez en mi bici y di una pequeña vuelta , al regresar al sitio donde el  me estaba esperando  me pidió que por favor le dejara usar la bici por ultima vez y que le entregara mi bolso y mi casco para demostrarme que el peso si influía en el equilibrio, realmente no se que me paso ese día, confié que por ser un ciclista mas no haría nada malo , después de entregarle mi bolso, me quito mis gafas y las metió en el bolso, diciéndome que le entregara el casco también a lo que yo me negué .... se monto en mi bici con mi bolso en la mano y cuando tenia una distancia considerable levanto la mano despidiéndose y huyo con todo lo que tenia ....", "clase": "Robo", "tipo": "Ladrón amigo", "marca": "alligator Gw ", "denuncia": "yes", "comentario": null, "recupera": "no", "Submission Time": "2020-12-08 16:10:02 UTC" }, "geometry": null },
 { "type": "Feature", "properties": { "20201203_4": "Femenino", "lugar": "En mi casa ", "latitude": null, "longitude": null, "fecha": "2020-02-28", "hora": "Media noche (12:00  a. m. - 3:59 a. m.)", "descripcion": "Se entraron por el techo y salieron por la puerta, solo sacaron la bici", "clase": "Robo", "tipo": null, "marca": "Gw", "denuncia": "yes", "comentario": null, "recupera": "no", "Submission Time": "2020-12-08 09:54:04 UTC" }, "geometry": null },
-{ "type": "Feature", "properties": { "20201203_4": "Femenino", "lugar": "Ciclovia San Juan con la 70", "latitude": 6.249379, "longitude": -75.588663, "fecha": "2020-12-12", "hora": "Tarde (2:00 p. m. - 6:59 p.m.)", "descripcion": "Tumbado,arma de fuego ", "clase": "Robo", "tipo": "Tumbado, a mano armada", "marca": "Cliff rock sport ", "denuncia": "yes", "comentario": null, "recupera": "no", "Submission Time": "2020-12-12 22:28:50 UTC" }, "geometry": { "type": "Point", "coordinates": [ -75.588663, 6.249379 ] } }
+{ "type": "Feature", "properties": { "20201203_4": "Femenino", "lugar": "Ciclovia San Juan con la 70", "latitude": 6.249379, "longitude": -75.588663, "fecha": "2020-12-12", "hora": "Tarde (2:00 p. m. - 6:59 p.m.)", "descripcion": "Tumbado,arma de fuego ", "clase": "Robo", "tipo": "Tumbado, a mano armada", "marca": "Cliff rock sport ", "denuncia": "yes", "comentario": null, "recupera": "no", "Submission Time": "2020-12-12 22:28:50 UTC" }, "geometry": { "type": "Point", "coordinates": [ -75.588663, 6.249379 ] } },
+{
+    "type": "Feature",
+    "properties": {
+    "20201203_4": "Masculino",
+      "lugar": "Biblioteca Pública Piloto",
+      "latitude": 6.249379,
+      "longitude": -75.588663,
+      "fecha": "2024-01-11",
+      "hora": "Mañana (10:30 a. m. - 12:30 p.m.)",
+      "descripcion": "El cicloparqueadero de la BPP tiene ladrón propio desde hace mucho tiempo pero ni la Biblioteca ni la Policía hacen nada al respecto.",
+      "clase": "Robo",
+      "tipo": "Parqueada",
+      "marca": "",
+      "denuncia": "no",
+      "comentario": null,
+      "recupera": "no",
+      "Submission Time": "2024-01-11 19:28:50 UTC"
+    },
+    "geometry": {
+      "coordinates": [
+        -75.57773810138565,
+        6.25538782862462
+      ],
+      "type": "Point"
+    }
+  }
 ]
 }
