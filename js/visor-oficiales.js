@@ -72,11 +72,17 @@ var biciIcono = L.icon({
   iconSize: [25, 25]
 });
 
+// Definir imagen bici blanca para popup
+var img = L.DomUtil.create('img');
+
+    img.src = './img/bici-blanca.jpg';
+
+    
 // mostrar ciclistas muertos en Medellín en 2015
    var biciLayer1 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -89,7 +95,7 @@ var biciIcono = L.icon({
   var biciLayer2 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -102,7 +108,7 @@ var biciIcono = L.icon({
     var biciLayer3 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -115,7 +121,7 @@ var biciIcono = L.icon({
   var biciLayer4 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -128,7 +134,7 @@ biciLayer4.addData(Biciblancadata);
   var biciLayer5 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -141,7 +147,7 @@ biciLayer5.addData(Biciblancadata);
   var biciLayer6 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Fecha incidente: " + feature.properties.fecha + "<br />Ciclista " + feature.properties.sexo + " de " + feature.properties.edad + " años, colisión con " + feature.properties.colision);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Fecha incidente: " + feature.properties.fecha + "<br />Ciclista " + feature.properties.sexo + " de " + feature.properties.edad + " años.<br />Incidente con " + feature.properties.colision);
       return marker;
     }
   });
@@ -155,7 +161,7 @@ biciLayer6.addData(Biciblancadata);
   var biciLayer7 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -169,7 +175,7 @@ biciLayer7.addData(Biciblancadata);
   var biciLayer8 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -182,7 +188,7 @@ biciLayer7.addData(Biciblancadata);
   var biciLayer9 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
   });
@@ -191,9 +197,31 @@ biciLayer7.addData(Biciblancadata);
 biciLayer9.addData(Biciblancadata);
 });
 
+// mostrar ciclistas muertos en Medellín en 2024
+var biciLayer0 = L.geoJson(false, {
+  pointToLayer: function (feature, latlng) {
+    var marker = L.marker(latlng, { icon: biciIcono });
+    marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+    return marker;
+  }
+});
+$.getJSON("./visor/admon/ciclistas-muertos2024.geojson", function (Biciblancadata) {
+  controlAdmon.addOverlay(biciLayer0, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2024</strong>");
+biciLayer0.addData(Biciblancadata);
+});
+
 var fallecidos = L.layerGroup([biciLayer1, biciLayer2, biciLayer3, biciLayer4, biciLayer5, biciLayer6, biciLayer7, biciLayer8, biciLayer9]);
 controlAdmon.addOverlay(fallecidos, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2015-2023</strong>");
   //////////////////////////////////
+  function genero(sexo){
+    if (sexo == "M"){
+        return "Masculino";
+    }
+    else{
+        return "Femenino";
+    }
+}
+
 
 function recorreRazgos8(feature, layer) {
 	// does this feature have a property named popupContent?
@@ -262,3 +290,16 @@ if (L.Browser.mobile) {
   controlMapas.collapse();
 });
 };
+
+// Agregar marcador al hacer clic en el mapa. Abre popup. Clic en el marcador lo elimina.
+map.on('click', function(e){
+  var marker = new L.marker(e.latlng).addTo(map).on('dblclick', e => e.target.remove());
+  map.addLayer(marker)
+  marker.bindPopup("<b>Hello world!</b><br />I am a popup.",
+  {closeButton: true, closeOnClick: true, removable: true, editable: true}
+  ).openPopup()
+});
+
+document.addEventListener("removeMarker", (e) => {
+  console.log(e);
+});
