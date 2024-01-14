@@ -1,27 +1,39 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Mapa ciclista interactivo v. 0.3
+// Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
-// 14 de noviembre de 2021
-// Última actualización: 14 de julio de 2023
+// Enero de 2024
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Panel datos oficiales
-// Control de las capas
+// Control de las capas 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlAdmon = L.control.layers(null, null, { collapsed: false }, { autoZIndex: true }).addTo(map);
+var controlAdmon = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
 
-var htmlObject4 = controlAdmon.getContainer();
-var d = document.getElementById('control-admon')
-function setParent(el, newParent) {
-  newParent.appendChild(el);
-}
-setParent(htmlObject4, d);
+// Crear modales y traer contenido del html
+// Crear modal Bienvenida
+var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienvenida'), {
+  focus: true
+});
+// EasyButton para abrir modal de bienvenida
+L.easyButton( '<img class="boton" src="./icons/creative-commons.png" style="width:36px; height:36px;">', function(btn, map){
+    ModalBienvenida.toggle();
+  },'Acerca de SIGenBici').setPosition('topright').addTo(map);
 
+// Crear modal ayuda
+  var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
+});
+// EasyButton para abrir modal de ayuda
+L.easyButton( '<img src="./icons/question.png" style="width:36px; height:36px;">', function(btn, map){
+  ModalAyuda.toggle();
+  },'Ayuda').addTo(map);
+  
+ // Control para ubicación usuario
+L.control.locate().addTo(map);
 
-// Definir estilo de línea para las capas y agregar tooltip con info de los objetos
+ // Definir estilo de línea para las capas y agregar tooltip con info de los objetos
 var customLayer8 = L.geoJson(null, {onEachFeature: recorreRazgos9, style: function (feature) {
     return feature.properties, {color: '#BA4A00', dashArray: '1,5', weight: '4', opacity: '0.7' };
   }});
@@ -54,162 +66,162 @@ controlAdmon.addOverlay(runLayer, "<span style='display: inline-block; backgroun
 var runLayer = omnivore.kml("./visor/admon/POT-MDE.kml", null, customLayer8);
 controlAdmon.addOverlay(runLayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: dotted #BA4A00 4px; vertical-align: middle;"></span><strong>&nbspCicloinfraestructura POT 2014-2027 MDE</strong>');
 
+// Definir icono bici blanca
+var biciIcono = L.icon({
+  iconUrl: './icons/ic_12.png',
+  iconSize: [25, 25]
+});
+
+// Definir imagen bici blanca para popup
+var img = L.DomUtil.create('img');
+
+    img.src = './img/bici-blanca.jpg';
+
+    
 // mostrar ciclistas muertos en Medellín en 2015
-$.getJSON("./visor/admon/ciclistas-muertos-2015.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+   var biciLayer1 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2015</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2015.geojson", function (Biciblancadata) {
+    biciLayer1.addData(Biciblancadata);
+ // controlAdmon.addOverlay(biciLayer1, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2015</strong>");
 });
 
 // mostrar ciclistas muertos en Medellín en 2016
-$.getJSON("./visor/admon/ciclistas-muertos-2016.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer2 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2016</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2016.geojson", function (Biciblancadata) {
+    biciLayer2.addData(Biciblancadata);
+//  controlAdmon.addOverlay(biciLayer2, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2016</strong>");
 });
 
 // mostrar ciclistas muertos en Medellín en 2017
-$.getJSON("./visor/admon/ciclistas-muertos-2017.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+    var biciLayer3 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2017</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2017.geojson", function (Biciblancadata) {
+    biciLayer3.addData(Biciblancadata);
+//  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2017</strong>");
 });
 
 // mostrar ciclistas muertos en Medellín en 2018
-$.getJSON("./visor/admon/ciclistas-muertos-2018.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer4 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2018</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2018.geojson", function (Biciblancadata) {
+//  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2018</strong>");
+biciLayer4.addData(Biciblancadata);
 });
 
 // mostrar ciclistas muertos en Medellín en 2019
-$.getJSON("./visor/admon/ciclistas-muertos-2019.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer5 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2019</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2019.geojson", function (Biciblancadata) {
+//  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2019</strong>");
+biciLayer5.addData(Biciblancadata);
 });
 
 // Mostrar ciclistas muertos 2020
-$.getJSON("./visor/admon/fallecidos-2020.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer6 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Fecha incidente: " + feature.properties.fecha + "<br />Ciclista " + feature.properties.sexo + " de " + feature.properties.edad + " años, colisión con " + feature.properties.colision);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Fecha incidente: " + feature.properties.fecha + "<br />Ciclista " + feature.properties.sexo + " de " + feature.properties.edad + " años.<br />Incidente con " + feature.properties.colision);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2020 </strong>");
+  });
+  $.getJSON("./visor/admon/fallecidos-2020.geojson", function (Biciblancadata) {
+//  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2020 </strong>");
+biciLayer6.addData(Biciblancadata);
 });
 
 
 // mostrar ciclistas muertos en Medellín en 2021
-$.getJSON("./visor/admon/ciclistas-muertos-2021.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer7 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2021</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2021.geojson", function (Biciblancadata) {
+//  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2021</strong>");
+biciLayer7.addData(Biciblancadata);
 });
 
 
 // mostrar ciclistas muertos en Medellín en 2022
-$.getJSON("./visor/admon/ciclistas-muertos-2022.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer8 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2022</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2022.geojson", function (Biciblancadata) {
+ // controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2022</strong>");
+ biciLayer8.addData(Biciblancadata);
 });
 
 // mostrar ciclistas muertos en Medellín en 2023
-$.getJSON("./visor/admon/ciclistas-muertos-2023.geojson", function (Biciblancadata) {
-  // Definir icono bici blanca
-  var biciIcono = L.icon({
-    iconUrl: './icons/ic_12.png',
-    iconSize: [25, 25]
-  });
-  var biciLayer = L.geoJson(Biciblancadata, {
+  var biciLayer9 = L.geoJson(false, {
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: biciIcono });
-      marker.bindPopup("Sexo: " + feature.properties.Sexo + "<br />Edad: " + feature.properties.Edad + " años<br /> Colisión con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+      marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
       return marker;
     }
-  })
-  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2023</strong>");
+  });
+  $.getJSON("./visor/admon/ciclistas-muertos-2023.geojson", function (Biciblancadata) {
+//  controlAdmon.addOverlay(biciLayer, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2023</strong>");
+biciLayer9.addData(Biciblancadata);
 });
 
-//////////////////////////////////
+// mostrar ciclistas muertos en Medellín en 2024
+var biciLayer0 = L.geoJson(false, {
+  pointToLayer: function (feature, latlng) {
+    var marker = L.marker(latlng, { icon: biciIcono });
+    marker.bindPopup("<img class='center' src='"+ img.src + "' style='width:90%;'><br>Género: " + (genero(feature.properties.Sexo)) + "<br />Edad: " + feature.properties.Edad + " años<br /> Incidente con " + feature.properties.Interaccion + ".<br>" + feature.properties.Fecha_Ocurrencia);
+    return marker;
+  }
+});
+$.getJSON("./visor/admon/ciclistas-muertos2024.geojson", function (Biciblancadata) {
+  controlAdmon.addOverlay(biciLayer0, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2024</strong>");
+biciLayer0.addData(Biciblancadata);
+});
+
+var fallecidos = L.layerGroup([biciLayer1, biciLayer2, biciLayer3, biciLayer4, biciLayer5, biciLayer6, biciLayer7, biciLayer8, biciLayer9]);
+controlAdmon.addOverlay(fallecidos, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2015-2023</strong>");
+  //////////////////////////////////
+  function genero(sexo){
+    if (sexo == "M"){
+        return "Masculino";
+    }
+    else{
+        return "Femenino";
+    }
+}
+
 
 function recorreRazgos8(feature, layer) {
 	// does this feature have a property named popupContent?
@@ -240,3 +252,54 @@ function recorreRazgos9(feature, layer) {
 	}
 	oyente_popup(layer);
 }
+
+function oyente_popup(layer){
+  map.on('zoomstart', function (e) {
+  this.closePopup();
+});
+layer.on('click', function (e) {
+  this.closePopup();
+});
+layer.on('mouseover', function (e) {
+  this.getPopup().setLatLng(e.latlng).openOn(layer);
+});
+layer.on('mouseout', function (e) {
+  this.closePopup();
+});		
+layer.on('mousemove', function (e) {
+  this.getPopup().setLatLng(e.latlng).openOn(layer);
+});
+}
+
+// Add search
+map.setGeocoder('Nominatim', {
+  email: 'contacto@siclas.org', // auth for large number of requests
+    'accept-language': 'es', // render results in Spanish
+    countrycodes: 'co', // limit search results to Colombia
+    extratags: 1, // include additional details
+    viewbox: '-75.72101014269579, 6.4784022617544395, -75.2253318522355, 5.969391404998333',
+    bounded: 1
+});
+map.addControl(L.control.search({ position: 'topright' }));
+
+if (L.Browser.mobile) {
+  map.on('movestart', function (e) {
+  controlAdmon.collapse();
+  controlCapas.collapse();
+  controlPuntos.collapse();
+  controlMapas.collapse();
+});
+};
+
+// Agregar marcador al hacer clic en el mapa. Abre popup. Clic en el marcador lo elimina.
+map.on('click', function(e){
+  var marker = new L.marker(e.latlng).addTo(map).on('dblclick', e => e.target.remove());
+  map.addLayer(marker)
+  marker.bindPopup("<b>Hello world!</b><br />I am a popup.",
+  {closeButton: true, closeOnClick: true, removable: true, editable: true}
+  ).openPopup()
+});
+
+document.addEventListener("removeMarker", (e) => {
+  console.log(e);
+});

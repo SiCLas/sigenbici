@@ -40,7 +40,7 @@ body > .container-fluid {
         float: right;
 }
 .leaflet-control-layers{
-        width: 100%;
+        width: auto;
 }
 
 .leaflet-touch .leaflet-control-layers{
@@ -89,7 +89,7 @@ body > .container-fluid {
 }
 
 .leaflet-control-layers-expanded {
-        background: var(--eighth-color);
+        background: rgba(69, 69, 69, 0.7);
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
@@ -106,8 +106,8 @@ h3.popupHeader {
         color: var(--second-color) !important;
 }
 
-a {
-        color: var(--second-color) !important;
+#ModalBienvenida a {
+        color: var(--third-color) !important;
 }
 
 #list_tematico {
@@ -205,9 +205,13 @@ a {
         border-right-color: var(--eighth-color);
 }
 
-.modal-content p, h3, h5 {
-        color:black;
+.modal-content p, h3, h5, a {
+        color:var(--third-color);
         padding: 5px;
+}
+
+.modal-content {
+        background-color: var(--eighth-color);
 }
 .modal-content h4 {
         background-color: var(--eighth-color);
@@ -215,7 +219,7 @@ a {
 }
 
 .btn-close {
-        background-color: var(--second-color);
+        background-color: var(--third-color);
 }
 
 input {
@@ -250,3 +254,74 @@ input {
                 border-radius:50%;
                 line-height:30px;
               }
+
+.leaflet-control-layers-toggle {
+              border:  1px solid grey;
+              border-radius: 5px;
+        }
+
+.leaflet-top.leaflet-left .leaflet-control-layers:nth-child(2) .leaflet-control-layers-toggle {  
+                background-image: url('https://www.siclas.org/sigenbici/icons/bicycle-solid.png');        
+                width: 36px;
+                height: 36px;
+        }
+ 
+.leaflet-top.leaflet-left .leaflet-control-layers:nth-child(3) .leaflet-control-layers-toggle {
+                background-image: url('https://www.siclas.org/sigenbici/icons/map-marker-solid.png');
+                width: 36px;
+                height: 36px; /*percepciones*/
+        }
+
+.leaflet-top.leaflet-left .leaflet-control-layers:nth-child(4) .leaflet-control-layers-toggle {
+                background-image: url('https://www.siclas.org/sigenbici/icons/map-solid.png');
+                width: 36px;
+                height: 36px; /*oficiales*/
+        }
+
+.leaflet-bar button { 
+        height: 36px !important; 
+        width: 36px !important; 
+        font-size: 2.6em; 
+        padding: 0;
+ }
+
+ .leaflet-bar button:hover {
+        background-color: var(--seventh-color);
+ }
+
+ .img-boton {
+        margin: 5px 5px; 
+        height: 35px; 
+        width: 35px; 
+        padding: 2px; 
+        background-color: var(--third-color); 
+        border: 1px solid grey; 
+        border-radius: 5px; 
+        float:left;
+        clear: both;
+        position: left;
+ }
+ 
+ .geo-search button {
+        height: 36px; 
+        width: 36px; 
+        border: 1px solid #888;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          padding: 2px 6px;
+          &:hover  {
+          background-color: #ddd;
+          }
+ }
+
+ .geo-search > input {
+        height: 36px; 
+        font-size: medium;
+        transition: width .4s;
+          width: 0;
+          padding: 2px 0;
+          border: solid #888;
+          border-width: 1px 0;
+          outline: 0;
+ }
+ 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="./css/style.css?v=5">
+
+    <title>SIGenBici</title>
+
+    <!-- Favicon -->
+	<link  rel="icon" href="./img/favicon.png" type="image/png" />
+</head>
+<body>
+    <!-- <video src="./img/video_fondo2.mp4" autoplay loop></video> -->
+    <!-- Contenedor para todos los elementos en pantalla -->
+    
+    <div class="d-flex justify-content-between min-vh-100">
+
+        <div id="logo-cc" class="d-flex flex-column justify-content-between">
+
+            <!-- Logo para medianas y grandes pantallas -->
+            <div id="logo1" class="show-me-desktop m-3 align-self-start">
+                <img src="./img/Logo2_b.svg" alt="">
+            </div>
+
+            <!-- Copyright para medianas y grandes pantallas -->
+            <div id="copyright1" class="m-3 show-me-desktop align-items-center">
+                <div class="me-2 cc">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                        <img class="me-2 cc" src="./icons/cc.svg" alt="Icono de copyright">
+                    </a>
+                </div>
+                
+                <div class="d-flex-column justify-content-between">
+                    <div><p class="fw-bold">Proyecto SIGenBici.</p></div>
+                    <div><p>Licencia Creative Commons Reconocimiento, No Comercial, Compartir Igual 4.0 Internacional.<br>
+                    Recibimos comentarios en el correo contacto [@] siclas.org. Foto: Diego Mario Rojas.</p></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="header" class="background-blur d-flex flex-column col-12 col-md-12 col-lg-5 col-xl-4 justify-content-around ">
+
+            <!-- Menu y logo  -->
+            <header class="col-12 px-5">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid p-0 justify-content-lg-end">
+
+
+                        <!-- Logo de la seccion Difuminada -->
+                        <div id="logo2" class="m-3 show-me-mobile">
+                            <img src="./img/Logo2_b.svg" alt="">
+                        </div>
+
+                        <!-- Icono del Menu oculto-->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Items del Menu -->
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav" id="desplegable">
+                                <a class="nav-link nav-link_index text-white" aria-current="page" href="https://semillerogeolab.org/?page_id=106">&nbsp&nbspAcerca de GeoLab</a>
+                                <a class="nav-link nav-link_index text-white" href="https://www.siclas.org/un-poco-de-historia/">&nbsp&nbspAcerca de SiCLas</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Titulo y texto principal -->
+            <div id="main-title" class="mx-5 d-flex flex-column align-items-center align-items-lg-start">
+                <h1 class="col-8">Mapa ciclista de Medellín y el Valle de Aburrá</h1>
+                <p id="p-description">Cartografía colaborativa de cicloinfraestructura para la optimización de rutas y mapas temáticos con herramientas geoespaciales y datos abiertos. Un proyecto de la Corporación Colectivo SiCLas y el Semillero GeoLab (Grupo de Investigación GeoLimna de la Facultad de Ingeniería, Universidad de Antioquia).
+                </p>
+            </div>
+
+            <!-- Botones -->
+            <div  id="buttons" class="d-flex btn-group justify-content-center " role="group" aria-label="Basic example">
+
+                <!-- Boton Mapa -->
+                <div class="icon-btn col-3 m-2 d-flex flex-column-reverse">
+                    <a role="button" href="./mapa.html" class="btn btn-primary col-12">Mapa</a>
+                    <img class="col-6 mx-auto d-block" src="./icons/map.svg" alt="Icono de un mapa">
+                </div>
+
+                <!-- Boton Estadisticas -->
+                <div class="icon-btn col-3 m-2 d-flex flex-column-reverse">
+                    <a role="button" href="./gallery.html" class="btn btn-primary col-12  px-0">Infografía</a>
+                    <img class="col-6 mx-auto d-block" src="./icons/bar-chart.svg" alt="Icono de Estadisticas">
+                </div>
+
+                <!-- Boton Encuesta -->
+                <div class="icon-btn col-3 m-2 d-flex flex-column-reverse">
+                    <a role="button" href="./encuesta.html" class="btn btn-primary col-12">Encuesta</a>
+                    <img class="col-6 mx-auto d-block" src="./icons/contact-form.svg" alt="Icono de Encuesta">
+                </div>
+                
+                
+            </div>
+
+            <!-- Copyrgiht de la seccion difuminada -->
+            <div id="copyright2" class="mx-3 show-me-mobile mt-4">
+                <div class="me-2 cc">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                        <img class="me-2 cc" src="./icons/cc.svg" alt="Icono de copyright">
+                    </a>
+                </div>
+                
+                <div class="d-flex-column justify-content-between">
+                    <div><p class="fw-bold">Proyecto SIGenBici.</p></div>
+                    <div><p>Licencia Creative Commons Reconocimiento, No Comercial, Compartir Igual 4.0 Internacional.<br>
+                    Recibimos comentarios en el correo contacto [@] siclas.org. Foto: Diego Mario Rojas.
+                        </p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript para elementos dinamicos de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
