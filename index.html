@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="./css/Leaflet.RevealOSM.css" />
 	      <link rel="stylesheet" href="./css/MarkerCluster.css" />
         <link rel="stylesheet" href="./css/MarkerCluster.Default.css" />
+        <link rel="stylesheet" href="./css/leaflet.groupedlayercontrol.min.css" />
          <link rel="stylesheet" href="./css/visor.css" />
         <script src="https://kit.fontawesome.com/3b4bdb4cb1.js" crossorigin="anonymous"></script>
     </head>
@@ -69,11 +70,11 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-              <p>Utiliza los botones en el lado izquierdo del mapa para activar los controles de capas.</p> 
+              <p>Utiliza el botón <img class="img-boton" src='./icons/bicycle-solid.png'> en la esquina superior izquierda del mapa para activar los controles de capas.</p> 
               <div style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
-                <img class="img-boton" src='./icons/bicycle-solid.png'><p>&nbsp;<strong>Cicloinfraestructura</strong></p>
-                <img class="img-boton" src="./icons/map-marker-solid.png"><p>&nbsp;<strong>Percepciones ciclistas</strong></p>
-                <img class="img-boton" src='./icons/map-solid.png'><p>&nbsp;<strong>Datos oficiales</strong></p>
+                <li>&nbsp;Cicloinfraestructura</li>
+                <li>&nbsp;Percepciones ciclistas</li>
+                <li>&nbsp;Datos oficiales</li>
               </div>
                 <hr style="width:100%">
                 <h4>Capas de cicloinfraestructura</h4>
@@ -104,6 +105,7 @@
                   <p>Los datos oficiales fueron obtenidos del portal de datos abiertos de Medellín.</p>
                 </div>
             <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalBienvenida">Acerca de SIGenBici</button>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Cicloinfraestructura en Colombia</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
@@ -161,6 +163,7 @@
     <script src="./js/bundle.js"></script>
     <script src="./js/leaflet.edgebuffer.js"></script>
     <script src="./js/leaflet-search.js"></script>
+    <script src="./js/leaflet.groupedlayercontrol.min.js"></script>
        <!--// Scripts para visor de mapas SIGenBici -->
       <script src="./js/visor-general.js"></script>
       <script src="./js/visor-cicloinfra.js"></script>

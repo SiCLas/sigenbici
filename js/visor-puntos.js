@@ -10,7 +10,7 @@
 // Control de los puntos
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlPuntos = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
+//var controlPuntos = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
 
 /////////////// 
 // Marker clusters
@@ -40,7 +40,7 @@ seguroLayer.addData(Segurodata);
 seguroLayer.eachLayer(function(layer) {
 layer.addTo(segurosMarkerSub);
 });
-controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18'> <strong>Percepción de seguridad personal</strong>");
+layerControl.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18'> Percepción de seguridad personal", "Percepciones ciclistas");
 });
   
   // Mostrar lugares agradable
@@ -63,7 +63,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
     AgradableLayer.eachLayer(function(layer) {
     layer.addTo(agradableMarkerSub);
     });
-    controlPuntos.addOverlay(agradableMarkerSub, "<img src='./icons/ic_7.png' width='18'> <strong>Percepción de zona agradable</strong>");
+    layerControl.addOverlay(agradableMarkerSub, "<img src='./icons/ic_7.png' width='18'> Percepción de zona agradable", "Percepciones ciclistas");
     });
   
   // Mostrar percepciones de lugares peligrosos
@@ -86,7 +86,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
   PeligrosoLayer.eachLayer(function(layer) {
   layer.addTo(peligrosoMarkerSub);
 });
-  controlPuntos.addOverlay(peligrosoMarkerSub, "<img src='./icons/ic_2.png' width='18'> <strong>Percepción de zona peligrosa</strong>");
+  layerControl.addOverlay(peligrosoMarkerSub, "<img src='./icons/ic_2.png' width='18'> Percepción de zona peligrosa", "Percepciones ciclistas");
   });
   
   // Mostrar problemas de infraestructura
@@ -109,7 +109,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
       InfraLayer.eachLayer(function(layer) {
         layer.addTo(infraMarkerSub);
       });
-    controlPuntos.addOverlay(infraMarkerSub, "<img src='./icons/ic_6.png' width='18'> <strong>Percepción de problema de infraestructura</strong>");
+    layerControl.addOverlay(infraMarkerSub, "<img src='./icons/ic_6.png' width='18'> Percepción de problema de infraestructura", "Percepciones ciclistas");
   });
   
   // Mostrar mejora entorno con cicloinfraestructura
@@ -132,7 +132,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
       MejoraLayer.eachLayer(function(layer) {
         layer.addTo(mejoraMarkerSub);
       });
-    controlPuntos.addOverlay(mejoraMarkerSub, "<img src='./icons/ic_10.png' width='18'> <strong>Percepción de mejora en el entorno</strong>");
+    layerControl.addOverlay(mejoraMarkerSub, "<img src='./icons/ic_10.png' width='18'> Percepción de mejora en el entorno", "Percepciones ciclistas");
   });
   
   // Mostrar desmejora entorno con cicloinfraestructura
@@ -155,7 +155,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
       DesMejoraLayer.eachLayer(function(layer) {
         layer.addTo(desmejoraMarkerSub);
       });
-      controlPuntos.addOverlay(desmejoraMarkerSub, "<img src='./icons/ic_11.png' width='18'> <strong>Percepción de desmejora en el entorno</strong>");
+      layerControl.addOverlay(desmejoraMarkerSub, "<img src='./icons/ic_11.png' width='18'> Percepción de desmejora en el entorno", "Percepciones ciclistas");
   });
   
 
@@ -179,7 +179,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
   IncidenteLayer.eachLayer(function(layer) {
   layer.addTo(incidenteMarkerSub);
 });
-  controlPuntos.addOverlay(incidenteMarkerSub, "<img src='./icons/ic_8.png' width='18'> <strong>Incidentes ciclistas 2020</strong>");
+  layerControl.addOverlay(incidenteMarkerSub, "<img src='./icons/ic_8.png' width='18'> Incidentes ciclistas 2020", "Percepciones ciclistas");
   });
   
     // Mostrar robos
@@ -200,7 +200,7 @@ controlPuntos.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='1
       roboLayer.eachLayer(function(layer) {
       layer.addTo(roboMarkerSub);
   });
-    controlPuntos.addOverlay(roboMarkerSub, "<img src='./icons/ic_9.png' width='18'> <strong>Robos de bici 2020</strong>");
+    layerControl.addOverlay(roboMarkerSub, "<img src='./icons/ic_9.png' width='18'> Robos de bici 2020", "Percepciones ciclistas");
   });
 
 //Funcion para no mostrar tooltips sin datos

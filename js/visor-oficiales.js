@@ -10,17 +10,17 @@
 // Control de las capas 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var controlAdmon = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
+//var controlAdmon = L.control.layers(null, null, { collapsed: true, position: 'topleft' }, { autoZIndex: true }).addTo(map);
 
 // Crear modales y traer contenido del html
 // Crear modal Bienvenida
-var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienvenida'), {
-  focus: true
-});
+//var ModalBienvenida = new bootstrap.Modal(document.getElementById('ModalBienvenida'), {
+//  focus: true
+//});
 // EasyButton para abrir modal de bienvenida
-L.easyButton( '<img class="boton" src="./icons/creative-commons.png" style="width:36px; height:36px;">', function(btn, map){
-    ModalBienvenida.toggle();
-  },'Acerca de SIGenBici').setPosition('topright').addTo(map);
+//L.easyButton( '<img class="boton" src="./icons/creative-commons.png" style="width:36px; height:36px;">', function(btn, map){
+ //   ModalBienvenida.toggle();
+ // },'Acerca de SIGenBici').setPosition('topright').addTo(map);
 
 // Crear modal ayuda
   var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
@@ -28,7 +28,7 @@ L.easyButton( '<img class="boton" src="./icons/creative-commons.png" style="widt
 // EasyButton para abrir modal de ayuda
 L.easyButton( '<img src="./icons/question.png" style="width:36px; height:36px;">', function(btn, map){
   ModalAyuda.toggle();
-  },'Ayuda').addTo(map);
+  },'Ayuda').setPosition('topright').addTo(map);
   
  // Control para ubicación usuario
 L.control.locate().addTo(map);
@@ -43,7 +43,8 @@ var customLayer9 = L.geoJson(null, {onEachFeature: recorreRazgos8, style: functi
 
 // Capa límites de comunas y corregimientos
 var runLayer = omnivore.kml("./visor/admon/Limite_Comuna_Corregimiento.kml", null, customLayer9);
-controlAdmon.addOverlay(runLayer, "<span style='display: inline-block; background: #229954; opacity: 0.3; height: 1em; width: 2em; border: solid #1BD66A 3px; vertical-align: middle;'></span><strong>&nbspComunas y corregimientos de Medellín</strong>");
+//controlAdmon.addOverlay(runLayer, "<span style='display: inline-block; background: #229954; opacity: 0.3; height: 1em; width: 2em; border: solid #1BD66A 3px; vertical-align: middle;'></span><strong>&nbspComunas y corregimientos de Medellín</strong>");
+layerControl.addOverlay(runLayer, "<span style='display: inline-block; background: #229954; opacity: 0.3; height: 1em; width: 2em; border: solid #1BD66A 3px; vertical-align: middle;'></span>&nbspComunas y corregimientos de Medellín", "Datos oficiales");
 
 // mostrar redes camineras desde geodatos Medellín
 // $.getJSON("https://opendata.arcgis.com/datasets/f327c5df0c8e4f70899773cc8b376c7d_0.geojson",function(Camineradata){
@@ -64,7 +65,7 @@ controlAdmon.addOverlay(runLayer, "<span style='display: inline-block; backgroun
 
 // mostrar cicloinfraestructura de Medellín según el POT 2014-2027
 var runLayer = omnivore.kml("./visor/admon/POT-MDE.kml", null, customLayer8);
-controlAdmon.addOverlay(runLayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: dotted #BA4A00 4px; vertical-align: middle;"></span><strong>&nbspCicloinfraestructura POT 2014-2027 MDE</strong>');
+layerControl.addOverlay(runLayer, '<span style="display: inline-block; height: 0.5em; width: 2em; border-top: dotted #BA4A00 4px; vertical-align: middle;"></span>&nbspCicloinfraestructura POT 2014-2027 MDE', "Datos oficiales");
 
 // Definir icono bici blanca
 var biciIcono = L.icon({
@@ -206,12 +207,12 @@ var biciLayer0 = L.geoJson(false, {
   }
 });
 $.getJSON("./visor/admon/ciclistas-muertos2024.geojson", function (Biciblancadata) {
-  controlAdmon.addOverlay(biciLayer0, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2024</strong>");
+  layerControl.addOverlay(biciLayer0, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'>&nbsp&nbspCiclistas muertos en Medellín 2024", "Datos oficiales");
 biciLayer0.addData(Biciblancadata);
 });
 
 var fallecidos = L.layerGroup([biciLayer1, biciLayer2, biciLayer3, biciLayer4, biciLayer5, biciLayer6, biciLayer7, biciLayer8, biciLayer9]);
-controlAdmon.addOverlay(fallecidos, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'><strong>&nbsp&nbspCiclistas muertos en Medellín 2015-2023</strong>");
+layerControl.addOverlay(fallecidos, "&nbsp&nbsp<img src='./icons/ic_12.png' width='18'>&nbsp&nbspCiclistas muertos en Medellín 2015-2023", "Datos oficiales");
   //////////////////////////////////
   function genero(sexo){
     if (sexo == "M"){
@@ -280,7 +281,7 @@ map.setGeocoder('Nominatim', {
     viewbox: '-75.72101014269579, 6.4784022617544395, -75.2253318522355, 5.969391404998333',
     bounded: 1
 });
-map.addControl(L.control.search({ position: 'topright' }));
+map.addControl(L.control.search({ position: 'bottomright' }));
 
 if (L.Browser.mobile) {
   map.on('movestart', function (e) {
@@ -288,18 +289,6 @@ if (L.Browser.mobile) {
   controlCapas.collapse();
   controlPuntos.collapse();
   controlMapas.collapse();
+  layerControl.collapse();
 });
 };
-
-// Agregar marcador al hacer clic en el mapa. Abre popup. Clic en el marcador lo elimina.
-map.on('click', function(e){
-  var marker = new L.marker(e.latlng).addTo(map).on('dblclick', e => e.target.remove());
-  map.addLayer(marker)
-  marker.bindPopup("<b>Hello world!</b><br />I am a popup.",
-  {closeButton: true, closeOnClick: true, removable: true, editable: true}
-  ).openPopup()
-});
-
-document.addEventListener("removeMarker", (e) => {
-  console.log(e);
-});
