@@ -23,12 +23,12 @@
  // },'Acerca de SIGenBici').setPosition('topright').addTo(map);
 
 // Crear modal ayuda
-  var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
-});
+//  var ModalAyuda = new bootstrap.Modal(document.getElementById('ModalAyuda'), {
+//});
 // EasyButton para abrir modal de ayuda
-L.easyButton( '<img src="./icons/question.png" style="width:36px; height:36px;">', function(btn, map){
-  ModalAyuda.toggle();
-  },'Ayuda').setPosition('topright').addTo(map);
+//L.easyButton( '<img src="./icons/question.png" style="width:36px; height:36px;">', function(btn, map){
+ // ModalAyuda.toggle();
+//  },'Ayuda').setPosition('topright').addTo(map);
   
  // Control para ubicación usuario
 L.control.locate().addTo(map);
@@ -282,13 +282,3 @@ map.setGeocoder('Nominatim', {
     bounded: 1
 });
 map.addControl(L.control.search({ position: 'bottomright' }));
-
-if (L.Browser.mobile) {
-  map.on('movestart', function (e) {
-  controlAdmon.collapse();
-  controlCapas.collapse();
-  controlPuntos.collapse();
-  controlMapas.collapse();
-  layerControl.collapse();
-});
-};

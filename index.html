@@ -21,6 +21,34 @@
         <script src="https://kit.fontawesome.com/3b4bdb4cb1.js" crossorigin="anonymous"></script>
     </head>
 <body style="background-image:none">
+  <!-- Top navigation bar -->
+  <nav class="navbar navbar-default navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">SIGenBici</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="https://www.siclas.org/sigenbici/guia-2023" target="_blank">Guía de mapeo en OSM</a></li>   
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.siclas.org/sigenbici/gallery.html" target="_blank">Infografía encuesta</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ayuda
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalAyuda">¿Cómo usar el mapa?</li>
+              <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal">Cicloinfraestructura en Colombia</li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalBienvenida">Acerca de SIGenBici</li>
+            </ul>
+          </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
         <!-- Begin page content -->
         <div id="container" class="container-fluid">
             
@@ -106,8 +134,6 @@
                   <p>Los datos oficiales fueron obtenidos del portal de datos abiertos de Medellín.</p>
                 </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalBienvenida">Acerca de SIGenBici</button>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Cicloinfraestructura en Colombia</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
           </div>

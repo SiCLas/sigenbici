@@ -4,12 +4,12 @@
 html, body, #container {
         height: 100%;
         width: 100%;
-        overflow: auto;
+        overflow: hidden;
 }
 
 
 body > .container-fluid {
-        padding: 0 0 0 0;
+        padding: 55px 0 0 0;
 }
  
 .navbar-toggler-icon {
@@ -19,7 +19,7 @@ body > .container-fluid {
 #mapid {
         display: block;
         width: auto;
-        height: 100vh;
+        height: 100%;
 }
 .sidebar{
         position: relative;
@@ -82,10 +82,9 @@ body > .container-fluid {
         background-color: var(--sixth-color);
 }
 
-.navbar-default {
-        background-color: var(--fifth-color);
-        border-color: var(--fifth-color);
+.fixed-top {
         color: var(--third-color);
+        height: 55px;
 }
 
 .leaflet-control-layers-expanded {
@@ -118,7 +117,7 @@ h3.popupHeader {
         .sidebar.leaflet-touch {
                 border: 2px solid rgba(0,0,0,.2);
                 border-right-width: 0px;
-        } 
+        }    
 }
 
 .navbar-default .navbar-nav > li> a, 
@@ -136,18 +135,15 @@ h3.popupHeader {
 
 @media (max-width: 992px) {
         body > .container-fluid {
-                padding: 0 0 0 0;
+                padding: 55px 0 0 0;
         }
         .nav-link:hover{
-                padding-left: 2em;
                 background-color: var(--second-color);
-                margin-left: -28px;
-                margin-right: -48px;
-                transition: .5s;
         }
 
         .nav-link {
                 padding: 8px 8px;
+                background-color: var(--eighth-color);
         }
         .nav-active {
                 background-color: var(--sixth-color);
@@ -336,3 +332,6 @@ input {
           outline: 0;
  }
  
+ .leaflet-control-layers-list leaflet-control-layers-scrollbar {
+        background-color: var(--third-color);
+ }
