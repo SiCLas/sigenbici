@@ -56,32 +56,7 @@ var overlayMaps = {"Cicloinfraestructura (CyclOSM Lite)": cyclosm_lite};
 
 // Control para cambiar mapa base, cerrado
 // cambiar a collapsed:false para mostrar el cuadro abierto
-var controlMapas = L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomright' }).addTo(map);
+//var controlMapas = L.control.layers(baseLayers, overlayMaps, { collapsed: true, position: 'bottomright' }).addTo(map);
 
  // Mostrar la escala del mapa en la parte inferior izquierda
 L.control.scale({position: 'bottomleft'}).addTo(map);
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Agregar marca de agua con el logo en la esquina superior derecha
-///////////////////////////////////////////////////////////////////////////////////////////////////
-
-L.Control.Watermark = L.Control.extend({
-  onAdd: function (map) {
-    var img = L.DomUtil.create('img');
-
-    img.src = './img/logo.png';
-    img.style.width = '75px';
-
-    return img;
-  },
-
-  onRemove: function (map) {
-    // Nothing to do here
-  }
-});
-
-L.control.watermark = function (opts) {
-  return new L.Control.Watermark(opts);
-};
-
-L.control.watermark({ position: 'topright' }).addTo(map);

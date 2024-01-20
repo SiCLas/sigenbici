@@ -21,24 +21,6 @@ body > .container-fluid {
         width: auto;
         height: 100%;
 }
-.sidebar{
-        position: relative;
-        height: 100%;
-        left:0;
-        top:0;
-        border-bottom-width: 0 !important;
-        border-top-width: 0 !important;
-        border-left-width: 0 !important;
-}
-
-.sidebar-left{
-        float: left;
-        border-right-width: 0px;
-}
-
-.sidebar-right{
-        float: right;
-}
 .leaflet-control-layers{
         width: auto;
 }
@@ -53,9 +35,6 @@ body > .container-fluid {
 	margin-right: auto;
 	width: 50%;
 }
-.sidebar-text {
-	line-height: 1.5;;
-}
 
 .leaflet-tooltip{
         width: 200px;
@@ -68,18 +47,6 @@ body > .container-fluid {
         height: 50px;
         margin-top: -15px;
         width: 50px;
-}
-
-.sidebar-header {
-        background-color: var(--second-color); 
-}
-
-.sidebar-content {
-        background-color: var(--eighth-color);
-}
-
-.sidebar-tabs {
-        background-color: var(--sixth-color);
 }
 
 .fixed-top {
@@ -100,10 +67,6 @@ h3.popupHeader {
         background-color: var(--second-color);
         color: var(--third-color);
 }
-#capas > p > a, 
-#puntos > p > a {
-        color: var(--second-color) !important;
-}
 
 #ModalBienvenida a {
         color: var(--third-color) !important;
@@ -111,13 +74,6 @@ h3.popupHeader {
 
 #list_tematico {
         text-align: left !important;
-}
-
-@media (min-width: 0px) {
-        .sidebar.leaflet-touch {
-                border: 2px solid rgba(0,0,0,.2);
-                border-right-width: 0px;
-        }    
 }
 
 .navbar-default .navbar-nav > li> a, 
@@ -130,7 +86,7 @@ h3.popupHeader {
         background-color: #e7e7e7;
 }
 .nav-link {
-        padding: 16px 8px;
+        padding: 8px 8px;
 }
 
 @media (max-width: 992px) {
@@ -159,16 +115,6 @@ h3.popupHeader {
 }
 .fa-map-pin:before {
         color: black;
-}
-
-.sidebar-tabs>li.active, 
-.sidebar-tabs>ul>li.active {
-        background-color: var(--second-color);
-}
-
-.sidebar-tabs>li:hover, 
-.sidebar-tabs>ul>li:hover {
-        background-color: var(--fifth-color);
 }
 
 .leaflet-tooltip {

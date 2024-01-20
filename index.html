@@ -22,26 +22,44 @@
     </head>
 <body style="background-image:none">
   <!-- Top navigation bar -->
-  <nav class="navbar navbar-default navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-default navbar-expand-lg navbar-dark fixed-top" style="background-color: var(--eighth-color);">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">SIGenBici</span>
+      <a class="navbar-brand p-0" href="./index.html">
+        <img class="img-fluid" src="./img/logo.png" title="Inicio" alt="Logo SIGenBici" width="45px">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item"><a class="nav-link" href="https://www.siclas.org/sigenbici/guia-2023" target="_blank">Guía de mapeo en OSM</a></li>   
+          <li class="nav-item ">
+            <a class="nav-link nav-active nav-link-active text-dark ps-5 px-lg-3" aria-current="page" href="./index.html">Mapa</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.siclas.org/sigenbici/gallery.html" target="_blank">Infografía encuesta</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ayuda
+                Agregar datos
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu mt-0 border-0" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./rutas.html">Agregar rutas frecuentes</a></li>
+              <li><a class="dropdown-item" href="./lugares.html">Agregar puntos de percepción</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://www.openstreetmap.org/">Mapear en OSM</a></li>
+          </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Recursos
+            </a>
+            <ul class="dropdown-menu mt-0 border-0" aria-labelledby="navbarDropdown">
               <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalAyuda">¿Cómo usar el mapa?</li>
               <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal">Cicloinfraestructura en Colombia</li>
               <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://www.siclas.org/archivo/sigenbici/" target="_blank">Blog</a></li>
+              <li><a class="dropdown-item" href="https://www.siclas.org/wp-content/uploads/2020/02/SIGenBici_guia_OSM.pdf" target="_blank">Guía de mapeo 2020</a></li>
+              <li><a class="dropdown-item" href="https://www.siclas.org/sigenbici/guia-2023" target="_blank">Guía de mapeo 2023</a></li>
               <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalBienvenida">Acerca de SIGenBici</li>
             </ul>
           </li>
@@ -49,15 +67,14 @@
         </div>
     </div>
   </nav>
-        <!-- Begin page content -->
+  
+     <!-- Begin page content -->
         <div id="container" class="container-fluid">
             
         <!-- Mapa -->
         <div id="mapid">
-         
         </div>
         
-
         <!-- Modal Bienvenida-->
   <div class="modal fade" id="ModalBienvenida" tabindex="-1" aria-labelledby="Acerca de SIGenBici" aria-hidden="true">
     <div class="modal-dialog">
@@ -199,7 +216,7 @@
     <script type="text/javascript">
       $(document).ready(function()
       {
-      $('#ModalBienvenida').modal('show');
+     // $('#ModalBienvenida').modal('show');
       });
     </script>
 </body>
