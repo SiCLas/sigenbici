@@ -30,7 +30,7 @@ var seguroLayer = L.geoJson(false, {
   pointToLayer: function (feature, latlng) {
     var marker = L.marker(latlng, { icon: SeguroIcon });
     marker.bindPopup("<h3 class='popupHeader'>Percepción de seguridad personal</h3>" + info_descrip(feature.properties.descripcio)
-          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +"<br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
           +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
         return marker;
   }
@@ -53,7 +53,7 @@ layerControl.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18
       pointToLayer: function (feature, latlng) {
         var marker = L.marker(latlng, { icon: AgradableIcon });
         marker.bindPopup("<h3 class='popupHeader'>Percepción de zona agradable</h3>" + info_descrip(feature.properties.Descripcio)
-          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +"<br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
           +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
         return marker;
       }
@@ -76,7 +76,7 @@ layerControl.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18
     pointToLayer: function (feature, latlng) {
       var marker = L.marker(latlng, { icon: PeligrosoIcon });
       marker.bindPopup("<h3 class='popupHeader'>Percepción de zona peligrosa</h3>" + info_descrip(feature.properties.descripcio)
-          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +"<br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
           +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
         return marker;
     }
@@ -99,7 +99,7 @@ layerControl.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18
       pointToLayer: function (feature, latlng) {
         var marker = L.marker(latlng, { icon: InfraIcon });
         marker.bindPopup("<h3 class='popupHeader'>Problema de infraestructura</h3>" + info_descrip(feature.properties.descripcio)
-          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +"<br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
           +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
         return marker;
       }
@@ -122,7 +122,7 @@ layerControl.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18
       pointToLayer: function (feature, latlng) {
         var marker = L.marker(latlng, { icon: MejoraIcon });
         marker.bindPopup("<h3 class='popupHeader'>Percepción de mejora en el entorno</h3>" + info_descrip(feature.properties.descripcio)
-          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +"<br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
           +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
         return marker;
       }
@@ -145,7 +145,7 @@ layerControl.addOverlay(segurosMarkerSub, "<img src='./icons/ic_1.png' width='18
       pointToLayer: function (feature, latlng) {
         var marker = L.marker(latlng, { icon: DesMejoraIcon });
         marker.bindPopup("<h3 class='popupHeader'>Percepción de desmejora en el entorno</h3>" + info_descrip(feature.properties.descripcio)
-          +".<br><br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
+          +"<br><strong>Género: </strong>"+ info_genero(feature.properties.genero)
           +".<br><strong>Nivel de experiencia: </strong>"+ info_exper(feature.properties.experienci));
         return marker;
       }
@@ -209,7 +209,7 @@ function info_descrip(descripcion){
     return " ";
   }
   else{
-    return descripcion;
+    return descripcion + "<br>";
   }
 }
 

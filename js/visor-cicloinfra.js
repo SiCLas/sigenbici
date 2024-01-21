@@ -207,13 +207,13 @@ function tipo_encicla(tipo){
     }
 }
 
-//Función para mostrar incrustado de Mapillary en ventana emergente cuando hay imagen asociada; no mostrar si no hay foto
+//Función para mostrar incrustado de Mapillary en popup cuando hay imagen asociada; no mostrar si no hay foto
 function foto_mapi(mapi){
  if (mapi == null){
     return "";
  } 
  else{
-    return "<br><iframe src='https://www.mapillary.com/embed?image_key=" + mapi + "&style=photo' height='300px' width='300px' frameborder='0'></iframe>";
+    return "<br><iframe src='https://www.mapillary.com/embed?image_key=" + mapi + "&style=photo' height='300' width='300' frameborder='0'></iframe>";
  }
 }
 
