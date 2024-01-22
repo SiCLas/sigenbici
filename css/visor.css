@@ -284,3 +284,16 @@ input {
  .leaflet-control-layers-list leaflet-control-layers-scrollbar {
         background-color: var(--third-color);
  }
+
+ #mly { 
+        width: 100%; 
+        height: 350px;
+        margin: auto;
+    }
+
+.mapillary {
+        background-color: var(--first-color);
+        &:hover  {
+                background-color: var(--second-color);
+                }
+}

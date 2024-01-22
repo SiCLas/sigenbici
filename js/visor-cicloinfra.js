@@ -213,8 +213,15 @@ function foto_mapi(mapi){
     return "";
  } 
  else{
-    return "<br><iframe src='https://www.mapillary.com/embed?image_key=" + mapi + "&style=photo' height='300' width='300' frameborder='0'></iframe>";
+    return "<br><button class='mapillary' title='Ver fotos en Mapillary' onclick='showOff(" + mapi + ")'><span class='fa fa-street-view'></span> Ver fotos</button>";
  }
+}
+
+function showOff(mapi) {
+  $('#OffcanvasMapillary').offcanvas('show');
+  mly.moveTo(mapi);
+  document.getElementById("mly").scrollIntoView();
+  map.closePopup();
 }
 
 function recorreRazgos2(feature, layer) {
