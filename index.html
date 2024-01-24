@@ -10,15 +10,15 @@
         <meta name="description" content="Mapas temáticos para ciclistas urbanos en Medellín y el Valle de Aburrá">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="./css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <link rel="stylesheet" href="./css/leaflet.css" />
         <link rel="stylesheet" href="./css/L.Control.Locate.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" />
         <link rel="stylesheet" href="./css/Leaflet.RevealOSM.css" />
 	      <link rel="stylesheet" href="./css/MarkerCluster.css" />
         <link rel="stylesheet" href="./css/MarkerCluster.Default.css" />
         <link rel="stylesheet" href="./css/leaflet.groupedlayercontrol.min.css" />
-        <link rel="stylesheet" href="https://unpkg.com/mapillary-js@4.1.1/dist/mapillary.css"/>
-        <script src="https://unpkg.com/mapillary-js@4.1.1/dist/mapillary.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/mapillary-js@4.1.2/dist/mapillary.css"/>
+        <script src="https://unpkg.com/mapillary-js@4.1.2/dist/mapillary.js"></script>
          <link rel="stylesheet" href="./css/visor.css" />
         <script src="https://kit.fontawesome.com/3b4bdb4cb1.js" crossorigin="anonymous"></script>
          </head>
@@ -37,9 +37,6 @@
           <li class="nav-item ">
             <a class="nav-link nav-active nav-link-active text-dark ps-5 px-lg-3" aria-current="page" href="./index.html">Mapa</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="offcanvas" href="#OffcanvasMapillary" role="button" aria-controls="#OffcanvasMapillary"><span class="fa fa-street-view"></span> Fotos</a>
-          </li> 
           <li class="nav-item">
             <a class="nav-link" href="https://www.siclas.org/sigenbici/gallery.html" target="_blank"><span class="fa fa-bar-chart"></span>&nbsp;Infografía encuesta</a>
           </li>
@@ -73,11 +70,15 @@
     </div>
   </nav>
   
-     <!-- Begin page content -->
+       <!-- Begin page content -->
         <div id="container" class="container-fluid">
-            
+
         <!-- Mapa -->
         <div id="mapid">
+          <!-- Leyenda y control de capas -->
+          <div id="control-capas" class="leaflet-control-layers leaflet-left" title="Marca las casillas para activar las capas correspondientes en el mapa">
+
+          </div>
         </div>
         
         <!-- Modal Bienvenida-->
@@ -91,8 +92,7 @@
         </div>
         <div class="modal-body">
           <p>Te damos la bienvenida al mapa ciclista SIGenBici, un proyecto de cartografía colaborativa de Medellín y el Valle de Aburrá con herramientas geoespaciales libres y datos abiertos.</p>
-                    <img src='./icons/bicycle-solid.png' style="margin: 10px 5px; height: 35px; width: 35px; padding: 2px; background-color: var(--third-color); border: 1px solid grey; border-radius: 5px; float:left;">
-                    <p>El botón en la esquina superior izquierda del mapa permite acceder a los controles para activar o desactivar las capas de interés:</p>
+                    <p>Al lado izquierdo del mapa se encuentran los controles para activar o desactivar las capas de interés:</p>
                     <p>&nbsp;<strong>Cicloinfraestructura</strong> (ciclorrutas, ciclobandas, carriles compartidos, cicloparqueaderos, etc.).</p>
               <p>&nbsp;<strong>Percepciones ciclistas</strong> (zonas agradables, seguras o peligrosas, problemas de infraestructura y otras).</p>
               <p>&nbsp;<strong>Datos oficiales</strong> (cicloinfraestructura según el POT 2014-2027 MDE, muertes de ciclistas en Medellín).</p>
@@ -121,7 +121,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-              <p>Utiliza el botón <img class="img-boton" src='./icons/bicycle-solid.png'> en la esquina superior izquierda del mapa para activar los controles de capas.</p> 
+              <p><img class="img-boton" src='./icons/bicycle-solid.png'> Al lado izquierdo del mapa están los controles para activar/desactivar las capas.</p> 
               <div style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
                 <li>&nbsp;Cicloinfraestructura</li>
                 <li>&nbsp;Percepciones ciclistas</li>
@@ -202,7 +202,7 @@
   <!-- offcanvas Mapillary -->
   <div class="offcanvas offcanvas-end" data-bs-theme="dark" data-bs-backdrop="false" tabindex="-1" id="OffcanvasMapillary" aria-labelledby="Label">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="Label">Fotos a nivel de calle</h5>
+      <h5 class="offcanvas-title" id="Label"><span class='fa fa-street-view'></span> Fotos a nivel de calle</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -210,25 +210,20 @@
         <div id="mly"></div>
         <p><span id="ubica"></span></p>
         <hr>
-        <p>Selecciona una intersección o glorieta de la lista desplegable para ver fotos a nivel de calle.</p>
-        <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          Ver fotos
-        </button>
-        <ul class="dropdown-menu">
-          <li><button class="dropdown-item" type="button" onclick="showPic(733739317938665)">San Juan con la 65</button></li>
-          <li><button class="dropdown-item" type="button" onclick="showPic(3028639470778101)">Otro punto</button></li>
-          <li><button class="dropdown-item" type="button" onclick="showPic(483917120612816)">Something else here</button></li>
-        </ul>
-      </div>
+        <p>Aquí puedes ver fotos a nivel de calle de las principales vías ciclistas de la ciudad. Si quieres contribuir al mapa, te invitamos a tomar fotos de tus recorridos frecuentes con la app de Mapillary.</p>
+        <p><span class="fa fa-graduation-cap"></span>&nbsp;<a href="https://youtu.be/HIUS-cJPhP0?si=_UiWekDm0hXsYmTy" target="_blank" title="Enlace a videotutorial Mapillary">Videotutorial Mapillary</a></p>
+        <p><span class="fa fa-graduation-cap"></span>&nbsp;<a href="https://www.siclas.org/taller-mapillary/" target="_blank" title="Taller Mapillary (blog)">Taller Mapillary (blog)</a></p>
       </div>
     </div>
   </div>
 
   <!-- Include scripts -->
+  <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+   <!-- Bootstrap -->
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!-- Leaflet & leaflet plugins-->
+    <script src="./js/leaflet.js"></script>
     <script src="./js/L.Control.Locate.min.js" charset="utf-8"></script>
     <!-- Include script leaflet-omnivore que permite mostrar archivos GPX (u otros) -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
@@ -245,40 +240,39 @@
       <script src="./js/visor-cicloinfra.js"></script>
       <script src="./js/visor-puntos.js"></script>
       <script src="./js/visor-oficiales.js"></script>
+      <!--// Script para abrir modal Bienvenida al cargar la página -->
     <script type="text/javascript">
       $(document).ready(function()
       {
     //  $('#ModalBienvenida').modal('show');
       });
     </script>
-<script type="text/javascript">
-// Script para visor de Mapillary
-var {Viewer} = mapillary;
-
-var mly = new Viewer({
+    <!-- Script para visor de Mapillary -->
+    <script type="text/javascript">
+    var {Viewer} = mapillary;
+    var mly = new Viewer({
     // Replace this with your own client ID from mapillary.com
     accessToken: 'MLY|client|clientID',
     component: {
         cover: false,
-        popup: true,
+        direction: true,
+        sequence: true,
+        zoom: true,
+        combinedPanning: true,
     },
-    container: 'mly',
-    imageId: '500012405613295',
-});
-mly.on(Viewer.nodechanged, onNodeChanged);
+    container: 'mly'
+  //   imageId: '',  initial ID is not known at implementation time. The viewer will show a black background until a move to an ID succeeds.
+    });
 
 // Viewer size is dynamic so resize should be called every time the window size changes
 window.addEventListener("resize", function() { mly.resize(); });
 
-function showPic(pKey) {
-mly.moveTo(pKey);
-document.getElementById("mly").scrollIntoView(); 
-if (pKey == 733739317938665) {
-  document.getElementById("ubica").innerHTML = 'San Juan con la 65';
-} else {
-  document.getElementById("ubica").innerHTML = '';
-}
-}
+// Función para mostrar las fotos asociadas a las ubicaciones de la lista desplegable
+  function showPic(pKey, nombre) {
+  mly.moveTo(pKey);
+  document.getElementById("mly").scrollIntoView(); 
+  document.getElementById("ubica").innerHTML = nombre;
+  }
 </script>
 </body>
 </html>

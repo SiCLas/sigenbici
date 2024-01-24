@@ -19,7 +19,14 @@ var groupedOverlays = {
   "Percepciones ciclistas": {},
   "Datos oficiales": {}
 };
-var layerControl = L.control.groupedLayers(null, groupedOverlays, {collapsed: true, position: 'topleft'}, { autoZIndex: true }).addTo(map);
+var layerControl = L.control.groupedLayers(null, groupedOverlays, {collapsed: true, position: 'topleft', sortLayers: false}, { autoZIndex: true }).addTo(map);
+
+var htmlObject = layerControl.getContainer();
+var a = document.getElementById('control-capas')
+function setParent(el, newParent) {
+  newParent.appendChild(el);
+}
+setParent(htmlObject, a);
 
 // Mostrar ciclorrutas
 $.getJSON("./visor/capas/ciclorruta-anden.geojson", function (DSCdata) {
@@ -114,7 +121,7 @@ var enciclaMarker = L.geoJson(false, {
       icon: enciclaIcon
     });
     //popup
-    marker.bindPopup("<h3 class='popupHeader'>" + feature.properties.name + "</h3><strong>" + (tipo_encicla(feature.properties.bicycle_rental)) + "</strong><br>" + (info_descrip(feature.properties.description)) + (foto_mapi(feature.properties.mapillary)));
+    marker.bindPopup("<h3 class='popupHeader'>" + feature.properties.name + "</h3><strong>" + (tipo_encicla(feature.properties.bicycle_rental)) + "</strong><br>" + (info_descrip(feature.properties.description)) + (foto_mapi(feature.properties.mapillary, feature.properties.name)));
       return marker;
   }
 });
@@ -183,6 +190,32 @@ $.getJSON("./visor/puntos/parqueaderos.json", function(BicycleParkingdata) {
  //panel.addOverlay({layer: parkingMarker}, 'Cicloparqueaderos', 'Ciclo'); 
 });
 
+// mostrar capa fotos mapi}
+$.getJSON("./visor/capas/fotos-mapi.geojson", function (fotosmapidata) {
+  var streetViewIcon = L.icon({
+    iconUrl: './icons/street-view-solid.png',
+    iconSize: [35, 35]
+  });
+  var fotosmapiMarker = L.geoJson(fotosmapidata, {
+    pointToLayer: function (feature, latlng) {
+      var marker = L.marker(latlng, {
+        icon: streetViewIcon
+      });
+      marker.bindTooltip("Haz clic en el icono para ver fotos.")
+      //.addTo(map)
+      .on('click', function() {
+        $('#OffcanvasMapillary').offcanvas('show');
+        mly.moveTo(feature.properties.mapillary);
+        document.getElementById("mly").scrollIntoView();
+        document.getElementById("ubica").innerHTML = feature.properties.name;
+      });
+      return marker;
+    }
+  });
+  layerControl.addOverlay(fotosmapiMarker, "&nbsp&nbsp<span class='fa fa-street-view'></span>&nbsp&nbspFotos a nivel de calle", "Cicloinfraestructura");
+  fotosmapiMarker.addData(fotosmapidata);
+});
+
 
 markers.addTo(map);
 
@@ -209,20 +242,27 @@ function tipo_encicla(tipo){
 
 //Función para mostrar incrustado de Mapillary en popup cuando hay imagen asociada; no mostrar si no hay foto
 function foto_mapi(mapi){
- if (mapi == null){
+  if (mapi == null){
     return "";
  } 
  else{
-    return "<br><button class='mapillary' title='Ver fotos en Mapillary' onclick='showOff(" + mapi + ")'><span class='fa fa-street-view'></span> Ver fotos</button>";
- }
+  return ("<br><button class='mapillary' title='Ver fotos en Mapillary' onclick='showOff(" + mapi + ")'><span class='fa fa-street-view'></span> Ver fotos</button>");
+ };
 }
 
-function showOff(mapi) {
+function showOff(mapi, nombre) {
   $('#OffcanvasMapillary').offcanvas('show');
   mly.moveTo(mapi);
   document.getElementById("mly").scrollIntoView();
-  map.closePopup();
+  document.getElementById("ubica").innerHTML = "";
 }
+
+const OffcanvasMapillary = document.getElementById('OffcanvasMapillary')
+OffcanvasMapillary.addEventListener('hidden.bs.offcanvas', event => {
+  map.closePopup();
+  document.getElementById("ubica").innerHTML = "";
+})
+
 
 function recorreRazgos2(feature, layer) {
 	// does this feature have a property named popupContent?
@@ -392,4 +432,6 @@ function oyente_tooltip(layer){
   layer.on('mouseout', function (e) {
 		this.closeTooltip();
 	});		
-	}
+	};
+
+  

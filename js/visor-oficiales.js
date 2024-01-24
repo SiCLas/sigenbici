@@ -259,17 +259,17 @@ function oyente_popup(layer){
   this.closePopup();
 });
 layer.on('click', function (e) {
-  this.closePopup();
-});
-layer.on('mouseover', function (e) {
   this.getPopup().setLatLng(e.latlng).openOn(layer);
 });
+//layer.on('mouseover', function (e) {
+ // this.getPopup().setLatLng(e.latlng).openOn(layer);
+//});
 layer.on('mouseout', function (e) {
   this.closePopup();
 });		
-layer.on('mousemove', function (e) {
-  this.getPopup().setLatLng(e.latlng).openOn(layer);
-});
+//layer.on('mousemove', function (e) {
+ // this.getPopup().setLatLng(e.latlng).openOn(layer);
+//});
 }
 
 // Add search
