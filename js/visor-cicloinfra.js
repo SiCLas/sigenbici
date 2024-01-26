@@ -19,7 +19,13 @@ var groupedOverlays = {
   "Percepciones ciclistas": {},
   "Datos oficiales": {}
 };
-var layerControl = L.control.groupedLayers(null, groupedOverlays, {collapsed: true, position: 'topleft', sortLayers: false}, { autoZIndex: true }).addTo(map);
+
+if (L.Browser.mobile){
+  var depende = true;
+} else {
+  var depende = false;
+}
+var layerControl = L.control.groupedLayers(null, groupedOverlays, {collapsed: depende, position: 'topleft', sortLayers: false}, { autoZIndex: true }).addTo(map);
 
 var htmlObject = layerControl.getContainer();
 var a = document.getElementById('control-capas')
@@ -27,6 +33,7 @@ function setParent(el, newParent) {
   newParent.appendChild(el);
 }
 setParent(htmlObject, a);
+L.DomEvent.disableClickPropagation(a)
 
 // Mostrar ciclorrutas
 $.getJSON("./visor/capas/ciclorruta-anden.geojson", function (DSCdata) {
@@ -201,9 +208,7 @@ $.getJSON("./visor/capas/fotos-mapi.geojson", function (fotosmapidata) {
       var marker = L.marker(latlng, {
         icon: streetViewIcon
       });
-      marker.bindTooltip("Haz clic en el icono para ver fotos.")
-      //.addTo(map)
-      .on('click', function() {
+      marker.on('click', function() {
         $('#OffcanvasMapillary').offcanvas('show');
         mly.moveTo(feature.properties.mapillary);
         document.getElementById("mly").scrollIntoView();
@@ -215,7 +220,6 @@ $.getJSON("./visor/capas/fotos-mapi.geojson", function (fotosmapidata) {
   layerControl.addOverlay(fotosmapiMarker, "&nbsp&nbsp<span class='fa fa-street-view'></span>&nbsp&nbspFotos a nivel de calle", "Cicloinfraestructura");
   fotosmapiMarker.addData(fotosmapidata);
 });
-
 
 markers.addTo(map);
 
@@ -239,29 +243,6 @@ function tipo_encicla(tipo){
         return "Automática";
     }
 }
-
-//Función para mostrar incrustado de Mapillary en popup cuando hay imagen asociada; no mostrar si no hay foto
-function foto_mapi(mapi){
-  if (mapi == null){
-    return "";
- } 
- else{
-  return ("<br><button class='mapillary' title='Ver fotos en Mapillary' onclick='showOff(" + mapi + ")'><span class='fa fa-street-view'></span> Ver fotos</button>");
- };
-}
-
-function showOff(mapi, nombre) {
-  $('#OffcanvasMapillary').offcanvas('show');
-  mly.moveTo(mapi);
-  document.getElementById("mly").scrollIntoView();
-  document.getElementById("ubica").innerHTML = "";
-}
-
-const OffcanvasMapillary = document.getElementById('OffcanvasMapillary')
-OffcanvasMapillary.addEventListener('hidden.bs.offcanvas', event => {
-  map.closePopup();
-  document.getElementById("ubica").innerHTML = "";
-})
 
 
 function recorreRazgos2(feature, layer) {
@@ -434,4 +415,84 @@ function oyente_tooltip(layer){
 	});		
 	};
 
-  
+  //Mapillary
+var {Viewer} = mapillary;
+var mly = new Viewer({
+// Replace this with your own client ID from mapillary.com
+accessToken: 'MLY|5554608214599642|0f4eab6039ca4f8060d9ed37b01c354c',
+component: {
+    cover: false,
+    direction: true,
+    sequence: true,
+    zoom: true,
+    combinedPanning: true,
+},
+container: 'mly'
+//   imageId: '',  initial ID is not known at implementation time. The viewer will show a black background until a move to an ID succeeds.
+});
+
+// Viewer size is dynamic so resize should be called every time the window size changes
+window.addEventListener("resize", function() { mly.resize(); });
+
+
+// Filtrar fotos para mostrar solo a partir de 2020
+mly.setFilter(['>', 'capturedAt', new Date(2020, 1, 1).getTime()]);
+
+
+// Crear círculo verde para el marcador
+var div_circle = L.divIcon({ className: 'circle'})
+// Create an empty group to add markers to later on
+let mapiGroup  = L.featureGroup().addTo(map)
+
+// Crear punto en el mapa sincronizado con el visor MLY
+const posi = async () => {
+var position = await mly.getPosition();
+var pos = [position.lat, position.lng]; 
+console.log(`'posición': ${pos}`);
+map.closePopup();
+var positionMarker = L.marker(pos, {
+  icon: div_circle
+}).bindTooltip("<span style='color:#04cb62;font-size: 2.5em;' class='fa fa-street-view'></span>", 
+{
+    direction: 'top'
+}
+)
+.addTo(mapiGroup)
+.addTo(map)
+};
+
+// Al cambiar de posición en el visor se actualiza el marcador en el mapa
+mly.on('position', posi);
+
+// Función para mostrar las fotos
+function showPic(pKey, nombre) {
+mly.moveTo(pKey).catch(mapillaryErrorHandler);
+document.getElementById("mly").scrollIntoView(); 
+document.getElementById("ubica").innerHTML = nombre;
+}
+
+//Función para mostrar botón para fotos en popup cuando hay imagen asociada; no mostrar si no hay foto
+function foto_mapi(mapi){
+  if (mapi == null){
+    return "";
+ } 
+ else{
+  return ("<br><button class='mapillary' title='Ver fotos en Mapillary' onclick='showOff(" + mapi + ")'><span class='fa fa-street-view'></span> Ver fotos</button>");
+ };
+}
+
+// Función para mostrar el panel lateral con el visor Mapillary
+function showOff(mapi, nombre) {
+  $('#OffcanvasMapillary').offcanvas('show');
+  mly.moveTo(mapi);
+  document.getElementById("mly").scrollIntoView();
+  document.getElementById("ubica").innerHTML = "";
+}
+
+// Cerrar popup y eliminar texto de ubicación al cerrar el panel lateral
+const OffcanvasMapillary = document.getElementById('OffcanvasMapillary')
+OffcanvasMapillary.addEventListener('hidden.bs.offcanvas', event => {
+  map.closePopup();
+  mapiGroup.clearLayers();
+  document.getElementById("ubica").innerHTML = "";
+})

@@ -37,8 +37,15 @@
           <li class="nav-item ">
             <a class="nav-link nav-active nav-link-active text-dark ps-5 px-lg-3" aria-current="page" href="./index.html">Mapa</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.siclas.org/sigenbici/gallery.html" target="_blank"><span class="fa fa-bar-chart"></span>&nbsp;Infografía encuesta</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="fa fa-graduation-cap"></span>&nbsp; Recursos
+            </a>
+            <ul class="dropdown-menu mt-0 border-0" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="https://www.siclas.org/archivo/sigenbici/" target="_blank">Blog SIGenBici<span class="fa fa-external-link"></span></a></li>
+              <li><a class="dropdown-item" href="https://www.siclas.org/wp-content/uploads/2020/02/SIGenBici_guia_OSM.pdf" target="_blank">Guía de mapeo 2020 <span class="fa fa-external-link"></span>&nbsp;</a></li>
+              <li><a class="dropdown-item" href="https://www.siclas.org/sigenbici/guia-2023" target="_blank">Guía de mapeo 2023 <span class="fa fa-external-link"></span>&nbsp;</a></li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,17 +60,16 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="fa fa-graduation-cap"></span>&nbsp; Recursos
+              <span class="fa fa-graduation-cap"></span>&nbsp; Ayuda
             </a>
             <ul class="dropdown-menu mt-0 border-0" aria-labelledby="navbarDropdown">
               <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalAyuda">¿Cómo usar el mapa? <span class="fa fa-info-circle"></span></li>
               <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal">Cicloinfraestructura en Colombia <span class="fa fa-info-circle"></span></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://www.siclas.org/archivo/sigenbici/" target="_blank">Blog <span class="fa fa-external-link"></span></a></li>
-              <li><a class="dropdown-item" href="https://www.siclas.org/wp-content/uploads/2020/02/SIGenBici_guia_OSM.pdf" target="_blank">Guía de mapeo 2020 <span class="fa fa-external-link"></span>&nbsp;</a></li>
-              <li><a class="dropdown-item" href="https://www.siclas.org/sigenbici/guia-2023" target="_blank">Guía de mapeo 2023 <span class="fa fa-external-link"></span>&nbsp;</a></li>
               <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalBienvenida">Acerca de SIGenBici <span class="fa fa-info-circle"></span></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.siclas.org/sigenbici/gallery.html" target="_blank"><span class="fa fa-bar-chart"></span>&nbsp;Infografía encuesta</a>
           </li>
           </ul>
         </div>
@@ -75,12 +81,9 @@
 
         <!-- Mapa -->
         <div id="mapid">
-          <!-- Leyenda y control de capas -->
-          <div id="control-capas" class="leaflet-control-layers leaflet-left" title="Marca las casillas para activar las capas correspondientes en el mapa">
-
-          </div>
+          <div id="control-capas" class="leaflet-left"></div>
         </div>
-        
+     
         <!-- Modal Bienvenida-->
   <div class="modal fade" id="ModalBienvenida" tabindex="-1" aria-labelledby="Acerca de SIGenBici" aria-hidden="true">
     <div class="modal-dialog">
@@ -247,32 +250,5 @@
     //  $('#ModalBienvenida').modal('show');
       });
     </script>
-    <!-- Script para visor de Mapillary -->
-    <script type="text/javascript">
-    var {Viewer} = mapillary;
-    var mly = new Viewer({
-    // Replace this with your own client ID from mapillary.com
-    accessToken: 'MLY|client|clientID',
-    component: {
-        cover: false,
-        direction: true,
-        sequence: true,
-        zoom: true,
-        combinedPanning: true,
-    },
-    container: 'mly'
-  //   imageId: '',  initial ID is not known at implementation time. The viewer will show a black background until a move to an ID succeeds.
-    });
-
-// Viewer size is dynamic so resize should be called every time the window size changes
-window.addEventListener("resize", function() { mly.resize(); });
-
-// Función para mostrar las fotos asociadas a las ubicaciones de la lista desplegable
-  function showPic(pKey, nombre) {
-  mly.moveTo(pKey);
-  document.getElementById("mly").scrollIntoView(); 
-  document.getElementById("ubica").innerHTML = nombre;
-  }
-</script>
 </body>
 </html>

@@ -38,11 +38,6 @@ body > .container-fluid {
 	width: 50%;
 }
 
-.leaflet-tooltip{
-        width: 200px;
-        white-space: normal;
-}
-
 .icon {
         display: block;
         fill: var(--first-color);
@@ -57,8 +52,10 @@ body > .container-fluid {
 }
 
 .leaflet-control-layers-expanded {
-        background: rgba(69, 69, 69, 0.7);
+        background: rgba(69, 69, 69, 0.9);
+        max-height: 75vh;
         overflow-y: auto;
+        padding-bottom: 20px;
 }
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
@@ -115,6 +112,10 @@ h3.popupHeader {
                 margin-right: -12px;
                 margin-left: -12px;
         }
+        .leaflet-control-layers-expanded {
+                max-width: 70%;
+                max-height: 60vh;
+        }
 }
 .fa-map-pin:before {
         color: black;
@@ -126,6 +127,8 @@ h3.popupHeader {
         color: var(--third-color);
         padding: 12px;
         border-radius: 12px;
+        width: fit-content;
+        white-space: normal;
 }
 
 .leaflet-tooltip-left {
@@ -234,6 +237,18 @@ input {
         background-color: #ddd;
  }
 
+ .img-boton {
+        margin: 5px 5px; 
+        height: 35px; 
+        width: 35px; 
+        padding: 2px; 
+        background-color: var(--third-color); 
+        border: 1px solid grey; 
+        border-radius: 5px; 
+        float:left;
+        clear: both;
+ }
+
   .geo-search button {
         height: 32px; 
         width: 32px; 
@@ -278,4 +293,15 @@ input {
 div#control-capas {
         position: relative;
         top: 80px !important;
-}
+       }
+
+.dropdown-item:hover {
+        color: var(--third-color);
+        background-color: var(--second-color);
+      }
+
+      /* Punto de sincronización del visor Mapillary en el mapa */
+.circle {
+        background: #04cb62; /* color of the circle */
+        border-radius: 50%; /* make the div a circular shape */
+      }
