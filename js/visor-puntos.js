@@ -2,11 +2,11 @@
 // Mapa ciclista interactivo v. 0.5
 // Proyecto SIGenBici
 // CC-BY-SA
-// Enero de 2023
+// Enero de 2024
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Panel puntos de interés
+// Percepciones ciclistas
 // Control de los puntos
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -286,7 +286,152 @@ var incidenteMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var peligrosoMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var desmejoraMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
 var infraMarkerSub = L.featureGroup.subGroup(negativeMarkerSub);
+// Agrupar marcadores agregados
+var NewMarkerSub = L.featureGroup.subGroup(positiveMarkerSub);
 // Agregar clusters al mapa
 positiveMarkerSub.addTo(map);
 negativeMarkerSub.addTo(map);
 perceptionmarkers.addTo(map);
+
+// Leaflet Draw
+// Capas para agrupar los marcadores creados y guardados
+var drawnItems = L.geoJson().addTo(map);
+var savedItems = L.geoJson().addTo(map);
+
+// Definicion del control de la capa de dibujo
+drawControl = new L.Control.Draw({
+	edit: {// Controla la capa si se va a editar o no
+             featureGroup: drawnItems,// Es el nombre de la capa que se crea arriba
+             edit: false// Solo permite borrar no editar
+         },
+	draw: {// Permite seleccionar el tipo de elemento que se va a dibujar, las que estan en false no las muestra
+		polygon : false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		marker: {repeatMode: false}, // solo activar botón para agregar marcador
+		circlemarker: false
+	},
+  position: 'topright'
+}).addTo(map);
+
+
+// Esta función cancela agregar marcador (elimina el marcador)
+function cancelar() {
+  map.closePopup();
+  drawnItems.clearLayers();
+  console.log('Cancelado');
+}
+
+// Esta funcion procesa la informacion del formulario del PopUp para los lugares marcados
+function enviar2(){
+	if($("input[name=tipo]:checked").val() != undefined){
+		var tempMarker = layer.toGeoJSON();
+		tempMarker.properties = {
+			clase: "Lugar",
+			tipo: $("input[name=tipo]:checked").val(),
+			descrip : $("textarea[name=descrip]").val()
+		};
+    var contenido = "<h3 class='popupHeader'>Tu percepción ciclista</h3>Tipo de punto:" + tempMarker.properties.tipo + "<br>" + "Descripción:" + tempMarker.properties.descrip; 
+		L.geoJSON(tempMarker, {markersInheritOptions: true, icon: L.icon({// Se crea el icono personalizado para el punto recien marcado
+			iconUrl: getStatoIcon($("input[name=tipo]:checked").val()),
+			iconSize: [50, 50],
+			iconAnchor: [25, 50],
+			})
+		})
+    .addTo(savedItems)
+    .addTo(agradableMarkerSub)
+    .bindPopup(contenido, {
+      keepInView: true,
+      closeButton: true,
+      closeOnClick: true
+      })
+    .addTo(map);
+    drawnItems.clearLayers();
+    map.closePopup();
+  
+    console.log(tempMarker);
+    console.log(savedItems);
+
+		$("input[name=preg]").val(JSON.stringify(drawnItems.toGeoJSON()));// Se actualiza la entrada a guardar en la base de datos ???
+
+    // La funcion define el icono a mostrar segun la respuesta marcada
+function getStatoIcon(dat) {
+	return  dat == 'seguro'   ? './icons/ic_1.png' :
+			dat == 'peligroso'   ? './icons/ic_2.png' :
+			dat == 'agradable'   ? './icons/ic_7.png' :
+			dat == 'problema_inf'   ? './icons/ic_6.png' :
+			dat == 'accident'   ? './icons/ic_5.png' :
+			'./icons/ic_0.png';       
+}
+	}
+	else{
+		console.log('undefined');
+	}
+} 
+
+map.on('draw:created', function(e) {
+  layer = e.layer,
+    feature = layer.feature = layer.feature || {}; // Intialize layer.feature
+    feature.type = feature.type || "Feature"; // Intialize feature.type
+    var props = feature.properties = feature.properties || {}; // Intialize feature.properties
+    props.tipo = null;
+    props.fecha = null;
+	$("input[name=tipo]:checked").val("");
+	$("textarea[name=descrip]").val("");
+	// Toma las coordenadas del marcador reciente
+	a = layer.getLatLng();
+	lat = a.lat;
+	lng = a.lng;
+  console.log(`'Lat': ${a.lat}`, `'Lng': ${a.lng}`);
+  var tempMarker = drawnItems.addLayer(e.layer);
+  var popupContent = // Se crea un formulario al interior del popup
+  popup_content = String("<form name='emergente' method='POST'>"
+  +"<input type='hidden' name='lat' value="
+  +lat
+  +"><input type='hidden' name='lng' value="
+  +lng
+  +">"
+  +"<div class='emergente'>"
+  +"<label class= 'form-label_emer text-dark'>&#8718;&nbsp;Considera el punto marcado: </label>"
+  +"<label class='text-dark'><input type='radio' class='ms-4 form-check-input' name='tipo' id='tipo' value='seguro'> Seguro</label><br>"
+  +"<label class='text-dark'><input type='radio' class='ms-4 form-check-input' name='tipo' id='tipo' value='peligroso'> Peligroso</label><br>"
+  +"<label class='text-dark'><input type='radio' class='ms-4 form-check-input' name='tipo' id='tipo' value='agradable'> Agradable</label><br>"
+  +"<label class='text-dark'><input type='radio' class='ms-4 form-check-input' name='tipo' id='tipo' value='problema_inf'> Con problemas de Infraestructura</label><br>"
+  +"<label class='text-dark'><input type='radio' class='ms-4 form-check-input' name='tipo' id='tipo' value='accident'> Con riesgo de incidentalidad</label><br><br>"
+  +"<label class='form-label_emer text-dark'>&#8718;&nbsp;Razones por las cuales considera lo anterior:</label><br>"
+  +"<textarea class = 'form-control bg-white text-dark' name='descrip' cols='30' rows='3' ></textarea><br><br></div>"
+  +"<button type='button' onClick='enviar2();'>&nbsp;&nbsp;Guardar respuestas&nbsp;&nbsp;</button>"
+  +"<button type='button' onClick='cancelar();'>&nbsp;&nbsp;Cancelar&nbsp;&nbsp;</button></form>"
+);
+  tempMarker.bindPopup("<h3 class='popupHeader'>Agregar punto de percepción</h3>" + popupContent,{
+    keepInView: true,
+    closeButton: false,
+    closeOnClick: false
+    }).openPopup();  
+});
+
+
+//-------------------------------------------------------------Establecer los textos de LF Draw en español----------------------------------------------------------
+
+L.drawLocal.draw.toolbar.buttons.marker = 'Agregar un punto';
+L.drawLocal.draw.toolbar.buttons.polyline = 'Agregar nueva ruta';
+L.drawLocal.draw.handlers.marker.tooltip.start = 'Haga clic para agregar un punto';
+L.drawLocal.draw.handlers.polyline.tooltip.start = 'Haga clic para empezar a dibujar la ruta';
+L.drawLocal.draw.handlers.polyline.tooltip.cont = 'Haga clic en otro punto para continuar la ruta. Para terminar, haga clic en el último punto marcado';
+L.drawLocal.draw.handlers.polyline.tooltip.end = 'Haga clic en otro punto para continuar la ruta. Para terminar, haga clic en el último punto marcado';
+
+L.drawLocal.draw.toolbar.actions.title = 'Cancelar dibujo de la ruta';
+L.drawLocal.draw.toolbar.actions.text = 'Cancelar';
+L.drawLocal.draw.toolbar.undo.title = 'Eliminar último punto dibujado';
+L.drawLocal.draw.toolbar.undo.text = 'Eliminar último punto';
+L.drawLocal.draw.toolbar.finish.title = 'Finalizar dibujo de la ruta';
+L.drawLocal.draw.toolbar.finish.text = 'Finalizar';
+
+L.drawLocal.edit.toolbar.buttons.remove = 'Eliminar elementos';
+L.drawLocal.edit.toolbar.buttons.removeDisabled = 'No hay elementos para eliminar';
+L.drawLocal.edit.handlers.remove.tooltip.text = 'Clic en el elemento a eliminar';
+L.drawLocal.edit.toolbar.actions.cancel.title = 'Cancelar edición, no guardar cambios';
+L.drawLocal.edit.toolbar.actions.cancel.text = 'Cancelar';
+L.drawLocal.edit.toolbar.actions.save.title = 'Guardar cambios';
+L.drawLocal.edit.toolbar.actions.save.text = 'Guardar';
