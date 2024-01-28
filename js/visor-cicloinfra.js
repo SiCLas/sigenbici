@@ -419,7 +419,7 @@ function oyente_tooltip(layer){
 var {Viewer} = mapillary;
 var mly = new Viewer({
 // Replace this with your own client ID from mapillary.com
-accessToken: 'MLY|5554608214599642|0f4eab6039ca4f8060d9ed37b01c354c',
+accessToken: 'MLY|client|ID',
 component: {
     cover: false,
     direction: true,
